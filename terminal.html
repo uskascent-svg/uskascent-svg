@@ -23,7 +23,7 @@ main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size
 .termbar{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;background:#101a13;border-bottom:1px solid #20382a;font-size:11px;color:var(--muted)}
 .term-actions{display:flex;gap:8px}.mini{background:#111e15;color:var(--green2);border:1px solid #2a4a34;border-radius:5px;padding:4px 8px;cursor:pointer;font-size:11px}.mini:hover{border-color:var(--green)}
 .output{padding:16px 16px 6px;min-height:300px;max-height:52vh;overflow:auto;scrollbar-color:#31573b #08100b;overflow-wrap:anywhere}
-.line{white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 7px}.prompt{color:var(--green);font-weight:700}.muted{color:var(--muted)}.cyan{color:var(--cyan)}.amber{color:var(--amber)}.good{color:var(--green)}.bad{color:var(--red)}.ascii{color:var(--green2);font-size:clamp(6px,1.05vw,11px);line-height:1.35;white-space:pre;overflow-x:auto}
+.line{white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 7px}.typing-cursor{display:inline-block;width:.62em;height:1.05em;vertical-align:-.13em;background:var(--green);margin-left:2px;animation:cursor-blink 1s steps(2,start) infinite}@keyframes cursor-blink{to{visibility:hidden}}.prompt{color:var(--green);font-weight:700}.muted{color:var(--muted)}.cyan{color:var(--cyan)}.amber{color:var(--amber)}.good{color:var(--green)}.bad{color:var(--red)}.ascii{color:var(--green2);font-size:clamp(6px,1.05vw,11px);line-height:1.35;white-space:pre;overflow-x:auto}
 .inputrow{display:flex;align-items:center;gap:8px;padding:12px 16px 16px}.prompt-label{color:var(--green);white-space:nowrap;font-size:13px}.command-input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:#e5ffeb;caret-color:var(--green);padding:3px 0}.command-input::placeholder{color:#4d6a55}
 .suggestions{display:flex;flex-wrap:wrap;gap:7px;padding:0 16px 16px}.suggestion{background:#0d1710;color:#91dba7;border:1px solid #25442e;border-radius:5px;padding:5px 8px;font-size:11px;cursor:pointer}.suggestion:hover,.suggestion:focus-visible{border-color:var(--green);color:#fff}
 .lower{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.card{border:1px solid #1e3526;border-radius:9px;padding:14px;background:#0a110c}.card h2{font-size:12px;letter-spacing:.12em;color:var(--green2);text-transform:uppercase;margin:0 0 8px}.card p{font-size:12px;color:var(--muted);margin:0}.card code{color:var(--cyan)}
@@ -43,7 +43,7 @@ main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size
 <main>
 <p class="intro">Welcome, visitor. Explore my background, projects and learning goals using the command line below. This is a safe, simulated terminal — commands only display profile information.</p>
 <section class="terminal" aria-label="Interactive terminal">
-<div class="termbar"><span>bash — visitor session</span><div class="term-actions"><button class="mini" id="clear" type="button">clear</button><button class="mini" id="reset" type="button">restart</button></div></div>
+<div class="termbar"><span>bash — visitor session</span><div class="term-actions"><button class="mini" id="clear" type="button">clear</button><button class="mini" id="replay" type="button">replay intro</button><button class="mini" id="reset" type="button">restart</button></div></div>
 <div class="output" id="output" role="log" aria-live="polite" aria-relevant="additions text"></div>
 <form id="command-form" autocomplete="off">
 <div class="inputrow"><label class="prompt-label" for="command-input">visitor@ascent:~$</label><input id="command-input" class="command-input" name="command" type="text" placeholder="type help and press Enter" spellcheck="false" autocapitalize="off" aria-label="Enter a terminal command"></div>
@@ -63,7 +63,25 @@ main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size
 (()=>{'use strict';
 const output=document.querySelector('#output'),form=document.querySelector('#command-form'),input=document.querySelector('#command-input');
 const history=[],known=['whoami','help','cat status.log','ls projects','./career.sh --goal','neofetch','contact','sudo defend','./ascentu3 --unlock','clear','history'];
-let historyIndex=0;
+let historyIndex=0, animationQueue=Promise.resolve(), generation=0, introGeneration=0;
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+const charDelay=()=>reducedMotion.matches?0:(38+Math.random()*34);
+const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+async function typeInto(node,text,token){
+  const cursor=document.createElement('span');cursor.className='typing-cursor';cursor.setAttribute('aria-hidden','true');node.append(cursor);
+  if(reducedMotion.matches){node.insertBefore(document.createTextNode(text),cursor);cursor.remove();return}
+  for(let i=0;i<text.length;i++){
+    if(token!==generation){cursor.remove();return}
+    node.insertBefore(document.createTextNode(text[i]),cursor);
+    output.scrollTop=output.scrollHeight;
+    let delay=charDelay();
+    if(/[.,:;·—]/.test(text[i]))delay+=90;
+    else if(text[i]===' ')delay*=0.45;
+    await pause(delay);
+  }
+  cursor.remove();
+}
+function enqueueRender(render){const token=generation;animationQueue=animationQueue.then(async()=>{if(token!==generation)return;await render(token)}).catch(()=>{})}
 const projects=[
  {name:'ASCENT SAFETY',desc:'Cybersecurity analysis and threat-detection platform.',url:'https://github.com/uskascent-svg/Ascent-Safety-'},
  {name:'Shop Agent',desc:'AI-powered shopping agent project.',url:'https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent'},
@@ -74,20 +92,20 @@ const projects=[
  {name:'KumbhSathi',desc:'Pilgrimage companion concept focused on safer journeys.',url:null}
 ];
 const ascii='  █████╗ ███████╗ ██████╗███████╗███╗   ██╗████████╗\n ██╔══██╗██╔════╝██╔════╝██╔════╝████╗  ██║╚══██╔══╝\n ███████║███████╗██║     █████╗  ██╔██╗ ██║   ██║\n ██╔══██║╚════██║██║     ██╔══╝  ██║╚██╗██║   ██║\n ██║  ██║███████║╚██████╗███████╗██║ ╚████║   ██║\n ╚═╝  ╚═╝╚══════╝ ╚═════╝╚══════╝╚═╝  ╚═══╝   ╚═╝';
-function line(text='',cls=''){const p=document.createElement('p');p.className='line'+(cls?' '+cls:'');p.textContent=text;output.append(p);output.scrollTop=output.scrollHeight;return p}
-function rich(parts){const p=document.createElement('p');p.className='line';for(const part of parts){if(part.text!==undefined){const span=document.createElement('span');span.className=part.cls||'';span.textContent=part.text;p.append(span)}else if(part.href){const a=document.createElement('a');a.href=part.href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=part.label;p.append(a)}}output.append(p);output.scrollTop=output.scrollHeight}
-function linkLine(label,url,desc){const p=document.createElement('p');p.className='line';const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;p.append(a,document.createTextNode(' — '+desc));output.append(p)}
+function line(text='',cls=''){enqueueRender(async token=>{const p=document.createElement('p');p.className='line'+(cls?' '+cls:'');output.append(p);await typeInto(p,String(text),token);output.scrollTop=output.scrollHeight})}
+function rich(parts){enqueueRender(async token=>{const p=document.createElement('p');p.className='line';output.append(p);for(const part of parts){if(part.text!==undefined){const span=document.createElement('span');span.className=part.cls||'';p.append(span);await typeInto(span,part.text,token)}else if(part.href){const a=document.createElement('a');a.href=part.href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=part.label;p.append(a)}}output.scrollTop=output.scrollHeight})}
+function linkLine(label,url,desc){enqueueRender(async token=>{const p=document.createElement('p');p.className='line';output.append(p);const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;p.append(a);await typeInto(p,' — '+desc,token);output.scrollTop=output.scrollHeight})}
 function banner(){line('ASCENT U3 :: INTERACTIVE PROFILE TERMINAL','good');line('Type "help" to list commands. Try "./ascentu3 --unlock" for a hidden reveal.','muted');line('')}
 function run(raw){const command=raw.trim();if(!command)return;line('visitor@ascent:~$ '+command,'prompt');const c=command.toLowerCase();
 if(c==='help'||c==='man'||c==='help --all'){line('AVAILABLE COMMANDS','cyan');known.filter(x=>!['clear','history'].includes(x)).forEach(x=>line('  '+x,'good'));line('  history        show commands from this session','good');line('  clear          clear the output','good');line('Tip: commands are simulated; no shell or security scan is executed.','muted')}
 else if(c==='whoami'){line('Utkarsh Khairnar','good');line('IT Engineering student · MET BKC IOE Nashik');line('Focus: Cybersecurity, Blue Team, Cloud Security and AI Security');line('Based in Nashik, India · IST (UTC+5:30)')}
-else if(c==='cat status.log'){line('[ OK ] Cybersecurity · Blue Team · Cloud Security','good');line('[ OK ] Email Phishing Detection System','good');line('[ .. ] SOC Operations · Threat Detection · AI Security','amber');line('Status markers describe learning focus, not certifications.','muted')}
+else if(c==='cat status.log'){line('[ OK ] Cybersecurity · Blue Team · Cloud Security','good');line('[ OK ] Email Phishing Detection System','good');line('[ .. ] SOC Operations · Threat Detection · AI Security','amber');line('[ OK ] Continuous learning through labs, testing and project iteration','good');line('[ .. ] Incident response, SIEM workflows and threat hunting — actively developing','amber');line('[ .. ] Cloud security posture and detection engineering — ongoing practice','amber');line('Status markers describe learning focus, not certifications or production monitoring.','muted')}
 else if(c==='ls projects'||c==='ls ~/projects'||c==='ls projects --all'||c==='ls'){line('PROJECTS / SELECT A REPOSITORY','cyan');projects.forEach((p,i)=>{if(p.url){const el=document.createElement('p');el.className='line';const a=document.createElement('a');a.href=p.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=String(i+1).padStart(2,'0')+'  '+p.name;el.append(a,document.createTextNode(' — '+p.desc));output.append(el)}else line(String(i+1).padStart(2,'0')+'  '+p.name+' — '+p.desc,'')});line('Concept projects without a verified public repository are labelled as concepts.','muted')}
 else if(c==='./career.sh --goal'||c==='career'){line('→ Aspiring Cybersecurity / SOC Analyst','good');line('→ Learning by building · testing · defending');line('→ Goal: grow into security operations and threat intelligence')}
 else if(c==='neofetch'){line('        /\\_/\\\\     utkarsh@cloud','good');line('       ( o.o )    ----------------','good');line('        > ^ <     OS: Curious learner / Windows + Linux labs');line('                  ROLE: IT Engineering student');line('                  FOCUS: Blue Team · Cloud Security');line('                  TOOLS: Python · Linux · Bash · Docker');line('                  PRINCIPLE: Verify before you trust');line('                  MODE: Learn / Build / Test / Defend','cyan')}
 else if(c==='contact'||c==='contact --all'){line('CONNECT','cyan');linkLine('LinkedIn','https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/','professional profile');linkLine('GitHub','https://github.com/uskascent-svg/uskascent-svg','projects and code');linkLine('LeetCode','https://leetcode.com/u/AscentU3/','problem solving');linkLine('Email','mailto:uskascent@gmail.com','opportunities and collaboration')}
 else if(c==='sudo defend'){line('[ SIMULATION ONLY ]','amber');line('Defence mindset: observe → validate → contain → recover.','good');line('1. Confirm the alert source and preserve evidence.');line('2. Scope affected identities, endpoints and services.');line('3. Follow the approved incident-response playbook.');line('4. Document actions and verify recovery.');line('No systems were scanned or changed.','muted')}
-else if(c==='./ascentu3 --unlock'||c==='ascentu3 --unlock'||c==='sudo ./ascentu3 --unlock'){line('SECRET IDENTITY UNLOCKED','cyan');const pre=document.createElement('pre');pre.className='ascii';pre.textContent=ascii;output.append(pre);line('ASCENT U3 — Detect. Prevent. Protect.','good');line('The original pixel artwork remains one click away:');linkLine('Open the ASCENT U3 pixel experience','./','interactive original logo')}
+else if(c==='./ascentu3 --unlock'||c==='ascentu3 --unlock'||c==='sudo ./ascentu3 --unlock'){line('SECRET IDENTITY UNLOCKED','cyan');enqueueRender(async token=>{const pre=document.createElement('pre');pre.className='ascii';output.append(pre);await typeInto(pre,ascii,token)});line('ASCENT U3 — Detect. Prevent. Protect.','good');line('The original pixel artwork remains one click away:');linkLine('Open the ASCENT U3 pixel experience','./','interactive original logo')}
 else if(c==='history'){history.forEach((h,i)=>line(String(i+1).padStart(2,'0')+'  '+h,'muted'))}
 else if(c==='clear'){output.replaceChildren()}
 else if(c==='pwd'){line('/home/visitor/ascent-profile','muted')}
@@ -102,9 +120,12 @@ else {line('command not found: '+command,'bad');line('Type "help" to see availab
 form.addEventListener('submit',e=>{e.preventDefault();const value=input.value;const c=value.trim().toLowerCase();if(!c)return;history.push(value.trim());historyIndex=history.length;run(value);input.value='';});
 input.addEventListener('keydown',e=>{if(e.key==='ArrowUp'){e.preventDefault();if(historyIndex>0)historyIndex--;input.value=history[historyIndex]||''}else if(e.key==='ArrowDown'){e.preventDefault();if(historyIndex<history.length)historyIndex++;input.value=history[historyIndex]||''}else if(e.key==='Tab'){e.preventDefault();const val=input.value.trim().toLowerCase();const matches=known.filter(x=>x.startsWith(val));if(matches.length===1)input.value=matches[0];else if(matches.length>1)line(matches.join('    '),'muted')}});
 document.querySelectorAll('[data-command]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.command;form.requestSubmit();input.focus()}));
-document.querySelector('#clear').addEventListener('click',()=>{output.replaceChildren();input.focus()});
-document.querySelector('#reset').addEventListener('click',()=>{output.replaceChildren();history.length=0;historyIndex=0;banner();input.value='';input.focus()});
-banner();input.focus();
+function clearOutput(){generation++;animationQueue=Promise.resolve();output.replaceChildren()}
+function playIntro(){clearOutput();const token=++introGeneration;banner();animationQueue=animationQueue.then(async()=>{if(token!==introGeneration)return;await pause(reducedMotion.matches?0:420)});['whoami','cat status.log','./career.sh --goal'].forEach(cmd=>run(cmd));input.focus()}
+document.querySelector('#clear').addEventListener('click',()=>{clearOutput();input.focus()});
+document.querySelector('#replay').addEventListener('click',playIntro);
+document.querySelector('#reset').addEventListener('click',()=>{introGeneration++;clearOutput();history.length=0;historyIndex=0;banner();input.value='';input.focus()});
+playIntro();
 })();
 </script>
 </body>
