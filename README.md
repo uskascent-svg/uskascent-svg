@@ -71,16 +71,21 @@ I aim to connect skills to reproducible labs, repositories, tests or write-ups i
 [always]   Documenting evidence, tests and limitations
 ```
 
-## Security-minded engineering
+## Cybersecurity & Cloud Security Mindset
 
-| Risk | How I handle it |
+My focus on **Blue Team security, cloud fundamentals, threat detection and security automation** helps me approach engineering risks from a defensive perspective—from reducing attack surfaces to investigating suspicious behaviour and validating results.
+
+| Security challenge | How my cybersecurity and cloud background helps |
 |---|---|
-| Untrusted input | Validate input and avoid unsafe shell interpolation |
-| Spoofing and abuse | Apply identity checks, permissions and rate limits |
-| Concurrent updates | Handle stale state and serialize writes where needed |
-| External API failure | Use timeouts, schema validation and known-good fallbacks |
-| Supply-chain risk | Pin dependencies and review automated updates |
-| Misleading metrics | Publish measured results, not inflated claims |
+| Identity and access risks | Apply IAM, role-based permissions and least-privilege thinking to limit unauthorised access. |
+| Suspicious activity and threats | Use Blue Team concepts, SIEM-oriented thinking and threat analysis to identify signals, assess risk and support investigation. |
+| Cloud misconfiguration | Consider AWS/Azure security, network boundaries and infrastructure-as-code practices when designing and reviewing workloads. |
+| Unsafe input and API abuse | Prioritise input validation, safe command handling, authentication, authorisation and rate limiting. |
+| Incidents and service failures | Think in terms of logging, alerting, timeouts, controlled fallbacks and clear investigation trails. |
+| Vulnerable dependencies and changes | Review dependency updates, reduce unnecessary exposure and favour repeatable, testable changes. |
+| Unproven security claims | Prefer measured tests, documented limitations and evidence-based results over unsupported accuracy or performance claims. |
+
+I’m continuing to strengthen these skills through practical projects and labs. I aim to make security decisions **testable, explainable and grounded in evidence** rather than presenting learning-stage work as production-certified expertise.
 
 ## `❯ ssh collab@utkarsh`
 
