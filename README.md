@@ -27,7 +27,7 @@ Nashik, India · IST (UTC+5:30)
 <h1 align="center">Contribution Activity</h1>
 
 <p align="center">
-  <img src="./assets/contribution-activity.svg" width="100%" alt="Large GitHub contribution calendar with month labels, weekday labels, total contributions, and date/count details on hover"/>
+  <img src="./assets/contribution-activity.svg" width="100%" alt="GitHub contribution calendar showing yearly total, date range, and a visible daily contribution count list for the latest 14 days"/>
 </p>
 
 
