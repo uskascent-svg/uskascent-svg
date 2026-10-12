@@ -15,7 +15,7 @@
 </defs>
 <rect width="1100" height="330" rx="12" fill="#050b0e"/>
 <ellipse cx="550" cy="165" rx="480" ry="115" fill="#00353a" opacity=".28"/>
-<g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14.4" font-weight="700" letter-spacing="1.8" xml:space="preserve" fill="url(#ink)" filter="url(#glow)">
+<g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="16" font-weight="700" letter-spacing="1.35" xml:space="preserve" fill="url(#ink)">
   <text x="24" y="42">                                                                        </text>
   <text x="24" y="56.1">                                                                        </text>
   <text x="24" y="70.2">            -.                                                          </text>
@@ -34,8 +34,8 @@
   <text x="24" y="253.5">    .:.          .+*+.............................                      </text>
   <text x="24" y="267.6">                  :::........ ........ ....                            </text>
   <text x="24" y="281.7">                      ...                                               </text>
-  <animateTransform attributeName="transform" type="translate" values="0 0;2 -1;0 0;-1 1;0 0" dur="5s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values=".78;1;.86;1;.78" dur="3.8s" repeatCount="indefinite"/>
+  <animateTransform attributeName="transform" type="translate" values="0 0;1 0;0 0;0 1;0 0" dur="6s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values=".9;1;.94;1;.9" dur="4.5s" repeatCount="indefinite"/>
 </g>
 <rect x="14" y="14" width="1072" height="302" rx="8" fill="none" stroke="#0d737b" stroke-opacity=".45"/>
 </svg>
