@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=profile-name-overlay-20261013-v3" width="100%" alt="Animated green Matrix rain banner with Utkarsh Khairnar and cybersecurity, cloud security, and AI security text" />
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=profile-name-overlay-20261013-v4" width="100%" alt="Animated green Matrix rain banner with Utkarsh Khairnar and cybersecurity, cloud security, and AI security text" />
 </p>
 
 **Cybersecurity · SOC Operations · Cloud Security · AI Security**
@@ -72,7 +72,7 @@ I’m open to cybersecurity internships, collaborative projects, and opportuniti
 Explore my background, cybersecurity interests, projects, learning goals, and contact links in a terminal-inspired experience.
 
 <p align="center">
-  <a href="https://uskascent-svg.github.io/uskascent-svg/terminal.html" title="Launch the interactive ASCENT U3 terminal"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/readme-terminal.gif?v=profile-terminal-20261013-v3" width="100%" alt="Preview of the ASCENT U3 terminal typing commands and output with a blinking cursor" /></a>
+  <a href="https://uskascent-svg.github.io/uskascent-svg/terminal.html" title="Launch the interactive ASCENT U3 terminal"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/readme-terminal.gif?v=profile-terminal-20261013-v4" width="100%" alt="Preview of the ASCENT U3 terminal typing commands and output with a blinking cursor" /></a>
 </p>
 
 **[Launch the interactive terminal ↗](https://uskascent-svg.github.io/uskascent-svg/terminal.html)**
