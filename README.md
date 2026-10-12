@@ -13,7 +13,7 @@
 <h2 align="center">Utkarsh Khairnar</h2>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=0039a1f67065867b460aaff81dab2982e73f6b1a" width="100%" alt="Animated green Matrix-style falling digital pixels" />
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=1edda9f5d466b298b539dc133a33ff1eb86675b9" width="75%" alt="Compact animated green Matrix rain with Utkarsh Khairnar displayed in front" />
 </p>
 
 Cybersecurity · Cloud Computing · Cloud Security · AI Security
