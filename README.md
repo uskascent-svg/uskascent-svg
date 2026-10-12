@@ -26,7 +26,7 @@
 
 **Utkarsh Khairnar**
 
-Cybersecurity · Blue Team · Cloud Security · AI Security
+Cybersecurity · Cloud Computing · Cloud Security · AI Security
 
 Nashik, India · IST (UTC+5:30)
 
@@ -90,7 +90,7 @@ utkarsh@cloud:~$ _
 ## `❯ cat ~/skills.md`
 
 - **Cloud:** AWS and Azure fundamentals, IAM, networking and Terraform labs.
-- **Security:** Blue-team concepts, SIEM, vulnerability analysis and threat modelling.
+- **Security:** Cloud computing concepts, SIEM, vulnerability analysis and threat modelling.
 - **Systems:** Linux, Docker, Bash and Python.
 - **Problem solving:** [LeetCode · AscentU3](https://leetcode.com/u/AscentU3/).
 
@@ -107,7 +107,7 @@ I aim to connect skills to reproducible labs, repositories, tests or write-ups i
 
 ## About Me
 
-I am an IT Engineering student at MET BKC IOE Nashik and i am passionate about Cybersecurity, SOC Operations, Threat Detection, Network Security, Vulnerability Assessment, and Al-driven security.
+I am an Information Technology Engineering Student at MET BKC IOE Nashik and i am passionate about Cybersecurity, SOC Operations, Threat Detection, Network Security, Vulnerability Assessment, and Al-driven security.
 
 I enjoy turning what I learn into practical security solutions. I've worked with Python, Linux, networking, web security, SIEM, and AI/ ML. One project I'm especially proud of is my Email Phishing Detection System, where I explored real-world phishing techniques and built a system to analyze emails, links, and suspicious patterns. The project strengthened my ability to think like both an attacker and a defender, turning security concepts into practical threat-detection solutions.
 
