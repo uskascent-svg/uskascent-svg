@@ -27,7 +27,8 @@ FT = font(13, True)
 FS = font(12)
 # (baseline, text, color, start time)
 lines = [
-    (105, "IT Engineering student", WHITE, 0.8),
+    (78, "$ whoami", GREEN, 0.15),
+    (105, "IT Engineering student", WHITE, 0.95),
     (131, "MET BKC IOE Nashik", WHITE, 2.3),
     (166, "$ cat status.log", GREEN, 4.2),
     (193, "[ OK ] Cybersecurity · Blue Team · Cloud Security", GREEN, 5.2),
@@ -41,9 +42,9 @@ def draw_frame(t):
     im = Image.new("RGB", (W,H))
     px = im.load()
     for y in range(H):
-        for x in range(W):
-            q=(x/W+y/H)/2
-            px[x,y]=tuple(round(BG0[k]*(1-q)+BG1[k]*q) for k in range(3))
+        q=y/H*0.5
+        shade=tuple(round(BG0[k]*(1-q)+BG1[k]*q) for k in range(3))
+        ImageDraw.Draw(im).line((0,y,W,y),fill=shade,width=1)
     d=ImageDraw.Draw(im)
     d.rounded_rectangle((0,0,W-1,H-1), radius=15, outline=(41,74,52), width=2)
     d.rectangle((0,0,W,42), fill=(16,26,19))
@@ -52,7 +53,6 @@ def draw_frame(t):
     d.text((82,12),"ASCENT U3 / CYBER DEFENCE CONSOLE",font=FT,fill=PALE)
     d.text((934,14),"SAFE PROFILE SIMULATION",font=FS,fill=DIM,anchor="ra")
     d.line((0,42,W,42),fill=(32,56,42),width=1)
-    d.text((28,62),"$ whoami",font=FB,fill=GREEN)
     cursor=None
     for y, text, color, start in lines:
         elapsed=t-start
@@ -67,11 +67,12 @@ def draw_frame(t):
             else:
                 break
         shown=text[:count]
-        d.text((28,y-19),shown,font=F,fill=color)
+        use_font = FB if text.startswith("$") else F
+        d.text((28,y-19),shown,font=use_font,fill=color)
         if count < len(text):
-            cursor=(28 + d.textlength(shown,font=F), y-18)
+            cursor=(28 + d.textlength(shown,font=use_font), y-18)
             break
-        cursor=(28+d.textlength(shown,font=F), y-18)
+        cursor=(28+d.textlength(shown,font=use_font), y-18)
     # Cursor blinks at the current typing position; at rest it stays after the final prompt.
     if int(t*2)%2==0 and cursor:
         cx,cy=cursor
