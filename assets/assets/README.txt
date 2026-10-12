@@ -1,0 +1,1 @@
+Original ASCENTU3 artwork assets
