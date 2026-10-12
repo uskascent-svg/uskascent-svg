@@ -1,10 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-<title id="title">AscentU3 digital pixel logo</title><desc id="desc">A cyan and ice-white AscentU3 wordmark surrounded by animated data streams and particles.</desc>
-<defs><radialGradient id="bg"><stop stop-color="#06232b"/><stop offset="1" stop-color="#02080d"/></radialGradient><linearGradient id="ink" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#d9fbff"/><stop offset=".5" stop-color="#38efff"/><stop offset="1" stop-color="#078da4"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#34eaff" opacity=".8"/></pattern><style>@keyframes drift{to{transform:translateX(-70px)}}@keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}.stream{animation:drift 9s linear infinite}.word{animation:pulse 3s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.stream,.word{animation:none}}</style></defs>
-<rect width="1200" height="360" rx="12" fill="url(#bg)"/>
-<g fill="none" stroke="#14dff4" stroke-width="1" opacity=".5" class="stream"><path d="M-30 85 Q180 210 350 140 T720 120 T1240 40"/><path d="M-30 265 Q180 175 380 250 T760 260 T1240 205" stroke-dasharray="2 7"/><path d="M-30 305 Q200 220 420 300 T840 300 T1240 250" stroke-dasharray="1 8"/></g>
-<g fill="url(#dots)" opacity=".8"><path d="M0 40 Q170 130 320 120 L320 190 Q160 205 0 120Z"/><path d="M820 230 Q1010 170 1200 70 L1200 120 Q1030 245 820 275Z"/></g>
-<g class="word" filter="url(#glow)"><text x="600" y="213" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="142" font-weight="900" letter-spacing="-5" fill="url(#ink)">AscentU3</text><text x="600" y="213" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="142" font-weight="900" letter-spacing="-5" fill="none" stroke="#bdfaff" stroke-width=".8" opacity=".7">AscentU3</text></g>
-<g fill="#52f4ff"><circle cx="112" cy="70" r="2"/><circle cx="176" cy="106" r="1.5"/><circle cx="1000" cy="90" r="2"/><circle cx="1080" cy="260" r="1.5"/><circle cx="270" cy="300" r="1.6"/><circle cx="900" cy="310" r="1.8"/></g>
-<path d="M70 326 H1130" stroke="#1b7885" stroke-opacity=".6"/><text x="600" y="346" text-anchor="middle" fill="#76b9c1" font-family="monospace" font-size="10" letter-spacing="4">DETECT · BUILD · ASCEND</text>
+<title id="title">AscentU3 digital pixel artwork</title>
+<desc id="desc">An angular cyan and white A emblem beside the AscentU3 wordmark, with gently drifting dotted data ribbons on a deep navy background.</desc>
+<defs>
+ <radialGradient id="bg" cx="52%" cy="48%" r="80%"><stop stop-color="#071d2a"/><stop offset=".58" stop-color="#030e1b"/><stop offset="1" stop-color="#020812"/></radialGradient>
+ <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e6fdff"/><stop offset=".52" stop-color="#39eafa"/><stop offset="1" stop-color="#1599b4"/></linearGradient>
+ <pattern id="pixels" width="8" height="8" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="2" height="2" fill="#39eafa" opacity=".7"/></pattern>
+ <filter id="glow" x="-20%" y="-30%" width="140%" height="160%"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <style>
+ @keyframes drift{from{transform:translateX(0)}to{transform:translateX(-42px)}}
+ @keyframes flicker{0%,100%{opacity:.85}50%{opacity:1}}
+ @keyframes twinkle{0%,100%{opacity:.3}50%{opacity:.9}}
+ .ribbon{animation:drift 13s linear infinite}.mark{animation:flicker 5s ease-in-out infinite}.spark{animation:twinkle 3.6s ease-in-out infinite}
+ @media(prefers-reduced-motion:reduce){.ribbon,.mark,.spark{animation:none}}
+ </style>
+</defs>
+<rect width="1200" height="360" fill="url(#bg)"/>
+<g class="ribbon" fill="none" stroke="#21dff3" stroke-width="1" opacity=".42">
+ <path d="M-50 45 C145 120 205 40 375 105 S680 155 845 75 S1080 50 1260 12" stroke-dasharray="1 7"/>
+ <path d="M-60 115 C135 195 260 90 415 150 S710 205 900 135 S1100 145 1260 90" stroke-dasharray="2 8"/>
+ <path d="M-50 290 C160 205 245 325 430 265 S740 220 905 280 S1100 310 1260 240" stroke-dasharray="1 7"/>
+ <path d="M-50 330 C170 260 290 350 470 300 S740 260 940 315 S1110 340 1260 285" stroke-dasharray="2 9"/>
+</g>
+<g fill="url(#pixels)" opacity=".8"><path d="M0 20 Q100 85 245 70 L245 130 Q105 150 0 85Z"/><path d="M860 220 Q1040 160 1200 75 L1200 135 Q1040 235 860 260Z"/></g>
+<g class="mark" filter="url(#glow)">
+ <path d="M72 258 L150 74 L228 258 L190 258 L150 157 L110 258 Z" fill="url(#ink)"/>
+ <path d="M122 211 L178 211 L190 240 L110 240 Z" fill="#061925"/>
+ <path d="M150 74 L150 157" stroke="#e6fdff" stroke-width="2" opacity=".8"/>
+ <text x="270" y="222" font-family="Arial,Helvetica,sans-serif" font-size="135" font-weight="900" letter-spacing="-5" fill="url(#ink)">AscentU3</text>
+ <text x="270" y="222" font-family="Arial,Helvetica,sans-serif" font-size="135" font-weight="900" letter-spacing="-5" fill="none" stroke="#d9fbff" stroke-width=".55" opacity=".72">AscentU3</text>
+</g>
+<g class="spark" fill="#d9fbff"><rect x="54" y="55" width="3" height="3"/><rect x="248" y="82" width="2" height="2"/><rect x="785" y="58" width="2" height="2"/><rect x="1085" y="245" width="3" height="3"/><rect x="975" y="92" width="2" height="2"/><rect x="425" y="300" width="2" height="2"/></g>
+<path d="M70 305 H1130" stroke="#1b7885" stroke-opacity=".48"/>
+<text x="600" y="334" text-anchor="middle" fill="#76b9c1" font-family="monospace" font-size="10" letter-spacing="4">DETECT · BUILD · ASCEND</text>
 </svg>
