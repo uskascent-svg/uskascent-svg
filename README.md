@@ -2,7 +2,7 @@
 
 <img src="./assets/animated-name.svg" width="100%" alt="UTKARSH ASCII-art name typing animation" />
 
-<img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/readme-terminal.gif" width="100%" alt="ASCENT U3 terminal typing character by character with a blinking cursor"/>
+<img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/readme-terminal.gif?v=6491668" width="100%" alt="ASCENT U3 terminal typing character by character with a blinking cursor"/>
 
 <h1 align="center">ASCENT U3</h1>
 
