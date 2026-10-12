@@ -46,12 +46,24 @@ Problem solving is **built on trust. Driven by results.**
 | **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
 | **LeetCode Solutions** | [Open repository ↗](https://github.com/uskascent-svg/Leetcode-solution-) | Repository for coding practice and problem solutions. |
 
-## `❯ languages --list`
+## `❯ languages --live`
 
 <div align="center">
 
 ```bash
-utkarsh@cloud:~$ figlet -f small "languages"
+utkarsh@cloud:~$ github-stats --languages --live
+Fetching public repository language data...
+```
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=uskascent-svg&layout=compact&theme=chartreuse-dark&hide_border=true&langs_count=8" alt="Live top programming languages and percentage distribution across public GitHub repositories" width="75%"/>
+
+```text
+utkarsh@cloud:~$ echo $LANGUAGE_STATS
+SOURCE    : public GitHub repositories
+METRIC    : percentage of code by language
+REFRESH   : dynamic stats card
+NOTE      : code share, not skill proficiency
+utkarsh@cloud:~$ _
 ```
 
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/></a>
@@ -61,18 +73,6 @@ utkarsh@cloud:~$ figlet -f small "languages"
 <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
 <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL"/></a>
 <a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/></a>
-
-```text
-utkarsh@cloud:~$ languages --status
-[active]   Python       | Security scripts & automation
-[learning] C++          | Data structures & algorithms
-[learning] Java         | Object-oriented programming
-[building] JavaScript   | Web development
-[building] TypeScript   | Typed application development
-[practice] SQL          | Database queries
-[active]   Bash         | Linux command line
-utkarsh@cloud:~$ _
-```
 
 </div>
 
