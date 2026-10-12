@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=profile-name-overlay-20261013" width="60%" alt="Compact Matrix rain with Utkarsh Khairnar displayed over the falling code" />
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=profile-name-overlay-20261013-v2" width="70%" alt="Compact Matrix rain with Utkarsh Khairnar displayed over the falling code" />
 </p>
 
 Cybersecurity · Cloud Computing · Cloud Security · AI Security
