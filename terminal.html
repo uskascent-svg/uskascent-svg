@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#050a08">
-<meta name="description" content="Utkarsh Khairnar's interactive cybersecurity terminal. Explore skills, projects and career goals.">
-<title>utkarsh@cloud:~ — Interactive Cybersecurity Terminal</title>
+<meta name="description" content="Utkarsh Khairnar — Computer Engineering Student | Cybersecurity. Explore security interests, projects and career goals in a safe interactive terminal.">
+<title>Utkarsh Khairnar | ASCENT U3 Cybersecurity Terminal</title>
 <style>
 :root{color-scheme:dark;--bg:#050a08;--panel:#0b110e;--panel2:#101914;--line:#20382a;--green:#4dff91;--green2:#a5ffc3;--cyan:#55e8ef;--muted:#83a18c;--amber:#ffc66d;--red:#ff8585;font:15px/1.6 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}
 *{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;min-height:100vh;color:#d7e8db;background:radial-gradient(ellipse at 50% -15%,#153322 0,transparent 55%),var(--bg);padding:clamp(12px,3vw,32px)}
@@ -34,14 +34,14 @@ main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size
 </head>
 <body>
 <div class="shell">
-<header class="topbar"><span><span class="dots"><i class="dot red"></i><i class="dot yellow"></i><i class="dot green-dot"></i></span><span class="top-title">ASCENT U3 / CYBER DEFENCE CONSOLE</span></span><span class="top-meta">LOCAL SIMULATION · NO SCANS RUN</span></header>
+<header class="topbar"><span><span class="dots"><i class="dot red"></i><i class="dot yellow"></i><i class="dot green-dot"></i></span><span class="top-title">ASCENT U3 / CYBER DEFENCE CONSOLE</span></span><span class="top-meta">LEARNING &amp; BUILDING · SAFE SIMULATION</span></header>
 <section class="brand">
 <a href="./" aria-label="Open ASCENT U3 interactive pixel logo"><img src="./assets/ascentu3-original.png" alt="Original ASCENT U3 logo"></a>
-<div><h1>utkarsh@cloud:~</h1><div class="subtitle">INTERACTIVE PROFILE TERMINAL · DETECT. PREVENT. PROTECT.</div></div>
+<div><h1>Utkarsh Khairnar</h1><div class="subtitle">COMPUTER ENGINEERING STUDENT | CYBERSECURITY · NASHIK, MAHARASHTRA, INDIA</div><div class="subtitle">DETECT. PREVENT. PROTECT.</div></div>
 <span class="status">● SESSION READY</span>
 </section>
 <main>
-<p class="intro">Welcome, visitor. Explore my background, projects and learning goals using the command line below. This is a safe, simulated terminal — commands only display profile information.</p>
+<p class="intro">Welcome to ASCENT U3. Explore my cybersecurity interests, projects and career direction. Current status: Learning &amp; Building — threat detection, security automation and AI-assisted defense. This is a safe, simulated terminal; commands only display profile information.</p>
 <section class="terminal" aria-label="Interactive terminal">
 <div class="termbar"><span>bash — visitor session</span><div class="term-actions"><button class="mini" id="clear" type="button">clear</button><button class="mini" id="replay" type="button">replay intro</button><button class="mini" id="reset" type="button">restart</button></div></div>
 <div class="output" id="output" role="log" aria-live="polite" aria-relevant="additions text"></div>
@@ -84,12 +84,12 @@ async function typeInto(node,text,token){
 function enqueueRender(render){const token=generation;animationQueue=animationQueue.then(async()=>{if(token!==generation)return;await render(token)}).catch(()=>{})}
 const projects=[
  {name:'ASCENT SAFETY',desc:'Cybersecurity analysis and threat-detection platform.',url:'https://github.com/uskascent-svg/Ascent-Safety-'},
+ {name:'Email Phishing Detection System',desc:'Email and link phishing-analysis project.',url:'https://github.com/uskascent-svg/uskascent-svg'},
+ {name:'RAIL-EYE AI Railway Safety',desc:'AI-assisted railway safety and monitoring project concept.',url:null},
+ {name:'E-Cycle / e-Recycle',desc:'Community e-waste repair, reuse, donation and recycling platform.',url:null},
+ {name:'KumbhSathi',desc:'Pilgrimage companion concept focused on safer, smoother journeys.',url:null},
  {name:'Shop Agent',desc:'AI-powered shopping agent project.',url:'https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent'},
- {name:'LeetCode Solutions',desc:'Coding practice and problem-solving repository.',url:'https://github.com/uskascent-svg/Leetcode-solution-'},
- {name:'Email Phishing Detection System',desc:'Phishing analysis project highlighted in my profile.',url:'https://github.com/uskascent-svg/uskascent-svg'},
- {name:'RAIL-EYE',desc:'AI-assisted railway safety and monitoring concept.',url:null},
- {name:'e-Recycle / E-Cycle',desc:'Community e-waste reuse, donation and recycling platform concept.',url:null},
- {name:'KumbhSathi',desc:'Pilgrimage companion concept focused on safer journeys.',url:null}
+ {name:'LeetCode Solutions',desc:'Coding practice and problem-solving repository.',url:'https://github.com/uskascent-svg/Leetcode-solution-'}
 ];
 const ascii='  █████╗ ███████╗ ██████╗███████╗███╗   ██╗████████╗\n ██╔══██╗██╔════╝██╔════╝██╔════╝████╗  ██║╚══██╔══╝\n ███████║███████╗██║     █████╗  ██╔██╗ ██║   ██║\n ██╔══██║╚════██║██║     ██╔══╝  ██║╚██╗██║   ██║\n ██║  ██║███████║╚██████╗███████╗██║ ╚████║   ██║\n ╚═╝  ╚═╝╚══════╝ ╚═════╝╚══════╝╚═╝  ╚═══╝   ╚═╝';
 function line(text='',cls=''){enqueueRender(async token=>{const p=document.createElement('p');p.className='line'+(cls?' '+cls:'');output.append(p);await typeInto(p,String(text),token);output.scrollTop=output.scrollHeight})}
@@ -98,11 +98,11 @@ function linkLine(label,url,desc){enqueueRender(async token=>{const p=document.c
 function banner(){line('ASCENT U3 :: INTERACTIVE PROFILE TERMINAL','good');line('Type "help" to list commands. Try "./ascentu3 --unlock" for a hidden reveal.','muted');line('')}
 function run(raw){const command=raw.trim();if(!command)return;line('visitor@ascent:~$ '+command,'prompt');const c=command.toLowerCase();
 if(c==='help'||c==='man'||c==='help --all'){line('AVAILABLE COMMANDS','cyan');known.filter(x=>!['clear','history'].includes(x)).forEach(x=>line('  '+x,'good'));line('  history        show commands from this session','good');line('  clear          clear the output','good');line('Tip: commands are simulated; no shell or security scan is executed.','muted')}
-else if(c==='whoami'){line('Utkarsh Khairnar','good');line('IT Engineering student · MET BKC IOE Nashik');line('Focus: Cybersecurity, Blue Team, Cloud Security and AI Security');line('Based in Nashik, India · IST (UTC+5:30)')}
-else if(c==='cat status.log'){line('[ OK ] Cybersecurity · Blue Team · Cloud Security','good');line('[ OK ] Email Phishing Detection System','good');line('[ .. ] SOC Operations · Threat Detection · AI Security','amber');line('[ OK ] Continuous learning through labs, testing and project iteration','good');line('[ .. ] Incident response, SIEM workflows and threat hunting — actively developing','amber');line('[ .. ] Cloud security posture and detection engineering — ongoing practice','amber');line('Status markers describe learning focus, not certifications or production monitoring.','muted')}
+else if(c==='whoami'){line('Utkarsh Khairnar','good');line('Computer Engineering Student | Cybersecurity');line('Location: Nashik, Maharashtra, India · IST (UTC+5:30)');line('Focus: SOC Analyst · Blue Team · Cloud Security · AI Security · Network Security');line('Status: Learning & Building','cyan')}
+else if(c==='cat status.log'){line('STATUS: Learning & Building','cyan');line('[ FOCUS ] SOC Analyst · Blue Team · Cloud Security','good');line('[ FOCUS ] AI Security · Network Security','good');line('[ BUILD ] Threat detection and security automation','good');line('[ BUILD ] AI-assisted defense and practical security projects','good');line('[ LEARN ] Incident response, SIEM workflows and threat hunting','amber');line('[ LEARN ] Cloud security posture and detection engineering','amber');line('These are learning priorities, not claims of live monitoring or certifications.','muted')}
 else if(c==='ls projects'||c==='ls ~/projects'||c==='ls projects --all'||c==='ls'){line('PROJECTS / SELECT A REPOSITORY','cyan');projects.forEach((p,i)=>{if(p.url){const el=document.createElement('p');el.className='line';const a=document.createElement('a');a.href=p.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=String(i+1).padStart(2,'0')+'  '+p.name;el.append(a,document.createTextNode(' — '+p.desc));output.append(el)}else line(String(i+1).padStart(2,'0')+'  '+p.name+' — '+p.desc,'')});line('Concept projects without a verified public repository are labelled as concepts.','muted')}
-else if(c==='./career.sh --goal'||c==='career'){line('→ Aspiring Cybersecurity / SOC Analyst','good');line('→ Learning by building · testing · defending');line('→ Goal: grow into security operations and threat intelligence')}
-else if(c==='neofetch'){line('        /\\_/\\\\     utkarsh@cloud','good');line('       ( o.o )    ----------------','good');line('        > ^ <     OS: Curious learner / Windows + Linux labs');line('                  ROLE: IT Engineering student');line('                  FOCUS: Blue Team · Cloud Security');line('                  TOOLS: Python · Linux · Bash · Docker');line('                  PRINCIPLE: Verify before you trust');line('                  MODE: Learn / Build / Test / Defend','cyan')}
+else if(c==='./career.sh --goal'||c==='career'){line('CAREER GOAL','cyan');line('→ SOC Analyst → Blue Team','good');line('→ Grow into Cloud Security and AI Security','good');line('→ Learn by building · testing · defending')}
+else if(c==='neofetch'){line('        /\\_/\\\\     utkarsh@cloud','good');line('       ( o.o )    ----------------','good');line('        > ^ <     OS: Curious learner / Windows + Linux labs');line('                  ROLE: Computer Engineering Student');line('                  LOCATION: Nashik, Maharashtra, India');line('                  FOCUS: SOC · Blue Team · Cloud · AI');line('                  ALSO: Network Security');line('                  STATUS: Learning & Building');line('                  MODE: Learn / Build / Test / Defend','cyan')}
 else if(c==='contact'||c==='contact --all'){line('CONNECT','cyan');linkLine('LinkedIn','https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/','professional profile');linkLine('GitHub','https://github.com/uskascent-svg/uskascent-svg','projects and code');linkLine('LeetCode','https://leetcode.com/u/AscentU3/','problem solving');linkLine('Email','mailto:uskascent@gmail.com','opportunities and collaboration')}
 else if(c==='sudo defend'){line('[ SIMULATION ONLY ]','amber');line('Defence mindset: observe → validate → contain → recover.','good');line('1. Confirm the alert source and preserve evidence.');line('2. Scope affected identities, endpoints and services.');line('3. Follow the approved incident-response playbook.');line('4. Document actions and verify recovery.');line('No systems were scanned or changed.','muted')}
 else if(c==='./ascentu3 --unlock'||c==='ascentu3 --unlock'||c==='sudo ./ascentu3 --unlock'){line('SECRET IDENTITY UNLOCKED','cyan');enqueueRender(async token=>{const pre=document.createElement('pre');pre.className='ascii';output.append(pre);await typeInto(pre,ascii,token)});line('ASCENT U3 — Detect. Prevent. Protect.','good');line('The original pixel artwork remains one click away:');linkLine('Open the ASCENT U3 pixel experience','./','interactive original logo')}
