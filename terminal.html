@@ -41,7 +41,7 @@ main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size
 <span class="status">● SESSION READY</span>
 </section>
 <main>
-<p class="intro">Welcome to ASCENT U3. Explore my cybersecurity interests, projects and career direction. Current status: Learning &amp; Building — threat detection, security automation and AI-assisted defense. This is a safe, simulated terminal; commands only display profile information.</p>
+<p class="intro">Welcome to ASCENT U3. Explore my cybersecurity interests, projects and career direction. Current status: Learning &amp; Building — threat detection, security automation and AI-assisted defense. This is a safe, simulated terminal. The 30 basic commands return predefined output; file operations affect only a temporary in-page virtual filesystem.</p>
 <section class="terminal" aria-label="Interactive terminal">
 <div class="termbar"><span>bash — visitor session</span><div class="term-actions"><button class="mini" id="clear" type="button">clear</button><button class="mini" id="replay" type="button">replay intro</button><button class="mini" id="reset" type="button">restart</button></div></div>
 <div class="output" id="output" role="log" aria-live="polite" aria-relevant="additions text"></div>
@@ -53,8 +53,8 @@ main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size
 </div>
 </section>
 <div class="lower">
-<section class="card"><h2>Available interactions</h2><p>Type commands, use <code>↑</code>/<code>↓</code> for history, <code>Tab</code> for command completion, or select a suggested command.</p></section>
-<section class="card"><h2>Safety notice</h2><p>This is a front-end profile experience. It does not execute shell commands, contact endpoints, perform scans, or access visitor data.</p></section>
+<section class="card"><h2>Available interactions</h2><p>Try the 30 basic commands: <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>grep</code>, <code>find</code>, <code>mkdir</code>, <code>touch</code>, <code>cp</code>, <code>mv</code>, and <code>rm</code>. Use <code>↑</code>/<code>↓</code> for history or <code>Tab</code> for completion. All output is simulated.</p></section>
+<section class="card"><h2>Safety notice</h2><p>This is a front-end simulation. Commands never run on your device or a server, and never contact endpoints or perform scans. File changes exist only in the page’s temporary virtual filesystem.</p></section>
 </div>
 </main>
 <footer class="footer"><span>BUILT TO LEARN · TEST · DEFEND</span><span><a href="https://github.com/uskascent-svg/uskascent-svg">GitHub</a><a href="https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/">LinkedIn</a><a href="mailto:uskascent@gmail.com">Email</a><a href="./terminal.html">Interactive terminal</a><a href="./">Pixel logo ↗</a></span></footer>
@@ -133,7 +133,7 @@ else if(c==='uptime'){line('up 3 days, 04:12, 1 user, load average: 0.08, 0.12, 
 else if(c==='ps'||c==='ps aux'||c==='top'){line('PID  USER     COMMAND','cyan');line('1    visitor  profile-terminal');line('42   visitor  simulated-command-router');line('84   visitor  typing-animation');line('Note: process list is fictional training output.','muted')}
 else if(c==='df'||c==='df -h'){line('Filesystem      Size  Used Avail Use% Mounted on','cyan');line('profile-fs      10G   2.1G  7.9G  21% /home','good');line('Values are simulated, not your device storage.','muted')}
 else if(c==='free'||c==='free -h'){line('              total   used   free','cyan');line('Mem (simulated)  8Gi   2Gi    6Gi','good');line('Values are fictional terminal output.','muted')}
-else if(c==='env'){line('USER=visitor','good');line('HOME=/home/visitor','good');line('SHELL=/bin/profile-sim','good');line('MODE=SIMULATED_READ_ONLY','good')}
+else if(c==='env'){line('USER=visitor','good');line('HOME=/home/visitor','good');line('SHELL=/bin/profile-sim','good');line('MODE=SIMULATED_SANDBOX','good')}
 else if(c.startsWith('mkdir ')){const p=resolvePath(command.trim().slice(6).trim());if(virtualDirs.has(p)||virtualFiles[p])line('mkdir: already exists: '+p,'amber');else{virtualDirs.add(p);line('created simulated directory: '+p,'good')}}
 else if(c.startsWith('touch ')){const p=resolvePath(command.trim().slice(6).trim());if(!command.trim().slice(6).trim())line('Usage: touch FILE','amber');else{if(virtualFiles[p]===undefined)virtualFiles[p]='';line('created/updated simulated file: '+p,'good')}}
 else if(c.startsWith('cp ')){const a=command.trim().split(/\s+/).slice(1),src=resolvePath(a[0]),dst=resolvePath(a[1]);if(!a[0]||!a[1])line('Usage: cp SOURCE DEST','amber');else if(virtualFiles[src]===undefined)line('cp: source not found: '+a[0],'bad');else{virtualFiles[dst]=virtualFiles[src];line('copied in virtual filesystem: '+a[0]+' -> '+a[1],'good')}}
@@ -146,7 +146,7 @@ else if(c==='sudo'){line('Permission denied: this profile terminal does not run 
 else if(c==='exit'||c==='logout'){line('Visitor session stays open. Explore another command when ready.','muted')}
 else if(c.startsWith('cat ')){line('File not found in this simulated profile. Try "cat status.log".','amber')}
 else if(c.startsWith('git ')){line('Git commands are not executed here. Explore the linked repositories with "ls projects".','amber')}
-else if(c.startsWith('rm ')||c.startsWith('curl ')||c.startsWith('ssh ')||c.startsWith('nmap ')||c.startsWith('python ')||c.startsWith('npm ')){line('Command blocked: this is a safe, read-only profile simulation, not a real shell.','bad')}
+else if(c.startsWith('rm ')||c.startsWith('curl ')||c.startsWith('ssh ')||c.startsWith('nmap ')||c.startsWith('python ')||c.startsWith('npm ')){line('Command blocked: this is a safe profile simulation, not a real shell.','bad')}
 else {line('command not found: '+command,'bad');line('Type "help" to see available commands.','muted')}
 }
 form.addEventListener('submit',e=>{e.preventDefault();const value=input.value;const c=value.trim().toLowerCase();if(!c)return;history.push(value.trim());historyIndex=history.length;run(value);input.value='';});
