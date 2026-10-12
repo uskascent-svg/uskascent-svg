@@ -1,5 +1,14 @@
 <div align="center">
 
+<pre>
+██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗
+██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║
+██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║
+██║   ██║   ██║   ██╔═██╗ ██╔══██║██╔══██╗╚════██║██╔══██║
+╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║
+ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+</pre>
+
 <img src="./assets/terminal-header.svg" width="100%" alt="Animated terminal introduction for Utkarsh, cybersecurity interests, project and career goal"/>
 
 **Utkarsh Khairnar**
