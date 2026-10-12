@@ -1,37 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 330" role="img" aria-labelledby="title desc">
-<title id="title">ASCENTU3 animated ASCII logo</title>
-<desc id="desc">A cyan and teal ASCII rendition of the ASCENTU3 logo, with a looping shimmer and pixel drift.</desc>
-<defs>
-  <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#087f8c"/>
-    <stop offset=".45" stop-color="#27e1e5"/>
-    <stop offset=".8" stop-color="#18b9c6"/>
-    <stop offset="1" stop-color="#07515c"/>
-  </linearGradient>
-  </defs>
-<rect width="1100" height="330" rx="12" fill="#050b0e"/>
-<ellipse cx="550" cy="165" rx="480" ry="115" fill="#00353a" opacity=".12"/>
-<g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="17" font-weight="700" letter-spacing="0.8" xml:space="preserve" fill="url(#ink)">
-  <text x="24" y="42">                                                                        </text>
-  <text x="24" y="56.1">                                                                        </text>
-  <text x="24" y="70.2">            -.                                                          </text>
-  <text x="24" y="84.3">           :=-                                                          </text>
-  <text x="24" y="98.4">          .-==:                                                         </text>
-  <text x="24" y="112.5">          --===.     ..................                                 </text>
-  <text x="24" y="126.6">         :---=+- .:-+**:     .      .         ...                       </text>
-  <text x="24" y="140.7">        .--:.=++:..:+*-:---=-.:====-.-=====-:-...:-:=----::.   . ....   </text>
-  <text x="24" y="154.8">        :--  :++-.-+=.:*****=:*****=.+++++*-+#-  ++-++*==:=:  .-....... </text>
-  <text x="24" y="168.89999999999998">       .--. . ::-=-.  +*----.++.....:-----..**#-.*=  -+. .=.  .-  .. .. </text>
-  <text x="24" y="183">      .::: :=-----. ..-****#-*-    .=*****.:#:=#=*- .+=  :=.  ::  ....  </text>
-  <text x="24" y="197.1">      ::: .-==.:+*- ..:---=#-*+----.------:-#..=##: .*-  :+:..-: ..  ..  </text>
-  <text x="24" y="211.2">      ...:::-: .+**. :*****=.-####+-####*#--+. .=*. .+:  .==--: .::...  </text>
-  <text x="24" y="225.29999999999998">  ....::.       :**=............................... ..                  </text>
-  <text x="24" y="239.4">    .::.         =**: ...................... ......                     </text>
-  <text x="24" y="253.5">    .:.          .+*+.............................                      </text>
-  <text x="24" y="267.6">                  :::........ ........ ....                            </text>
-  <text x="24" y="281.7">                      ...                                               </text>
-  <animateTransform attributeName="transform" type="translate" values="0 0;1 0;0 0;0 1;0 0" dur="6s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values=".9;1;.94;1;.9" dur="4.5s" repeatCount="indefinite"/>
-</g>
-<rect x="14" y="14" width="1072" height="302" rx="8" fill="none" stroke="#0d737b" stroke-opacity=".45"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">AscentU3 digital pixel logo</title><desc id="desc">A cyan and ice-white AscentU3 wordmark surrounded by animated data streams and particles.</desc>
+<defs><radialGradient id="bg"><stop stop-color="#06232b"/><stop offset="1" stop-color="#02080d"/></radialGradient><linearGradient id="ink" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#d9fbff"/><stop offset=".5" stop-color="#38efff"/><stop offset="1" stop-color="#078da4"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#34eaff" opacity=".8"/></pattern><style>@keyframes drift{to{transform:translateX(-70px)}}@keyframes pulse{0%,100%{opacity:.6}50%{opacity:1}}.stream{animation:drift 9s linear infinite}.word{animation:pulse 3s ease-in-out infinite}@media(prefers-reduced-motion:reduce){.stream,.word{animation:none}}</style></defs>
+<rect width="1200" height="360" rx="12" fill="url(#bg)"/>
+<g fill="none" stroke="#14dff4" stroke-width="1" opacity=".5" class="stream"><path d="M-30 85 Q180 210 350 140 T720 120 T1240 40"/><path d="M-30 265 Q180 175 380 250 T760 260 T1240 205" stroke-dasharray="2 7"/><path d="M-30 305 Q200 220 420 300 T840 300 T1240 250" stroke-dasharray="1 8"/></g>
+<g fill="url(#dots)" opacity=".8"><path d="M0 40 Q170 130 320 120 L320 190 Q160 205 0 120Z"/><path d="M820 230 Q1010 170 1200 70 L1200 120 Q1030 245 820 275Z"/></g>
+<g class="word" filter="url(#glow)"><text x="600" y="213" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="142" font-weight="900" letter-spacing="-5" fill="url(#ink)">AscentU3</text><text x="600" y="213" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="142" font-weight="900" letter-spacing="-5" fill="none" stroke="#bdfaff" stroke-width=".8" opacity=".7">AscentU3</text></g>
+<g fill="#52f4ff"><circle cx="112" cy="70" r="2"/><circle cx="176" cy="106" r="1.5"/><circle cx="1000" cy="90" r="2"/><circle cx="1080" cy="260" r="1.5"/><circle cx="270" cy="300" r="1.6"/><circle cx="900" cy="310" r="1.8"/></g>
+<path d="M70 326 H1130" stroke="#1b7885" stroke-opacity=".6"/><text x="600" y="346" text-anchor="middle" fill="#76b9c1" font-family="monospace" font-size="10" letter-spacing="4">DETECT · BUILD · ASCEND</text>
 </svg>
