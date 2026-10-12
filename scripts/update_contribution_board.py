@@ -75,7 +75,7 @@ def main():
     left, top = 62, 64
     step = cell + gap
     width = left + weeks * step + 24
-    height = 190
+    height = 210
     total = sum(parser.days.get((START + timedelta(days=i)).isoformat(), {}).get("count", 0) for i in range(365))
 
     lines = [
