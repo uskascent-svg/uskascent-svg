@@ -11,7 +11,10 @@ main{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;align-items
 header,footer{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#70aeb7;font-size:clamp(9px,1.05vw,12px);letter-spacing:.18em;text-transform:uppercase}
 .brand{color:#49f4ff;font-weight:800}#stage{position:relative;width:100%;height:min(76vh,760px);min-height:360px;overflow:hidden;background:#020812;touch-action:pan-y}
 #fx{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;z-index:0}.art-image{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none;pointer-events:none}
-.hint{color:#8cbec5;letter-spacing:.07em;text-align:center;font-size:clamp(10px,1.2vw,13px)}a{color:#59efff;text-decoration:none}a:hover{text-decoration:underline}
+.hint{color:#8cbec5;letter-spacing:.07em;text-align:center;font-size:clamp(10px,1.2vw,13px)}
+.terminal-launch{justify-self:center;display:inline-flex;align-items:center;gap:10px;padding:11px 17px;border:1px solid #246d57;border-radius:8px;background:linear-gradient(110deg,#09251b,#07131a);color:#9dffc3;font-size:clamp(10px,1.15vw,13px);letter-spacing:.08em;text-align:center;box-shadow:0 0 22px #38ff8010;transition:border-color .2s,box-shadow .2s,transform .2s}
+.terminal-launch:hover{border-color:#49f4ff;box-shadow:0 0 24px #49f4ff20;text-decoration:none;transform:translateY(-1px)}
+a{color:#59efff;text-decoration:none}a:hover{text-decoration:underline}
 @media(max-width:560px){header,footer{letter-spacing:.08em}#stage{height:60vh;min-height:340px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style>
@@ -21,6 +24,7 @@ header,footer{display:flex;justify-content:space-between;gap:12px;align-items:ce
 <section id="stage" aria-label="Original AscentU3 logo with interactive pixel effects"><canvas id="fx" aria-hidden="true"></canvas><img class="art-image" src="./assets/ascentu3-original.png" alt="Original AscentU3 logo artwork" draggable="false"></section>
 <footer><span>DETECT · BUILD · ASCEND</span><span><a href="https://github.com/uskascent-svg/uskascent-svg">GITHUB ↗</a></span></footer>
 <div class="hint">PIXELS DRIFT CONTINUOUSLY · TOUCH OR MOVE TO INTERACT</div>
+<a class="terminal-launch" href="./terminal.html" aria-label="Launch the interactive cybersecurity terminal"><span aria-hidden="true">▸_</span> OPEN INTERACTIVE CYBERSECURITY TERMINAL <span aria-hidden="true">↗</span></a>
 </main>
 <script>
 (()=>{'use strict';
