@@ -43,7 +43,7 @@ Currently exploring Blue Team operations, threat intelligence, network security,
 
 Problem solving is **built on trust. Driven by results.**
 
-**[View my LeetCode profile →](https://leetcode.com/u/AscentU3/)**
+**[LeetCode · AscentU3](https://leetcode.com/u/AscentU3/)**
 
 ## `❯ ls ~/projects --featured`
 
