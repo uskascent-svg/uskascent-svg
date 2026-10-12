@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a 365-day chess-inspired SVG from GitHub's public contribution calendar."""
+"""Generate a large, labeled GitHub contribution calendar SVG."""
 from datetime import date, timedelta
 from html.parser import HTMLParser
 from urllib.request import Request, urlopen
@@ -9,13 +9,11 @@ import re
 import sys
 
 USERNAME = os.environ.get("GITHUB_USERNAME", "uskascent-svg")
-OUTPUT = "assets/chess-contributions.svg"
+OUTPUT = "assets/contribution-activity.svg"
 TODAY = date.today()
 START = TODAY - timedelta(days=364)
 URL = f"https://github.com/users/{USERNAME}/contributions?from={START.isoformat()}&to={TODAY.isoformat()}"
-COLORS = ["#9c886b", "#b7d7a8", "#75b86d", "#3f8c50", "#1d5e37"]
-LIGHT = "#e8dcc8"
-DARK = "#9c886b"
+GREEN = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 
 
 class CalendarParser(HTMLParser):
@@ -23,8 +21,8 @@ class CalendarParser(HTMLParser):
         super().__init__()
         self.days = {}
         self.current_date = None
-        self.title_depth = 0
-        self.title_text = ""
+        self.tooltip_depth = 0
+        self.tooltip_text = ""
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -41,81 +39,93 @@ class CalendarParser(HTMLParser):
                     "level": min(4, max(0, level)),
                 }
         if tag == "tool-tip" and self.current_date:
-            self.title_depth = 1
-            self.title_text = ""
+            self.tooltip_depth = 1
+            self.tooltip_text = ""
 
     def handle_data(self, data):
-        if self.title_depth:
-            self.title_text += data
+        if self.tooltip_depth:
+            self.tooltip_text += data
 
     def handle_endtag(self, tag):
-        if tag == "tool-tip" and self.title_depth:
-            text = " ".join(self.title_text.split())
-            if self.current_date and text:
-                match = re.search(r"(\d[\d,]*) contributions?", text)
-                if match:
-                    self.days[self.current_date]["count"] = int(match.group(1).replace(",", ""))
-            self.title_depth = 0
-            self.current_date = None
+        if tag == "tool-tip" and self.tooltip_depth:
+            text = " ".join(self.tooltip_text.split())
+            match = re.search(r"(\d[\d,]*) contributions?", text)
+            if self.current_date and match and self.current_date in self.days:
+                self.days[self.current_date]["count"] = int(match.group(1).replace(",", ""))
+            self.tooltip_depth = 0
 
 
 def main():
-    request = Request(URL, headers={"User-Agent": "uskascent-svg-contribution-board/1.0"})
+    request = Request(URL, headers={"User-Agent": "uskascent-svg-contribution-calendar/1.0"})
     with urlopen(request, timeout=20) as response:
         html = response.read().decode("utf-8", errors="replace")
     parser = CalendarParser()
     parser.feed(html)
     if len(parser.days) < 300:
         raise RuntimeError(
-            f"Expected at least 300 dates in the public GitHub contribution calendar; "
-            f"parsed only {len(parser.days)}. Keeping the last committed SVG."
+            f"Expected at least 300 dates from GitHub; parsed {len(parser.days)}. "
+            "Keeping the previously committed calendar."
         )
 
-    days = []
-    for offset in range(365):
-        current = START + timedelta(days=offset)
-        item = parser.days.get(current.isoformat(), {"count": 0, "level": 0})
-        days.append((current, item["count"], item["level"]))
+    # Align every column to Sunday so weekday labels and dates line up.
+    grid_start = START - timedelta(days=(START.weekday() + 1) % 7)
+    grid_end = TODAY + timedelta(days=(5 - TODAY.weekday()) % 7)
+    weeks = ((grid_end - grid_start).days + 1) // 7
+    cell, gap = 14, 3
+    left, top = 62, 64
+    step = cell + gap
+    width = left + weeks * step + 24
+    height = 190
+    total = sum(parser.days.get((START + timedelta(days=i)).isoformat(), {}).get("count", 0) for i in range(365))
 
-    # 53 columns × 7 rows gives a compact, GitHub-calendar-style rectangle.
-    cell, gap = 28, 5
-    cols, rows = 26, 14
-    x0, y0 = 28, 90
-    board_w = cols * cell
-    total = sum(count for _, count, _ in days)
-    width, height = 800, 510
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
-        '<title id="title">Live 365-day GitHub contributions for ' + escape(USERNAME) + '</title>',
-        '<desc id="desc">A 365-day rectangular contribution board with 365 squares. Each square is one date; color intensity reflects public GitHub contribution activity. Hover over a square for its date and count. Updated daily by GitHub Actions.</desc>',
-        '<rect width="100%" height="100%" rx="10" fill="#171411" stroke="#8d6b3f"/>',
-        '<text x="24" y="30" font-family="monospace" font-size="18" fill="#f1d29a">365-DAY CONTRIBUTION CHESSBOARD</text>',
-        f'<text x="24" y="52" font-family="monospace" font-size="13" fill="#c9b18b">{escape(USERNAME)} · {total:,} contributions in the last 365 days · refreshed {TODAY.isoformat()}</text>',
+        f'<title id="title">GitHub contribution activity for {escape(USERNAME)}</title>',
+        '<desc id="desc">A large 365-day GitHub contribution calendar with month and weekday labels. Hover over a square to see the exact date and contribution count.</desc>',
+        '<rect width="100%" height="100%" rx="10" fill="#0d1117" stroke="#30363d"/>',
+        '<text x="20" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#f0f6fc">CONTRIBUTION ACTIVITY</text>',
+        f'<text x="20" y="47" font-family="Arial, sans-serif" font-size="11" fill="#8b949e">{total:,} contributions · {START.isoformat()} — {TODAY.isoformat()}</text>',
     ]
-    for index, (day, count, level) in enumerate(days):
-        col, row = index // rows, index % rows
-        x, y = x0 + col * cell, y0 + row * cell
-        base = LIGHT if (col + row) % 2 == 0 else DARK
-        fill = base if count == 0 else COLORS[max(1, level)]
-        label = f"{day.isoformat()}: {count} contribution" + ("" if count == 1 else "s")
-        lines.append(
-            f'<g><title>{escape(label)}</title><rect x="{x}" y="{y}" width="{cell-gap}" height="{cell-gap}" rx="1.5" fill="{fill}" stroke="#171411" stroke-width="0.4"/></g>'
-        )
-    legend_y = y0 + rows * cell + 13
-    lines.extend([
-        f'<text x="28" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">LESS</text>',
-    ])
-    for i, color in enumerate([LIGHT, "#b7d7a8", "#75b86d", "#3f8c50", "#1d5e37"]):
-        lines.append(f'<rect x="{82 + i*20}" y="{legend_y-7}" width="15" height="15" rx="2" fill="{color}"/>')
-    lines.extend([
-        f'<text x="{190}" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">MORE</text>',
-        '<text x="772" y="480" text-anchor="end" font-family="monospace" font-size="10" fill="#c9b18b">LIVE · DAILY</text>',
-        '</svg>',
-    ])
+
+    # Month labels sit above the week in which each month begins.
+    current = grid_start
+    while current <= grid_end:
+        if current.day == 1:
+            col = (current - grid_start).days // 7
+            x = left + col * step
+            lines.append(f'<text x="{x}" y="61" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">{current.strftime("%b")}</text>')
+        current += timedelta(days=1)
+
+    weekday_names = [(1, "Mon"), (3, "Wed"), (5, "Fri")]
+    for row, name in weekday_names:
+        y = top + row * step + cell - 2
+        lines.append(f'<text x="20" y="{y}" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">{name}</text>')
+
+    current = grid_start
+    while current <= grid_end:
+        col = (current - grid_start).days // 7
+        row = (current.weekday() + 1) % 7
+        if START <= current <= TODAY:
+            item = parser.days.get(current.isoformat(), {"count": 0, "level": 0})
+            level = item["level"]
+            x, y = left + col * step, top + row * step
+            label = f'{current.isoformat()}: {item["count"]} contribution' + ("" if item["count"] == 1 else "s")
+            lines.append(
+                f'<g><title>{escape(label)}</title><rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="3" fill="{GREEN[level]}"/></g>'
+            )
+        current += timedelta(days=1)
+
+    legend_y = top + 7 * step + 8
+    lines.append(f'<text x="{left}" y="{legend_y}" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">Less</text>')
+    for i, color in enumerate(GREEN):
+        lines.append(f'<rect x="{left + 34 + i * 17}" y="{legend_y - 10}" width="12" height="12" rx="2" fill="{color}"/>')
+    lines.append(f'<text x="{left + 126}" y="{legend_y}" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">More</text>')
+    lines.append('</svg>')
+
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as file:
         file.write("\n".join(lines) + "\n")
-    print(f"Updated {OUTPUT}: {len(days)} dates, {total} contributions.")
+    print(f"Updated {OUTPUT}: {len(parser.days)} dates, {total} contributions.")
 
 
 if __name__ == "__main__":
