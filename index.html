@@ -2,66 +2,70 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#02080d">
-<title>AscentU3 — Interactive Digital Art</title>
+<meta name="theme-color" content="#020812">
+<title>AscentU3 — Digital Pixel Art</title>
 <style>
-:root{color-scheme:dark;background:#02080d;color:#d9fbff;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#02080d}body{min-height:100svh;overflow-x:hidden}
-main{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;align-items:center;padding:clamp(12px,3vw,34px);gap:12px}
-header,footer{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#70aeb7;font-size:clamp(9px,1.1vw,12px);letter-spacing:.18em;text-transform:uppercase}
-.brand{color:#49f4ff;font-weight:800}#stage{position:relative;width:100%;min-height:48vh;height:min(72vh,760px);border:1px solid #103941;border-radius:16px;overflow:hidden;background:radial-gradient(ellipse at 50% 48%,#06232b 0,#02080d 68%);box-shadow:0 0 70px #00e5ff0b,inset 0 0 50px #00dfff08;touch-action:pan-y}
+:root{color-scheme:dark;background:#020812;color:#d9fbff;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#020812}body{min-height:100svh;overflow-x:hidden}
+main{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;align-items:center;padding:clamp(10px,2.5vw,28px);gap:10px}
+header,footer{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#70aeb7;font-size:clamp(9px,1.05vw,12px);letter-spacing:.18em;text-transform:uppercase}
+.brand{color:#49f4ff;font-weight:800}#stage{position:relative;width:100%;height:min(76vh,760px);min-height:360px;overflow:hidden;background:#020812;touch-action:pan-y}
 canvas{display:block;width:100%;height:100%;touch-action:pan-y}
-.hint{color:#9ac7cc;letter-spacing:.07em;text-align:center;font-size:clamp(10px,1.2vw,13px)}
-a{color:#59efff;text-decoration:none}a:hover{text-decoration:underline}
+.hint{color:#8cbec5;letter-spacing:.07em;text-align:center;font-size:clamp(10px,1.2vw,13px)}a{color:#59efff;text-decoration:none}a:hover{text-decoration:underline}
+@media(max-width:560px){header,footer{letter-spacing:.08em}#stage{height:60vh;min-height:340px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style>
 </head>
-<body>
-<main>
-<header><span class="brand">ASCENTU3 <span style="color:#8baeb4">/ DIGITAL FIELD</span></span><span>INTERACTIVE ART · 01</span></header>
-<section id="stage" aria-label="Interactive animated AscentU3 digital logo"><canvas id="art"></canvas></section>
-<footer><span>DETECT · BUILD · ASCEND</span><span><a href="https://github.com/uskascent-svg/uskascent-svg">BACK TO GITHUB ↗</a></span></footer>
-<div class="hint">MOVE · TOUCH · SCROLL — DISTURB THE PIXELS, THEN WATCH THEM REFORM</div>
+<body><main>
+<header><span class="brand">ASCENTU3 <span style="color:#8baeb4">/ DIGITAL FIELD</span></span><span>PIXEL ART · 01</span></header>
+<section id="stage" aria-label="Interactive AscentU3 digital pixel logo"><canvas id="art"></canvas></section>
+<footer><span>DETECT · BUILD · ASCEND</span><span><a href="https://github.com/uskascent-svg/uskascent-svg">GITHUB ↗</a></span></footer>
+<div class="hint">TOUCH · MOVE · SCROLL — PIXELS REACT GENTLY AND SETTLE BACK</div>
 </main>
 <script>
 (()=>{'use strict';
 const canvas=document.querySelector('#art'),stage=document.querySelector('#stage'),ctx=canvas.getContext('2d');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let W=1200,H=650,dpr=1,pts=[],pointer={x:-1000,y:-1000,active:false,energy:0},scrollEnergy=0,lastY=window.scrollY;
-const cyan='#38efff',white='#d9fbff';
-function resize(){const r=stage.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);W=Math.max(320,r.width);H=Math.max(360,r.height);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);build()}
+let W=1200,H=600,dpr=1,particles=[],pointer={x:-999,y:-999,active:false,power:0},scrollEnergy=0,lastY=window.scrollY;
+function resize(){const r=stage.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);W=Math.max(320,r.width);H=Math.max(340,r.height);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);build()}
 function build(){
- pts=[];const off=document.createElement('canvas');off.width=1200;off.height=360;const o=off.getContext('2d');
- o.clearRect(0,0,1200,360);o.textAlign='center';o.textBaseline='middle';
- o.font='900 230px Arial, Helvetica, sans-serif';o.fillText('AscentU3',600,185);
- const data=o.getImageData(0,0,1200,360).data;
- const sx=W/1200,sy=H/650,step=5;
- for(let y=0;y<360;y+=step)for(let x=0;x<1200;x+=step){const i=(y*1200+x)*4;if(data[i+3]>80)pts.push({ox:x*sx,oy:(y+105)*sy,x:x*sx,y:(y+105)*sy,vx:0,vy:0,size:1.1+Math.random()*1.4,phase:Math.random()*6.28,bright:Math.random()})}
+ particles=[];
+ const off=document.createElement('canvas');off.width=1200;off.height=600;const o=off.getContext('2d');
+ // The angular A emblem and wordmark follow the composition of the reference artwork.
+ o.fillStyle='#fff';
+ o.font='900 225px Arial,Helvetica,sans-serif';o.textAlign='left';o.textBaseline='middle';o.fillText('AscentU3',280,300);
+ // Pixel-grid angular A emblem at the left.
+ o.font='900 310px Arial,Helvetica,sans-serif';o.textAlign='center';o.fillText('A',150,300);
+ const data=o.getImageData(0,0,1200,600).data,step=4.5,sx=W/1200,sy=H/600;
+ for(let y=0;y<600;y+=step)for(let x=0;x<1200;x+=step){const i=(Math.floor(y)*1200+Math.floor(x))*4;if(data[i+3]>90){const xx=x*sx,yy=y*sy;particles.push({ox:xx,oy:yy,x:xx,y:yy,vx:0,vy:0,size:1+Math.random()*1.25,phase:Math.random()*6.28,white:Math.random()>.64})}}
 }
-function pointerAt(e){const r=canvas.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.active=true;pointer.energy=1}
+function point(e){const r=canvas.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.active=true;pointer.power=1}
 function release(){pointer.active=false}
-canvas.addEventListener('pointermove',pointerAt);canvas.addEventListener('pointerdown',pointerAt);canvas.addEventListener('pointerup',release);canvas.addEventListener('pointercancel',release);canvas.addEventListener('pointerleave',release);
-stage.addEventListener('wheel',e=>{scrollEnergy=Math.min(1,scrollEnergy+Math.min(0.5,Math.abs(e.deltaY)/700));pointer.x=e.offsetX;pointer.y=e.offsetY;pointer.active=true;setTimeout(()=>{pointer.active=false},220)});
-window.addEventListener('scroll',()=>{scrollEnergy=Math.min(1,scrollEnergy+Math.min(.45,Math.abs(window.scrollY-lastY)/180));lastY=window.scrollY},{passive:true});
+canvas.addEventListener('pointermove',point);canvas.addEventListener('pointerdown',point);canvas.addEventListener('pointerup',release);canvas.addEventListener('pointercancel',release);canvas.addEventListener('pointerleave',release);
+stage.addEventListener('wheel',e=>{scrollEnergy=Math.min(1,scrollEnergy+Math.min(.4,Math.abs(e.deltaY)/900));pointer.x=e.offsetX;pointer.y=e.offsetY;pointer.active=true;pointer.power=.45;setTimeout(()=>pointer.active=false,180)},{passive:true});
+window.addEventListener('scroll',()=>{scrollEnergy=Math.min(1,scrollEnergy+Math.min(.3,Math.abs(window.scrollY-lastY)/220));lastY=window.scrollY},{passive:true});
 window.addEventListener('resize',resize);
 function draw(t){
- ctx.clearRect(0,0,W,H);const bg=ctx.createRadialGradient(W*.5,H*.48,5,W*.5,H*.48,W*.7);bg.addColorStop(0,'#06222a');bg.addColorStop(.65,'#030b11');bg.addColorStop(1,'#02070b');ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
- // Flowing dotted data ribbons
- for(let band=0;band<8;band++){ctx.beginPath();for(let x=-20;x<W+30;x+=8){const y=H*(.18+band*.095)+Math.sin(x*.008+t*.00045+band)*H*.045+Math.sin(x*.018-t*.00032)*H*.012;if(x===-20)ctx.moveTo(x,y);else ctx.lineTo(x,y)}ctx.strokeStyle='rgba(20,220,244,'+(.035+band%3*.012)+')';ctx.lineWidth=1;ctx.stroke()}
- // Wordmark pixels respond to pointer and scroll, then spring back
- for(const p of pts){let dx=p.x-pointer.x,dy=p.y-pointer.y,dist=Math.hypot(dx,dy)||1;if(pointer.active&&dist<150){const force=(150-dist)/150*(8+pointer.energy*12);p.vx+=dx/dist*force;p.vy+=dy/dist*force}
- if(scrollEnergy>.01){p.vy+=Math.sin(p.ox*.02+t*.003)*scrollEnergy*.18;p.vx+=Math.cos(p.oy*.02+t*.002)*scrollEnergy*.12}
- if(!reduced){p.vx+=(p.ox-p.x)*.035;p.vy+=(p.oy-p.y)*.035;p.vx*=.86;p.vy*=.86;p.x+=p.vx;p.y+=p.vy}
- const shimmer=.55+.45*Math.sin(t*.002+p.phase);ctx.fillStyle=p.bright>.7?'rgba(220,253,255,'+shimmer+')':'rgba(45,231,248,'+(shimmer*.95)+')';ctx.fillRect(p.x,p.y,p.size*1.35,p.size*1.35)
+ ctx.clearRect(0,0,W,H);
+ const bg=ctx.createRadialGradient(W*.52,H*.48,5,W*.52,H*.48,W*.78);bg.addColorStop(0,'#061c2a');bg.addColorStop(.55,'#030e1b');bg.addColorStop(1,'#020812');ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+ // Fine, flowing dotted ribbons — restrained so the wordmark stays crisp.
+ for(let b=0;b<15;b++){const base=H*(.08+b*.061);for(let x=-12;x<W+12;x+=7){const wave=Math.sin(x*.008+t*.00016+b*.5)*H*.035+Math.sin(x*.018-t*.00012+b)*H*.012;const y=base+wave;const alpha=.10+.12*(.5+.5*Math.sin(x*.025+t*.0008+b));ctx.fillStyle=b%4===0?'rgba(221,252,255,'+alpha+')':'rgba(39,226,248,'+alpha+')';ctx.fillRect(x,y,1.6,1.6)}}
+ // A few long dotted arcs echo the reference's data-stream trails.
+ for(let k=0;k<4;k++){ctx.beginPath();for(let x=-10;x<W+10;x+=5){const y=H*(.2+k*.2)+Math.sin(x*.006+t*.0002+k*1.4)*H*.07;if(x===-10)ctx.moveTo(x,y);else ctx.lineTo(x,y)}ctx.strokeStyle='rgba(35,218,242,.12)';ctx.lineWidth=1;ctx.stroke()}
+ for(const p of particles){
+   const dx=p.x-pointer.x,dy=p.y-pointer.y,d=Math.hypot(dx,dy)||1;
+   if(pointer.active&&d<95){const f=(95-d)/95*(1.8+pointer.power*3.2);p.vx+=dx/d*f;p.vy+=dy/d*f}
+   if(scrollEnergy>.01){p.vx+=Math.sin(p.ox*.015+t*.0007)*scrollEnergy*.035;p.vy+=Math.cos(p.oy*.02+t*.0006)*scrollEnergy*.035}
+   if(!reduced){p.vx+=(p.ox-p.x)*.045;p.vy+=(p.oy-p.y)*.045;p.vx*=.82;p.vy*=.82;p.x+=p.vx;p.y+=p.vy}
+   const shimmer=.7+.3*Math.sin(t*.0012+p.phase);
+   ctx.fillStyle=p.white?'rgba(228,253,255,'+shimmer+')':'rgba(43,230,249,'+shimmer+')';
+   ctx.fillRect(p.x,p.y,p.size,p.size);
  }
- // Ascending particle trails around the mark
- for(let i=0;i<150;i++){const x=(i*83+t*(.012+(i%4)*.004))%(W+40)-20;const y=(i*47-t*(.025+(i%5)*.004)+H*2)%(H+30)-15;const a=.12+.22*(.5+.5*Math.sin(t*.001+i));ctx.fillStyle='rgba(44,232,255,'+a+')';ctx.fillRect(x,y,1.5+(i%3),1.5+(i%3))}
- // Tiny live status line
- ctx.font='10px ui-monospace,monospace';ctx.fillStyle='rgba(110,223,234,.55)';ctx.fillText('PIXEL MATRIX // LIVE',18,H-20);ctx.textAlign='right';ctx.fillText('SIGNAL '+Math.round(70+15*Math.sin(t*.001))+'%',W-18,H-20);ctx.textAlign='left';
- pointer.energy*=.94;scrollEnergy*=.965;
+ // Sparse floating pixels add motion without overpowering the logo.
+ for(let i=0;i<95;i++){const x=(i*97+t*(.004+(i%4)*.0018))%(W+20)-10;const y=(i*53-t*(.008+(i%5)*.0018)+H*2)%(H+20)-10;ctx.fillStyle='rgba(55,224,246,'+(.10+.12*(.5+.5*Math.sin(t*.001+i))+scrollEnergy*.12)+')';ctx.fillRect(x,y,1.2+(i%2),1.2+(i%2))}
+ pointer.power*=.92;scrollEnergy*=.97;
  if(!reduced)requestAnimationFrame(draw)
 }
 resize();requestAnimationFrame(draw);
 })();
-</script>
-</body></html>
+</script></body></html>
