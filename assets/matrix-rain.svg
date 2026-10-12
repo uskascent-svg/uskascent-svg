@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180" role="img" aria-labelledby="title desc">
+  <title id="title">ASCENT U3 Matrix rain</title>
+  <desc id="desc">A dark green cyber-themed banner with cascading green digital pixels.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#020805"/>
+      <stop offset="1" stop-color="#06150c"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8ffe2"/>
+      <stop offset=".22" stop-color="#55ff88"/>
+      <stop offset="1" stop-color="#08752f" stop-opacity=".1"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#0c6b32" stroke-opacity=".18" stroke-width=".7"/>
+    </pattern>
+    <style>
+      .rain { font: 14px monospace; fill: #24ff70; opacity: .72; }
+      .bright { fill: url(#glow); opacity: .95; }
+      .column { animation: fall var(--speed, 7s) linear infinite; }
+      @keyframes fall { from { transform: translateY(-180px); } to { transform: translateY(180px); } }
+      @media (prefers-reduced-motion: reduce) { .column { animation: none; } }
+    </style>
+  </defs>
+  <rect width="1200" height="180" rx="8" fill="url(#bg)"/>
+  <rect width="1200" height="180" rx="8" fill="url(#grid)"/>
+  <g class="rain">
+    <g class="column" style="--speed:6.2s"><animateTransform attributeName="transform" type="translate" values="0,-180;0,180" dur="6.2s" repeatCount="indefinite"/><text x="22" y="18">1<tspan x="22" dy="17">0</tspan><tspan x="22" dy="17">1</tspan><tspan x="22" dy="17">⌁</tspan><tspan x="22" dy="17">0</tspan><tspan x="22" dy="17">1</tspan><tspan x="22" dy="17">0</tspan><tspan x="22" dy="17">⌗</tspan><tspan x="22" dy="17">1</tspan><tspan x="22" dy="17">0</tspan><tspan x="22" dy="17">1</tspan><tspan x="22" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-260;0,180" dur="8.4s" begin="-3s" repeatCount="indefinite"/><text x="76" y="18">0<tspan x="76" dy="17">1</tspan><tspan x="76" dy="17">⌘</tspan><tspan x="76" dy="17">0</tspan><tspan x="76" dy="17">1</tspan><tspan x="76" dy="17">1</tspan><tspan x="76" dy="17">0</tspan><tspan x="76" dy="17">⌁</tspan><tspan x="76" dy="17">1</tspan><tspan x="76" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-200;0,180" dur="5.7s" begin="-1.8s" repeatCount="indefinite"/><text x="132" y="18">⌗<tspan x="132" dy="17">1</tspan><tspan x="132" dy="17">0</tspan><tspan x="132" dy="17">0</tspan><tspan x="132" dy="17">⌘</tspan><tspan x="132" dy="17">1</tspan><tspan x="132" dy="17">0</tspan><tspan x="132" dy="17">1</tspan><tspan x="132" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-220;0,180" dur="7.3s" begin="-4s" repeatCount="indefinite"/><text x="192" y="18">1<tspan x="192" dy="17">0</tspan><tspan x="192" dy="17">⌁</tspan><tspan x="192" dy="17">1</tspan><tspan x="192" dy="17">0</tspan><tspan x="192" dy="17">⌗</tspan><tspan x="192" dy="17">0</tspan><tspan x="192" dy="17">1</tspan><tspan x="192" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-240;0,180" dur="9s" begin="-2s" repeatCount="indefinite"/><text x="252" y="18">0<tspan x="252" dy="17">1</tspan><tspan x="252" dy="17">0</tspan><tspan x="252" dy="17">⌘</tspan><tspan x="252" dy="17">1</tspan><tspan x="252" dy="17">0</tspan><tspan x="252" dy="17">1</tspan><tspan x="252" dy="17">⌁</tspan><tspan x="252" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-180;0,180" dur="6.6s" begin="-4.4s" repeatCount="indefinite"/><text x="312" y="18">1<tspan x="312" dy="17">⌁</tspan><tspan x="312" dy="17">0</tspan><tspan x="312" dy="17">1</tspan><tspan x="312" dy="17">0</tspan><tspan x="312" dy="17">1</tspan><tspan x="312" dy="17">⌗</tspan><tspan x="312" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-280;0,180" dur="8.1s" begin="-1s" repeatCount="indefinite"/><text x="372" y="18">0<tspan x="372" dy="17">1</tspan><tspan x="372" dy="17">⌘</tspan><tspan x="372" dy="17">0</tspan><tspan x="372" dy="17">1</tspan><tspan x="372" dy="17">0</tspan><tspan x="372" dy="17">1</tspan><tspan x="372" dy="17">0</tspan><tspan x="372" dy="17">⌁</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-190;0,180" dur="5.9s" begin="-2.6s" repeatCount="indefinite"/><text x="432" y="18">⌁<tspan x="432" dy="17">0</tspan><tspan x="432" dy="17">1</tspan><tspan x="432" dy="17">0</tspan><tspan x="432" dy="17">⌗</tspan><tspan x="432" dy="17">1</tspan><tspan x="432" dy="17">0</tspan><tspan x="432" dy="17">1</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-250;0,180" dur="7.7s" begin="-5s" repeatCount="indefinite"/><text x="492" y="18">1<tspan x="492" dy="17">0</tspan><tspan x="492" dy="17">1</tspan><tspan x="492" dy="17">⌘</tspan><tspan x="492" dy="17">0</tspan><tspan x="492" dy="17">1</tspan><tspan x="492" dy="17">⌁</tspan><tspan x="492" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-180;0,180" dur="6.9s" begin="-3.7s" repeatCount="indefinite"/><text x="552" y="18">0<tspan x="552" dy="17">1</tspan><tspan x="552" dy="17">0</tspan><tspan x="552" dy="17">1</tspan><tspan x="552" dy="17">⌗</tspan><tspan x="552" dy="17">0</tspan><tspan x="552" dy="17">1</tspan><tspan x="552" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-240;0,180" dur="8.7s" begin="-2.2s" repeatCount="indefinite"/><text x="612" y="18">⌘<tspan x="612" dy="17">1</tspan><tspan x="612" dy="17">0</tspan><tspan x="612" dy="17">1</tspan><tspan x="612" dy="17">0</tspan><tspan x="612" dy="17">⌁</tspan><tspan x="612" dy="17">1</tspan><tspan x="612" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-210;0,180" dur="6.1s" begin="-4.8s" repeatCount="indefinite"/><text x="672" y="18">1<tspan x="672" dy="17">⌁</tspan><tspan x="672" dy="17">0</tspan><tspan x="672" dy="17">1</tspan><tspan x="672" dy="17">⌗</tspan><tspan x="672" dy="17">0</tspan><tspan x="672" dy="17">1</tspan><tspan x="672" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-270;0,180" dur="9.2s" begin="-1.3s" repeatCount="indefinite"/><text x="732" y="18">0<tspan x="732" dy="17">1</tspan><tspan x="732" dy="17">⌘</tspan><tspan x="732" dy="17">0</tspan><tspan x="732" dy="17">1</tspan><tspan x="732" dy="17">0</tspan><tspan x="732" dy="17">⌁</tspan><tspan x="732" dy="17">1</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-190;0,180" dur="5.6s" begin="-3.1s" repeatCount="indefinite"/><text x="792" y="18">⌗<tspan x="792" dy="17">0</tspan><tspan x="792" dy="17">1</tspan><tspan x="792" dy="17">0</tspan><tspan x="792" dy="17">⌘</tspan><tspan x="792" dy="17">1</tspan><tspan x="792" dy="17">0</tspan><tspan x="792" dy="17">1</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-230;0,180" dur="7.8s" begin="-4.1s" repeatCount="indefinite"/><text x="852" y="18">1<tspan x="852" dy="17">0</tspan><tspan x="852" dy="17">⌁</tspan><tspan x="852" dy="17">1</tspan><tspan x="852" dy="17">0</tspan><tspan x="852" dy="17">⌗</tspan><tspan x="852" dy="17">1</tspan><tspan x="852" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-250;0,180" dur="8.5s" begin="-2.7s" repeatCount="indefinite"/><text x="912" y="18">0<tspan x="912" dy="17">1</tspan><tspan x="912" dy="17">0</tspan><tspan x="912" dy="17">⌘</tspan><tspan x="912" dy="17">1</tspan><tspan x="912" dy="17">0</tspan><tspan x="912" dy="17">1</tspan><tspan x="912" dy="17">⌁</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-200;0,180" dur="6.4s" begin="-5.1s" repeatCount="indefinite"/><text x="972" y="18">⌁<tspan x="972" dy="17">1</tspan><tspan x="972" dy="17">0</tspan><tspan x="972" dy="17">1</tspan><tspan x="972" dy="17">0</tspan><tspan x="972" dy="17">⌗</tspan><tspan x="972" dy="17">1</tspan><tspan x="972" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-260;0,180" dur="8.9s" begin="-1.5s" repeatCount="indefinite"/><text x="1032" y="18">1<tspan x="1032" dy="17">0</tspan><tspan x="1032" dy="17">⌘</tspan><tspan x="1032" dy="17">1</tspan><tspan x="1032" dy="17">0</tspan><tspan x="1032" dy="17">1</tspan><tspan x="1032" dy="17">⌁</tspan><tspan x="1032" dy="17">0</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-180;0,180" dur="5.8s" begin="-3.5s" repeatCount="indefinite"/><text x="1092" y="18">0<tspan x="1092" dy="17">1</tspan><tspan x="1092" dy="17">⌗</tspan><tspan x="1092" dy="17">0</tspan><tspan x="1092" dy="17">1</tspan><tspan x="1092" dy="17">0</tspan><tspan x="1092" dy="17">⌘</tspan><tspan x="1092" dy="17">1</tspan></text></g>
+    <g class="column"><animateTransform attributeName="transform" type="translate" values="0,-220;0,180" dur="7.1s" begin="-2.4s" repeatCount="indefinite"/><text x="1152" y="18">1<tspan x="1152" dy="17">0</tspan><tspan x="1152" dy="17">1</tspan><tspan x="1152" dy="17">⌁</tspan><tspan x="1152" dy="17">0</tspan><tspan x="1152" dy="17">⌗</tspan><tspan x="1152" dy="17">1</tspan><tspan x="1152" dy="17">0</tspan></text></g>
+  </g>
+  <g fill="#8bffac" opacity=".95">
+    <rect x="21" y="23" width="3" height="3"/><rect x="251" y="73" width="3" height="3"/><rect x="431" y="41" width="3" height="3"/><rect x="671" y="91" width="3" height="3"/><rect x="911" y="31" width="3" height="3"/><rect x="1091" y="123" width="3" height="3"/>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="179" rx="8" fill="none" stroke="#1aff65" stroke-opacity=".45"/>
+</svg>
