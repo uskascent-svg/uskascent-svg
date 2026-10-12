@@ -11,13 +11,19 @@
 
 <img src="./assets/terminal-header.svg" width="100%" alt="Animated terminal introduction for Utkarsh, cybersecurity interests, project and career goal"/>
 
-<h2 align="center">AscentU3 · Interactive Digital Pixel Art</h2>
+<h1 align="center">ASCENT U3</h1>
 
-<p align="center">
-  <a href="https://uskascent-svg.github.io/uskascent-svg/"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/ascentu3-original.png" width="100%" alt="Original AscentU3 logo — click for the interactive pixel experience" /></a>
-</p>
+<h3 align="center">CYBERSECURITY · IT SOLUTIONS</h3>
 
-<p align="center"><em>Tap or click the logo for the interactive pixel experience.</em></p>
+<p align="center"><strong>Secure your systems. Strengthen your digital future.</strong></p>
+
+<p align="center">ASCENT U3 delivers security-focused technology solutions to help protect digital assets, detect threats, secure cloud environments, and build reliable IT infrastructure.</p>
+
+<p align="center"><strong>Our Services:</strong> Cybersecurity · Cloud Security · Threat Detection · IT Infrastructure</p>
+
+<p align="center"><strong>Let’s secure your digital future.</strong> Connect with ASCENT U3 to explore the right solutions for your needs.</p>
+
+<p align="center"><strong>Detect. Prevent. Protect.</strong></p>
 
 **Utkarsh Khairnar**
 
