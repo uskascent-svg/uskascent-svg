@@ -3,193 +3,112 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050a08">
-<meta name="description" content="Utkarsh Khairnar — Information Technology Engineering Student | Cybersecurity. Explore security interests, projects and career goals in a safe interactive terminal.">
-<title>Utkarsh Khairnar | ASCENT U3 Cybersecurity Terminal</title>
+<meta name="theme-color" content="#070b09">
+<meta name="description" content="A minimal interactive profile terminal for Utkarsh Khairnar: cybersecurity, projects, skills and contact links.">
+<title>Utkarsh Khairnar — Profile Terminal</title>
 <style>
-:root{color-scheme:dark;--bg:#050a08;--panel:#0b110e;--panel2:#101914;--line:#20382a;--green:#4dff91;--green2:#a5ffc3;--cyan:#55e8ef;--muted:#83a18c;--amber:#ffc66d;--red:#ff8585;font:15px/1.6 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;min-height:100vh;color:#d7e8db;background:transparent;padding:clamp(12px,3vw,32px);isolation:isolate}#terminal-backdrop{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.24;background:radial-gradient(ellipse at 50% -15%,#153322 0,transparent 55%),#050a08}.shell{position:relative;z-index:1;backdrop-filter:blur(1.5px)}
-a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline;color:#fff}button,input{font:inherit}
-.shell{max-width:1000px;margin:0 auto;border:1px solid #294a34;border-radius:15px;overflow:hidden;background:rgba(5,10,8,.96);box-shadow:0 22px 90px #0009,0 0 36px #36ff8010}
-.topbar{min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:#111a14;border-bottom:1px solid var(--line);color:var(--muted);font-size:12px}
-.dots{display:inline-flex;gap:6px;margin-right:10px;vertical-align:middle}.dot{width:9px;height:9px;border-radius:50%;display:inline-block}.red{background:#ff625d}.yellow{background:#ffc04d}.green-dot{background:#42d66b}
-.top-title{color:var(--green2);letter-spacing:.08em}.top-meta{white-space:nowrap}
-.brand{display:flex;align-items:center;gap:15px;padding:24px clamp(16px,4vw,36px) 18px;border-bottom:1px solid #17251c}
-.brand img{width:72px;height:54px;object-fit:contain;border:1px solid #284431;border-radius:8px;background:#020812;padding:4px}
-h1{font-size:clamp(19px,3vw,28px);line-height:1.25;color:var(--green);margin:0 0 4px;letter-spacing:-.04em} .subtitle{color:var(--muted);font-size:12px}
-.status{margin-left:auto;align-self:flex-start;color:var(--green);border:1px solid #275a38;border-radius:999px;padding:3px 9px;font-size:10px;white-space:nowrap}
-main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size:13px}
-.terminal{border:1px solid #24402d;border-radius:10px;overflow:hidden;background:#070d09}
-.termbar{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;background:#101a13;border-bottom:1px solid #20382a;font-size:11px;color:var(--muted)}
-.term-actions{display:flex;gap:8px}.mini{background:#111e15;color:var(--green2);border:1px solid #2a4a34;border-radius:5px;padding:4px 8px;cursor:pointer;font-size:11px}.mini:hover{border-color:var(--green)}
-.output{padding:16px 16px 6px;min-height:300px;max-height:52vh;overflow:auto;scrollbar-color:#31573b #08100b;overflow-wrap:anywhere}
-.line{white-space:pre-wrap;overflow-wrap:anywhere;margin:0 0 7px}.typing-cursor{display:inline-block;width:.62em;height:1.05em;vertical-align:-.13em;background:var(--green);margin-left:2px;animation:cursor-blink 1s steps(2,start) infinite}@keyframes cursor-blink{to{visibility:hidden}}.prompt{color:var(--green);font-weight:700}.muted{color:var(--muted)}.cyan{color:var(--cyan)}.amber{color:var(--amber)}.good{color:var(--green)}.bad{color:var(--red)}.ascii{color:var(--green2);font-size:clamp(6px,1.05vw,11px);line-height:1.35;white-space:pre;overflow-x:auto}
-.inputrow{display:flex;align-items:center;gap:8px;padding:12px 16px 16px}.prompt-label{color:var(--green);white-space:nowrap;font-size:13px}.command-input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:#e5ffeb;caret-color:var(--green);padding:3px 0}.command-input::placeholder{color:#4d6a55}
-.suggestions{display:flex;flex-wrap:wrap;gap:7px;padding:0 16px 16px}.suggestion{background:#0d1710;color:#91dba7;border:1px solid #25442e;border-radius:5px;padding:5px 8px;font-size:11px;cursor:pointer}.suggestion:hover,.suggestion:focus-visible{border-color:var(--green);color:#fff}
-.lower{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}.card{border:1px solid #1e3526;border-radius:9px;padding:14px;background:#0a110c}.card h2{font-size:12px;letter-spacing:.12em;color:var(--green2);text-transform:uppercase;margin:0 0 8px}.card p{font-size:12px;color:var(--muted);margin:0}.card code{color:var(--cyan)}
-.footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:15px 20px;border-top:1px solid #1b2c20;color:#6f9079;font-size:11px}.footer a{margin-left:12px}
-@media(max-width:620px){.top-meta{display:none}.brand{gap:10px}.brand img{width:55px;height:45px}.status{font-size:9px;padding:2px 6px}.lower{grid-template-columns:1fr}.output{min-height:260px;max-height:55vh}.prompt-label{font-size:11px}.inputrow{padding-left:11px;padding-right:11px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+:root{color-scheme:dark;--bg:#070b09;--panel:#0b110d;--line:#203329;--green:#79f2a0;--text:#dce9df;--muted:#8ca595;--cyan:#79dce6;--red:#ff9696;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0,#14271b 0,transparent 55%),var(--bg);color:var(--text);padding:clamp(12px,3vw,32px);display:grid;place-items:center}a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline;color:#fff}button,input{font:inherit}.shell{width:min(780px,100%);border:1px solid var(--line);border-radius:12px;background:rgba(8,13,10,.97);overflow:hidden;box-shadow:0 20px 70px #0007}.bar{height:38px;display:flex;align-items:center;justify-content:space-between;padding:0 13px;border-bottom:1px solid var(--line);color:var(--muted);font-size:11px}.dots{display:flex;gap:5px}.dot{width:8px;height:8px;border-radius:50%;background:#42664d}.dot:first-child{background:#ff6b65}.dot:nth-child(2){background:#ffc35d}.dot:nth-child(3){background:#70dc87}.identity{display:flex;align-items:center;gap:13px;padding:20px 20px 16px;border-bottom:1px solid #17251b}.logo{width:47px;height:42px;object-fit:contain;background:#030811;border:1px solid #233a2b;border-radius:6px;padding:3px}.name{font-size:clamp(17px,3vw,22px);font-weight:700;color:var(--green);letter-spacing:-.04em}.role{font-size:11px;color:var(--muted);margin-top:3px}.links{margin-left:auto;display:flex;gap:12px;font-size:11px;flex-wrap:wrap;justify-content:flex-end}.main{padding:18px 20px 14px}.hint{font-size:12px;color:var(--muted);margin:0 0 12px}.term{border:1px solid #20382a;border-radius:8px;overflow:hidden;background:#060b07}.termbar{height:33px;display:flex;align-items:center;justify-content:space-between;padding:0 11px;background:#0d160f;border-bottom:1px solid #1b2e20;color:#8ca595;font-size:11px}.clear{border:0;background:transparent;color:#9bb4a2;cursor:pointer;padding:3px 0}.clear:hover{color:var(--green)}.output{height:min(43vh,370px);min-height:220px;overflow:auto;padding:14px 13px;scrollbar-color:#294632 #060b07;overflow-wrap:anywhere}.line{margin:0 0 7px;white-space:pre-wrap}.prompt{color:var(--green)}.muted{color:var(--muted)}.error{color:var(--red)}.link{color:var(--cyan)}.inputrow{display:flex;align-items:center;gap:8px;border-top:1px solid #17271c;padding:12px 13px}.promptlabel{color:var(--green);white-space:nowrap}.input{min-width:0;flex:1;color:#e4f8e9;background:transparent;border:0;outline:0;caret-color:var(--green)}.input::placeholder{color:#526b59}.chips{display:flex;gap:7px;flex-wrap:wrap;padding:0 13px 13px}.chip{border:1px solid #25412e;border-radius:5px;background:#0c160f;color:#a9e9ba;padding:4px 8px;font-size:11px;cursor:pointer}.chip:hover,.chip:focus-visible{border-color:var(--green);color:#fff}.foot{padding:11px 20px;border-top:1px solid #17271c;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#6f8b77;font-size:10px}@media(max-width:540px){.identity{padding:16px;gap:10px}.logo{width:40px;height:38px}.role{max-width:220px}.links{gap:8px}.main{padding:14px}.output{min-height:200px}.foot{padding:10px 14px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
-<canvas id="terminal-backdrop" aria-hidden="true"></canvas>
 <div class="shell">
-<header class="topbar"><span><span class="dots"><i class="dot red"></i><i class="dot yellow"></i><i class="dot green-dot"></i></span><span class="top-title">ASCENT U3 / CYBER DEFENCE CONSOLE</span></span><span class="top-meta">LEARNING &amp; BUILDING · SAFE SIMULATION</span></header>
-<section class="brand">
-<a href="./" aria-label="Open ASCENT U3 interactive pixel logo"><img src="./assets/ascentu3-original.png" alt="Original ASCENT U3 logo"></a>
-<div><h1>Utkarsh Khairnar</h1><div class="subtitle">INFORMATION TECHNOLOGY ENGINEERING STUDENT | CYBERSECURITY · NASHIK, MAHARASHTRA, INDIA</div><div class="subtitle">DETECT. PREVENT. PROTECT.</div></div>
-<span class="status">● SESSION READY</span>
+<header class="bar"><span><span class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span> &nbsp; ASCENT U3</span><span>PROFILE TERMINAL</span></header>
+<section class="identity">
+<a href="./" aria-label="Open ASCENT U3 logo experience"><img class="logo" src="./assets/ascentu3-original.png" alt="ASCENT U3 logo"></a>
+<div><div class="name">Utkarsh Khairnar</div><div class="role">IT Engineering Student · Cybersecurity · Nashik, India</div></div>
+<nav class="links" aria-label="Profile links"><a href="https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://leetcode.com/u/AscentU3/" target="_blank" rel="noopener noreferrer">LeetCode ↗</a><a href="mailto:uskascent@gmail.com">Email ↗</a></nav>
 </section>
-<main>
-<p class="intro">Welcome to ASCENT U3. Explore my cybersecurity interests, projects and career direction. Current status: Learning &amp; Building — threat detection, security automation and AI-assisted defense. This is a safe, simulated terminal. The 30 basic commands return predefined output; file operations affect only a temporary in-page virtual filesystem.</p>
-<section class="terminal" aria-label="Interactive terminal">
-<div class="termbar"><span>bash — visitor session</span><div class="term-actions"><button class="mini" id="clear" type="button">clear</button><button class="mini" id="replay" type="button">clear output</button><button class="mini" id="reset" type="button">restart</button></div></div>
-<div class="output" id="output" role="log" aria-live="polite" aria-relevant="additions text"></div>
-<form id="command-form" autocomplete="off">
-<div class="inputrow"><label class="prompt-label" for="command-input">visitor@ascent:~$</label><input id="command-input" class="command-input" name="command" type="text" placeholder="type help and press Enter" spellcheck="false" autocapitalize="off" aria-label="Enter a terminal command"></div>
-</form>
-<div class="suggestions" aria-label="Suggested commands">
-<button class="suggestion" data-command="help">help</button><button class="suggestion" data-command="whoami">whoami</button><button class="suggestion" data-command="ls projects">ls projects</button><button class="suggestion" data-command="cat status.log">cat status.log</button><button class="suggestion" data-command="neofetch">neofetch</button><button class="suggestion" data-command="./play --profile">./play --profile</button><button class="suggestion" data-command="./ascentu3 --unlock">secret command</button>
-</div>
+<main class="main">
+<p class="hint">A small terminal for exploring my work. Enter a command.</p>
+<section class="term" aria-label="Interactive profile terminal">
+<div class="termbar"><span>visitor session</span><button class="clear" id="clear" type="button">clear</button></div>
+<div class="output" id="output" role="log" aria-live="polite" aria-relevant="additions"></div>
+<form id="form" autocomplete="off"><div class="inputrow"><label class="promptlabel" for="command">›</label><input class="input" id="command" name="command" placeholder="try: whoami" spellcheck="false" autocapitalize="off" aria-label="Terminal command"></div></form>
+<div class="chips" aria-label="Quick commands"><button class="chip" data-cmd="whoami">whoami</button><button class="chip" data-cmd="interests">interests</button><button class="chip" data-cmd="projects">projects</button><button class="chip" data-cmd="contact">contact</button><button class="chip" data-cmd="help">help</button></div>
 </section>
-<div class="lower">
-<section class="card"><h2>Available interactions</h2><p>Try the 30 basic commands: <code>ls</code>, <code>cd</code>, <code>cat</code>, <code>grep</code>, <code>find</code>, <code>mkdir</code>, <code>touch</code>, <code>cp</code>, <code>mv</code>, and <code>rm</code>. Use <code>↑</code>/<code>↓</code> for history or <code>Tab</code> for completion. All output is simulated.</p></section>
-<section class="card"><h2>Safety notice</h2><p>This is a front-end simulation. Commands never run on your device or a server, and never contact endpoints or perform scans. File changes exist only in the page’s temporary virtual filesystem.</p></section>
-</div>
 </main>
-<footer class="footer"><span>BUILT TO LEARN · TEST · DEFEND</span><span><a href="https://github.com/uskascent-svg/uskascent-svg">GitHub</a><a href="https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/">LinkedIn</a><a href="mailto:uskascent@gmail.com">Email</a><a href="./terminal.html">Interactive terminal</a><a href="./">Pixel logo ↗</a></span></footer>
+<footer class="foot"><span>DETECT. PREVENT. PROTECT.</span><a href="https://github.com/uskascent-svg/uskascent-svg">GitHub profile ↗</a></footer>
 </div>
 <script>
 (()=>{'use strict';
-(()=>{'use strict';
-const canvas=document.querySelector('#terminal-backdrop');
-if(canvas){
- const ctx=canvas.getContext('2d',{alpha:true});
- const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- const glyphs='01アイウエオカキクケコ<>/{}[]$#';
- let width=1,height=1,dpr=1,columns=[],raf=0;
- function resize(){
-  dpr=Math.min(window.devicePixelRatio||1,1.5);
-  width=Math.max(1,window.innerWidth);height=Math.max(1,window.innerHeight);
-  canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);
-  ctx.setTransform(dpr,0,0,dpr,0,0);
-  columns=Array.from({length:Math.ceil(width/19)},()=>({y:Math.random()*height,speed:.18+Math.random()*.48,trail:5+Math.floor(Math.random()*9)}));
- }
- function draw(){
-  ctx.clearRect(0,0,width,height);ctx.font='12px ui-monospace,monospace';
-  columns.forEach((c,i)=>{
-   for(let j=0;j<c.trail;j++){
-    const y=c.y-j*17;if(y<0||y>height)continue;
-    ctx.fillStyle='rgba(77,255,145,'+(0.035*(1-j/c.trail))+')';
-    ctx.fillText(glyphs[(i*13+j*7+Math.floor(c.y/17))%glyphs.length],i*19,y);
-   }
-   if(!reduced){c.y+=c.speed;if(c.y-c.trail*17>height)c.y=-Math.random()*height*.35}
-  });
-  if(!reduced)raf=requestAnimationFrame(draw);
- }
- resize();draw();
- window.addEventListener('resize',()=>{resize();if(reduced)draw()},{passive:true});
- window.addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
-}
-})();
-const output=document.querySelector('#output'),form=document.querySelector('#command-form'),input=document.querySelector('#command-input');
-const history=[],known=['help','whoami','pwd','ls','cd','cat','head','tail','wc','grep','find','echo','date','cal','uname','hostname','id','uptime','ps','top','df','free','env','history','clear','mkdir','touch','cp','mv','rm','git status','python --version','node --version','cat status.log','ls projects','./career.sh --goal','neofetch','contact','./play --profile','sudo defend','./ascentu3 --unlock'];
-const virtualFiles={'/home/visitor/ascent-profile/status.log':'STATUS: Learning & Building\nFOCUS: SOC Analyst, Cloud Computing, Cloud Security, AI Security, Network Security\nBUILD: Threat detection, security automation, practical projects\nLEARN: Incident response, SIEM workflows, threat hunting, detection engineering\nNOTE: These are learning priorities, not claims of live monitoring or certifications.','/home/visitor/ascent-profile/skills.md':'Cloud: AWS and Azure fundamentals, IAM, networking, Terraform labs\nSecurity: SIEM, vulnerability analysis, threat modelling\nSystems: Linux, Docker, Bash, Python\nProblem solving: LeetCode / AscentU3','/home/visitor/ascent-profile/about.txt':'Utkarsh Khairnar\nInformation Technology Engineering Student\nNashik, Maharashtra, India\nInterests: Cybersecurity, SOC Operations, Cloud Security, AI Security, Network Security\nCareer goal: Cybersecurity / SOC Analyst, growing into security and threat intelligence'};
-const virtualDirs=new Set(['/home','/home/visitor','/home/visitor/ascent-profile','/home/visitor/ascent-profile/projects']);
-const virtualCwd='/home/visitor/ascent-profile';let cwd=virtualCwd;
-function resolvePath(p=''){if(!p||p==='~')return virtualCwd;if(p.startsWith('/'))return p.replace(/\\/g,'/').replace(/\/$/,'')||'/';const base=p.startsWith('~/')?virtualCwd+'/'+p.slice(2):cwd+'/'+p;const out=[];for(const part of base.split('/')){if(!part||part==='.')continue;if(part==='..')out.pop();else out.push(part)}return '/'+out.join('/')}
-function virtualList(path){const dir=resolvePath(path||'.');const entries=new Set();for(const d of virtualDirs){if(d!==dir&&d.startsWith(dir+'/'))entries.add(d.slice(dir.length+1).split('/')[0]+'/')}for(const file of Object.keys(virtualFiles)){if(file.startsWith(dir+'/'))entries.add(file.slice(dir.length+1).split('/')[0])}return [...entries].sort()}
-function readVirtual(path){return virtualFiles[resolvePath(path)]??null}
-function simulatedOutput(lines,cls='muted'){(Array.isArray(lines)?lines:[lines]).forEach(x=>line(x,cls))}
-let historyIndex=0, animationQueue=Promise.resolve(), generation=0, introGeneration=0;
-const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-const charDelay=()=>reducedMotion.matches?0:(38+Math.random()*34);
-const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
-async function typeInto(node,text,token){
-  const cursor=document.createElement('span');cursor.className='typing-cursor';cursor.setAttribute('aria-hidden','true');node.append(cursor);
-  if(reducedMotion.matches){node.insertBefore(document.createTextNode(text),cursor);cursor.remove();return}
-  for(let i=0;i<text.length;i++){
-    if(token!==generation){cursor.remove();return}
-    node.insertBefore(document.createTextNode(text[i]),cursor);
-    output.scrollTop=output.scrollHeight;
-    let delay=charDelay();
-    if(/[.,:;·—]/.test(text[i]))delay+=90;
-    else if(text[i]===' ')delay*=0.45;
-    await pause(delay);
-  }
-  cursor.remove();
-}
-function enqueueRender(render){const token=generation;animationQueue=animationQueue.then(async()=>{if(token!==generation)return;await render(token)}).catch(()=>{})}
-const projects=[
- {name:'ASCENT SAFETY',desc:'Cybersecurity analysis and threat-detection platform.',url:'https://github.com/uskascent-svg/Ascent-Safety-'},
- {name:'Email Phishing Detection System',desc:'Email and link phishing-analysis project.',url:'https://github.com/uskascent-svg/uskascent-svg'},
- {name:'RAIL-EYE AI Railway Safety',desc:'AI-assisted railway safety and monitoring project concept.',url:null},
- {name:'E-Cycle / e-Recycle',desc:'Community e-waste repair, reuse, donation and recycling platform.',url:null},
- {name:'KumbhSathi',desc:'Pilgrimage companion concept focused on safer, smoother journeys.',url:null},
- {name:'Shop Agent',desc:'AI-powered shopping agent project.',url:'https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent'},
- {name:'LeetCode Solutions',desc:'Coding practice and problem-solving repository.',url:'https://github.com/uskascent-svg/Leetcode-solution-'}
-];
-const ascii='  █████╗ ███████╗ ██████╗███████╗███╗   ██╗████████╗\n ██╔══██╗██╔════╝██╔════╝██╔════╝████╗  ██║╚══██╔══╝\n ███████║███████╗██║     █████╗  ██╔██╗ ██║   ██║\n ██╔══██║╚════██║██║     ██╔══╝  ██║╚██╗██║   ██║\n ██║  ██║███████║╚██████╗███████╗██║ ╚████║   ██║\n ╚═╝  ╚═╝╚══════╝ ╚═════╝╚══════╝╚═╝  ╚═══╝   ╚═╝';
-function line(text='',cls=''){enqueueRender(async token=>{const p=document.createElement('p');p.className='line'+(cls?' '+cls:'');output.append(p);await typeInto(p,String(text),token);output.scrollTop=output.scrollHeight})}
-function rich(parts){enqueueRender(async token=>{const p=document.createElement('p');p.className='line';output.append(p);for(const part of parts){if(part.text!==undefined){const span=document.createElement('span');span.className=part.cls||'';p.append(span);await typeInto(span,part.text,token)}else if(part.href){const a=document.createElement('a');a.href=part.href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=part.label;p.append(a)}}output.scrollTop=output.scrollHeight})}
-function linkLine(label,url,desc){enqueueRender(async token=>{const p=document.createElement('p');p.className='line';output.append(p);const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;p.append(a);await typeInto(p,' — '+desc,token);output.scrollTop=output.scrollHeight})}
-function banner(){line('ASCENT U3 :: INTERACTIVE PROFILE TERMINAL','good');line('Type "help" to list commands. Try "./ascentu3 --unlock" for a hidden reveal.','muted');line('')}
-function run(raw){const command=raw.trim();if(!command)return;line('visitor@ascent:~$ '+command,'prompt');const c=command.toLowerCase();
-if(c==='help'||c==='man'||c==='help --all'){line('AVAILABLE COMMANDS','cyan');known.filter(x=>!['clear','history'].includes(x)).forEach(x=>line('  '+x,'good'));line('  history        show commands from this session','good');line('  clear          clear the output','good');line('Tip: commands are simulated; no shell or security scan is executed.','muted')}
-else if(c==='whoami'){line('Utkarsh Khairnar','good');line('Information Technology Engineering Student | Cybersecurity');line('Location: Nashik, Maharashtra, India · IST (UTC+5:30)');line('Focus: SOC Analyst · Cloud Computing · Cloud Security · AI Security · Network Security');line('Status: Learning & Building','cyan')}
-else if(c==='cat status.log'){line('STATUS: Learning & Building','cyan');line('[ FOCUS ] SOC Analyst · Cloud Computing · Cloud Security','good');line('[ FOCUS ] AI Security · Network Security','good');line('[ BUILD ] Threat detection and security automation','good');line('[ BUILD ] AI-assisted defense and practical security projects','good');line('[ LEARN ] Incident response, SIEM workflows and threat hunting','amber');line('[ LEARN ] Cloud security posture and detection engineering','amber');line('These are learning priorities, not claims of live monitoring or certifications.','muted')}
-else if(c==='ls projects'||c==='ls ~/projects'||c==='ls projects --all'){line('PROJECTS / SELECT A REPOSITORY','cyan');projects.forEach((p,i)=>{if(p.url){const el=document.createElement('p');el.className='line';const a=document.createElement('a');a.href=p.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=String(i+1).padStart(2,'0')+'  '+p.name;el.append(a,document.createTextNode(' — '+p.desc));output.append(el)}else line(String(i+1).padStart(2,'0')+'  '+p.name+' — '+p.desc,'')});line('Concept projects without a verified public repository are labelled as concepts.','muted')}
-else if(c==='ls'||c.startsWith('ls ')){const args=command.split(/\s+/).slice(1).filter(x=>!x.startsWith('-'));const entries=virtualList(args[0]||'.');simulatedOutput(entries.length?entries:['(empty directory)'])}
-else if(c==='cd'||c.startsWith('cd ')){const requested=command.trim().slice(2).trim()||'~';const dest=resolvePath(requested);if(virtualDirs.has(dest)){cwd=dest;const label=document.querySelector('.prompt-label');if(label)label.textContent='visitor@ascent:'+(cwd===virtualCwd?'~':cwd.replace('/home/visitor','~'))+'$';line('directory changed (simulated): '+cwd,'good')}else line('cd: no such directory: '+requested,'bad')}
-else if(c==='./career.sh --goal'||c==='career'){line('CAREER GOAL','cyan');line('→ SOC Analyst → Cloud Computing','good');line('→ Grow into Cloud Security and AI Security','good');line('→ Learn by building · testing · defending')}
-else if(c==='neofetch'){line('        /\\_/\\\\     utkarsh@cloud','good');line('       ( o.o )    ----------------','good');line('        > ^ <     OS: Curious learner / Windows + Linux labs');line('                  ROLE: Information Technology Engineering Student');line('                  LOCATION: Nashik, Maharashtra, India');line('                  FOCUS: SOC · Cloud Computing · AI Security');line('                  ALSO: Network Security');line('                  STATUS: Learning & Building');line('                  MODE: Learn / Build / Test / Defend','cyan')}
-else if(c==='play'||c==='profile'||c==='./play --profile'){line('INTERACTIVE PROFILE','cyan');line('Explore my background, skills, projects and career goals through terminal commands.','good');line('Try: whoami · ls projects · cat status.log · ./career.sh --goal · contact','muted')}else if(c==='contact'||c==='contact --all'){line('CONNECT','cyan');linkLine('LinkedIn','https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/','professional profile');linkLine('GitHub','https://github.com/uskascent-svg/uskascent-svg','projects and code');linkLine('LeetCode','https://leetcode.com/u/AscentU3/','problem solving');linkLine('Email','mailto:uskascent@gmail.com','opportunities and collaboration')}
-else if(c==='sudo defend'){line('[ SIMULATION ONLY ]','amber');line('Defence mindset: observe → validate → contain → recover.','good');line('1. Confirm the alert source and preserve evidence.');line('2. Scope affected identities, endpoints and services.');line('3. Follow the approved incident-response playbook.');line('4. Document actions and verify recovery.');line('No systems were scanned or changed.','muted')}
-else if(c==='./ascentu3 --unlock'||c==='ascentu3 --unlock'||c==='sudo ./ascentu3 --unlock'){line('SECRET IDENTITY UNLOCKED','cyan');enqueueRender(async token=>{const pre=document.createElement('pre');pre.className='ascii';output.append(pre);await typeInto(pre,ascii,token)});line('ASCENT U3 — Detect. Prevent. Protect.','good');line('The original pixel artwork remains one click away:');linkLine('Open the ASCENT U3 pixel experience','./','interactive original logo')}
-else if(c==='history'){history.forEach((h,i)=>line(String(i+1).padStart(2,'0')+'  '+h,'muted'))}
-else if(c==='clear'){clearOutput()}
-else if(c==='pwd'){line(cwd,'muted')}
-else if(c==='date'){line(new Date().toLocaleString(),'muted')}
-else if(c==='echo'||c.startsWith('echo ')){line(command.slice(4),'good')}
-else if(c==='cat'||c.startsWith('cat ')){const path=command.trim().slice(3).trim();const content=readVirtual(path);if(content!==null)simulatedOutput(content.split('\n'));else line('cat: '+(path||'(missing file)')+': no such file in the simulated profile','amber')}
-else if(c.startsWith('head ')||c.startsWith('tail ')){const isHead=c.startsWith('head '),args=command.split(/\s+/).slice(1),path=args[args.length-1],content=readVirtual(path);if(content===null)line((isHead?'head: ':'tail: ')+path+': no such file','amber');else{const rows=content.split('\n');simulatedOutput(isHead?rows.slice(0,10):rows.slice(-10))}}
-else if(c.startsWith('wc ')){const path=command.trim().split(/\s+/).pop(),content=readVirtual(path);if(content===null)line('wc: '+path+': no such file','amber');else{const rows=content.split('\n');line(rows.length+' '+content.split(/\s+/).filter(Boolean).length+' '+content.length+' '+path,'good')}}
-else if(c.startsWith('grep ')){const parts=command.trim().split(/\s+/),pattern=parts[1],path=parts[2],content=readVirtual(path);if(!pattern||!path)line('Usage: grep PATTERN FILE','amber');else if(content===null)line('grep: '+path+': no such file','amber');else{const matches=content.split('\n').filter(s=>s.toLowerCase().includes(pattern.replace(/^['"]|['"]$/g,'').toLowerCase()));simulatedOutput(matches.length?matches:['(no matches)'],matches.length?'good':'muted')}}
-else if(c.startsWith('find ')){const path=command.split(/\s+/)[1]||'.';const base=resolvePath(path);const results=[...virtualDirs,...Object.keys(virtualFiles)].filter(p=>p===base||p.startsWith(base+'/'));simulatedOutput(results.length?results:['find: no matching virtual paths'],'muted')}
-else if(c==='cal'){line('     OCTOBER 2026','cyan');line('Su Mo Tu We Th Fr Sa');line('             1  2  3');line(' 4  5  6  7  8  9 10');line('11 12 13 14 15 16 17');line('18 19 20 21 22 23 24');line('25 26 27 28 29 30 31')}
-else if(c==='uname'||c==='uname -a'){line(c==='uname'?'Linux':'Linux ascent-profile 6.1.0-simulated #1 SMP x86_64 GNU/Linux','good')}
-else if(c==='hostname'){line('ascent-profile','good')}
-else if(c==='id'){line('uid=1000(visitor) gid=1000(visitor) groups=1000(visitor)','good')}
-else if(c==='uptime'){line('up 3 days, 04:12, 1 user, load average: 0.08, 0.12, 0.10','good')}
-else if(c==='ps'||c==='ps aux'||c==='top'){line('PID  USER     COMMAND','cyan');line('1    visitor  profile-terminal');line('42   visitor  simulated-command-router');line('84   visitor  typing-animation');line('Note: process list is fictional training output.','muted')}
-else if(c==='df'||c==='df -h'){line('Filesystem      Size  Used Avail Use% Mounted on','cyan');line('profile-fs      10G   2.1G  7.9G  21% /home','good');line('Values are simulated, not your device storage.','muted')}
-else if(c==='free'||c==='free -h'){line('              total   used   free','cyan');line('Mem (simulated)  8Gi   2Gi    6Gi','good');line('Values are fictional terminal output.','muted')}
-else if(c==='env'){line('USER=visitor','good');line('HOME=/home/visitor','good');line('SHELL=/bin/profile-sim','good');line('MODE=SIMULATED_SANDBOX','good')}
-else if(c==='mkdir'||c.startsWith('mkdir ')){const arg=command.trim().slice(5).trim();if(!arg)line('Usage: mkdir DIRECTORY','amber');else{const p=resolvePath(arg);if(virtualDirs.has(p)||Object.prototype.hasOwnProperty.call(virtualFiles,p))line('mkdir: already exists: '+p,'amber');else{virtualDirs.add(p);line('created simulated directory: '+p,'good')}}}
-else if(c==='touch'||c.startsWith('touch ')){const arg=command.trim().slice(5).trim();if(!arg)line('Usage: touch FILE','amber');else{const p=resolvePath(arg);if(virtualDirs.has(p))line('touch: is a directory: '+arg,'bad');else{if(virtualFiles[p]===undefined)virtualFiles[p]='';line('created/updated simulated file: '+p,'good')}}}
-else if(c.startsWith('cp ')){const a=command.trim().split(/\s+/).slice(1),src=resolvePath(a[0]),dst=resolvePath(a[1]);if(!a[0]||!a[1])line('Usage: cp SOURCE DEST','amber');else if(virtualFiles[src]===undefined)line('cp: source not found: '+a[0],'bad');else if(virtualDirs.has(dst))line('cp: destination is a directory: '+a[1],'bad');else{virtualFiles[dst]=virtualFiles[src];line('copied in virtual filesystem: '+a[0]+' -> '+a[1],'good')}}
-else if(c.startsWith('mv ')){const a=command.trim().split(/\s+/).slice(1),src=resolvePath(a[0]),dst=resolvePath(a[1]);if(!a[0]||!a[1])line('Usage: mv SOURCE DEST','amber');else if(virtualFiles[src]===undefined)line('mv: source not found: '+a[0],'bad');else if(virtualDirs.has(dst))line('mv: destination is a directory: '+a[1],'bad');else{virtualFiles[dst]=virtualFiles[src];delete virtualFiles[src];line('moved in virtual filesystem: '+a[0]+' -> '+a[1],'good')}}
-else if(c.startsWith('rm ')){const path=command.trim().split(/\s+/).pop(),p=resolvePath(path);if(virtualFiles[p]===undefined)line('rm: cannot remove '+path+': no such virtual file','amber');else{delete virtualFiles[p];line('removed virtual file only: '+path,'good')}}
-else if(c==='git status'){line('On branch profile-simulation','good');line('nothing to commit, working tree clean','muted')}
-else if(c==='python --version'){line('Python 3.12.0 (simulated)','good')}
-else if(c==='node --version'){line('v22.0.0 (simulated)','good')}
-else if(c==='sudo'){line('Permission denied: this profile terminal does not run privileged commands.','bad')}
-else if(c==='exit'||c==='logout'){line('Visitor session stays open. Explore another command when ready.','muted')}
-else if(c.startsWith('cat ')){line('File not found in this simulated profile. Try "cat status.log".','amber')}
-else if(c.startsWith('git ')){line('Git commands are not executed here. Explore the linked repositories with "ls projects".','amber')}
-else if(c.startsWith('rm ')||c.startsWith('curl ')||c.startsWith('ssh ')||c.startsWith('nmap ')||c.startsWith('python ')||c.startsWith('npm ')){line('Command blocked: this is a safe profile simulation, not a real shell.','bad')}
-else {line('command not found: '+command,'bad');line('Type "help" to see available commands.','muted')}
-}
-form.addEventListener('submit',e=>{e.preventDefault();const value=input.value;const c=value.trim().toLowerCase();if(!c)return;history.push(value.trim());historyIndex=history.length;run(value);input.value='';});
-input.addEventListener('keydown',e=>{if(e.key==='ArrowUp'){e.preventDefault();if(historyIndex>0)historyIndex--;input.value=history[historyIndex]||''}else if(e.key==='ArrowDown'){e.preventDefault();if(historyIndex<history.length)historyIndex++;input.value=history[historyIndex]||''}else if(e.key==='Tab'){e.preventDefault();const val=input.value.trim().toLowerCase();const matches=known.filter(x=>x.startsWith(val));if(matches.length===1)input.value=matches[0];else if(matches.length>1)line(matches.join('    '),'muted')}});
-document.querySelectorAll('[data-command]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.command;form.requestSubmit();input.focus()}));
-function clearOutput(){generation++;animationQueue=Promise.resolve();output.replaceChildren()}
-function playIntro(){introGeneration++;clearOutput();input.focus()}
-document.querySelector('#clear').addEventListener('click',()=>{clearOutput();input.focus()});
-document.querySelector('#replay').addEventListener('click',playIntro);
-document.querySelector('#reset').addEventListener('click',()=>{introGeneration++;clearOutput();history.length=0;historyIndex=0;cwd=virtualCwd;input.value='';input.focus()});
-input.focus();
+const PROFILE={
+ whoami:['Utkarsh Khairnar','IT Engineering Student · Nashik, Maharashtra, India'],
+ about:['I learn by building practical technology and security projects.'],
+ education:['Information Technology Engineering · MET BKC IOE, Nashik'],
+ interests:['Cybersecurity · Cloud Security · AI Security · Network Security'],
+ cybersecurity:['Focus: threat detection, vulnerability assessment and defensive security.'],
+ soc:['Career direction: SOC analysis, alert triage and incident response.'],
+ cloud:['Interest: cloud fundamentals, IAM, networking and infrastructure security.'],
+ 'ai-security':['Exploring AI-assisted detection and safer AI systems.'],
+ network:['Learning network fundamentals, traffic analysis and defensive monitoring.'],
+ skills:['Python · Linux · Networking · Web Security · SIEM · AI/ML fundamentals'],
+ languages:['Python · C++ · Java · JavaScript · TypeScript · SQL'],
+ linux:['Linux and Bash for systems practice and security workflows.'],
+ python:['Python for automation, analysis and security project development.'],
+ projects:['Use: project ascent-safety · project phishing · project shop-agent · project leetcode'],
+ 'ascent-safety':['Cybersecurity analysis and threat-detection platform.'],
+ phishing:['Email phishing detection: examining suspicious messages, links and patterns.'],
+ 'rail-eye':['RAIL-EYE: AI-assisted railway safety concept using edge vision and risk analysis.'],
+ 'e-recycle':['E-Cycle: community workflow for repair, reuse, donation and e-waste recycling.'],
+ kumbhsathi:['KumbhSathi: pilgrimage companion concept focused on safer, smoother journeys.'],
+ 'shop-agent':['AI-powered shopping-agent project.'],
+ github:['GitHub: https://github.com/uskascent-svg/uskascent-svg'],
+ linkedin:['LinkedIn: https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/'],
+ leetcode:['LeetCode: https://leetcode.com/u/AscentU3/'],
+ email:['Email: uskascent@gmail.com'],
+ contact:['LinkedIn · https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/','GitHub · https://github.com/uskascent-svg/uskascent-svg','LeetCode · https://leetcode.com/u/AscentU3/','Email · uskascent@gmail.com'],
+ career:['Goal: Cybersecurity / SOC Analyst, growing toward security and threat intelligence.'],
+ goal:['Build practical skills in detection, response and cloud security.'],
+ learning:['Currently building: security analysis, Linux, networking and automation.'],
+ currently:['Learning & building. I prefer evidence-backed projects over inflated claims.'],
+ location:['Nashik, Maharashtra, India · India Standard Time (UTC+5:30).'],
+ values:['Curiosity · consistency · teamwork · learning by doing.'],
+ approach:['Understand → build → test → document → improve.'],
+ teamwork:['I value clear communication, shared ownership and dependable execution.'],
+ events:['Experience includes departmental event work and TEDx college event support.'],
+ hackathons:['Interested in practical, team-based problem solving and project showcases.'],
+ ctf:['Interested in hands-on labs and challenge-based security learning.'],
+ labs:['Practice areas: Linux, networking, web security and detection workflows.'],
+ certifications:['I only list certifications when verified; none are claimed by this terminal.'],
+ resume:['For a current résumé, contact me by email or LinkedIn.'],
+ collab:['Open to learning-focused cybersecurity projects and meaningful collaboration.'],
+ opportunities:['Seeking cybersecurity internships and project opportunities.'],
+ motto:['Detect. Prevent. Protect.'],
+ stack:['Python · Linux · Bash · Docker · Git · networking · TypeScript'],
+ tools:['VS Code · Git/GitHub · Linux tooling · Python'],
+ security:['Defensive focus: understand signals, validate findings and document evidence.'],
+ roadmap:['Next: deepen cloud security, detection engineering and incident-response practice.'],
+ stats:['I do not display invented scores, live counts or unverified performance metrics.'],
+ 'project ascent-safety':['Repository: https://github.com/uskascent-svg/Ascent-Safety-'],
+ 'project phishing':['Email phishing detection project; contact me for details and current artifacts.'],
+ 'project shop-agent':['Repository: https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent'],
+ 'project leetcode':['Repository: https://github.com/uskascent-svg/Leetcode-solution-'],
+ 'socials':['LinkedIn · https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/','LeetCode · https://leetcode.com/u/AscentU3/'],
+ 'open-source':['GitHub: https://github.com/uskascent-svg/uskascent-svg'],
+ 'why-security':['I enjoy investigating suspicious patterns and turning findings into useful defenses.'],
+ 'blue-team':['Defensive security: monitor, investigate, contain and learn from incidents.'],
+ 'cloud-security':['Interest: IAM, least privilege, secure configuration and cloud visibility.'],
+ 'threat-detection':['Build toward reliable detections that can be tested, explained and improved.'],
+ 'problem-solving':['LeetCode: https://leetcode.com/u/AscentU3/'],
+ 'communication':['Clear notes and reproducible evidence matter as much as the alert.'],
+ 'fun-fact':['I like combining cybersecurity, AI and practical product building.'],
+ 'availability':['For internships or collaboration, reach out through LinkedIn or email.'],
+ 'ascentu3':['ASCENT U3 · Detect. Prevent. Protect.'],
+ 'help':['Try one of these 50 commands:','whoami · about · education · interests · cybersecurity · soc · cloud · ai-security · network · skills · languages · linux · python · projects · ascent-safety · phishing · rail-eye · e-recycle · kumbhsathi · shop-agent · github · linkedin · leetcode · email · contact · career · goal · learning · currently · location · values · approach · teamwork · events · hackathons · ctf · labs · certifications · resume · collab · opportunities · motto · stack · tools · security · roadmap · stats · socials · open-source · why-security · blue-team · cloud-security · threat-detection · problem-solving · communication · fun-fact · availability · ascentu3']
+};
+const ALIASES={hi:'whoami',me:'whoami',profile:'about',bio:'about',study:'education',focus:'interests',cyber:'cybersecurity',soc:'soc',ai:'ai-security',projects:'projects',work:'projects',mail:'email',links:'contact',leetcode:'leetcode',linkedin:'linkedin',career:'career',goal:'goal',help:'help',clear:'clear',exit:'exit',quit:'exit'};
+const output=document.querySelector('#output'),form=document.querySelector('#form'),input=document.querySelector('#command');
+const commands=Object.keys(PROFILE);
+const history=[];let historyIndex=0;
+function add(text,kind=''){const p=document.createElement('p');p.className='line'+(kind?' '+kind:'');p.textContent=text;output.append(p);output.scrollTop=output.scrollHeight}
+function renderLine(text){const p=document.createElement('p');p.className='line';const match=text.match(/^(.*?)(https?:\/\/\S+|mailto:\S+)$/);if(match){p.append(document.createTextNode(match[1]));const a=document.createElement('a');a.className='link';a.href=match[2];a.textContent=match[2];a.target=match[2].startsWith('http')?'_blank':'_self';if(a.target==='_blank')a.rel='noopener noreferrer';p.append(a)}else p.textContent=text;output.append(p);output.scrollTop=output.scrollHeight}
+function run(raw){const value=raw.trim();if(!value)return;add('visitor@ascent:~$ '+value,'prompt');const key=value.toLowerCase().replace(/\s+/g,' ');if(key==='clear'){output.replaceChildren();return}if(key==='exit'||key==='quit'){add('Session remains open. Explore another command.','muted');return}const command=ALIASES[key]||key;if(!Object.prototype.hasOwnProperty.call(PROFILE,command)){add('Unknown command. Type help.','error');return}PROFILE[command].forEach(renderLine)}
+form.addEventListener('submit',e=>{e.preventDefault();const value=input.value.trim();if(!value)return;history.push(value);historyIndex=history.length;run(value);input.value=''});
+input.addEventListener('keydown',e=>{if(e.key==='ArrowUp'){e.preventDefault();if(historyIndex>0)historyIndex--;input.value=history[historyIndex]||''}else if(e.key==='ArrowDown'){e.preventDefault();if(historyIndex<history.length)historyIndex++;input.value=history[historyIndex]||''}else if(e.key==='Tab'){e.preventDefault();const q=input.value.toLowerCase();const matches=[...new Set([...Object.keys(PROFILE),...Object.keys(ALIASES)])].filter(x=>x.startsWith(q));if(matches.length===1)input.value=matches[0]}});
+document.querySelectorAll('[data-cmd]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.cmd;form.requestSubmit();input.focus()}));
+document.querySelector('#clear').addEventListener('click',()=>{output.replaceChildren();input.focus()});
+add('Welcome, visitor. Type help to explore.','muted');add('visitor@ascent:~$ _','prompt');
 })();
 </script>
 </body>
