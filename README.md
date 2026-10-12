@@ -2,7 +2,7 @@
 
 <img src="./assets/animated-name.svg" width="100%" alt="UTKARSH ASCII-art name typing animation" />
 
-<img src="./assets/terminal-header.svg" width="100%" alt="Animated terminal introduction for Utkarsh, cybersecurity interests, project and career goal"/>
+<img src="./assets/readme-terminal.svg" width="100%" alt="Animated ASCENT U3 terminal typing whoami, expanded cybersecurity status, and career goals"/>
 
 <h1 align="center">ASCENT U3</h1>
 
@@ -34,7 +34,6 @@ Nashik, India · IST (UTC+5:30)
 [![LeetCode](https://img.shields.io/badge/LeetCode-AscentU3-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AscentU3/)
 [![Email](https://img.shields.io/badge/Email-Contact%20me-8B89CC?style=for-the-badge&logo=gmail)](mailto:uskascent@gmail.com?subject=Opportunity%20from%20GitHub%20profile)
 
-<p align="center"><a href="https://uskascent-svg.github.io/uskascent-svg/terminal.html"><strong>↳ Launch the Interactive Cybersecurity Terminal</strong></a></p>
 
 </div>
 ---
