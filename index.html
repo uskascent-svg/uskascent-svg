@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASCENTUB · Interactive ASCII Logo</title>
+<style>
+:root{color-scheme:dark;--bg:#050b0e;--cyan:#27e1e5;--muted:#91a8ad}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(ellipse at center,#06242a 0,#050b0e 65%);color:#e7ffff;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.wrap{width:min(1100px,100%);padding:20px}header{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:12px;letter-spacing:.12em;margin-bottom:12px}canvas{display:block;width:100%;height:auto;aspect-ratio:1100/330;border:1px solid #13505a;border-radius:12px;box-shadow:0 0 55px #00d9e51b;touch-action:pan-y}.hint{text-align:center;color:var(--muted);font-size:12px;margin:16px 0 0}a{color:var(--cyan)}@media(prefers-reduced-motion:reduce){.hint:after{content:" (reduced motion preference is respected)"}}</style>
+</head>
+<body><main class="wrap"><header><span>ASCENTUB / ASCII FIELD</span><span>INTERACTIVE LOGO · v1.0</span></header><canvas id="field" aria-label="Interactive ASCII ASCENTUB logo. Move or touch to scatter the characters."></canvas><p class="hint">MOVE OR TOUCH TO SCATTER PIXELS · RELEASE TO LET THEM SPRING BACK</p></main>
+<script>
+(()=>{'use strict';
+const canvas=document.querySelector('#field'),ctx=canvas.getContext('2d'),W=1100,H=330;
+const art=["                                                                        ","                                                                        ","            -.                                                          ","           :=-                                                          ","          .-==:                                                         ","          --===.     ..................                                 ","         :---=+- .:-+**:     .      .         ...                       ","        .--:.=++:..:+*-:---=-.:====-.-=====-:-...:-:=----::.   . ....   ","        :--  :++-.-+=.:*****=:*****=.+++++*-+#-  ++-++*==:=:  .-....... ","       .--. . ::-=-.  +*----.++.....:-----..**#-.*=  -+. .=.  .-  .. .. ","      .::: :=-----. ..-****#-*-    .=*****.:#:=#=*- .+=  :=.  ::  ....  ","      ::: .-==.:+*- ..:---=#-*+----.------:-#..=##: .*-  :+:..-: ..  ..  ","      ...:::-: .+**. :*****=.-####+-####*#--+. .=*. .+:  .==--: .::...  ","  ....::.       :**=............................... ..                  ","    .::.         =**: ...................... ......                     ","    .:.          .+*+.............................                      ","                  :::........ ........ ....                            ","                      ...                                               "],chars=' .:-=+*#%@',particles=[];let dpr=1,pointer={x:-9999,y:-9999,active:false},last=0;
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.width*(H/W)*dpr);ctx.setTransform(canvas.width/W,0,0,canvas.height/H,0,0);build()}
+function build(){particles.length=0;const cellW=15.2,cellH=14.1,startX=24,startY=42;art.forEach((row,ri)=>Array.from(row).forEach((ch,ci)=>{if(ch===' ')return;const x=startX+ci*cellW,y=startY+ri*cellH;const lum=chars.indexOf(ch);particles.push({x,y,ox:x,oy:y,vx:0,vy:0,ch,lum,phase:Math.random()*6.28})}))}
+function pos(e){const r=canvas.getBoundingClientRect();pointer.x=(e.clientX-r.left)/r.width*W;pointer.y=(e.clientY-r.top)/r.height*H;pointer.active=true}
+function leave(){pointer.active=false}
+canvas.addEventListener('pointermove',pos);canvas.addEventListener('pointerdown',pos);canvas.addEventListener('pointerup',leave);canvas.addEventListener('pointercancel',leave);canvas.addEventListener('pointerleave',leave);window.addEventListener('resize',resize);
+function frame(t){ctx.clearRect(0,0,W,H);ctx.fillStyle='#050b0e';ctx.fillRect(0,0,W,H);ctx.font='700 14.4px ui-monospace, SFMono-Regular, Consolas, monospace';ctx.textBaseline='middle';
+for(const p of particles){let dx=p.x-pointer.x,dy=p.y-pointer.y,dist=Math.hypot(dx,dy)||1;if(pointer.active&&dist<100){const force=(100-dist)/100*8;p.vx+=dx/dist*force;p.vy+=dy/dist*force}
+if(!reduced){p.vx+=(p.ox-p.x)*.045;p.vy+=(p.oy-p.y)*.045;p.vx*=.82;p.vy*=.82;p.x+=p.vx;p.y+=p.vy}
+const shimmer=.7+.3*Math.sin(t*.002+p.phase);ctx.fillStyle='rgba(39,225,229,'+(shimmer*(.38+p.lum*.065))+')';ctx.shadowColor='#17cbd7';ctx.shadowBlur=shimmer*5;ctx.fillText(p.ch,p.x,p.y)}
+ctx.shadowBlur=0;if(!reduced)requestAnimationFrame(frame)}
+resize();requestAnimationFrame(frame);
+})();
+</script></body></html>
