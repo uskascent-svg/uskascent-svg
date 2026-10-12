@@ -38,8 +38,6 @@ Nashik, India · IST (UTC+5:30)
   <img src="./assets/contribution-activity.svg" width="100%" alt="GitHub contribution calendar showing yearly total and date range"/>
 </p>
 
-
-
 ## `❯ ./leetcode --profile`
 
 <p align="center">
@@ -48,7 +46,15 @@ Nashik, India · IST (UTC+5:30)
 
 Problem solving is **built on trust. Driven by results.**
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 **[LeetCode · AscentU3](https://leetcode.com/u/AscentU3/)**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
 
 ## `❯ ./play --profile`
 
@@ -57,6 +63,10 @@ Problem solving is **built on trust. Driven by results.**
 </p>
 
 **[Launch the ASCENT U3 Interactive Terminal ↗](https://uskascent-svg.github.io/uskascent-svg/terminal.html)** — enter commands to explore my background, cybersecurity interests, projects, current learning goals, career direction, and contact links. This is one safe, simulated terminal experience; it does not run real shell commands or security scans.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
 
 ## `❯ ls ~/projects --featured`
 
@@ -70,6 +80,10 @@ Problem solving is **built on trust. Driven by results.**
 | **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
 | **LeetCode Solutions** | [Open repository ↗](https://github.com/uskascent-svg/Leetcode-solution-) | Repository for coding practice and problem solutions. |
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 ## `❯ ls ~/stack`
 
 <p align="center">
@@ -81,6 +95,10 @@ drwxr-xr-x  security/  soc  threat-detection  siem  vulnerability-assessment  ne
 drwxr-xr-x  systems/   linux  bash  python  docker
 drwxr-xr-x  development/  python  cpp  java  javascript  typescript  sql
 ```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,mysql,bash,linux,docker,git,vscode&perline=11&theme=dark" alt="Programming languages and developer tools" />
@@ -105,6 +123,10 @@ utkarsh@cloud:~$ language-stats --source github
 utkarsh@cloud:~$ _
 ```
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 ## `❯ cat ~/skills.md`
 
 <p align="center">
@@ -116,7 +138,15 @@ utkarsh@cloud:~$ _
 - **Systems:** Linux, Docker, Bash and Python.
 - **Problem solving:** [LeetCode · AscentU3](https://leetcode.com/u/AscentU3/).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 I aim to connect skills to reproducible labs, repositories, tests or write-ups instead of listing unverified credentials.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
 
 ## `❯ tail -f ~/learning.log`
 
@@ -131,6 +161,10 @@ I aim to connect skills to reproducible labs, repositories, tests or write-ups i
 [always]   Documenting evidence, tests and limitations
 ```
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 ## About Me
 
 <p align="center">
@@ -139,13 +173,33 @@ I aim to connect skills to reproducible labs, repositories, tests or write-ups i
 
 I am an Information Technology Engineering Student at MET BKC IOE Nashik and i am passionate about Cybersecurity, SOC Operations, Threat Detection, Network Security, Vulnerability Assessment, and Al-driven security.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 I enjoy turning what I learn into practical security solutions. I've worked with Python, Linux, networking, web security, SIEM, and AI/ ML. One project I'm especially proud of is my Email Phishing Detection System, where I explored real-world phishing techniques and built a system to analyze emails, links, and suspicious patterns. The project strengthened my ability to think like both an attacker and a defender, turning security concepts into practical threat-detection solutions.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
 
 I believe in learning cybersecurity through hands-on projects, CTFs, labs, and real-world problem solving.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 Career Goal: To become a Cybersecurity/SOC Analyst and grow into Security and Threat Intelligence.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 Currently seeking cybersecurity internships and project opportunities where I can apply my skills, contribute to real-world security challenges, and learn from experienced professionals.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
 
 ## `❯ ssh collab@utkarsh`
 
@@ -157,8 +211,20 @@ Currently seeking cybersecurity internships and project opportunities where I ca
 
 **Let's connect**
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 [LinkedIn](https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/) · [LeetCode](https://leetcode.com/u/AscentU3/) · [Email](mailto:uskascent@gmail.com)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
+
 *Curious by default. Security-minded by design.*
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Thick animated green Matrix rain flowing across the README" />
+</p>
 
 </div>
