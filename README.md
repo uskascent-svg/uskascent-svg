@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/animated-name.svg" width="100%" alt="UTKARSH ASCII-art name typing animation" />
+
 <a href="https://uskascent-svg.github.io/uskascent-svg/terminal.html" title="Open the fully interactive ASCENT U3 terminal"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/readme-terminal.gif?v=6491668" width="100%" alt="ASCENT U3 terminal typing character by character with a blinking cursor"/></a>
 
 <p align="center">
@@ -7,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=profile-name-overlay-20261013-v2" width="70%" alt="Compact Matrix rain animation" />
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg" width="70%" alt="Compact Matrix rain animation" />
 </p>
 
 Cybersecurity · Cloud Computing · Cloud Security · AI Security
