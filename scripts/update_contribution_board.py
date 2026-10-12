@@ -78,19 +78,19 @@ def main():
         days.append((current, item["count"], item["level"]))
 
     # 53 columns × 7 rows gives a compact, GitHub-calendar-style rectangle.
-    cell, gap = 11, 2
+    cell, gap = 16, 3
     cols, rows = 53, 7
-    x0, y0 = 18, 48
+    x0, y0 = 24, 70
     board_w = cols * cell
     total = sum(count for _, count, _ in days)
-    width, height = 630, 150
+    width, height = 950, 225
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
         '<title id="title">Live 365-day GitHub contributions for ' + escape(USERNAME) + '</title>',
         '<desc id="desc">A 365-day rectangular contribution board with 365 squares. Each square is one date; color intensity reflects public GitHub contribution activity. Hover over a square for its date and count. Updated daily by GitHub Actions.</desc>',
         '<rect width="100%" height="100%" rx="10" fill="#171411" stroke="#8d6b3f"/>',
-        '<text x="18" y="20" font-family="monospace" font-size="12" fill="#f1d29a">365-DAY CONTRIBUTION CHESSBOARD</text>',
-        f'<text x="18" y="35" font-family="monospace" font-size="9" fill="#c9b18b">{escape(USERNAME)} · {total:,} contributions in the last 365 days · refreshed {TODAY.isoformat()}</text>',
+        '<text x="24" y="30" font-family="monospace" font-size="18" fill="#f1d29a">365-DAY CONTRIBUTION CHESSBOARD</text>',
+        f'<text x="24" y="52" font-family="monospace" font-size="13" fill="#c9b18b">{escape(USERNAME)} · {total:,} contributions in the last 365 days · refreshed {TODAY.isoformat()}</text>',
     ]
     for index, (day, count, level) in enumerate(days):
         col, row = index // rows, index % rows
@@ -103,13 +103,13 @@ def main():
         )
     legend_y = y0 + rows * cell + 13
     lines.extend([
-        f'<text x="18" y="{legend_y}" font-family="monospace" font-size="8" fill="#c9b18b">LESS</text>',
+        f'<text x="18" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">LESS</text>',
     ])
     for i, color in enumerate([LIGHT, "#b7d7a8", "#75b86d", "#3f8c50", "#1d5e37"]):
-        lines.append(f'<rect x="{52 + i*13}" y="{legend_y-7}" width="9" height="9" rx="1" fill="{color}"/>')
+        lines.append(f'<rect x="{72 + i*18}" y="{legend_y-7}" width="13" height="13" rx="1.5" fill="{color}"/>')
     lines.extend([
-        f'<text x="{125}" y="{legend_y}" font-family="monospace" font-size="8" fill="#c9b18b">MORE</text>',
-        '<text x="612" y="140" text-anchor="end" font-family="monospace" font-size="7" fill="#c9b18b">LIVE · DAILY</text>',
+        f'<text x="{125}" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">MORE</text>',
+        '<text x="925" y="210" text-anchor="end" font-family="monospace" font-size="10" fill="#c9b18b">LIVE · DAILY</text>',
         '</svg>',
     ])
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
