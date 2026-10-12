@@ -1,4 +1,4 @@
-name: Deploy ASCENTUB ASCII Logo to GitHub Pages
+name: Deploy ASCENTU3 ASCII Logo to GitHub Pages
 
 on:
   push:
