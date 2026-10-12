@@ -11,13 +11,13 @@
 
 <img src="./assets/terminal-header.svg" width="100%" alt="Animated terminal introduction for Utkarsh, cybersecurity interests, project and career goal"/>
 
-<h2 align="center">AscentU3 · Animated ASCII Logo</h2>
+<h2 align="center">AscentU3 · Interactive Digital Pixel Art</h2>
 
 <p align="center">
-  <a href="https://uskascent-svg.github.io/uskascent-svg/"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/logo.svg?v=3" width="100%" alt="Animated AscentU3 ASCII logo — click for the interactive version" /></a>
+  <a href="https://uskascent-svg.github.io/uskascent-svg/"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/logo.svg?v=4" width="100%" alt="Animated AscentU3 digital pixel logo — click for the interactive version" /></a>
 </p>
 
-<p align="center"><em>Click the logo for the interactive version.</em></p>
+<p align="center"><em>Tap or click the logo for the interactive pixel experience.</em></p>
 
 **Utkarsh Khairnar**
 
