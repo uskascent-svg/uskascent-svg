@@ -76,8 +76,7 @@ def main():
     step = cell + gap
     width = left + weeks * step + 24
     calendar_bottom = top + 7 * step + 22
-    recent_days = [TODAY - timedelta(days=i) for i in range(13, -1, -1)]
-    height = calendar_bottom + 190
+    height = calendar_bottom + 20
     total = sum(parser.days.get((START + timedelta(days=i)).isoformat(), {}).get("count", 0) for i in range(365))
 
     lines = [
@@ -122,22 +121,6 @@ def main():
     for i, color in enumerate(GREEN):
         lines.append(f'<rect x="{left + 34 + i * 17}" y="{legend_y - 10}" width="12" height="12" rx="2" fill="{color}"/>')
     lines.append(f'<text x="{left + 126}" y="{legend_y}" font-family="Arial, sans-serif" font-size="10" fill="#8b949e">More</text>')
-    # Explicit rows keep exact dates and counts visible on touch devices, where SVG
-    # hover tooltips are not consistently available in GitHub's image renderer.
-    section_y = calendar_bottom + 16
-    lines.append(f'<line x1="20" y1="{section_y}" x2="{width-20}" y2="{section_y}" stroke="#30363d"/>')
-    lines.append(f'<text x="20" y="{section_y+25}" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#f0f6fc">DAILY CONTRIBUTIONS · LAST 14 DAYS</text>')
-    col_width = (width - 48) // 2
-    for i, day in enumerate(recent_days):
-        col, row = i // 7, i % 7
-        x = 24 + col * col_width
-        y = section_y + 48 + row * 20
-        item = parser.days.get(day.isoformat(), {"count": 0, "level": 0})
-        date_label = day.strftime("%a, %b %d").replace(" 0", " ")
-        count_label = f'{item["count"]} contribution' + ("" if item["count"] == 1 else "s")
-        lines.append(f'<text x="{x}" y="{y}" font-family="Arial, sans-serif" font-size="11" fill="#c9d1d9">{escape(date_label)}</text>')
-        count_color = GREEN[item["level"]] if item["count"] else "#8b949e"
-        lines.append(f'<text x="{x+col_width-24}" y="{y}" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="{count_color}">{escape(count_label)}</text>')
     lines.append('</svg>')
 
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
