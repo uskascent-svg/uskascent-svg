@@ -15,12 +15,12 @@ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.width*(H/W)*dpr);ctx.setTransform(canvas.width/W,0,0,canvas.height/H,0,0);build()}
 function build(){particles.length=0;const cellW=15.2,cellH=14.1,startX=24,startY=42;art.forEach((row,ri)=>Array.from(row).forEach((ch,ci)=>{if(ch===' ')return;const x=startX+ci*cellW,y=startY+ri*cellH;const lum=chars.indexOf(ch);particles.push({x,y,ox:x,oy:y,vx:0,vy:0,ch,lum,phase:Math.random()*6.28})}))}
 function pos(e){const r=canvas.getBoundingClientRect();pointer.x=(e.clientX-r.left)/r.width*W;pointer.y=(e.clientY-r.top)/r.height*H;pointer.active=true}
-function leave(){pointer.active=false}
-canvas.addEventListener('pointermove',pos);canvas.addEventListener('pointerdown',pos);canvas.addEventListener('pointerup',leave);canvas.addEventListener('pointercancel',leave);canvas.addEventListener('pointerleave',leave);window.addEventListener('resize',resize);
+let releaseTimer=0;function leave(){clearTimeout(releaseTimer);releaseTimer=setTimeout(()=>{pointer.active=false},420)}
+canvas.addEventListener('pointermove',pos);canvas.addEventListener('pointerdown',e=>{clearTimeout(releaseTimer);pos(e)});canvas.addEventListener('pointerup',leave);canvas.addEventListener('pointercancel',leave);canvas.addEventListener('pointerleave',leave);window.addEventListener('resize',resize);
 function frame(t){ctx.clearRect(0,0,W,H);ctx.fillStyle='#050b0e';ctx.fillRect(0,0,W,H);ctx.font='700 14.4px ui-monospace, SFMono-Regular, Consolas, monospace';ctx.textBaseline='middle';
 for(const p of particles){let dx=p.x-pointer.x,dy=p.y-pointer.y,dist=Math.hypot(dx,dy)||1;if(pointer.active&&dist<100){const force=(100-dist)/100*8;p.vx+=dx/dist*force;p.vy+=dy/dist*force}
 if(!reduced){p.vx+=(p.ox-p.x)*.045;p.vy+=(p.oy-p.y)*.045;p.vx*=.82;p.vy*=.82;p.x+=p.vx;p.y+=p.vy}
-const shimmer=.7+.3*Math.sin(t*.002+p.phase);ctx.fillStyle='rgba(39,225,229,'+(shimmer*(.38+p.lum*.065))+')';ctx.shadowColor='#17cbd7';ctx.shadowBlur=shimmer*5;ctx.fillText(p.ch,p.x,p.y)}
+const shimmer=.7+.3*Math.sin(t*.002+p.phase);ctx.fillStyle='rgba(39,225,229,'+(shimmer*(.55+p.lum*.045))+')';ctx.shadowBlur=0;ctx.fillText(p.ch,p.x,p.y)}
 ctx.shadowBlur=0;if(!reduced)requestAnimationFrame(frame)}
 resize();requestAnimationFrame(frame);
 })();
