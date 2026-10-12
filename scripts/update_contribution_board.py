@@ -78,12 +78,12 @@ def main():
         days.append((current, item["count"], item["level"]))
 
     # 53 columns × 7 rows gives a compact, GitHub-calendar-style rectangle.
-    cell, gap = 16, 3
-    cols, rows = 53, 7
-    x0, y0 = 24, 70
+    cell, gap = 28, 5
+    cols, rows = 26, 14
+    x0, y0 = 28, 90
     board_w = cols * cell
     total = sum(count for _, count, _ in days)
-    width, height = 950, 225
+    width, height = 800, 510
     lines = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">',
         '<title id="title">Live 365-day GitHub contributions for ' + escape(USERNAME) + '</title>',
@@ -103,13 +103,13 @@ def main():
         )
     legend_y = y0 + rows * cell + 13
     lines.extend([
-        f'<text x="18" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">LESS</text>',
+        f'<text x="28" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">LESS</text>',
     ])
     for i, color in enumerate([LIGHT, "#b7d7a8", "#75b86d", "#3f8c50", "#1d5e37"]):
-        lines.append(f'<rect x="{72 + i*18}" y="{legend_y-7}" width="13" height="13" rx="1.5" fill="{color}"/>')
+        lines.append(f'<rect x="{82 + i*20}" y="{legend_y-7}" width="15" height="15" rx="2" fill="{color}"/>')
     lines.extend([
-        f'<text x="{125}" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">MORE</text>',
-        '<text x="925" y="210" text-anchor="end" font-family="monospace" font-size="10" fill="#c9b18b">LIVE · DAILY</text>',
+        f'<text x="{165}" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">MORE</text>',
+        '<text x="772" y="500" text-anchor="end" font-family="monospace" font-size="10" fill="#c9b18b">LIVE · DAILY</text>',
         '</svg>',
     ])
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
