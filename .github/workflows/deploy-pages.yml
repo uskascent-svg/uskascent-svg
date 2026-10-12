@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "terminal.html"
+      - "README.md"
       - "logo.svg"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
