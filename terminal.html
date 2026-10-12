@@ -67,9 +67,6 @@ const PROFILE={
  approach:['Understand → build → test → document → improve.'],
  teamwork:['I value clear communication, shared ownership and dependable execution.'],
  events:['Experience includes departmental event work and TEDx college event support.'],
- hackathons:['Interested in practical, team-based problem solving and project showcases.'],
- ctf:['Interested in hands-on labs and challenge-based security learning.'],
- labs:['Practice areas: Linux, networking, web security and detection workflows.'],
  certifications:['I only list certifications when verified; none are claimed by this terminal.'],
  resume:['For a current résumé, contact me by email or LinkedIn.'],
  collab:['Open to learning-focused cybersecurity projects and meaningful collaboration.'],
@@ -80,26 +77,16 @@ const PROFILE={
  security:['Defensive focus: understand signals, validate findings and document evidence.'],
  roadmap:['Next: deepen cloud security, detection engineering and incident-response practice.'],
  stats:['I do not display invented scores, live counts or unverified performance metrics.'],
- 'project ascent-safety':['Repository: https://github.com/uskascent-svg/Ascent-Safety-'],
- 'project phishing':['Email phishing detection project; contact me for details and current artifacts.'],
- 'project shop-agent':['Repository: https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent'],
- 'project leetcode':['Repository: https://github.com/uskascent-svg/Leetcode-solution-'],
- 'socials':['LinkedIn · https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/','LeetCode · https://leetcode.com/u/AscentU3/'],
- 'open-source':['GitHub: https://github.com/uskascent-svg/uskascent-svg'],
- 'why-security':['I enjoy investigating suspicious patterns and turning findings into useful defenses.'],
  'blue-team':['Defensive security: monitor, investigate, contain and learn from incidents.'],
  'cloud-security':['Interest: IAM, least privilege, secure configuration and cloud visibility.'],
  'threat-detection':['Build toward reliable detections that can be tested, explained and improved.'],
  'problem-solving':['LeetCode: https://leetcode.com/u/AscentU3/'],
- 'communication':['Clear notes and reproducible evidence matter as much as the alert.'],
- 'fun-fact':['I like combining cybersecurity, AI and practical product building.'],
- 'availability':['For internships or collaboration, reach out through LinkedIn or email.'],
  'ascentu3':['ASCENT U3 · Detect. Prevent. Protect.'],
  'help':['Try one of these 50 commands:','whoami · about · education · interests · cybersecurity · soc · cloud · ai-security · network · skills · languages · linux · python · projects · ascent-safety · phishing · rail-eye · e-recycle · kumbhsathi · shop-agent · github · linkedin · leetcode · email · contact · career · goal · learning · currently · location · values · approach · teamwork · events · hackathons · ctf · labs · certifications · resume · collab · opportunities · motto · stack · tools · security · roadmap · stats · socials · open-source · why-security · blue-team · cloud-security · threat-detection · problem-solving · communication · fun-fact · availability · ascentu3']
 };
 const ALIASES={hi:'whoami',me:'whoami',profile:'about',bio:'about',study:'education',focus:'interests',cyber:'cybersecurity',soc:'soc',ai:'ai-security',projects:'projects',work:'projects',mail:'email',links:'contact',leetcode:'leetcode',linkedin:'linkedin',career:'career',goal:'goal',help:'help',clear:'clear',exit:'exit',quit:'exit'};
 const output=document.querySelector('#output'),form=document.querySelector('#form'),input=document.querySelector('#command');
-const commands=Object.keys(PROFILE);
+const commands=Object.keys(PROFILE);PROFILE.help=['50 commands:',commands.filter(x=>x!=='help').join(' · ')];
 const history=[];let historyIndex=0;
 function add(text,kind=''){const p=document.createElement('p');p.className='line'+(kind?' '+kind:'');p.textContent=text;output.append(p);output.scrollTop=output.scrollHeight}
 function renderLine(text){const p=document.createElement('p');p.className='line';const match=text.match(/^(.*?)(https?:\/\/\S+|mailto:\S+)$/);if(match){p.append(document.createTextNode(match[1]));const a=document.createElement('a');a.className='link';a.href=match[2];a.textContent=match[2];a.target=match[2].startsWith('http')?'_blank':'_self';if(a.target==='_blank')a.rel='noopener noreferrer';p.append(a)}else p.textContent=text;output.append(p);output.scrollTop=output.scrollHeight}
