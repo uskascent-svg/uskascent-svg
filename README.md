@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg" width="70%" alt="Compact Matrix rain animation" />
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=matrix-clean-20261013" width="70%" alt="Compact Matrix rain animation" />
 </p>
 
 Cybersecurity · Cloud Computing · Cloud Security · AI Security
