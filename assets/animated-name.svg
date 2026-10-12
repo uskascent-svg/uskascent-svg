@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230" role="img" aria-labelledby="title desc">
+<title id="title">Utkarsh name typed in terminal style</title>
+<desc id="desc">The exact UTKARSH ASCII-art banner is revealed line by line like a typing animation.</desc>
+<rect width="960" height="230" rx="12" fill="#0d1117"/>
+<rect x="1" y="1" width="958" height="228" rx="11" fill="none" stroke="#30363d"/>
+<g font-family="Consolas, 'Courier New', monospace" font-size="18" xml:space="preserve" fill="#00ff9c">
+  <text x="24" y="28" font-size="13" fill="#8b949e">utkarsh@cloud:~$</text>
+  <text x="24" y="58">██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗</text>
+  <text x="24" y="86">██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║</text>
+  <text x="24" y="114">██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║</text>
+  <text x="24" y="142">██║   ██║   ██║   ██╔═██╗ ██╔══██║██╔══██╗╚════██║██╔══██║</text>
+  <text x="24" y="170">╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║</text>
+  <text x="24" y="198"> ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝</text>
+</g>
+<g fill="#00ff9c">
+  <rect x="20" y="40" width="0" height="24"><animate attributeName="width" from="0" to="914" dur="2.4s" begin=".4s" fill="freeze" calcMode="discrete" values="0;914" keyTimes="0;1"/></rect>
+  <rect x="20" y="68" width="0" height="24"><animate attributeName="width" from="0" to="914" dur="2.4s" begin="2.9s" fill="freeze" calcMode="discrete" values="0;914" keyTimes="0;1"/></rect>
+  <rect x="20" y="96" width="0" height="24"><animate attributeName="width" from="0" to="914" dur="2.4s" begin="5.4s" fill="freeze" calcMode="discrete" values="0;914" keyTimes="0;1"/></rect>
+  <rect x="20" y="124" width="0" height="24"><animate attributeName="width" from="0" to="914" dur="2.4s" begin="7.9s" fill="freeze" calcMode="discrete" values="0;914" keyTimes="0;1"/></rect>
+  <rect x="20" y="152" width="0" height="24"><animate attributeName="width" from="0" to="914" dur="2.4s" begin="10.4s" fill="freeze" calcMode="discrete" values="0;914" keyTimes="0;1"/></rect>
+  <rect x="20" y="180" width="0" height="24"><animate attributeName="width" from="0" to="914" dur="2.4s" begin="12.9s" fill="freeze" calcMode="discrete" values="0;914" keyTimes="0;1"/></rect>
+</g>
+<text x="24" y="220" font-family="Consolas, monospace" font-size="12" fill="#8b949e">typing identity... <tspan fill="#22d3ee">UTKARSH</tspan><tspan fill="#00ff9c">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+</svg>
