@@ -1,13 +1,6 @@
 <div align="center">
 
-<pre>
-██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗
-██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║
-██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║
-██║   ██║   ██║   ██╔═██╗ ██╔══██║██╔══██╗╚════██║██╔══██║
-╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║
- ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-</pre>
+<img src="./assets/animated-name.svg" width="100%" alt="UTKARSH ASCII-art name typing animation" />
 
 <img src="./assets/terminal-header.svg" width="100%" alt="Animated terminal introduction for Utkarsh, cybersecurity interests, project and career goal"/>
 
