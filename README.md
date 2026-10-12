@@ -1,15 +1,6 @@
 <div align="center">
 
-<pre>
-utkarsh@cloud:~$ figlet -f ansi_shadow utkarsh
-
-██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗
-██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║
-██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║
-██║   ██║   ██║   ██╔═██╗ ██╔══██║██╔══██╗╚════██║██╔══██║
-╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║
- ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-</pre>
+<img src="./assets/terminal-header.svg" width="100%" alt="Animated terminal introduction for Utkarsh, cybersecurity interests, project and career goal"/>
 
 **Utkarsh Khairnar**
 
@@ -17,31 +8,11 @@ Cybersecurity · Blue Team · Cloud Security · AI Security
 
 Nashik, India · IST (UTC+5:30)
 
-</div>
-
-```bash
-utkarsh@cloud:~$ whoami
-→ IT Engineering student at MET BKC IOE Nashik, building practical cybersecurity solutions.
-
-utkarsh@cloud:~$ cat status.log
-[ OK ] Cybersecurity projects and hands-on learning
-[ OK ] Email Phishing Detection System
-[ .. ] SOC Operations, threat detection and cloud security (growing)
-[ .. ] Seeking cybersecurity internships and project opportunities
-
-utkarsh@cloud:~$ ./deploy.sh --env=dev
-build passed
-✓ learning in public · shipping practical projects
-```
-
-<div align="center">
-
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-AscentU3-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AscentU3/)
 [![Email](https://img.shields.io/badge/Email-Contact%20me-8B89CC?style=for-the-badge&logo=gmail)](mailto:uskascent@gmail.com?subject=Opportunity%20from%20GitHub%20profile)
 
 </div>
-
 ---
 
 <h1 align="center">Contribution Activity</h1>
