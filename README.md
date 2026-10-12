@@ -17,7 +17,7 @@ IT Engineering student building security tools, cloud labs and automation—and 
 <h1 align="center">Contribution Activity</h1>
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/00E676/uskascent-svg" width="100%" height="220" alt="Large GitHub contribution activity heatmap for uskascent-svg in green shades"/>
+  <img src="./assets/contribution-activity.svg" width="100%" alt="Large GitHub contribution calendar with month labels, weekday labels, total contributions, and date/count details on hover"/>
 </p>
 
 Information Technology Engineering Student | Cybersecurity • Blue Team • Cloud Security • AI Security
