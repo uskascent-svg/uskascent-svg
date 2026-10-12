@@ -8,7 +8,7 @@
 <title>Utkarsh Khairnar | ASCENT U3 Cybersecurity Terminal</title>
 <style>
 :root{color-scheme:dark;--bg:#050a08;--panel:#0b110e;--panel2:#101914;--line:#20382a;--green:#4dff91;--green2:#a5ffc3;--cyan:#55e8ef;--muted:#83a18c;--amber:#ffc66d;--red:#ff8585;font:15px/1.6 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;min-height:100vh;color:#d7e8db;background:radial-gradient(ellipse at 50% -15%,#153322 0,transparent 55%),var(--bg);padding:clamp(12px,3vw,32px)}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;min-height:100vh;color:#d7e8db;background:transparent;padding:clamp(12px,3vw,32px);isolation:isolate}#terminal-backdrop{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.24;background:radial-gradient(ellipse at 50% -15%,#153322 0,transparent 55%),#050a08}.shell{position:relative;z-index:1;backdrop-filter:blur(1.5px)}
 a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline;color:#fff}button,input{font:inherit}
 .shell{max-width:1000px;margin:0 auto;border:1px solid #294a34;border-radius:15px;overflow:hidden;background:rgba(5,10,8,.96);box-shadow:0 22px 90px #0009,0 0 36px #36ff8010}
 .topbar{min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:#111a14;border-bottom:1px solid var(--line);color:var(--muted);font-size:12px}
@@ -33,6 +33,7 @@ main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size
 </style>
 </head>
 <body>
+<canvas id="terminal-backdrop" aria-hidden="true"></canvas>
 <div class="shell">
 <header class="topbar"><span><span class="dots"><i class="dot red"></i><i class="dot yellow"></i><i class="dot green-dot"></i></span><span class="top-title">ASCENT U3 / CYBER DEFENCE CONSOLE</span></span><span class="top-meta">LEARNING &amp; BUILDING · SAFE SIMULATION</span></header>
 <section class="brand">
@@ -61,6 +62,37 @@ main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size
 </div>
 <script>
 (()=>{'use strict';
+(()=>{'use strict';
+const canvas=document.querySelector('#terminal-backdrop');
+if(canvas){
+ const ctx=canvas.getContext('2d',{alpha:true});
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const glyphs='01アイウエオカキクケコ<>/{}[]$#';
+ let width=1,height=1,dpr=1,columns=[],raf=0;
+ function resize(){
+  dpr=Math.min(window.devicePixelRatio||1,1.5);
+  width=Math.max(1,window.innerWidth);height=Math.max(1,window.innerHeight);
+  canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  columns=Array.from({length:Math.ceil(width/19)},()=>({y:Math.random()*height,speed:.18+Math.random()*.48,trail:5+Math.floor(Math.random()*9)}));
+ }
+ function draw(){
+  ctx.clearRect(0,0,width,height);ctx.font='12px ui-monospace,monospace';
+  columns.forEach((c,i)=>{
+   for(let j=0;j<c.trail;j++){
+    const y=c.y-j*17;if(y<0||y>height)continue;
+    ctx.fillStyle='rgba(77,255,145,'+(0.035*(1-j/c.trail))+')';
+    ctx.fillText(glyphs[(i*13+j*7+Math.floor(c.y/17))%glyphs.length],i*19,y);
+   }
+   if(!reduced){c.y+=c.speed;if(c.y-c.trail*17>height)c.y=-Math.random()*height*.35}
+  });
+  if(!reduced)raf=requestAnimationFrame(draw);
+ }
+ resize();draw();
+ window.addEventListener('resize',()=>{resize();if(reduced)draw()},{passive:true});
+ window.addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
+}
+})();
 const output=document.querySelector('#output'),form=document.querySelector('#command-form'),input=document.querySelector('#command-input');
 const history=[],known=['help','whoami','pwd','ls','cd','cat','head','tail','wc','grep','find','echo','date','cal','uname','hostname','id','uptime','ps','top','df','free','env','history','clear','mkdir','touch','cp','mv','rm','git status','python --version','node --version','cat status.log','ls projects','./career.sh --goal','neofetch','contact','./play --profile','sudo defend','./ascentu3 --unlock'];
 const virtualFiles={'/home/visitor/ascent-profile/status.log':'STATUS: Learning & Building\nFOCUS: SOC Analyst, Cloud Computing, Cloud Security, AI Security, Network Security\nBUILD: Threat detection, security automation, practical projects\nLEARN: Incident response, SIEM workflows, threat hunting, detection engineering\nNOTE: These are learning priorities, not claims of live monitoring or certifications.','/home/visitor/ascent-profile/skills.md':'Cloud: AWS and Azure fundamentals, IAM, networking, Terraform labs\nSecurity: SIEM, vulnerability analysis, threat modelling\nSystems: Linux, Docker, Bash, Python\nProblem solving: LeetCode / AscentU3','/home/visitor/ascent-profile/about.txt':'Utkarsh Khairnar\nInformation Technology Engineering Student\nNashik, Maharashtra, India\nInterests: Cybersecurity, SOC Operations, Cloud Security, AI Security, Network Security\nCareer goal: Cybersecurity / SOC Analyst, growing into security and threat intelligence'};
