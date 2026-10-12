@@ -17,15 +17,7 @@ IT Engineering student building security tools, cloud labs and automation—and 
 <h1 align="center">Contribution Activity</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/SECURITY%20LOG-CONTRIBUTION%20ACTIVITY-00E676?style=for-the-badge&labelColor=0D1117" alt="Security log: contribution activity"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=uskascent-svg&bg_color=0d1117&color=00e676&line=00e676&point=ffffff&area=true&hide_border=true&custom_title=GitHub%20Contribution%20Activity" width="100%" alt="Large GitHub contribution activity graph in black and green"/>
-</p>
-
-<p align="center">
-  <img src="https://ghchart.rshah.org/00E676/uskascent-svg" width="100%" alt="GitHub contribution activity heatmap for uskascent-svg in green shades"/>
+  <img src="https://ghchart.rshah.org/00E676/uskascent-svg" width="100%" height="220" alt="Large GitHub contribution activity heatmap for uskascent-svg in green shades"/>
 </p>
 
 Information Technology Engineering Student | Cybersecurity • Blue Team • Cloud Security • AI Security
