@@ -20,14 +20,14 @@ header,footer{display:flex;justify-content:space-between;gap:12px;align-items:ce
 <header><span class="brand">ASCENTU3 <span style="color:#8baeb4">/ DIGITAL FIELD</span></span><span>PIXEL ART · 01</span></header>
 <section id="stage" aria-label="Original AscentU3 logo with interactive pixel effects"><canvas id="fx" aria-hidden="true"></canvas><img class="art-image" src="./assets/ascentu3-original.png" alt="Original AscentU3 logo artwork" draggable="false"></section>
 <footer><span>DETECT · BUILD · ASCEND</span><span><a href="https://github.com/uskascent-svg/uskascent-svg">GITHUB ↗</a></span></footer>
-<div class="hint">TOUCH · MOVE · SCROLL — PIXELS REACT GENTLY AND SETTLE BACK</div>
+<div class="hint">PIXELS DRIFT CONTINUOUSLY · TOUCH OR MOVE TO INTERACT</div>
 </main>
 <script>
 (()=>{'use strict';
 const canvas=document.querySelector('#fx'),stage=document.querySelector('#stage'),ctx=canvas.getContext('2d',{alpha:true});
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let W=1,H=1,dpr=1,points=[],pointer={x:-1000,y:-1000,active:false},energy=0,lastY=window.scrollY,raf=0;
-function resize(){const r=stage.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);W=Math.max(1,r.width);H=Math.max(1,r.height);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);points=Array.from({length:Math.max(55,Math.floor(W*H/9000))},()=>({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,r:.7+Math.random()*1.2,a:.12+Math.random()*.32,phase:Math.random()*6.28}))}
+function resize(){const r=stage.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);W=Math.max(1,r.width);H=Math.max(1,r.height);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);points=Array.from({length:Math.max(90,Math.floor(W*H/6500))},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.42,vy:(Math.random()-.5)*.42,r:.8+Math.random()*1.5,a:.22+Math.random()*.42,phase:Math.random()*6.28,speed:.35+Math.random()*.9}))}
 function move(e){const r=stage.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.active=true}
 function leave(){pointer.active=false}
 stage.addEventListener('pointermove',move,{passive:true});stage.addEventListener('pointerdown',move,{passive:true});stage.addEventListener('pointerup',leave,{passive:true});stage.addEventListener('pointercancel',leave,{passive:true});stage.addEventListener('pointerleave',leave,{passive:true});
@@ -36,10 +36,17 @@ stage.addEventListener('wheel',e=>{energy=Math.min(1,energy+Math.min(.35,Math.ab
 window.addEventListener('scroll',()=>{energy=Math.min(1,energy+Math.min(.25,Math.abs(window.scrollY-lastY)/240));lastY=window.scrollY},{passive:true});
 window.addEventListener('resize',resize,{passive:true});
 function draw(t){ctx.clearRect(0,0,W,H);
- for(const p of points){if(pointer.active){const dx=p.x-pointer.x,dy=p.y-pointer.y,d=Math.hypot(dx,dy)||1;if(d<115){const f=(115-d)/115*.42;p.vx+=dx/d*f;p.vy+=dy/d*f}}
- if(!reduced){p.vx+=(Math.sin(t*.00035+p.phase)*.08-p.vx)*.018;p.vy+=(Math.cos(t*.00028+p.phase)*.08-p.vy)*.018;p.vx*=.985;p.vy*=.985;p.x+=p.vx*(1+energy*2);p.y+=p.vy*(1+energy*2);if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0}
- ctx.fillStyle='rgba(70,235,250,'+(p.a+energy*.18)+')';ctx.fillRect(p.x,p.y,p.r,p.r)}
- energy*=.975;if(!reduced)raf=requestAnimationFrame(draw)}
+ for(const p of points){
+  p.vx+=Math.sin(t*.00042*p.speed+p.phase)*.012;
+  p.vy+=Math.cos(t*.00036*p.speed+p.phase)*.012;
+  if(pointer.active){const dx=p.x-pointer.x,dy=p.y-pointer.y,d=Math.hypot(dx,dy)||1;if(d<125){const f=(125-d)/125*.16;p.vx+=dx/d*f;p.vy+=dy/d*f}}
+  p.vx=Math.max(-.8,Math.min(.8,p.vx))*.992;p.vy=Math.max(-.8,Math.min(.8,p.vy))*.992;
+  p.x+=p.vx*(1+energy*2.5);p.y+=p.vy*(1+energy*2.5);
+  if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;
+  const alpha=Math.min(.85,p.a+energy*.22);
+  ctx.fillStyle='rgba(70,235,250,'+alpha+')';ctx.shadowBlur=5;ctx.shadowColor='rgba(45,220,255,.45)';ctx.fillRect(p.x,p.y,p.r,p.r);
+ }
+ ctx.shadowBlur=0;energy*=.982;if(!reduced)raf=requestAnimationFrame(draw)}
 resize();if(!reduced)raf=requestAnimationFrame(draw);else draw(0);
 window.addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
 })();
