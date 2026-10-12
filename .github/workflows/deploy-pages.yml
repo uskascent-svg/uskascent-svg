@@ -3,12 +3,6 @@ name: Deploy ASCENTU3 ASCII Logo to GitHub Pages
 on:
   push:
     branches: [main]
-    paths:
-      - "index.html"
-      - "terminal.html"
-      - "README.md"
-      - "logo.svg"
-      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
