@@ -13,6 +13,12 @@
 
 <h1 align="center">ASCENT U3</h1>
 
+<p align="center">
+  <a href="https://uskascent-svg.github.io/uskascent-svg/"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/ascentu3-original.png" width="100%" alt="Original ASCENT U3 logo — click for the interactive pixel experience" /></a>
+</p>
+
+<p align="center"><em>Tap or click the logo for the interactive pixel experience.</em></p>
+
 <h3 align="center">CYBERSECURITY · IT SOLUTIONS</h3>
 
 <p align="center"><strong>Secure your systems. Strengthen your digital future.</strong></p>
