@@ -46,6 +46,22 @@ Problem solving is **built on trust. Driven by results.**
 | **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
 | **LeetCode Solutions** | [Open repository ↗](https://github.com/uskascent-svg/Leetcode-solution-) | Repository for coding practice and problem solutions. |
 
+## `❯ languages --list`
+
+```text
+utkarsh@cloud:~$ languages --list
+
+Python        [ security scripts · threat analysis · automation ]
+C++           [ data structures · algorithms · problem solving ]
+Java          [ object-oriented programming · coursework ]
+JavaScript    [ web development ]
+TypeScript    [ typed application development ]
+SQL           [ relational databases · queries ]
+Bash          [ Linux command-line basics ]
+
+utkarsh@cloud:~$ _
+```
+
 ## `❯ cat ~/skills.md`
 
 - **Cloud:** AWS and Azure fundamentals, IAM, networking and Terraform labs.
