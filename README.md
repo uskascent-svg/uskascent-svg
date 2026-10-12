@@ -31,6 +31,10 @@ Nashik, India · IST (UTC+5:30)
 <h1 align="center">Contribution Activity</h1>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
+
+<p align="center">
   <img src="./assets/contribution-activity.svg" width="100%" alt="GitHub contribution calendar showing yearly total and date range"/>
 </p>
 
@@ -38,15 +42,27 @@ Nashik, India · IST (UTC+5:30)
 
 ## `❯ ./leetcode --profile`
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
+
 Problem solving is **built on trust. Driven by results.**
 
 **[LeetCode · AscentU3](https://leetcode.com/u/AscentU3/)**
 
 ## `❯ ./play --profile`
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
+
 **[Launch the ASCENT U3 Interactive Terminal ↗](https://uskascent-svg.github.io/uskascent-svg/terminal.html)** — enter commands to explore my background, cybersecurity interests, projects, current learning goals, career direction, and contact links. This is one safe, simulated terminal experience; it does not run real shell commands or security scans.
 
 ## `❯ ls ~/projects --featured`
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
 
 | Project | Repository | What it does |
 |---|---|---|
@@ -55,6 +71,10 @@ Problem solving is **built on trust. Driven by results.**
 | **LeetCode Solutions** | [Open repository ↗](https://github.com/uskascent-svg/Leetcode-solution-) | Repository for coding practice and problem solutions. |
 
 ## `❯ ls ~/stack`
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
 
 ```bash
 drwxr-xr-x  security/  soc  threat-detection  siem  vulnerability-assessment  network-security
@@ -67,6 +87,10 @@ drwxr-xr-x  development/  python  cpp  java  javascript  typescript  sql
 </p>
 
 ## `❯ ./stats --live`
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
 
 <p align="center">
   <img src="./assets/langs.svg" height="350" alt="Terminal-style language distribution with percentages generated from public GitHub repositories" />
@@ -83,6 +107,10 @@ utkarsh@cloud:~$ _
 
 ## `❯ cat ~/skills.md`
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
+
 - **Cloud:** AWS and Azure fundamentals, IAM, networking and Terraform labs.
 - **Security:** Cloud computing concepts, SIEM, vulnerability analysis and threat modelling.
 - **Systems:** Linux, Docker, Bash and Python.
@@ -92,6 +120,10 @@ I aim to connect skills to reproducible labs, repositories, tests or write-ups i
 
 ## `❯ tail -f ~/learning.log`
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
+
 ```text
 [building] Cloud, Linux, networking and automation
 [building] Security analysis and detection engineering
@@ -100,6 +132,10 @@ I aim to connect skills to reproducible labs, repositories, tests or write-ups i
 ```
 
 ## About Me
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
 
 I am an Information Technology Engineering Student at MET BKC IOE Nashik and i am passionate about Cybersecurity, SOC Operations, Threat Detection, Network Security, Vulnerability Assessment, and Al-driven security.
 
@@ -112,6 +148,10 @@ Career Goal: To become a Cybersecurity/SOC Analyst and grow into Security and Th
 Currently seeking cybersecurity internships and project opportunities where I can apply my skills, contribute to real-world security challenges, and learn from experienced professionals.
 
 ## `❯ ssh collab@utkarsh`
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-divider.svg" width="100%" alt="Animated green Matrix falling-pixels divider" />
+</p>
 
 <div align="center">
 
