@@ -20,7 +20,24 @@ IT Engineering student building security tools, cloud labs and automation—and 
   <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/chess-contributions.svg?v=3" width="100%" alt="Live 365-day chess-inspired GitHub contribution board; each square represents one day and color intensity represents contribution activity"/>
 </p>
 
-A **365-day rectangular chessboard** showing my public GitHub contributions. Every square represents one day, and darker green squares indicate more activity. Hover over any square to see its date and contribution count. GitHub Actions refreshes the board daily and can also be run manually from the repository's Actions tab. The board is generated from GitHub's public contribution calendar; if the source cannot be read reliably, the workflow fails rather than replacing the board with invented data.
+Information Technology Engineering Student | Cybersecurity • Blue Team • Cloud Security • AI Security
+
+Passionate about building safer digital environments through intelligent threat detection, security automation, and defensive security engineering. Interested in leveraging AI and machine learning to identify threats, analyze suspicious activities, and strengthen digital defenses.
+
+Currently exploring Blue Team operations, threat intelligence, network security, cloud workload protection, vulnerability assessment, and incident response. Focused on developing practical cybersecurity tools and AI-driven solutions that address real-world security challenges.
+
+**Focus Areas**
+
+- Cybersecurity & Blue Team Operations
+- Threat Detection & Incident Response
+- Cloud Security & Workload Protection
+- AI/ML for Cybersecurity
+- Security Automation & Python
+- Network Security & Threat Intelligence
+
+**Mission:** Building secure, resilient digital systems through intelligent defense, continuous learning, and practical security engineering.
+
+**Detect. Prevent. Protect.**
 
 ## `❯ ./leetcode --profile`
 
