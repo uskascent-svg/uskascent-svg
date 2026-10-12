@@ -6,6 +6,8 @@
 
 <h1 align="center">ASCENT U3</h1>
 
+<h2 align="center">Utkarsh Khairnar</h2>
+
 <p align="center">
   <a href="https://uskascent-svg.github.io/uskascent-svg/"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/ascentu3-original.png" width="100%" alt="Original ASCENT U3 logo — click for the interactive pixel experience" /></a>
 </p>
