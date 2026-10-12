@@ -17,15 +17,11 @@ IT Engineering student building security tools, cloud labs and automation—and 
 ## `❯ ./contributions --live`
 
 <p align="center">
-  <a href="https://github.com/uskascent-svg#yearly-contribution-calendar" title="Open my GitHub contribution calendar">
-    <img src="https://ghchart.rshah.org/00ff9c/uskascent-svg" width="100%" alt="GitHub contribution calendar for uskascent-svg in a cybersecurity-inspired neon green theme; click to open the live contribution calendar on GitHub"/>
-  </a>
+  <img src="https://ghchart.rshah.org/00ff9c/uskascent-svg" width="100%" alt="GitHub contribution calendar for uskascent-svg, styled in green and showing daily contribution activity"/>
 </p>
 
 <p align="center">
-  <a href="https://github.com/uskascent-svg#yearly-contribution-calendar"><strong>↗ OPEN LIVE GITHUB CONTRIBUTION PANEL</strong></a>
-  <br/>
-  <sub>Live contribution activity · Neon-green security aesthetic · Source: GitHub public contribution data</sub>
+  <sub>GitHub contribution activity · Security-green theme</sub>
 </p>
 
 Information Technology Engineering Student | Cybersecurity • Blue Team • Cloud Security • AI Security
