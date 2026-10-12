@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "17 5 * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/update_contribution_board.py"
+      - ".github/workflows/update-contribution-board.yml"
 
 permissions:
   contents: write
