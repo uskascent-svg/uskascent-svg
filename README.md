@@ -6,7 +6,6 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-AscentU3-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AscentU3/)
-[![GitHub](https://img.shields.io/badge/GitHub-uskascent--svg-181717?style=for-the-badge&logo=github)](https://github.com/uskascent-svg)
 [![Email](https://img.shields.io/badge/Email-Contact%20me-8B89CC?style=for-the-badge&logo=gmail)](mailto:uskascent@gmail.com?subject=Opportunity%20from%20GitHub%20profile)
 
 IT Engineering student building security tools, cloud labs and automation—and backing claims with evidence, tests and clear limitations.
