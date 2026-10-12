@@ -10,10 +10,8 @@
   <a href="https://uskascent-svg.github.io/uskascent-svg/"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/ascentu3-original.png" width="100%" alt="Original ASCENT U3 logo — click for the interactive pixel experience" /></a>
 </p>
 
-<h2 align="center">Utkarsh Khairnar</h2>
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=06ced8cca38664410b8992adfbfabd689a6dddf3" width="60%" alt="Compact Matrix rain with Utkarsh Khairnar in the foreground" />
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg?v=profile-name-overlay-20261013" width="60%" alt="Compact Matrix rain with Utkarsh Khairnar displayed over the falling code" />
 </p>
 
 Cybersecurity · Cloud Computing · Cloud Security · AI Security
