@@ -2,7 +2,7 @@
 
 <img src="./assets/animated-name.svg" width="100%" alt="UTKARSH ASCII-art name typing animation" />
 
-<img src="./assets/readme-terminal.svg" width="100%" alt="Animated ASCENT U3 terminal typing whoami, expanded cybersecurity status, and career goals"/>
+<img src="./assets/readme-terminal.gif" width="100%" alt="ASCENT U3 terminal typing character by character with a blinking cursor"/>
 
 <h1 align="center">ASCENT U3</h1>
 
