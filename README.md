@@ -14,14 +14,10 @@ IT Engineering student building security tools, cloud labs and automation—and 
 
 ---
 
-## `❯ ./contributions --live`
+## `❯ ./contributions --activity`
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/00ff9c/uskascent-svg" width="100%" alt="GitHub contribution calendar for uskascent-svg, styled in green and showing daily contribution activity"/>
-</p>
-
-<p align="center">
-  <sub>GitHub contribution activity · Security-green theme</sub>
+  <img src="https://ghchart.rshah.org/40916c/uskascent-svg" width="100%" alt="GitHub-style yearly contribution submission heatmap for uskascent-svg, with daily squares shaded by contribution activity"/>
 </p>
 
 Information Technology Engineering Student | Cybersecurity • Blue Team • Cloud Security • AI Security
