@@ -1,14 +1,44 @@
 <div align="center">
 
-# Utkarsh Khairnar
+<pre>
+utkarsh@cloud:~$ figlet -f ansi_shadow utkarsh
 
-**Building safer cloud workloads** · Cybersecurity · Blue Team · Cloud
+██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗
+██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║
+██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║
+██║   ██║   ██║   ██╔═██╗ ██╔══██║██╔══██╗╚════██║██╔══██║
+╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║
+ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
+</pre>
+
+**Utkarsh Khairnar**
+
+Cybersecurity · Blue Team · Cloud Security · AI Security
+
+Nashik, India · IST (UTC+5:30)
+
+</div>
+
+```bash
+utkarsh@cloud:~$ whoami
+→ IT Engineering student at MET BKC IOE Nashik, building practical cybersecurity solutions.
+
+utkarsh@cloud:~$ cat status.log
+[ OK ] Cybersecurity projects and hands-on learning
+[ OK ] Email Phishing Detection System
+[ .. ] SOC Operations, threat detection and cloud security (growing)
+[ .. ] Seeking cybersecurity internships and project opportunities
+
+utkarsh@cloud:~$ ./deploy.sh --env=dev
+build passed
+✓ learning in public · shipping practical projects
+```
+
+<div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-AscentU3-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AscentU3/)
 [![Email](https://img.shields.io/badge/Email-Contact%20me-8B89CC?style=for-the-badge&logo=gmail)](mailto:uskascent@gmail.com?subject=Opportunity%20from%20GitHub%20profile)
-
-IT Engineering student building security tools, cloud labs and automation—and backing claims with evidence, tests and clear limitations.
 
 </div>
 
@@ -20,24 +50,7 @@ IT Engineering student building security tools, cloud labs and automation—and 
   <img src="./assets/contribution-activity.svg" width="100%" alt="Large GitHub contribution calendar with month labels, weekday labels, total contributions, and date/count details on hover"/>
 </p>
 
-Information Technology Engineering Student | Cybersecurity • Blue Team • Cloud Security • AI Security
 
-Passionate about building safer digital environments through intelligent threat detection, security automation, and defensive security engineering. Interested in leveraging AI and machine learning to identify threats, analyze suspicious activities, and strengthen digital defenses.
-
-Currently exploring Blue Team operations, threat intelligence, network security, cloud workload protection, vulnerability assessment, and incident response. Focused on developing practical cybersecurity tools and AI-driven solutions that address real-world security challenges.
-
-**Focus Areas**
-
-- Cybersecurity & Blue Team Operations
-- Threat Detection & Incident Response
-- Cloud Security & Workload Protection
-- AI/ML for Cybersecurity
-- Security Automation & Python
-- Network Security & Threat Intelligence
-
-**Mission:** Building secure, resilient digital systems through intelligent defense, continuous learning, and practical security engineering.
-
-**Detect. Prevent. Protect.**
 
 ## `❯ ./leetcode --profile`
 
