@@ -108,8 +108,8 @@ def main():
     for i, color in enumerate([LIGHT, "#b7d7a8", "#75b86d", "#3f8c50", "#1d5e37"]):
         lines.append(f'<rect x="{82 + i*20}" y="{legend_y-7}" width="15" height="15" rx="2" fill="{color}"/>')
     lines.extend([
-        f'<text x="{165}" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">MORE</text>',
-        '<text x="772" y="500" text-anchor="end" font-family="monospace" font-size="10" fill="#c9b18b">LIVE · DAILY</text>',
+        f'<text x="{190}" y="{legend_y}" font-family="monospace" font-size="11" fill="#c9b18b">MORE</text>',
+        '<text x="772" y="480" text-anchor="end" font-family="monospace" font-size="10" fill="#c9b18b">LIVE · DAILY</text>',
         '</svg>',
     ])
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
