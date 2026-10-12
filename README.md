@@ -48,19 +48,33 @@ Problem solving is **built on trust. Driven by results.**
 
 ## `❯ languages --list`
 
+<div align="center">
+
+```bash
+utkarsh@cloud:~$ figlet -f small "languages"
+```
+
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/></a>
+<a href="https://isocpp.org/"><img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++"/></a>
+<a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/></a>
+<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
+<a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL"/></a>
+<a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/></a>
+
 ```text
-utkarsh@cloud:~$ languages --list
-
-Python        [ security scripts · threat analysis · automation ]
-C++           [ data structures · algorithms · problem solving ]
-Java          [ object-oriented programming · coursework ]
-JavaScript    [ web development ]
-TypeScript    [ typed application development ]
-SQL           [ relational databases · queries ]
-Bash          [ Linux command-line basics ]
-
+utkarsh@cloud:~$ languages --status
+[active]   Python       | Security scripts & automation
+[learning] C++          | Data structures & algorithms
+[learning] Java         | Object-oriented programming
+[building] JavaScript   | Web development
+[building] TypeScript   | Typed application development
+[practice] SQL          | Database queries
+[active]   Bash         | Linux command line
 utkarsh@cloud:~$ _
 ```
+
+</div>
 
 ## `❯ cat ~/skills.md`
 
