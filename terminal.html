@@ -43,7 +43,7 @@ main{padding:clamp(16px,4vw,36px)}.intro{margin:0 0 20px;color:#9eb8a4;font-size
 <main>
 <p class="intro">Welcome to ASCENT U3. Explore my cybersecurity interests, projects and career direction. Current status: Learning &amp; Building — threat detection, security automation and AI-assisted defense. This is a safe, simulated terminal. The 30 basic commands return predefined output; file operations affect only a temporary in-page virtual filesystem.</p>
 <section class="terminal" aria-label="Interactive terminal">
-<div class="termbar"><span>bash — visitor session</span><div class="term-actions"><button class="mini" id="clear" type="button">clear</button><button class="mini" id="replay" type="button">replay intro</button><button class="mini" id="reset" type="button">restart</button></div></div>
+<div class="termbar"><span>bash — visitor session</span><div class="term-actions"><button class="mini" id="clear" type="button">clear</button><button class="mini" id="replay" type="button">clear output</button><button class="mini" id="reset" type="button">restart</button></div></div>
 <div class="output" id="output" role="log" aria-live="polite" aria-relevant="additions text"></div>
 <form id="command-form" autocomplete="off">
 <div class="inputrow"><label class="prompt-label" for="command-input">visitor@ascent:~$</label><input id="command-input" class="command-input" name="command" type="text" placeholder="type help and press Enter" spellcheck="false" autocapitalize="off" aria-label="Enter a terminal command"></div>
@@ -153,63 +153,11 @@ form.addEventListener('submit',e=>{e.preventDefault();const value=input.value;co
 input.addEventListener('keydown',e=>{if(e.key==='ArrowUp'){e.preventDefault();if(historyIndex>0)historyIndex--;input.value=history[historyIndex]||''}else if(e.key==='ArrowDown'){e.preventDefault();if(historyIndex<history.length)historyIndex++;input.value=history[historyIndex]||''}else if(e.key==='Tab'){e.preventDefault();const val=input.value.trim().toLowerCase();const matches=known.filter(x=>x.startsWith(val));if(matches.length===1)input.value=matches[0];else if(matches.length>1)line(matches.join('    '),'muted')}});
 document.querySelectorAll('[data-command]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.command;form.requestSubmit();input.focus()}));
 function clearOutput(){generation++;animationQueue=Promise.resolve();output.replaceChildren()}
-function playIntro(){clearOutput();const token=++introGeneration;banner();animationQueue=animationQueue.then(async()=>{if(token!==introGeneration)return;await pause(reducedMotion.matches?0:420)});['whoami','cat status.log','./career.sh --goal'].forEach(cmd=>run(cmd));input.focus()}
+function playIntro(){introGeneration++;clearOutput();input.focus()}
 document.querySelector('#clear').addEventListener('click',()=>{clearOutput();input.focus()});
 document.querySelector('#replay').addEventListener('click',playIntro);
-document.querySelector('#reset').addEventListener('click',()=>{introGeneration++;clearOutput();history.length=0;historyIndex=0;banner();input.value='';input.focus()});
-playIntro();
-})();
-</script>
-</body>
-</html>;line('directory changed (simulated): '+cwd,'good')}else line('cd: no such directory: '+command.trim().slice(2).trim(),'bad')}
-else if(c==='./career.sh --goal'||c==='career'){line('CAREER GOAL','cyan');line('→ SOC Analyst → Cloud Computing','good');line('→ Grow into Cloud Security and AI Security','good');line('→ Learn by building · testing · defending')}
-else if(c==='neofetch'){line('        /\\_/\\\\     utkarsh@cloud','good');line('       ( o.o )    ----------------','good');line('        > ^ <     OS: Curious learner / Windows + Linux labs');line('                  ROLE: Information Technology Engineering Student');line('                  LOCATION: Nashik, Maharashtra, India');line('                  FOCUS: SOC · Cloud Computing · AI Security');line('                  ALSO: Network Security');line('                  STATUS: Learning & Building');line('                  MODE: Learn / Build / Test / Defend','cyan')}
-else if(c==='play'||c==='profile'||c==='./play --profile'){line('INTERACTIVE PROFILE','cyan');line('Explore my background, skills, projects and career goals through terminal commands.','good');line('Try: whoami · ls projects · cat status.log · ./career.sh --goal · contact','muted')}else if(c==='contact'||c==='contact --all'){line('CONNECT','cyan');linkLine('LinkedIn','https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/','professional profile');linkLine('GitHub','https://github.com/uskascent-svg/uskascent-svg','projects and code');linkLine('LeetCode','https://leetcode.com/u/AscentU3/','problem solving');linkLine('Email','mailto:uskascent@gmail.com','opportunities and collaboration')}
-else if(c==='sudo defend'){line('[ SIMULATION ONLY ]','amber');line('Defence mindset: observe → validate → contain → recover.','good');line('1. Confirm the alert source and preserve evidence.');line('2. Scope affected identities, endpoints and services.');line('3. Follow the approved incident-response playbook.');line('4. Document actions and verify recovery.');line('No systems were scanned or changed.','muted')}
-else if(c==='./ascentu3 --unlock'||c==='ascentu3 --unlock'||c==='sudo ./ascentu3 --unlock'){line('SECRET IDENTITY UNLOCKED','cyan');enqueueRender(async token=>{const pre=document.createElement('pre');pre.className='ascii';output.append(pre);await typeInto(pre,ascii,token)});line('ASCENT U3 — Detect. Prevent. Protect.','good');line('The original pixel artwork remains one click away:');linkLine('Open the ASCENT U3 pixel experience','./','interactive original logo')}
-else if(c==='history'){history.forEach((h,i)=>line(String(i+1).padStart(2,'0')+'  '+h,'muted'))}
-else if(c==='clear'){clearOutput()}
-else if(c==='pwd'){line(cwd,'muted')}
-else if(c==='date'){line(new Date().toLocaleString(),'muted')}
-else if(c==='echo'||c.startsWith('echo ')){line(command.slice(4),'good')}
-else if(c==='cat'||c.startsWith('cat ')){const path=command.trim().slice(3).trim();const content=readVirtual(path);if(content!==null)simulatedOutput(content.split('\n'));else line('cat: '+(path||'(missing file)')+': no such file in the simulated profile','amber')}
-else if(c.startsWith('head ')||c.startsWith('tail ')){const isHead=c.startsWith('head '),args=command.split(/\s+/).slice(1),path=args[args.length-1],content=readVirtual(path);if(content===null)line((isHead?'head: ':'tail: ')+path+': no such file','amber');else{const rows=content.split('\n');simulatedOutput(isHead?rows.slice(0,10):rows.slice(-10))}}
-else if(c.startsWith('wc ')){const path=command.trim().split(/\s+/).pop(),content=readVirtual(path);if(content===null)line('wc: '+path+': no such file','amber');else{const rows=content.split('\n');line(rows.length+' '+content.split(/\s+/).filter(Boolean).length+' '+content.length+' '+path,'good')}}
-else if(c.startsWith('grep ')){const parts=command.trim().split(/\s+/),pattern=parts[1],path=parts[2],content=readVirtual(path);if(!pattern||!path)line('Usage: grep PATTERN FILE','amber');else if(content===null)line('grep: '+path+': no such file','amber');else{const matches=content.split('\n').filter(s=>s.toLowerCase().includes(pattern.replace(/^['"]|['"]$/g,'').toLowerCase()));simulatedOutput(matches.length?matches:['(no matches)'],matches.length?'good':'muted')}}
-else if(c.startsWith('find ')){const path=command.split(/\s+/)[1]||'.';const base=resolvePath(path);const results=[...virtualDirs,...Object.keys(virtualFiles)].filter(p=>p===base||p.startsWith(base+'/'));simulatedOutput(results.length?results:['find: no matching virtual paths'],'muted')}
-else if(c==='cal'){line('     OCTOBER 2026','cyan');line('Su Mo Tu We Th Fr Sa');line('             1  2  3');line(' 4  5  6  7  8  9 10');line('11 12 13 14 15 16 17');line('18 19 20 21 22 23 24');line('25 26 27 28 29 30 31')}
-else if(c==='uname'||c==='uname -a'){line(c==='uname'?'Linux':'Linux ascent-profile 6.1.0-simulated #1 SMP x86_64 GNU/Linux','good')}
-else if(c==='hostname'){line('ascent-profile','good')}
-else if(c==='id'){line('uid=1000(visitor) gid=1000(visitor) groups=1000(visitor)','good')}
-else if(c==='uptime'){line('up 3 days, 04:12, 1 user, load average: 0.08, 0.12, 0.10','good')}
-else if(c==='ps'||c==='ps aux'||c==='top'){line('PID  USER     COMMAND','cyan');line('1    visitor  profile-terminal');line('42   visitor  simulated-command-router');line('84   visitor  typing-animation');line('Note: process list is fictional training output.','muted')}
-else if(c==='df'||c==='df -h'){line('Filesystem      Size  Used Avail Use% Mounted on','cyan');line('profile-fs      10G   2.1G  7.9G  21% /home','good');line('Values are simulated, not your device storage.','muted')}
-else if(c==='free'||c==='free -h'){line('              total   used   free','cyan');line('Mem (simulated)  8Gi   2Gi    6Gi','good');line('Values are fictional terminal output.','muted')}
-else if(c==='env'){line('USER=visitor','good');line('HOME=/home/visitor','good');line('SHELL=/bin/profile-sim','good');line('MODE=SIMULATED_SANDBOX','good')}
-else if(c.startsWith('mkdir ')){const p=resolvePath(command.trim().slice(6).trim());if(virtualDirs.has(p)||virtualFiles[p])line('mkdir: already exists: '+p,'amber');else{virtualDirs.add(p);line('created simulated directory: '+p,'good')}}
-else if(c.startsWith('touch ')){const p=resolvePath(command.trim().slice(6).trim());if(!command.trim().slice(6).trim())line('Usage: touch FILE','amber');else{if(virtualFiles[p]===undefined)virtualFiles[p]='';line('created/updated simulated file: '+p,'good')}}
-else if(c.startsWith('cp ')){const a=command.trim().split(/\s+/).slice(1),src=resolvePath(a[0]),dst=resolvePath(a[1]);if(!a[0]||!a[1])line('Usage: cp SOURCE DEST','amber');else if(virtualFiles[src]===undefined)line('cp: source not found: '+a[0],'bad');else{virtualFiles[dst]=virtualFiles[src];line('copied in virtual filesystem: '+a[0]+' -> '+a[1],'good')}}
-else if(c.startsWith('mv ')){const a=command.trim().split(/\s+/).slice(1),src=resolvePath(a[0]),dst=resolvePath(a[1]);if(!a[0]||!a[1])line('Usage: mv SOURCE DEST','amber');else if(virtualFiles[src]===undefined)line('mv: source not found: '+a[0],'bad');else{virtualFiles[dst]=virtualFiles[src];delete virtualFiles[src];line('moved in virtual filesystem: '+a[0]+' -> '+a[1],'good')}}
-else if(c.startsWith('rm ')){const path=command.trim().split(/\s+/).pop(),p=resolvePath(path);if(virtualFiles[p]===undefined)line('rm: cannot remove '+path+': no such virtual file','amber');else{delete virtualFiles[p];line('removed virtual file only: '+path,'good')}}
-else if(c==='git status'){line('On branch profile-simulation','good');line('nothing to commit, working tree clean','muted')}
-else if(c==='python --version'){line('Python 3.12.0 (simulated)','good')}
-else if(c==='node --version'){line('v22.0.0 (simulated)','good')}
-else if(c==='sudo'){line('Permission denied: this profile terminal does not run privileged commands.','bad')}
-else if(c==='exit'||c==='logout'){line('Visitor session stays open. Explore another command when ready.','muted')}
-else if(c.startsWith('cat ')){line('File not found in this simulated profile. Try "cat status.log".','amber')}
-else if(c.startsWith('git ')){line('Git commands are not executed here. Explore the linked repositories with "ls projects".','amber')}
-else if(c.startsWith('rm ')||c.startsWith('curl ')||c.startsWith('ssh ')||c.startsWith('nmap ')||c.startsWith('python ')||c.startsWith('npm ')){line('Command blocked: this is a safe profile simulation, not a real shell.','bad')}
-else {line('command not found: '+command,'bad');line('Type "help" to see available commands.','muted')}
-}
-form.addEventListener('submit',e=>{e.preventDefault();const value=input.value;const c=value.trim().toLowerCase();if(!c)return;history.push(value.trim());historyIndex=history.length;run(value);input.value='';});
-input.addEventListener('keydown',e=>{if(e.key==='ArrowUp'){e.preventDefault();if(historyIndex>0)historyIndex--;input.value=history[historyIndex]||''}else if(e.key==='ArrowDown'){e.preventDefault();if(historyIndex<history.length)historyIndex++;input.value=history[historyIndex]||''}else if(e.key==='Tab'){e.preventDefault();const val=input.value.trim().toLowerCase();const matches=known.filter(x=>x.startsWith(val));if(matches.length===1)input.value=matches[0];else if(matches.length>1)line(matches.join('    '),'muted')}});
-document.querySelectorAll('[data-command]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.command;form.requestSubmit();input.focus()}));
-function clearOutput(){generation++;animationQueue=Promise.resolve();output.replaceChildren()}
-function playIntro(){clearOutput();const token=++introGeneration;banner();animationQueue=animationQueue.then(async()=>{if(token!==introGeneration)return;await pause(reducedMotion.matches?0:420)});['whoami','cat status.log','./career.sh --goal'].forEach(cmd=>run(cmd));input.focus()}
-document.querySelector('#clear').addEventListener('click',()=>{clearOutput();input.focus()});
-document.querySelector('#replay').addEventListener('click',playIntro);
-document.querySelector('#reset').addEventListener('click',()=>{introGeneration++;clearOutput();history.length=0;historyIndex=0;banner();input.value='';input.focus()});
-playIntro();
+document.querySelector('#reset').addEventListener('click',()=>{introGeneration++;clearOutput();history.length=0;historyIndex=0;cwd=virtualCwd;input.value='';input.focus()});
+input.focus();
 })();
 </script>
 </body>
