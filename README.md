@@ -52,12 +52,15 @@ Problem solving is **built on trust. Driven by results.**
 
 **[LeetCode · AscentU3](https://leetcode.com/u/AscentU3/)**
 
-## `❯ ./play --arcade`\n\n**[Launch ASCENT U3 Cyber Arcade ↗](https://uskascent-svg.github.io/uskascent-svg/arcade.html)** — play safe, simulated threat-hunting, phishing-detection and firewall-triage challenges.\n\n## `❯ ls ~/projects --featured`
+## `❯ ./play --profile`
+
+**[Launch the ASCENT U3 Interactive Terminal ↗](https://uskascent-svg.github.io/uskascent-svg/terminal.html)** — enter commands to explore my background, cybersecurity interests, projects, current learning goals, career direction, and contact links. This is one safe, simulated terminal experience; it does not run real shell commands or security scans.
+
+## `❯ ls ~/projects --featured`
 
 | Project | Repository | What it does |
 |---|---|---|
 | **ASCENT SAFETY** | [Open repository ↗](https://github.com/uskascent-svg/Ascent-Safety-) | Cybersecurity analysis and threat-detection platform. |
-| **ASCENT U3 Cyber Arcade** | [Play the game ↗](https://uskascent-svg.github.io/uskascent-svg/arcade.html) | Playable threat-hunting, phishing-detection and firewall-triage challenges. |
 | **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
 | **LeetCode Solutions** | [Open repository ↗](https://github.com/uskascent-svg/Leetcode-solution-) | Repository for coding practice and problem solutions. |
 
