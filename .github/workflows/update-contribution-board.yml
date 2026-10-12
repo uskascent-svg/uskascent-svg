@@ -39,4 +39,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/contribution-activity.svg
           git commit -m "chore: refresh contribution activity panel"
+          # A README or another generated-card commit can land while this job runs.
+          # Rebase the SVG-only commit onto the latest main before pushing.
+          git pull --rebase origin main
           git push
