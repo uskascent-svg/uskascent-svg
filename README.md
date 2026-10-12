@@ -47,11 +47,11 @@ Problem solving is **built on trust. Driven by results.**
 
 ## `❯ ls ~/projects --featured`
 
-| Project | What it does | Stack / status |
+| Project | Repository | What it does |
 |---|---|---|
-| **[ASCENT SAFETY](https://github.com/uskascent-svg/Ascent-Safety-)** | Analyzes suspicious files, text and URLs, with explainable security findings. | Python · FastAPI · Active development |
-| **RAIL-EYE** | Uses computer vision to identify railway-track intrusions and support rapid alerts. | Computer Vision · FastAPI · React · Prototype |
-| **TinyGPT / SLM** | Explores how small language models learn and generate text. | PyTorch · NLP · Learning project |
+| **ASCENT SAFETY** | [Open repository ↗](https://github.com/uskascent-svg/Ascent-Safety-) | Cybersecurity analysis and threat-detection platform. |
+| **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
+| **LeetCode Solutions** | [Open repository ↗](https://github.com/uskascent-svg/Leetcode-solution-) | Repository for coding practice and problem solutions. |
 
 ## `❯ cat ~/skills.md`
 
