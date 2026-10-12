@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Generate a Suyash-inspired terminal language-distribution SVG from public GitHub repository data."""
+"""Generate a Suyash-inspired terminal language-distribution SVG from public GitHub repository data.
+
+The scheduled workflow refreshes this card daily; changes to this generator also trigger a refresh.
+"""
 import json
 import os
 import urllib.error
