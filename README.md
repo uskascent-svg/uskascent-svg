@@ -2,14 +2,14 @@
 
 # Utkarsh Khairnar
 
-**Building safer cloud workloads | Cybersecurity · Blue Team · Cloud**
+**Building safer cloud workloads** · Cybersecurity · Blue Team · Cloud
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-AscentU3-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AscentU3/)
 [![GitHub](https://img.shields.io/badge/GitHub-uskascent--svg-181717?style=for-the-badge&logo=github)](https://github.com/uskascent-svg)
-[![Email](https://img.shields.io/badge/Email-Contact%20me-8B89CC?style=for-the-badge&logo=gmail)](mailto:uskas@gmail.com?subject=Opportunity%20from%20GitHub%20profile)
+[![Email](https://img.shields.io/badge/Email-Contact%20me-8B89CC?style=for-the-badge&logo=gmail)](mailto:uskascent@gmail.com?subject=Opportunity%20from%20GitHub%20profile)
 
-*IT Engineering student building practical security tools, cloud labs and automation—with evidence, tests and clear limitations.*
+IT Engineering student building security tools, cloud labs and automation—and backing claims with evidence, tests and clear limitations.
 
 </div>
 
@@ -18,53 +18,53 @@
 ## `❯ ./chessboard --activity`
 
 <p align="center">
-  <img src="./assets/chess-contributions.svg" width="340" alt="Chess-themed GitHub contribution board, automatically refreshed by GitHub Actions"/>
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/chess-contributions.svg" width="100%" alt="Live 365-day chess-inspired GitHub contribution board; each square represents one day and color intensity represents contribution activity"/>
 </p>
 
-A chess-inspired view of your **public GitHub contribution activity**. A GitHub Actions workflow now fetches the contribution calendar and regenerates the 8×8 board daily; hover over squares to see the date and contribution count. The first live refresh runs when the workflow is triggered or at its next scheduled run. If GitHub changes its public calendar markup or the request fails, the workflow fails instead of overwriting the last known board with fabricated data.
+A **365-day rectangular chessboard** showing my public GitHub contributions. Every square represents one day, and darker green squares indicate more activity. Hover over any square to see its date and contribution count. GitHub Actions refreshes the board daily and can also be run manually from the repository's Actions tab. The board is generated from GitHub's public contribution calendar; if the source cannot be read reliably, the workflow fails rather than replacing the board with invented data.
 
 ## `❯ ./leetcode --profile`
 
-**[View LeetCode profile →](https://leetcode.com/u/AscentU3/)**
+Problem solving is **built on trust. Driven by results.**
 
-LeetCode profile stats are available at the source. Automated stat syncing and a self-hosted card are planned; no cached or simulated numbers are shown here.
+**[View my LeetCode profile →](https://leetcode.com/u/AscentU3/)**
 
 ## `❯ ls ~/projects --featured`
 
-| Project | Focus | Stack / status |
+| Project | What it does | Stack / status |
 |---|---|---|
-| **[ASCENT SAFETY](https://github.com/uskascent-svg/Ascent-Safety-)** | Explainable analysis of suspicious files, text and URLs. | Python · FastAPI · Security analysis — active development |
-| **RAIL-EYE** | Vision-assisted railway intrusion detection and alerting. | Computer vision · FastAPI · React — prototype |
-| **TinyGPT / SLM** | Compact language-model training and text generation experiments. | PyTorch · NLP · FastAPI — learning project |
+| **[ASCENT SAFETY](https://github.com/uskascent-svg/Ascent-Safety-)** | Analyzes suspicious files, text and URLs, with explainable security findings. | Python · FastAPI · Active development |
+| **RAIL-EYE** | Uses computer vision to identify railway-track intrusions and support rapid alerts. | Computer Vision · FastAPI · React · Prototype |
+| **TinyGPT / SLM** | Explores how small language models learn and generate text. | PyTorch · NLP · Learning project |
 
 ## `❯ cat ~/skills.md`
 
-- **Cloud:** AWS/Azure, IAM, networking and Terraform — building hands-on labs.
-- **Security:** blue-team fundamentals, SIEM concepts, vulnerability analysis and threat modelling.
+- **Cloud:** AWS and Azure fundamentals, IAM, networking and Terraform labs.
+- **Security:** Blue-team concepts, SIEM, vulnerability analysis and threat modelling.
 - **Systems:** Linux, Docker, Bash and Python.
 - **Problem solving:** [LeetCode · AscentU3](https://leetcode.com/u/AscentU3/).
 
-I aim to connect each skill to a reproducible lab, repository, test, or write-up rather than list unverified credentials. No certifications are listed until earned.
+I aim to connect skills to reproducible labs, repositories, tests or write-ups instead of listing unverified credentials.
 
 ## `❯ tail -f ~/learning.log`
 
 ```text
-[building] Practising cloud, Linux, networking and automation
-[building] Improving security analysis and detection engineering
-[next]     Hardening CI/CD and infrastructure-as-code workflows
+[building] Cloud, Linux, networking and automation
+[building] Security analysis and detection engineering
+[next]     Hardening CI/CD and infrastructure-as-code
 [always]   Documenting evidence, tests and limitations
 ```
 
 ## Security-minded engineering
 
-| Risk | Engineering principle |
+| Risk | How I handle it |
 |---|---|
-| Untrusted input | Validate against strict allowlists and avoid shell interpolation |
-| Spoofing and abuse | Verify identity, permissions, rate limits and legal state transitions |
-| Concurrent updates | Serialize writes and handle stale state safely |
-| External API failure | Use timeouts, validate schemas and preserve known-good cached data |
-| Supply-chain risk | Pin workflow dependencies, use lockfiles and review automated updates |
-| Misleading metrics | Show measured results only; label placeholders and limitations clearly |
+| Untrusted input | Validate input and avoid unsafe shell interpolation |
+| Spoofing and abuse | Apply identity checks, permissions and rate limits |
+| Concurrent updates | Handle stale state and serialize writes where needed |
+| External API failure | Use timeouts, schema validation and known-good fallbacks |
+| Supply-chain risk | Pin dependencies and review automated updates |
+| Misleading metrics | Publish measured results, not inflated claims |
 
 ## `❯ ssh collab@utkarsh`
 
@@ -72,7 +72,7 @@ I aim to connect each skill to a reproducible lab, repository, test, or write-up
 
 **Let's connect**
 
-[LinkedIn](https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/) · [LeetCode](https://leetcode.com/u/AscentU3/) · [Send an email](mailto:uskas@gmail.com?subject=Opportunity%20from%20GitHub%20profile)
+[LinkedIn](https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/) · [LeetCode](https://leetcode.com/u/AscentU3/) · [Email](mailto:uskascent@gmail.com)
 
 *Curious by default. Security-minded by design.*
 
