@@ -14,10 +14,14 @@ IT Engineering student building security tools, cloud labs and automation—and 
 
 ---
 
-## 🟢 Contribution Activity
+## Contribution Activity
+
+<p>
+  <img src="https://img.shields.io/badge/SECURITY%20LOG-CONTRIBUTION%20ACTIVITY-00E676?style=flat-square&labelColor=0D1117" alt="Security log: contribution activity"/>
+</p>
 
 <p align="center">
-  <img src="https://ghchart.rshah.org/40916c/uskascent-svg" width="100%" alt="GitHub-style yearly contribution submission heatmap for uskascent-svg, with daily squares shaded by contribution activity"/>
+  <img src="https://ghchart.rshah.org/00E676/uskascent-svg" width="100%" alt="GitHub contribution activity heatmap for uskascent-svg in green shades"/>
 </p>
 
 Information Technology Engineering Student | Cybersecurity • Blue Team • Cloud Security • AI Security
