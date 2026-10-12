@@ -29,14 +29,14 @@ FS = font(12)
 lines = [
     (70, "$ whoami", GREEN, 0.15),
     (94, "Utkarsh Khairnar", WHITE, 0.95),
-    (118, "Computer Engineering Student | Cybersecurity", WHITE, 2.2),
+    (118, "Information Technology Engineering Student | Cybersecurity", WHITE, 2.2),
     (142, "Nashik, Maharashtra, India", DIM, 4.0),
     (166, "$ cat status.log", GREEN, 5.2),
     (190, "STATUS: Learning & Building", PALE, 6.0),
     (214, "Threat detection · Security automation · AI-assisted defense", GREEN, 7.7),
-    (238, "SOC Analyst · Blue Team · Cloud · AI · Network Security", DIM, 10.7),
+    (238, "SOC Analyst · Cloud Computing · Cloud · AI · Network Security", DIM, 10.7),
     (262, "$ ./career.sh --goal", GREEN, 13.0),
-    (286, "→ SOC Analyst → Blue Team → Cloud & AI Security", GREEN, 14.0),
+    (286, "→ SOC Analyst → Cloud Computing → Cloud & AI Security", GREEN, 14.0),
     (310, "Projects: ASCENT SAFETY · Phishing Detection · RAIL-EYE · e-Recycle · KumbhSathi", WHITE, 16.5),
 ]
 def draw_frame(t):
