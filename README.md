@@ -14,10 +14,18 @@ IT Engineering student building security tools, cloud labs and automation—and 
 
 ---
 
-## `❯ ./chessboard --activity`
+## `❯ ./contributions --live`
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/chess-contributions.svg?v=3" width="100%" alt="Live 365-day chess-inspired GitHub contribution board; each square represents one day and color intensity represents contribution activity"/>
+  <a href="https://github.com/uskascent-svg#yearly-contribution-calendar" title="Open my GitHub contribution calendar">
+    <img src="https://ghchart.rshah.org/00ff9c/uskascent-svg" width="100%" alt="GitHub contribution calendar for uskascent-svg in a cybersecurity-inspired neon green theme; click to open the live contribution calendar on GitHub"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/uskascent-svg#yearly-contribution-calendar"><strong>↗ OPEN LIVE GITHUB CONTRIBUTION PANEL</strong></a>
+  <br/>
+  <sub>Live contribution activity · Neon-green security aesthetic · Source: GitHub public contribution data</sub>
 </p>
 
 Information Technology Engineering Student | Cybersecurity • Blue Team • Cloud Security • AI Security
