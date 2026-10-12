@@ -2,26 +2,66 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ASCENTU3 · Interactive ASCII Logo</title>
+<meta name="theme-color" content="#02080d">
+<title>AscentU3 — Interactive Digital Art</title>
 <style>
-:root{color-scheme:dark;--bg:#050b0e;--cyan:#27e1e5;--muted:#91a8ad}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(ellipse at center,#06242a 0,#050b0e 65%);color:#e7ffff;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}.wrap{width:min(1100px,100%);padding:20px}header{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:12px;letter-spacing:.12em;margin-bottom:12px}canvas{display:block;width:100%;height:auto;aspect-ratio:1100/330;border:1px solid #13505a;border-radius:12px;box-shadow:0 0 55px #00d9e51b;touch-action:pan-y}.hint{text-align:center;color:var(--muted);font-size:12px;margin:16px 0 0}a{color:var(--cyan)}@media(prefers-reduced-motion:reduce){.hint:after{content:" (reduced motion preference is respected)"}}</style>
+:root{color-scheme:dark;background:#02080d;color:#d9fbff;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#02080d}body{min-height:100svh;overflow-x:hidden}
+main{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;align-items:center;padding:clamp(12px,3vw,34px);gap:12px}
+header,footer{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#70aeb7;font-size:clamp(9px,1.1vw,12px);letter-spacing:.18em;text-transform:uppercase}
+.brand{color:#49f4ff;font-weight:800}#stage{position:relative;width:100%;min-height:48vh;height:min(72vh,760px);border:1px solid #103941;border-radius:16px;overflow:hidden;background:radial-gradient(ellipse at 50% 48%,#06232b 0,#02080d 68%);box-shadow:0 0 70px #00e5ff0b,inset 0 0 50px #00dfff08;touch-action:pan-y}
+canvas{display:block;width:100%;height:100%;touch-action:pan-y}
+.hint{color:#9ac7cc;letter-spacing:.07em;text-align:center;font-size:clamp(10px,1.2vw,13px)}
+a{color:#59efff;text-decoration:none}a:hover{text-decoration:underline}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
 </head>
-<body><main class="wrap"><header><span>ASCENTU3 / ASCII FIELD</span><span>INTERACTIVE LOGO · v1.0</span></header><canvas id="field" aria-label="Interactive ASCII ASCENTU3 logo. Move or touch to scatter the characters."></canvas><p class="hint">MOVE OR TOUCH TO SCATTER PIXELS · RELEASE TO LET THEM SPRING BACK</p></main>
+<body>
+<main>
+<header><span class="brand">ASCENTU3 <span style="color:#8baeb4">/ DIGITAL FIELD</span></span><span>INTERACTIVE ART · 01</span></header>
+<section id="stage" aria-label="Interactive animated AscentU3 digital logo"><canvas id="art"></canvas></section>
+<footer><span>DETECT · BUILD · ASCEND</span><span><a href="https://github.com/uskascent-svg/uskascent-svg">BACK TO GITHUB ↗</a></span></footer>
+<div class="hint">MOVE · TOUCH · SCROLL — DISTURB THE PIXELS, THEN WATCH THEM REFORM</div>
+</main>
 <script>
 (()=>{'use strict';
-const canvas=document.querySelector('#field'),ctx=canvas.getContext('2d'),W=1100,H=330;
-const art=["                                                                        ","                                                                        ","            -.                                                          ","           :=-                                                          ","          .-==:                                                         ","          --===.     ..................                                 ","         :---=+- .:-+**:     .      .         ...                       ","        .--:.=++:..:+*-:---=-.:====-.-=====-:-...:-:=----::.   . ....   ","        :--  :++-.-+=.:*****=:*****=.+++++*-+#-  ++-++*==:=:  .-....... ","       .--. . ::-=-.  +*----.++.....:-----..**#-.*=  -+. .=.  .-  .. .. ","      .::: :=-----. ..-****#-*-    .=*****.:#:=#=*- .+=  :=.  ::  ....  ","      ::: .-==.:+*- ..:---=#-*+----.------:-#..=##: .*-  :+:..-: ..  ..  ","      ...:::-: .+**. :*****=.-####+-####*#--+. .=*. .+:  .==--: .::...  ","  ....::.       :**=............................... ..                  ","    .::.         =**: ...................... ......                     ","    .:.          .+*+.............................                      ","                  :::........ ........ ....                            ","                      ...                                               "],chars=' .:-=+*#%@',particles=[];let dpr=1,pointer={x:-9999,y:-9999,active:false},last=0;
+const canvas=document.querySelector('#art'),stage=document.querySelector('#stage'),ctx=canvas.getContext('2d');
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-function resize(){const r=canvas.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.width*(H/W)*dpr);ctx.setTransform(canvas.width/W,0,0,canvas.height/H,0,0);build()}
-function build(){particles.length=0;const cellW=15.2,cellH=14.1,startX=24,startY=42;art.forEach((row,ri)=>Array.from(row).forEach((ch,ci)=>{if(ch===' ')return;const x=startX+ci*cellW,y=startY+ri*cellH;const lum=chars.indexOf(ch);particles.push({x,y,ox:x,oy:y,vx:0,vy:0,ch,lum,phase:Math.random()*6.28})}))}
-function pos(e){const r=canvas.getBoundingClientRect();pointer.x=(e.clientX-r.left)/r.width*W;pointer.y=(e.clientY-r.top)/r.height*H;pointer.active=true}
-let releaseTimer=0;function leave(){clearTimeout(releaseTimer);releaseTimer=setTimeout(()=>{pointer.active=false},420)}
-canvas.addEventListener('pointermove',pos);canvas.addEventListener('pointerdown',e=>{clearTimeout(releaseTimer);pos(e)});canvas.addEventListener('pointerup',leave);canvas.addEventListener('pointercancel',leave);canvas.addEventListener('pointerleave',leave);window.addEventListener('resize',resize);
-function frame(t){ctx.clearRect(0,0,W,H);ctx.fillStyle='#050b0e';ctx.fillRect(0,0,W,H);ctx.font='700 14.4px ui-monospace, SFMono-Regular, Consolas, monospace';ctx.textBaseline='middle';
-for(const p of particles){let dx=p.x-pointer.x,dy=p.y-pointer.y,dist=Math.hypot(dx,dy)||1;if(pointer.active&&dist<100){const force=(100-dist)/100*8;p.vx+=dx/dist*force;p.vy+=dy/dist*force}
-if(!reduced){p.vx+=(p.ox-p.x)*.045;p.vy+=(p.oy-p.y)*.045;p.vx*=.82;p.vy*=.82;p.x+=p.vx;p.y+=p.vy}
-const shimmer=.7+.3*Math.sin(t*.002+p.phase);ctx.fillStyle='rgba(39,225,229,'+(shimmer*(.55+p.lum*.045))+')';ctx.shadowBlur=0;ctx.fillText(p.ch,p.x,p.y)}
-ctx.shadowBlur=0;if(!reduced)requestAnimationFrame(frame)}
-resize();requestAnimationFrame(frame);
+let W=1200,H=650,dpr=1,pts=[],pointer={x:-1000,y:-1000,active:false,energy:0},scrollEnergy=0,lastY=window.scrollY;
+const cyan='#38efff',white='#d9fbff';
+function resize(){const r=stage.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);W=Math.max(320,r.width);H=Math.max(360,r.height);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);build()}
+function build(){
+ pts=[];const off=document.createElement('canvas');off.width=1200;off.height=360;const o=off.getContext('2d');
+ o.clearRect(0,0,1200,360);o.textAlign='center';o.textBaseline='middle';
+ o.font='900 230px Arial, Helvetica, sans-serif';o.fillText('AscentU3',600,185);
+ const data=o.getImageData(0,0,1200,360).data;
+ const sx=W/1200,sy=H/650,step=5;
+ for(let y=0;y<360;y+=step)for(let x=0;x<1200;x+=step){const i=(y*1200+x)*4;if(data[i+3]>80)pts.push({ox:x*sx,oy:(y+105)*sy,x:x*sx,y:(y+105)*sy,vx:0,vy:0,size:1.1+Math.random()*1.4,phase:Math.random()*6.28,bright:Math.random()})}
+}
+function pointerAt(e){const r=canvas.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.active=true;pointer.energy=1}
+function release(){pointer.active=false}
+canvas.addEventListener('pointermove',pointerAt);canvas.addEventListener('pointerdown',pointerAt);canvas.addEventListener('pointerup',release);canvas.addEventListener('pointercancel',release);canvas.addEventListener('pointerleave',release);
+stage.addEventListener('wheel',e=>{scrollEnergy=Math.min(1,scrollEnergy+Math.min(0.5,Math.abs(e.deltaY)/700));pointer.x=e.offsetX;pointer.y=e.offsetY;pointer.active=true;setTimeout(()=>{pointer.active=false},220)});
+window.addEventListener('scroll',()=>{scrollEnergy=Math.min(1,scrollEnergy+Math.min(.45,Math.abs(window.scrollY-lastY)/180));lastY=window.scrollY},{passive:true});
+window.addEventListener('resize',resize);
+function draw(t){
+ ctx.clearRect(0,0,W,H);const bg=ctx.createRadialGradient(W*.5,H*.48,5,W*.5,H*.48,W*.7);bg.addColorStop(0,'#06222a');bg.addColorStop(.65,'#030b11');bg.addColorStop(1,'#02070b');ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
+ // Flowing dotted data ribbons
+ for(let band=0;band<8;band++){ctx.beginPath();for(let x=-20;x<W+30;x+=8){const y=H*(.18+band*.095)+Math.sin(x*.008+t*.00045+band)*H*.045+Math.sin(x*.018-t*.00032)*H*.012;if(x===-20)ctx.moveTo(x,y);else ctx.lineTo(x,y)}ctx.strokeStyle='rgba(20,220,244,'+(.035+band%3*.012)+')';ctx.lineWidth=1;ctx.stroke()}
+ // Wordmark pixels respond to pointer and scroll, then spring back
+ for(const p of pts){let dx=p.x-pointer.x,dy=p.y-pointer.y,dist=Math.hypot(dx,dy)||1;if(pointer.active&&dist<150){const force=(150-dist)/150*(8+pointer.energy*12);p.vx+=dx/dist*force;p.vy+=dy/dist*force}
+ if(scrollEnergy>.01){p.vy+=Math.sin(p.ox*.02+t*.003)*scrollEnergy*.18;p.vx+=Math.cos(p.oy*.02+t*.002)*scrollEnergy*.12}
+ if(!reduced){p.vx+=(p.ox-p.x)*.035;p.vy+=(p.oy-p.y)*.035;p.vx*=.86;p.vy*=.86;p.x+=p.vx;p.y+=p.vy}
+ const shimmer=.55+.45*Math.sin(t*.002+p.phase);ctx.fillStyle=p.bright>.7?'rgba(220,253,255,'+shimmer+')':'rgba(45,231,248,'+(shimmer*.95)+')';ctx.fillRect(p.x,p.y,p.size*1.35,p.size*1.35)
+ }
+ // Ascending particle trails around the mark
+ for(let i=0;i<150;i++){const x=(i*83+t*(.012+(i%4)*.004))%(W+40)-20;const y=(i*47-t*(.025+(i%5)*.004)+H*2)%(H+30)-15;const a=.12+.22*(.5+.5*Math.sin(t*.001+i));ctx.fillStyle='rgba(44,232,255,'+a+')';ctx.fillRect(x,y,1.5+(i%3),1.5+(i%3))}
+ // Tiny live status line
+ ctx.font='10px ui-monospace,monospace';ctx.fillStyle='rgba(110,223,234,.55)';ctx.fillText('PIXEL MATRIX // LIVE',18,H-20);ctx.textAlign='right';ctx.fillText('SIGNAL '+Math.round(70+15*Math.sin(t*.001))+'%',W-18,H-20);ctx.textAlign='left';
+ pointer.energy*=.94;scrollEnergy*=.965;
+ if(!reduced)requestAnimationFrame(draw)
+}
+resize();requestAnimationFrame(draw);
 })();
-</script></body></html>
+</script>
+</body></html>
