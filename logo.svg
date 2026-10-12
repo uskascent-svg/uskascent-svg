@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 330" role="img" aria-labelledby="title desc">
-<title id="title">ASCENTUB animated ASCII logo</title>
-<desc id="desc">A cyan and teal ASCII rendition of the ASCENTUB logo, with a looping shimmer and pixel drift.</desc>
+<title id="title">ASCENTU3 animated ASCII logo</title>
+<desc id="desc">A cyan and teal ASCII rendition of the ASCENTU3 logo, with a looping shimmer and pixel drift.</desc>
 <defs>
   <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0">
     <stop offset="0" stop-color="#087f8c"/>
