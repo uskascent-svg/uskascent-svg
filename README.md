@@ -11,6 +11,14 @@
 
 <img src="./assets/terminal-header.svg" width="100%" alt="Animated terminal introduction for Utkarsh, cybersecurity interests, project and career goal"/>
 
+<h2 align="center">AscentU3 · Animated ASCII Logo</h2>
+
+<p align="center">
+  <a href="https://uskascent-svg.github.io/uskascent-svg/"><img src="./logo.svg" width="100%" alt="Animated AscentU3 ASCII logo — click for the interactive version" /></a>
+</p>
+
+<p align="center"><em>Click the logo for the interactive version.</em></p>
+
 **Utkarsh Khairnar**
 
 Cybersecurity · Blue Team · Cloud Security · AI Security
