@@ -71,21 +71,17 @@ I aim to connect skills to reproducible labs, repositories, tests or write-ups i
 [always]   Documenting evidence, tests and limitations
 ```
 
-## Cybersecurity & Cloud Security Mindset
+## About Me
 
-My focus on **Blue Team security, cloud fundamentals, threat detection and security automation** helps me approach engineering risks from a defensive perspective—from reducing attack surfaces to investigating suspicious behaviour and validating results.
+I am an IT Engineering student at MET BKC IOE Nashik and i am passionate about Cybersecurity, SOC Operations, Threat Detection, Network Security, Vulnerability Assessment, and Al-driven security.
 
-| Security challenge | How my cybersecurity and cloud background helps |
-|---|---|
-| Identity and access risks | Apply IAM, role-based permissions and least-privilege thinking to limit unauthorised access. |
-| Suspicious activity and threats | Use Blue Team concepts, SIEM-oriented thinking and threat analysis to identify signals, assess risk and support investigation. |
-| Cloud misconfiguration | Consider AWS/Azure security, network boundaries and infrastructure-as-code practices when designing and reviewing workloads. |
-| Unsafe input and API abuse | Prioritise input validation, safe command handling, authentication, authorisation and rate limiting. |
-| Incidents and service failures | Think in terms of logging, alerting, timeouts, controlled fallbacks and clear investigation trails. |
-| Vulnerable dependencies and changes | Review dependency updates, reduce unnecessary exposure and favour repeatable, testable changes. |
-| Unproven security claims | Prefer measured tests, documented limitations and evidence-based results over unsupported accuracy or performance claims. |
+I enjoy turning what I learn into practical security solutions. I've worked with Python, Linux, networking, web security, SIEM, and AI/ ML. One project I'm especially proud of is my Email Phishing Detection System, where I explored real-world phishing techniques and built a system to analyze emails, links, and suspicious patterns. The project strengthened my ability to think like both an attacker and a defender, turning security concepts into practical threat-detection solutions.
 
-I’m continuing to strengthen these skills through practical projects and labs. I aim to make security decisions **testable, explainable and grounded in evidence** rather than presenting learning-stage work as production-certified expertise.
+I believe in learning cybersecurity through hands-on projects, CTFs, labs, and real-world problem solving.
+
+Career Goal: To become a Cybersecurity/SOC Analyst and grow into Security and Threat Intelligence.
+
+Currently seeking cybersecurity internships and project opportunities where I can apply my skills, contribute to real-world security challenges, and learn from experienced professionals.
 
 ## `❯ ssh collab@utkarsh`
 
