@@ -61,7 +61,7 @@ drwxr-xr-x  development/  python  cpp  java  javascript  typescript  sql
 ## `❯ ./stats --live`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=uskascent-svg&layout=compact&theme=chartreuse-dark&bg_color=0d1117&title_color=00ff9c&text_color=c9d1d9&hide_border=true&langs_count=8" width="75%" alt="Live top programming languages with code percentages from public GitHub repositories" />
+  <img src="./assets/langs.svg" height="350" alt="Terminal-style language distribution with percentages generated from public GitHub repositories" />
 </p>
 
 ```console
