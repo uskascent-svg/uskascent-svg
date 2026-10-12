@@ -375,6 +375,6 @@
 <rect x="122" y="488" width="15" height="15" rx="2" fill="#75b86d"/>
 <rect x="142" y="488" width="15" height="15" rx="2" fill="#3f8c50"/>
 <rect x="162" y="488" width="15" height="15" rx="2" fill="#1d5e37"/>
-<text x="165" y="495" font-family="monospace" font-size="11" fill="#c9b18b">MORE</text>
-<text x="772" y="500" text-anchor="end" font-family="monospace" font-size="10" fill="#c9b18b">LIVE · DAILY</text>
+<text x="190" y="495" font-family="monospace" font-size="11" fill="#c9b18b">MORE</text>
+<text x="772" y="480" text-anchor="end" font-family="monospace" font-size="10" fill="#c9b18b">LIVE · DAILY</text>
 </svg>
