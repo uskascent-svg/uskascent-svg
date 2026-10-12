@@ -18,10 +18,10 @@
 ## `❯ ./chessboard --activity`
 
 <p align="center">
-  <img src="./assets/chess-contributions.svg" width="340" alt="Chess-themed contribution board illustration"/>
+  <img src="./assets/chess-contributions.svg" width="340" alt="Chess-themed GitHub contribution board, automatically refreshed by GitHub Actions"/>
 </p>
 
-A chess-inspired take on the contribution grid. The board artwork is currently a visual placeholder; live contribution mapping and issue-driven chess moves will be added only when their workflows and validation tests are in place.
+A chess-inspired view of your **public GitHub contribution activity**. A GitHub Actions workflow now fetches the contribution calendar and regenerates the 8×8 board daily; hover over squares to see the date and contribution count. The first live refresh runs when the workflow is triggered or at its next scheduled run. If GitHub changes its public calendar markup or the request fails, the workflow fails instead of overwriting the last known board with fabricated data.
 
 ## `❯ ./leetcode --profile`
 
