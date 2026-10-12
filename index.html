@@ -10,7 +10,7 @@
 main{min-height:100svh;display:grid;grid-template-rows:auto 1fr auto;align-items:center;padding:clamp(10px,2.5vw,28px);gap:10px}
 header,footer{display:flex;justify-content:space-between;gap:12px;align-items:center;color:#70aeb7;font-size:clamp(9px,1.05vw,12px);letter-spacing:.18em;text-transform:uppercase}
 .brand{color:#49f4ff;font-weight:800}#stage{position:relative;width:100%;height:min(76vh,760px);min-height:360px;overflow:hidden;background:#020812;touch-action:pan-y}
-canvas{display:block;width:100%;height:100%;touch-action:pan-y}
+#fx{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;z-index:0}.art-image{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none;pointer-events:none}
 .hint{color:#8cbec5;letter-spacing:.07em;text-align:center;font-size:clamp(10px,1.2vw,13px)}a{color:#59efff;text-decoration:none}a:hover{text-decoration:underline}
 @media(max-width:560px){header,footer{letter-spacing:.08em}#stage{height:60vh;min-height:340px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
@@ -18,54 +18,29 @@ canvas{display:block;width:100%;height:100%;touch-action:pan-y}
 </head>
 <body><main>
 <header><span class="brand">ASCENTU3 <span style="color:#8baeb4">/ DIGITAL FIELD</span></span><span>PIXEL ART · 01</span></header>
-<section id="stage" aria-label="Interactive AscentU3 digital pixel logo"><canvas id="art"></canvas></section>
+<section id="stage" aria-label="Original AscentU3 logo with interactive pixel effects"><canvas id="fx" aria-hidden="true"></canvas><img class="art-image" src="./assets/ascentu3-original.png" alt="Original AscentU3 logo artwork" draggable="false"></section>
 <footer><span>DETECT · BUILD · ASCEND</span><span><a href="https://github.com/uskascent-svg/uskascent-svg">GITHUB ↗</a></span></footer>
 <div class="hint">TOUCH · MOVE · SCROLL — PIXELS REACT GENTLY AND SETTLE BACK</div>
 </main>
 <script>
 (()=>{'use strict';
-const canvas=document.querySelector('#art'),stage=document.querySelector('#stage'),ctx=canvas.getContext('2d');
+const canvas=document.querySelector('#fx'),stage=document.querySelector('#stage'),ctx=canvas.getContext('2d',{alpha:true});
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let W=1200,H=600,dpr=1,particles=[],pointer={x:-999,y:-999,active:false,power:0},scrollEnergy=0,lastY=window.scrollY;
-function resize(){const r=stage.getBoundingClientRect();dpr=Math.min(devicePixelRatio||1,2);W=Math.max(320,r.width);H=Math.max(340,r.height);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);build()}
-function build(){
- particles=[];
- const off=document.createElement('canvas');off.width=1200;off.height=600;const o=off.getContext('2d');
- // The angular A emblem and wordmark follow the composition of the reference artwork.
- o.fillStyle='#fff';
- o.font='900 225px Arial,Helvetica,sans-serif';o.textAlign='left';o.textBaseline='middle';o.fillText('AscentU3',280,300);
- // Pixel-grid angular A emblem at the left.
- o.font='900 310px Arial,Helvetica,sans-serif';o.textAlign='center';o.fillText('A',150,300);
- const data=o.getImageData(0,0,1200,600).data,step=4.5,sx=W/1200,sy=H/600;
- for(let y=0;y<600;y+=step)for(let x=0;x<1200;x+=step){const i=(Math.floor(y)*1200+Math.floor(x))*4;if(data[i+3]>90){const xx=x*sx,yy=y*sy;particles.push({ox:xx,oy:yy,x:xx,y:yy,vx:0,vy:0,size:1+Math.random()*1.25,phase:Math.random()*6.28,white:Math.random()>.64})}}
-}
-function point(e){const r=canvas.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.active=true;pointer.power=1}
-function release(){pointer.active=false}
-canvas.addEventListener('pointermove',point);canvas.addEventListener('pointerdown',point);canvas.addEventListener('pointerup',release);canvas.addEventListener('pointercancel',release);canvas.addEventListener('pointerleave',release);
-stage.addEventListener('wheel',e=>{scrollEnergy=Math.min(1,scrollEnergy+Math.min(.4,Math.abs(e.deltaY)/900));pointer.x=e.offsetX;pointer.y=e.offsetY;pointer.active=true;pointer.power=.45;setTimeout(()=>pointer.active=false,180)},{passive:true});
-window.addEventListener('scroll',()=>{scrollEnergy=Math.min(1,scrollEnergy+Math.min(.3,Math.abs(window.scrollY-lastY)/220));lastY=window.scrollY},{passive:true});
-window.addEventListener('resize',resize);
-function draw(t){
- ctx.clearRect(0,0,W,H);
- const bg=ctx.createRadialGradient(W*.52,H*.48,5,W*.52,H*.48,W*.78);bg.addColorStop(0,'#061c2a');bg.addColorStop(.55,'#030e1b');bg.addColorStop(1,'#020812');ctx.fillStyle=bg;ctx.fillRect(0,0,W,H);
- // Fine, flowing dotted ribbons — restrained so the wordmark stays crisp.
- for(let b=0;b<15;b++){const base=H*(.08+b*.061);for(let x=-12;x<W+12;x+=7){const wave=Math.sin(x*.008+t*.00016+b*.5)*H*.035+Math.sin(x*.018-t*.00012+b)*H*.012;const y=base+wave;const alpha=.10+.12*(.5+.5*Math.sin(x*.025+t*.0008+b));ctx.fillStyle=b%4===0?'rgba(221,252,255,'+alpha+')':'rgba(39,226,248,'+alpha+')';ctx.fillRect(x,y,1.6,1.6)}}
- // A few long dotted arcs echo the reference's data-stream trails.
- for(let k=0;k<4;k++){ctx.beginPath();for(let x=-10;x<W+10;x+=5){const y=H*(.2+k*.2)+Math.sin(x*.006+t*.0002+k*1.4)*H*.07;if(x===-10)ctx.moveTo(x,y);else ctx.lineTo(x,y)}ctx.strokeStyle='rgba(35,218,242,.12)';ctx.lineWidth=1;ctx.stroke()}
- for(const p of particles){
-   const dx=p.x-pointer.x,dy=p.y-pointer.y,d=Math.hypot(dx,dy)||1;
-   if(pointer.active&&d<95){const f=(95-d)/95*(1.8+pointer.power*3.2);p.vx+=dx/d*f;p.vy+=dy/d*f}
-   if(scrollEnergy>.01){p.vx+=Math.sin(p.ox*.015+t*.0007)*scrollEnergy*.035;p.vy+=Math.cos(p.oy*.02+t*.0006)*scrollEnergy*.035}
-   if(!reduced){p.vx+=(p.ox-p.x)*.045;p.vy+=(p.oy-p.y)*.045;p.vx*=.82;p.vy*=.82;p.x+=p.vx;p.y+=p.vy}
-   const shimmer=.7+.3*Math.sin(t*.0012+p.phase);
-   ctx.fillStyle=p.white?'rgba(228,253,255,'+shimmer+')':'rgba(43,230,249,'+shimmer+')';
-   ctx.fillRect(p.x,p.y,p.size,p.size);
- }
- // Sparse floating pixels add motion without overpowering the logo.
- for(let i=0;i<95;i++){const x=(i*97+t*(.004+(i%4)*.0018))%(W+20)-10;const y=(i*53-t*(.008+(i%5)*.0018)+H*2)%(H+20)-10;ctx.fillStyle='rgba(55,224,246,'+(.10+.12*(.5+.5*Math.sin(t*.001+i))+scrollEnergy*.12)+')';ctx.fillRect(x,y,1.2+(i%2),1.2+(i%2))}
- pointer.power*=.92;scrollEnergy*=.97;
- if(!reduced)requestAnimationFrame(draw)
-}
-resize();requestAnimationFrame(draw);
+let W=1,H=1,dpr=1,points=[],pointer={x:-1000,y:-1000,active:false},energy=0,lastY=window.scrollY,raf=0;
+function resize(){const r=stage.getBoundingClientRect();dpr=Math.min(window.devicePixelRatio||1,2);W=Math.max(1,r.width);H=Math.max(1,r.height);canvas.width=Math.round(W*dpr);canvas.height=Math.round(H*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);points=Array.from({length:Math.max(55,Math.floor(W*H/9000))},()=>({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0,r:.7+Math.random()*1.2,a:.12+Math.random()*.32,phase:Math.random()*6.28}))}
+function move(e){const r=stage.getBoundingClientRect();pointer.x=e.clientX-r.left;pointer.y=e.clientY-r.top;pointer.active=true}
+function leave(){pointer.active=false}
+stage.addEventListener('pointermove',move,{passive:true});stage.addEventListener('pointerdown',move,{passive:true});stage.addEventListener('pointerup',leave,{passive:true});stage.addEventListener('pointercancel',leave,{passive:true});stage.addEventListener('pointerleave',leave,{passive:true});
+stage.addEventListener('touchmove',e=>{if(e.touches.length){const r=stage.getBoundingClientRect();pointer.x=e.touches[0].clientX-r.left;pointer.y=e.touches[0].clientY-r.top;pointer.active=true}},{passive:true});
+stage.addEventListener('wheel',e=>{energy=Math.min(1,energy+Math.min(.35,Math.abs(e.deltaY)/1000))},{passive:true});
+window.addEventListener('scroll',()=>{energy=Math.min(1,energy+Math.min(.25,Math.abs(window.scrollY-lastY)/240));lastY=window.scrollY},{passive:true});
+window.addEventListener('resize',resize,{passive:true});
+function draw(t){ctx.clearRect(0,0,W,H);
+ for(const p of points){if(pointer.active){const dx=p.x-pointer.x,dy=p.y-pointer.y,d=Math.hypot(dx,dy)||1;if(d<115){const f=(115-d)/115*.42;p.vx+=dx/d*f;p.vy+=dy/d*f}}
+ if(!reduced){p.vx+=(Math.sin(t*.00035+p.phase)*.08-p.vx)*.018;p.vy+=(Math.cos(t*.00028+p.phase)*.08-p.vy)*.018;p.vx*=.985;p.vy*=.985;p.x+=p.vx*(1+energy*2);p.y+=p.vy*(1+energy*2);if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0}
+ ctx.fillStyle='rgba(70,235,250,'+(p.a+energy*.18)+')';ctx.fillRect(p.x,p.y,p.r,p.r)}
+ energy*=.975;if(!reduced)raf=requestAnimationFrame(draw)}
+resize();if(!reduced)raf=requestAnimationFrame(draw);else draw(0);
+window.addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
 })();
 </script></body></html>
