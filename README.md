@@ -12,6 +12,10 @@
 
 <h2 align="center">Utkarsh Khairnar</h2>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/matrix-rain.svg" width="100%" alt="Animated green Matrix-style falling digital pixels" />
+</p>
+
 Cybersecurity · Cloud Computing · Cloud Security · AI Security
 
 Nashik, India · IST (UTC+5:30)
