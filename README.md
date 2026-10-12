@@ -14,7 +14,7 @@ IT Engineering student building security tools, cloud labs and automation—and 
 
 ---
 
-## `./contributions --activity`
+## 🟢 Contribution Activity
 
 <p align="center">
   <img src="https://ghchart.rshah.org/40916c/uskascent-svg" width="100%" alt="GitHub-style yearly contribution submission heatmap for uskascent-svg, with daily squares shaded by contribution activity"/>
