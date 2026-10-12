@@ -5,7 +5,7 @@ import math
 W, H = 960, 390
 OUT = Path("assets/readme-terminal.gif")
 FPS = 12
-DURATION = 24.0
+DURATION = 25.0
 BG0, BG1 = (7, 19, 11), (2, 6, 4)
 GREEN, WHITE, DIM, PALE = (77,255,145), (215,232,219), (131,161,140), (165,255,195)
 
@@ -28,15 +28,16 @@ FS = font(12)
 # (baseline, text, color, start time)
 lines = [
     (78, "$ whoami", GREEN, 0.15),
-    (105, "IT Engineering student", WHITE, 0.95),
-    (131, "MET BKC IOE Nashik", WHITE, 2.3),
-    (166, "$ cat status.log", GREEN, 4.2),
-    (193, "[ OK ] Cybersecurity · Blue Team · Cloud Security", GREEN, 5.2),
-    (220, "[ OK ] Email Phishing Detection System", GREEN, 8.1),
-    (247, "[ .. ] SOC Operations · Threat Detection · AI Security", DIM, 10.4),
-    (282, "$ ./career.sh --goal", GREEN, 13.5),
-    (309, "→ Aspiring Cybersecurity / SOC Analyst", GREEN, 14.7),
-    (336, "→ Learning by building · testing · defending", WHITE, 17.1),
+    (105, "Utkarsh Khairnar", WHITE, 0.95),
+    (131, "Computer Engineering Student | Cybersecurity", WHITE, 2.2),
+    (157, "Nashik, Maharashtra, India", DIM, 4.0),
+    (190, "$ cat status.log", GREEN, 5.2),
+    (217, "STATUS: Learning & Building", PALE, 6.0),
+    (244, "Threat detection · Security automation · AI-assisted defense", GREEN, 7.7),
+    (271, "SOC Analyst · Blue Team · Cloud · AI · Network Security", DIM, 10.7),
+    (304, "$ ./career.sh --goal", GREEN, 13.0),
+    (331, "→ SOC Analyst → Blue Team → Cloud & AI Security", GREEN, 14.0),
+    (358, "Projects: ASCENT SAFETY · Phishing Detection · RAIL-EYE · e-Recycle · KumbhSathi", WHITE, 16.5),
 ]
 def draw_frame(t):
     im = Image.new("RGB", (W,H))
