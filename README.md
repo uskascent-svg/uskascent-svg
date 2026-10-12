@@ -46,35 +46,32 @@ Problem solving is **built on trust. Driven by results.**
 | **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
 | **LeetCode Solutions** | [Open repository ↗](https://github.com/uskascent-svg/Leetcode-solution-) | Repository for coding practice and problem solutions. |
 
-## `❯ languages --live`
-
-<div align="center">
+## `❯ ls ~/stack`
 
 ```bash
-utkarsh@cloud:~$ github-stats --languages --live
-Fetching public repository language data...
+drwxr-xr-x  security/  soc  threat-detection  siem  vulnerability-assessment  network-security
+drwxr-xr-x  systems/   linux  bash  python  docker
+drwxr-xr-x  development/  python  cpp  java  javascript  typescript  sql
 ```
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=uskascent-svg&layout=compact&theme=chartreuse-dark&hide_border=true&langs_count=8" alt="Live top programming languages and percentage distribution across public GitHub repositories" width="75%"/>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,mysql,bash,linux,docker,git,vscode&perline=11&theme=dark" alt="Programming languages and developer tools" />
+</p>
 
-```text
-utkarsh@cloud:~$ echo $LANGUAGE_STATS
-SOURCE    : public GitHub repositories
-METRIC    : percentage of code by language
-REFRESH   : dynamic stats card
-NOTE      : code share, not skill proficiency
+## `❯ ./stats --live`
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=uskascent-svg&layout=compact&theme=chartreuse-dark&bg_color=0d1117&title_color=00ff9c&text_color=c9d1d9&hide_border=true&langs_count=8" width="75%" alt="Live top programming languages with code percentages from public GitHub repositories" />
+</p>
+
+```console
+utkarsh@cloud:~$ language-stats --source github
+> source: public repositories
+> display: language share + percentage
+> refresh: generated dynamically by stats service
+> note: percentages represent repository code, not skill level
 utkarsh@cloud:~$ _
 ```
-
-<a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/></a>
-<a href="https://isocpp.org/"><img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++"/></a>
-<a href="https://www.java.com/"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/></a>
-<a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/></a>
-<a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL"/></a>
-<a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash"/></a>
-
-</div>
 
 ## `❯ cat ~/skills.md`
 
