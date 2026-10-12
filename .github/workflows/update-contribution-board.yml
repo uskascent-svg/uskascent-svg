@@ -31,7 +31,7 @@ jobs:
         run: python3 scripts/update_contribution_board.py
       - name: Commit panel when changed
         run: |
-          if git diff --quiet -- assets/contribution-activity.svg; then
+          if [ -z "$(git status --porcelain -- assets/contribution-activity.svg)" ]; then
             echo "Contribution panel is already current."
             exit 0
           fi
