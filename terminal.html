@@ -2,33 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#070b09">
-<meta name="description" content="A minimal interactive profile terminal for Utkarsh Khairnar: cybersecurity, projects, skills and contact links.">
-<title>Utkarsh Khairnar — Profile Terminal</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07100b">
+<meta name="description" content="Explore Utkarsh Khairnar's cybersecurity interests, projects and links through the ASCENT U3 interactive profile terminal.">
+<title>ASCENT U3 — Interactive Profile Terminal</title>
 <style>
-:root{color-scheme:dark;--bg:#070b09;--panel:#0b110d;--line:#203329;--green:#79f2a0;--text:#dce9df;--muted:#8ca595;--cyan:#79dce6;--red:#ff9696;font:14px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% 0,#14271b 0,transparent 55%),var(--bg);color:var(--text);padding:clamp(12px,3vw,32px);display:grid;place-items:center}a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline;color:#fff}button,input{font:inherit}.shell{width:min(780px,100%);border:1px solid var(--line);border-radius:12px;background:rgba(8,13,10,.97);overflow:hidden;box-shadow:0 20px 70px #0007}.bar{height:38px;display:flex;align-items:center;justify-content:space-between;padding:0 13px;border-bottom:1px solid var(--line);color:var(--muted);font-size:11px}.dots{display:flex;gap:5px}.dot{width:8px;height:8px;border-radius:50%;background:#42664d}.dot:first-child{background:#ff6b65}.dot:nth-child(2){background:#ffc35d}.dot:nth-child(3){background:#70dc87}.identity{display:flex;align-items:center;gap:13px;padding:20px 20px 16px;border-bottom:1px solid #17251b}.logo{width:47px;height:42px;object-fit:contain;background:#030811;border:1px solid #233a2b;border-radius:6px;padding:3px}.name{font-size:clamp(17px,3vw,22px);font-weight:700;color:var(--green);letter-spacing:-.04em}.role{font-size:11px;color:var(--muted);margin-top:3px}.links{margin-left:auto;display:flex;gap:12px;font-size:11px;flex-wrap:wrap;justify-content:flex-end}.main{padding:18px 20px 14px}.hint{font-size:12px;color:var(--muted);margin:0 0 12px}.term{border:1px solid #20382a;border-radius:8px;overflow:hidden;background:#060b07}.termbar{height:33px;display:flex;align-items:center;justify-content:space-between;padding:0 11px;background:#0d160f;border-bottom:1px solid #1b2e20;color:#8ca595;font-size:11px}.clear{border:0;background:transparent;color:#9bb4a2;cursor:pointer;padding:3px 0}.clear:hover{color:var(--green)}.output{height:min(43vh,370px);min-height:220px;overflow:auto;padding:14px 13px;scrollbar-color:#294632 #060b07;overflow-wrap:anywhere}.line{margin:0 0 7px;white-space:pre-wrap}.prompt{color:var(--green)}.muted{color:var(--muted)}.error{color:var(--red)}.link{color:var(--cyan)}.inputrow{display:flex;align-items:center;gap:8px;border-top:1px solid #17271c;padding:12px 13px}.promptlabel{color:var(--green);white-space:nowrap}.input{min-width:0;flex:1;color:#e4f8e9;background:transparent;border:0;outline:0;caret-color:var(--green)}.input::placeholder{color:#526b59}.chips{display:flex;gap:7px;flex-wrap:wrap;padding:0 13px 13px}.chip{border:1px solid #25412e;border-radius:5px;background:#0c160f;color:#a9e9ba;padding:4px 8px;font-size:11px;cursor:pointer}.chip:hover,.chip:focus-visible{border-color:var(--green);color:#fff}.foot{padding:11px 20px;border-top:1px solid #17271c;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#6f8b77;font-size:10px}@media(max-width:540px){.identity{padding:16px;gap:10px}.logo{width:40px;height:38px}.role{max-width:220px}.links{gap:8px}.main{padding:14px}.output{min-height:200px}.foot{padding:10px 14px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+:root{color-scheme:dark;--bg:#060b08;--panel:#0a120d;--panel2:#0d1811;--line:#20382a;--line2:#2d5038;--green:#91f5ac;--text:#e0eee4;--muted:#8ba493;--cyan:#8de7ed;--red:#ff9999;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font:14px/1.55 var(--mono)}
+*{box-sizing:border-box}html{min-height:100%;background:var(--bg);scroll-behavior:smooth}body{margin:0;min-height:100svh;color:var(--text);background:radial-gradient(ellipse at 50% -15%,#173321 0,transparent 55%),linear-gradient(140deg,#060b08,#080e0a 60%,#050906);padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));display:grid;place-items:center}
+a{color:var(--cyan);text-decoration:none}a:hover{color:#fff;text-decoration:underline}button,input{font:inherit}.shell{width:min(940px,100%);border:1px solid var(--line);border-radius:14px;background:rgba(8,14,10,.97);overflow:hidden;box-shadow:0 24px 90px #0008,0 0 0 1px #9bffb508;animation:appear .45s ease-out both}.bar{min-height:42px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 15px;border-bottom:1px solid var(--line);background:#0b130d;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.bar-left{display:flex;align-items:center;gap:11px}.dots{display:flex;gap:5px}.dot{width:8px;height:8px;border-radius:50%;background:#70dc87}.dot:first-child{background:#ff6b65}.dot:nth-child(2){background:#ffc35d}.bar-status{display:flex;align-items:center;gap:7px}.status-light{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 9px #91f5ac;animation:pulse 2.2s infinite}.identity{display:flex;align-items:center;gap:15px;padding:21px clamp(15px,3vw,28px) 18px;border-bottom:1px solid #17271c}.logo-link{display:block;flex:0 0 auto}.logo{display:block;width:56px;height:50px;object-fit:contain;background:#030811;border:1px solid #294333;border-radius:8px;padding:4px;transition:border-color .2s,box-shadow .2s}.logo-link:hover .logo{border-color:var(--green);box-shadow:0 0 18px #91f5ac22}.identity-copy{min-width:0}.eyebrow{color:var(--muted);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:3px}.name{font-size:clamp(18px,3.5vw,25px);line-height:1.2;font-weight:750;color:var(--green);letter-spacing:-.045em}.role{font-size:12px;color:#a4b9aa;margin-top:5px}.links{margin-left:auto;display:flex;gap:13px;flex-wrap:wrap;justify-content:flex-end;font-size:11px}.main{padding:clamp(14px,3vw,25px)}.intro{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:15px}.hint{font-size:12px;color:var(--muted);margin:0}.session-tag{flex-shrink:0;font-size:10px;color:#a3c6ab;border:1px solid #24402c;border-radius:5px;padding:3px 7px}.term{border:1px solid #25412e;border-radius:10px;overflow:hidden;background:#050a06;box-shadow:inset 0 0 28px #0005}.termbar{min-height:37px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:7px 13px;background:linear-gradient(90deg,#0d1910,#0b130d);border-bottom:1px solid #1b3020;color:#91a999;font-size:11px}.termbar-left{display:flex;gap:10px;align-items:center}.path{color:#c0d6c5}.term-actions{display:flex;align-items:center;gap:12px}.key-hint{font-size:10px;color:#647b6b}.clear{border:1px solid transparent;border-radius:5px;background:transparent;color:#9bb4a2;cursor:pointer;padding:3px 7px}.clear:hover,.clear:focus-visible{border-color:var(--line2);color:var(--green);outline:none}.output{height:clamp(250px,43vh,430px);min-height:250px;overflow:auto;padding:16px clamp(12px,2vw,18px);scrollbar-color:#294632 #060b07;overflow-wrap:anywhere;overscroll-behavior:contain;scrollbar-width:thin}.line{margin:0 0 7px;white-space:pre-wrap;overflow-wrap:anywhere;animation:line-in .14s ease-out both}.prompt{color:var(--green)}.muted{color:var(--muted)}.error{color:var(--red)}.link{color:var(--cyan);text-decoration:underline;text-decoration-color:#8de7ed55;text-underline-offset:3px}.inputrow{display:flex;align-items:center;gap:9px;border-top:1px solid #17271c;padding:12px 14px;background:#080f09}.promptlabel{color:var(--green);white-space:nowrap;font-weight:bold}.input{min-width:0;flex:1;color:#e4f8e9;background:transparent;border:0;outline:0;caret-color:var(--green);font-size:14px}.input::placeholder{color:#5e7765}.input:focus-visible{outline:none}.submit-hint{font-size:10px;color:#637b69;white-space:nowrap}.chips{display:flex;gap:7px;flex-wrap:wrap;padding:0 13px 14px;background:#080f09}.chip{border:1px solid #25412e;border-radius:6px;background:#0c160f;color:#b6e9c1;padding:6px 9px;font-size:11px;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}.chip:hover,.chip:focus-visible{border-color:var(--green);background:#13271a;color:#fff;transform:translateY(-1px);outline:none}.chip:active{transform:translateY(0)}.suggest-label{width:100%;color:#6f8b77;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin:1px 0 0}.foot{padding:12px clamp(15px,3vw,28px);border-top:1px solid #17271c;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;color:#6f8b77;font-size:10px}.foot strong{color:#a6c9af;font-weight:500}.footer-links{display:flex;gap:12px;flex-wrap:wrap}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes appear{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}@keyframes line-in{from{opacity:.25;transform:translateY(2px)}to{opacity:1;transform:translateY(0)}}@keyframes pulse{50%{opacity:.45;box-shadow:0 0 3px #91f5ac}}
+@media(max-width:600px){body{padding:8px}.shell{border-radius:10px}.bar{padding:9px 11px;font-size:9px;letter-spacing:.08em}.identity{padding:15px 13px;gap:11px;align-items:flex-start}.logo{width:43px;height:41px}.eyebrow{font-size:9px}.name{font-size:19px}.role{font-size:11px;line-height:1.45}.links{gap:8px;margin-left:0;justify-content:flex-start;width:100%;font-size:11px}.identity{flex-wrap:wrap}.identity-copy{flex:1 1 calc(100% - 60px)}.links{padding-left:54px;margin-top:-3px}.main{padding:12px}.intro{gap:8px}.hint{font-size:11px;max-width:290px}.session-tag{font-size:9px}.termbar{padding:7px 10px}.key-hint{display:none}.output{height:42svh;min-height:230px;max-height:390px;padding:13px 11px}.inputrow{padding:12px 10px}.input{font-size:16px}.submit-hint{display:none}.chips{padding:0 10px 12px;gap:6px}.chip{padding:7px 9px;font-size:11px}.foot{padding:11px 13px;font-size:9px}}
+@media(max-width:360px){.bar-status{font-size:0}.bar-status .status-light{width:7px;height:7px}.name{font-size:17px}.role{font-size:10px}.termbar{font-size:10px}.chip{padding:6px 7px}.footer-links{gap:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <div class="shell">
-<header class="bar"><span><span class="dots"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span> &nbsp; ASCENT U3</span><span>PROFILE TERMINAL</span></header>
-<section class="identity">
-<a href="./" aria-label="Open ASCENT U3 logo experience"><img class="logo" src="./assets/ascentu3-original.png" alt="ASCENT U3 logo"></a>
-<div><div class="name">Utkarsh Khairnar</div><div class="role">IT Engineering Student · Cybersecurity · Nashik, India</div></div>
+<header class="bar"><div class="bar-left"><span class="dots" aria-hidden="true"><i class="dot"></i><i class="dot"></i><i class="dot"></i></span><span>ASCENT U3</span></div><span class="bar-status"><i class="status-light" aria-hidden="true"></i> LOCAL PROFILE SESSION</span></header>
+<section class="identity" aria-label="ASCENT U3 profile">
+<a class="logo-link" href="./" aria-label="Return to the original ASCENT U3 logo experience"><img class="logo" src="./assets/ascentu3-original.png" alt="Original ASCENT U3 logo"></a>
+<div class="identity-copy"><div class="eyebrow">Cybersecurity · IT solutions</div><div class="name">Utkarsh Khairnar</div><div class="role">IT Engineering Student · Cybersecurity · Nashik, India</div></div>
 <nav class="links" aria-label="Profile links"><a href="https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://leetcode.com/u/AscentU3/" target="_blank" rel="noopener noreferrer">LeetCode ↗</a><a href="mailto:uskascent@gmail.com">Email ↗</a></nav>
 </section>
 <main class="main">
-<p class="hint">A small terminal for exploring my work. Enter a command.</p>
+<div class="intro"><p class="hint">Explore my work and interests. Enter a command or choose a shortcut.</p><span class="session-tag">SAFE MODE</span></div>
 <section class="term" aria-label="Interactive profile terminal">
-<div class="termbar"><span>visitor session</span><button class="clear" id="clear" type="button">clear</button></div>
-<div class="output" id="output" role="log" aria-live="polite" aria-relevant="additions"></div>
-<form id="form" autocomplete="off"><div class="inputrow"><label class="promptlabel" for="command">›</label><input class="input" id="command" name="command" placeholder="try: whoami" spellcheck="false" autocapitalize="off" aria-label="Terminal command"></div></form>
-<div class="chips" aria-label="Quick commands"><button class="chip" data-cmd="whoami">whoami</button><button class="chip" data-cmd="interests">interests</button><button class="chip" data-cmd="projects">projects</button><button class="chip" data-cmd="contact">contact</button><button class="chip" data-cmd="help">help</button></div>
+<div class="termbar"><div class="termbar-left"><span>terminal</span><span class="path">~/profile</span></div><div class="term-actions"><span class="key-hint">↑ ↓ history · Tab complete</span><button class="clear" id="clear" type="button" title="Clear terminal output">clear</button></div></div>
+<div class="output" id="output" role="log" aria-live="polite" aria-relevant="additions text" tabindex="0"></div>
+<form id="form" autocomplete="off"><div class="inputrow"><label class="promptlabel" for="command">visitor@ascent <span aria-hidden="true">›</span></label><input class="input" id="command" name="command" placeholder="type help to begin" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Terminal command"><span class="submit-hint">ENTER ↵</span></div></form>
+<div class="chips" aria-label="Quick commands"><span class="suggest-label">Quick access</span><button class="chip" type="button" data-cmd="whoami">whoami</button><button class="chip" type="button" data-cmd="interests">interests</button><button class="chip" type="button" data-cmd="projects">projects</button><button class="chip" type="button" data-cmd="skills">skills</button><button class="chip" type="button" data-cmd="contact">contact</button><button class="chip" type="button" data-cmd="help">help</button></div>
 </section>
 </main>
-<footer class="foot"><span>DETECT. PREVENT. PROTECT.</span><a href="https://github.com/uskascent-svg/uskascent-svg">GitHub profile ↗</a></footer>
+<footer class="foot"><span><strong>DETECT. PREVENT. PROTECT.</strong> · ASCENT U3</span><span class="footer-links"><a href="https://github.com/uskascent-svg/uskascent-svg" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="./" aria-label="Back to logo experience">Logo experience ↗</a></span></footer>
 </div>
 <script>
 (()=>{'use strict';
@@ -46,18 +51,19 @@ const PROFILE={
  languages:['Python · C++ · Java · JavaScript · TypeScript · SQL'],
  linux:['Linux and Bash for systems practice and security workflows.'],
  python:['Python for automation, analysis and security project development.'],
- projects:['Try: ascent-safety · phishing · shop-agent · leetcode'],
- 'ascent-safety':['Cybersecurity analysis and threat-detection platform.'],
+ projects:['Featured projects:','ascent-safety · phishing · rail-eye · e-recycle · kumbhsathi · shop-agent · leetcode'],
+ 'ascent-safety':['ASCENT SAFETY','Cybersecurity analysis and threat-detection platform.','Repository: https://github.com/uskascent-svg/Ascent-Safety-'],
  phishing:['Email phishing detection: examining suspicious messages, links and patterns.'],
  'rail-eye':['RAIL-EYE: AI-assisted railway safety concept using edge vision and risk analysis.'],
  'e-recycle':['E-Cycle: community workflow for repair, reuse, donation and e-waste recycling.'],
  kumbhsathi:['KumbhSathi: pilgrimage companion concept focused on safer, smoother journeys.'],
- 'shop-agent':['AI-powered shopping-agent project.'],
+ 'shop-agent':['AI-powered shopping-agent project.','Repository: https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent'],
+ leetcode:['LeetCode solutions and problem-solving practice.','Profile: https://leetcode.com/u/AscentU3/'],
  github:['GitHub: https://github.com/uskascent-svg/uskascent-svg'],
  linkedin:['LinkedIn: https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/'],
- leetcode:['LeetCode: https://leetcode.com/u/AscentU3/'],
  email:['Email: uskascent@gmail.com'],
  contact:['LinkedIn · https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/','GitHub · https://github.com/uskascent-svg/uskascent-svg','LeetCode · https://leetcode.com/u/AscentU3/','Email · uskascent@gmail.com'],
+ socials:['LinkedIn · https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/','GitHub · https://github.com/uskascent-svg/uskascent-svg','LeetCode · https://leetcode.com/u/AscentU3/'],
  career:['Goal: Cybersecurity / SOC Analyst, growing toward security and threat intelligence.'],
  goal:['Build practical skills in detection, response and cloud security.'],
  learning:['Currently building: security analysis, Linux, networking and automation.'],
@@ -67,7 +73,10 @@ const PROFILE={
  approach:['Understand → build → test → document → improve.'],
  teamwork:['I value clear communication, shared ownership and dependable execution.'],
  events:['Experience includes departmental event work and TEDx college event support.'],
- certifications:['I only list certifications when verified; none are claimed by this terminal.'],
+ hackathons:['I enjoy collaborative technical projects, learning quickly and turning ideas into working prototypes.'],
+ ctf:['Interested in hands-on security learning and structured problem-solving.'],
+ labs:['Practice areas: Linux, networking, cloud fundamentals and defensive security workflows.'],
+ certifications:['I only list certifications when verified; this terminal does not claim unverified credentials.'],
  resume:['For a current résumé, contact me by email or LinkedIn.'],
  collab:['Open to learning-focused cybersecurity projects and meaningful collaboration.'],
  opportunities:['Seeking cybersecurity internships and project opportunities.'],
@@ -76,26 +85,42 @@ const PROFILE={
  tools:['VS Code · Git/GitHub · Linux tooling · Python'],
  security:['Defensive focus: understand signals, validate findings and document evidence.'],
  roadmap:['Next: deepen cloud security, detection engineering and incident-response practice.'],
- stats:['I do not display invented scores, live counts or unverified performance metrics.'],
+ stats:['No invented scores, live counts or unverified performance metrics are shown here.'],
  'blue-team':['Defensive security: monitor, investigate, contain and learn from incidents.'],
  'cloud-security':['Interest: IAM, least privilege, secure configuration and cloud visibility.'],
  'threat-detection':['Build toward reliable detections that can be tested, explained and improved.'],
  'problem-solving':['LeetCode: https://leetcode.com/u/AscentU3/'],
- 'ascentu3':['ASCENT U3 · Detect. Prevent. Protect.'],
- 'help':['Try one of these 50 commands:','whoami · about · education · interests · cybersecurity · soc · cloud · ai-security · network · skills · languages · linux · python · projects · ascent-safety · phishing · rail-eye · e-recycle · kumbhsathi · shop-agent · github · linkedin · leetcode · email · contact · career · goal · learning · currently · location · values · approach · teamwork · events · hackathons · ctf · labs · certifications · resume · collab · opportunities · motto · stack · tools · security · roadmap · stats · socials · open-source · why-security · blue-team · cloud-security · threat-detection · problem-solving · communication · fun-fact · availability · ascentu3']
+ communication:['Clear communication, teamwork and documented handoffs matter in technical work.'],
+ 'fun-fact':['I like turning ideas into practical projects and improving them through testing.'],
+ availability:['Open to cybersecurity internships, project collaborations and learning opportunities.'],
+ open-source:['GitHub profile and projects: https://github.com/uskascent-svg/uskascent-svg'],
+ ascentu3:['ASCENT U3 · Cybersecurity · IT solutions','Detect. Prevent. Protect.'],
+ help:[]
 };
-const ALIASES={hi:'whoami',me:'whoami',profile:'about',bio:'about',study:'education',focus:'interests',cyber:'cybersecurity',soc:'soc',ai:'ai-security',projects:'projects',work:'projects',mail:'email',links:'contact',leetcode:'leetcode',linkedin:'linkedin',career:'career',goal:'goal',help:'help',clear:'clear',exit:'exit',quit:'exit'};
+const ALIASES={hi:'whoami',me:'whoami',profile:'about',bio:'about',study:'education',focus:'interests',cyber:'cybersecurity',ai:'ai-security',work:'projects',mail:'email',links:'contact',social:'socials',career:'career',goal:'goal',quit:'exit',q:'exit',cls:'clear','?':'help'};
 const output=document.querySelector('#output'),form=document.querySelector('#form'),input=document.querySelector('#command');
-const commands=Object.keys(PROFILE);PROFILE.help=['50 commands:',commands.filter(x=>x!=='help').join(' · ')];
-const history=[];let historyIndex=0;
+const commands=[...Object.keys(PROFILE),'help','clear','exit','quit','history','date','banner'];
+PROFILE.help=['Available commands (55+):',commands.join(' · '),'Tip: use ↑ / ↓ for command history and Tab to complete a command.','This is a simulated profile terminal; it does not execute system commands or run security scans.'];
+const history=[];let historyIndex=0;let commandCount=0;
 function add(text,kind=''){const p=document.createElement('p');p.className='line'+(kind?' '+kind:'');p.textContent=text;output.append(p);output.scrollTop=output.scrollHeight}
-function renderLine(text){const p=document.createElement('p');p.className='line';const match=text.match(/^(.*?)(https?:\/\/\S+|mailto:\S+)$/);if(match){p.append(document.createTextNode(match[1]));const a=document.createElement('a');a.className='link';a.href=match[2];a.textContent=match[2];a.target=match[2].startsWith('http')?'_blank':'_self';if(a.target==='_blank')a.rel='noopener noreferrer';p.append(a)}else p.textContent=text;output.append(p);output.scrollTop=output.scrollHeight}
-function run(raw){const value=raw.trim();if(!value)return;add('visitor@ascent:~$ '+value,'prompt');const key=value.toLowerCase().replace(/\s+/g,' ');if(key==='clear'){output.replaceChildren();return}if(key==='exit'||key==='quit'){add('Session remains open. Explore another command.','muted');return}const command=ALIASES[key]||key;if(!Object.prototype.hasOwnProperty.call(PROFILE,command)){add('Unknown command. Type help.','error');return}PROFILE[command].forEach(renderLine)}
+function renderLine(text){const p=document.createElement('p');p.className='line';const urlPattern=/(https?:\/\/[^\s]+|mailto:[^\s]+)/g;let last=0,match;while((match=urlPattern.exec(text))!==null){p.append(document.createTextNode(text.slice(last,match.index)));const a=document.createElement('a');a.className='link';a.href=match[0].replace(/[.,;]+$/,'');a.textContent=a.href;a.target=a.href.startsWith('http')?'_blank':'_self';if(a.target==='_blank')a.rel='noopener noreferrer';p.append(a);last=urlPattern.lastIndex}p.append(document.createTextNode(text.slice(last)));output.append(p);output.scrollTop=output.scrollHeight}
+function normalize(raw){return raw.trim().toLowerCase().replace(/\s+/g,' ')}
+function run(raw){const value=raw.trim();if(!value)return;const key=normalize(value);add('visitor@ascent:~/profile$ '+value,'prompt');commandCount++;
+if(key==='clear'||key==='cls'){output.replaceChildren();return}
+if(key==='exit'||key==='quit'||key==='q'){add('Session remains open. Try another command.','muted');return}
+if(key==='history'){if(!history.length)add('No previous commands in this session.','muted');else history.slice(-20).forEach((item,i)=>add((Math.max(0,history.length-20)+i+1)+': '+item,'muted'));return}
+if(key==='date'){add(new Intl.DateTimeFormat(undefined,{dateStyle:'medium',timeStyle:'short'}).format(new Date()),'muted');return}
+if(key==='banner'){add('ASCENT U3  /  DETECT. PREVENT. PROTECT.','prompt');add('Cybersecurity · IT solutions · profile terminal','muted');return}
+let command=ALIASES[key]||key;
+if(!Object.prototype.hasOwnProperty.call(PROFILE,command)){const candidates=commands.filter(c=>c.startsWith(command));add(candidates.length?'Unknown command. Did you mean: '+candidates.slice(0,5).join(', ')+'?':'Unknown command. Type help to list available commands.','error');return}
+PROFILE[command].forEach(renderLine);
+}
 form.addEventListener('submit',e=>{e.preventDefault();const value=input.value.trim();if(!value)return;history.push(value);historyIndex=history.length;run(value);input.value=''});
-input.addEventListener('keydown',e=>{if(e.key==='ArrowUp'){e.preventDefault();if(historyIndex>0)historyIndex--;input.value=history[historyIndex]||''}else if(e.key==='ArrowDown'){e.preventDefault();if(historyIndex<history.length)historyIndex++;input.value=history[historyIndex]||''}else if(e.key==='Tab'){e.preventDefault();const q=input.value.toLowerCase();const matches=[...new Set([...Object.keys(PROFILE),...Object.keys(ALIASES)])].filter(x=>x.startsWith(q));if(matches.length===1)input.value=matches[0]}});
+input.addEventListener('keydown',e=>{if(e.key==='ArrowUp'){e.preventDefault();if(historyIndex>0)historyIndex--;input.value=history[historyIndex]||''}else if(e.key==='ArrowDown'){e.preventDefault();if(historyIndex<history.length)historyIndex++;input.value=history[historyIndex]||''}else if(e.key==='Tab'){e.preventDefault();const q=normalize(input.value);const matches=commands.filter(x=>x.startsWith(q));if(matches.length===1)input.value=matches[0];else if(matches.length>1){add('Matches: '+matches.slice(0,8).join(' · '),'muted')}}});
 document.querySelectorAll('[data-cmd]').forEach(b=>b.addEventListener('click',()=>{input.value=b.dataset.cmd;form.requestSubmit();input.focus()}));
 document.querySelector('#clear').addEventListener('click',()=>{output.replaceChildren();input.focus()});
-add('Welcome, visitor. Type help to explore.','muted');add('visitor@ascent:~$ _','prompt');
+add('ASCENT U3 profile terminal · session ready.','muted');add('Type help to explore. No real shell commands are executed.','muted');
+if(window.matchMedia('(min-width: 700px)').matches)input.focus({preventScroll:true});
 })();
 </script>
 </body>
