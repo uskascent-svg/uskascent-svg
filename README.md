@@ -7,7 +7,7 @@
 
 <p align="center">
 </p>
-Utkarsh Sanjay Khairnar 
+
 Cybersecurity · Cloud Computing · Cloud Security · AI Security
 
 Nashik, India · IST (UTC+5:30)
