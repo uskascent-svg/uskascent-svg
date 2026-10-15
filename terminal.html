@@ -97,21 +97,34 @@ const PROFILE={
  ascentu3:['ASCENT U3 · Cybersecurity · IT solutions','Detect. Prevent. Protect.'],
  help:[]
 };
-const ALIASES={hi:'whoami',me:'whoami',profile:'about',bio:'about',study:'education',focus:'interests',cyber:'cybersecurity',ai:'ai-security',work:'projects',mail:'email',links:'contact',social:'socials',career:'career',goal:'goal',quit:'exit',q:'exit',cls:'clear','?':'help'};
+const ALIASES={hi:'whoami',me:'whoami',profile:'about',bio:'about',study:'education',focus:'interests',cyber:'cybersecurity',ai:'ai-security',work:'projects',mail:'email',links:'contact',social:'socials',career:'career',goal:'goal',quit:'exit',q:'exit',cls:'clear','?':'help',ls:'projects',dir:'projects',pwd:'ascentu3',info:'about',stack:'skills', 'cloud security':'cloud-security','threat detection':'threat-detection','blue team':'blue-team','cloud security':'cloud-security'};
 const output=document.querySelector('#output'),form=document.querySelector('#form'),input=document.querySelector('#command');
 const commands=[...Object.keys(PROFILE),'help','clear','exit','quit','history','date','banner'];
 PROFILE.help=['Available commands (55+):',commands.join(' · '),'Tip: use ↑ / ↓ for command history and Tab to complete a command.','This is a simulated profile terminal; it does not execute system commands or run security scans.'];
 const history=[];let historyIndex=0;let commandCount=0;
 function add(text,kind=''){const p=document.createElement('p');p.className='line'+(kind?' '+kind:'');p.textContent=text;output.append(p);output.scrollTop=output.scrollHeight}
 function renderLine(text){const p=document.createElement('p');p.className='line';const urlPattern=/(https?:\/\/[^\s]+|mailto:[^\s]+)/g;let last=0,match;while((match=urlPattern.exec(text))!==null){p.append(document.createTextNode(text.slice(last,match.index)));const a=document.createElement('a');a.className='link';a.href=match[0].replace(/[.,;]+$/,'');a.textContent=a.href;a.target=a.href.startsWith('http')?'_blank':'_self';if(a.target==='_blank')a.rel='noopener noreferrer';p.append(a);last=urlPattern.lastIndex}p.append(document.createTextNode(text.slice(last)));output.append(p);output.scrollTop=output.scrollHeight}
-function normalize(raw){return raw.trim().toLowerCase().replace(/\s+/g,' ')}
+function normalize(raw){return raw.trim().toLowerCase().replace(/^[>$]+\s*/,'').replace(/^(?:visitor@ascent:~\/profile\$\s*)/,'').replace(/^(?:\.\/|\.\\)/,'').replace(/\s+/g,' ').trim()}
 function run(raw){const value=raw.trim();if(!value)return;const key=normalize(value);add('visitor@ascent:~/profile$ '+value,'prompt');commandCount++;
 if(key==='clear'||key==='cls'){output.replaceChildren();return}
 if(key==='exit'||key==='quit'||key==='q'){add('Session remains open. Try another command.','muted');return}
 if(key==='history'){if(!history.length)add('No previous commands in this session.','muted');else history.slice(-20).forEach((item,i)=>add((Math.max(0,history.length-20)+i+1)+': '+item,'muted'));return}
 if(key==='date'){add(new Intl.DateTimeFormat(undefined,{dateStyle:'medium',timeStyle:'short'}).format(new Date()),'muted');return}
 if(key==='banner'){add('ASCENT U3  /  DETECT. PREVENT. PROTECT.','prompt');add('Cybersecurity · IT solutions · profile terminal','muted');return}
-let command=ALIASES[key]||key;
+const parts=key.split(' '), first=parts[0], args=parts.slice(1), alias=ALIASES[first];
+let command=alias||first;
+if(command==='help'&&args.length){const topic=ALIASES[args.join(' ')]||args.join(' ');if(PROFILE[topic]){add(topic+' — command details:','prompt');PROFILE[topic].forEach(renderLine)}else add('No help entry for "'+args.join(' ')+'". Try help or a command from the list.','muted');return}
+if(command==='cat'&&args.length){const file=args.join(' ').replace(/^~\//,'').replace(/\.md$/,'').replace(/\.txt$/,'');const fileAliases={ 'about':'about','skills':'skills','skills.md':'skills','learning.log':'learning','learning':'learning','projects':'projects','projects.md':'projects','contact':'contact','contact.md':'contact','profile':'whoami','learning.log':'learning'};command=fileAliases[file]||file}
+if(command==='man'){add('Use help or help <command> to inspect available profile commands.','muted');return}
+if(command==='echo'){add(args.join(' ')||'','muted');return}
+if(command==='open'){const destinations={github:'github',linkedin:'linkedin',leetcode:'leetcode',email:'email','ascent-safety':'ascent-safety','shop-agent':'shop-agent'};command=destinations[args.join(' ')]||args[0]||'help'}
+if(command==='ls'||command==='dir')command='projects';
+if(command==='pwd'){add('/home/utkarsh/profile','muted');return}
+if(command==='clear'||command==='cls'){output.replaceChildren();return}
+if(command==='exit'||command==='quit'||command==='q'){add('Session remains open. Try another command.','muted');return}
+if(command==='history'){if(!history.length)add('No previous commands in this session.','muted');else history.slice(-20).forEach((item,i)=>add((Math.max(0,history.length-20)+i+1)+': '+item,'muted'));return}
+if(command==='date'){add(new Intl.DateTimeFormat(undefined,{dateStyle:'medium',timeStyle:'short'}).format(new Date()),'muted');return}
+if(command==='banner'){add('ASCENT U3  /  DETECT. PREVENT. PROTECT.','prompt');add('Cybersecurity · IT solutions · profile terminal','muted');return}
 if(!Object.prototype.hasOwnProperty.call(PROFILE,command)){const candidates=commands.filter(c=>c.startsWith(command));add(candidates.length?'Unknown command. Did you mean: '+candidates.slice(0,5).join(', ')+'?':'Unknown command. Type help to list available commands.','error');return}
 PROFILE[command].forEach(renderLine);
 }
