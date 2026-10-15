@@ -1,24 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
-<title id="title">Utkarsh name typing animation</title>
-<desc id="desc">Responsive terminal-style UTKARSH ASCII-art typing animation.</desc>
-<rect width="960" height="230" rx="12" fill="#0d1117"/>
-<rect x="1" y="1" width="958" height="228" rx="11" fill="none" stroke="#30363d"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="170" viewBox="0 0 960 170" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+<title id="title">Utkarsh S Khairnar typing animation</title>
+<desc id="desc">A responsive terminal-style animation that types the name Utkarsh S Khairnar from left to right.</desc>
+<rect width="960" height="170" rx="12" fill="#0d1117"/>
+<rect x="1" y="1" width="958" height="168" rx="11" fill="none" stroke="#30363d"/>
+<text x="28" y="32" font-family="monospace" font-size="15" fill="#8b949e">utkarsh@cloud:~$ whoami</text>
 <defs>
-<clipPath id="line0"><rect x="80" y="38" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="0.4s" fill="freeze"/></rect></clipPath>
-<clipPath id="line1"><rect x="80" y="66" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="2.8s" fill="freeze"/></rect></clipPath>
-<clipPath id="line2"><rect x="80" y="94" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="5.2s" fill="freeze"/></rect></clipPath>
-<clipPath id="line3"><rect x="80" y="122" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="7.6s" fill="freeze"/></rect></clipPath>
-<clipPath id="line4"><rect x="80" y="150" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="10s" fill="freeze"/></rect></clipPath>
-<clipPath id="line5"><rect x="80" y="178" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="12.4s" fill="freeze"/></rect></clipPath>
+  <clipPath id="typing-reveal">
+    <rect x="80" y="48" width="0" height="76">
+      <animate attributeName="width" from="0" to="800" dur="3.2s" begin="0.5s" fill="freeze"/>
+    </rect>
+  </clipPath>
 </defs>
-<text x="24" y="28" font-family="monospace" font-size="13" fill="#8b949e">utkarsh@cloud:~$</text>
-<g font-family="monospace" font-size="18" xml:space="preserve" fill="#00ff9c" text-anchor="start">
-<text x="80" y="58" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line0)">██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗</text>
-<text x="80" y="86" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line1)">██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║</text>
-<text x="80" y="114" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line2)">██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║</text>
-<text x="80" y="142" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line3)">██║   ██║   ██║   ██╔═██╗ ██╔══██╗██╔══██╗╚════██║██╔══██║</text>
-<text x="80" y="170" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line4)">╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║</text>
-<text x="80" y="198" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line5)"> ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝</text>
-</g>
-<text x="24" y="220" font-family="monospace" font-size="12" fill="#8b949e">typing identity... <tspan fill="#22d3ee">UTKARSH</tspan><tspan fill="#00ff9c">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+<text x="80" y="105" font-family="monospace" font-size="54" font-weight="700" fill="#00ff9c" text-anchor="start" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#typing-reveal)">Utkarsh S Khairnar</text>
+<rect x="80" y="59" width="4" height="54" fill="#00ff9c">
+  <animate attributeName="x" values="80;880" dur="3.2s" begin="0.5s" fill="freeze"/>
+  <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.98;1" dur="3.2s" begin="0.5s" fill="freeze"/>
+</rect>
+<text x="28" y="145" font-family="monospace" font-size="13" fill="#8b949e">identity loaded <tspan fill="#22d3ee">[ ASCENT U3 ]</tspan><tspan fill="#00ff9c"> _<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
 </svg>
