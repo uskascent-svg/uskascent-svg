@@ -16,6 +16,7 @@ Nashik, India · IST (UTC+5:30)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-AscentU3-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AscentU3/)
 [![Email](https://img.shields.io/badge/Email-Contact%20me-8B89CC?style=for-the-badge&logo=gmail)](mailto:uskascent@gmail.com?subject=Opportunity%20from%20GitHub%20profile)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-00C7B7?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ascent-u3-portfolio.lovable.app)
 
 </div>
 
