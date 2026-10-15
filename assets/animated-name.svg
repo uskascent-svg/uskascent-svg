@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
 <title id="title">Utkarsh name typing animation</title>
-<desc id="desc">Terminal-style UTKARSH ASCII-art typing animation with a consistent left edge.</desc>
+<desc id="desc">Responsive terminal-style UTKARSH ASCII-art typing animation.</desc>
 <rect width="960" height="230" rx="12" fill="#0d1117"/>
 <rect x="1" y="1" width="958" height="228" rx="11" fill="none" stroke="#30363d"/>
 <defs>
-<clipPath id="line0"><rect x="150" y="38" width="0" height="27"><animate attributeName="width" from="0" to="660" dur="2.3s" begin="0.4s" fill="freeze"/></rect></clipPath>
-<clipPath id="line1"><rect x="150" y="66" width="0" height="27"><animate attributeName="width" from="0" to="660" dur="2.3s" begin="2.8s" fill="freeze"/></rect></clipPath>
-<clipPath id="line2"><rect x="150" y="94" width="0" height="27"><animate attributeName="width" from="0" to="660" dur="2.3s" begin="5.2s" fill="freeze"/></rect></clipPath>
-<clipPath id="line3"><rect x="150" y="122" width="0" height="27"><animate attributeName="width" from="0" to="660" dur="2.3s" begin="7.6s" fill="freeze"/></rect></clipPath>
-<clipPath id="line4"><rect x="150" y="150" width="0" height="27"><animate attributeName="width" from="0" to="660" dur="2.3s" begin="10s" fill="freeze"/></rect></clipPath>
-<clipPath id="line5"><rect x="150" y="178" width="0" height="27"><animate attributeName="width" from="0" to="660" dur="2.3s" begin="12.4s" fill="freeze"/></rect></clipPath>
+<clipPath id="line0"><rect x="80" y="38" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="0.4s" fill="freeze"/></rect></clipPath>
+<clipPath id="line1"><rect x="80" y="66" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="2.8s" fill="freeze"/></rect></clipPath>
+<clipPath id="line2"><rect x="80" y="94" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="5.2s" fill="freeze"/></rect></clipPath>
+<clipPath id="line3"><rect x="80" y="122" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="7.6s" fill="freeze"/></rect></clipPath>
+<clipPath id="line4"><rect x="80" y="150" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="10s" fill="freeze"/></rect></clipPath>
+<clipPath id="line5"><rect x="80" y="178" width="0" height="27"><animate attributeName="width" from="0" to="800" dur="2.3s" begin="12.4s" fill="freeze"/></rect></clipPath>
 </defs>
 <text x="24" y="28" font-family="monospace" font-size="13" fill="#8b949e">utkarsh@cloud:~$</text>
 <g font-family="monospace" font-size="18" xml:space="preserve" fill="#00ff9c" text-anchor="start">
-<text x="150" y="58" clip-path="url(#line0)">██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗</text>
-<text x="150" y="86" clip-path="url(#line1)">██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║</text>
-<text x="150" y="114" clip-path="url(#line2)">██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║</text>
-<text x="150" y="142" clip-path="url(#line3)">██║   ██║   ██║   ██╔═██╗ ██╔══██╗██╔══██╗╚════██║██╔══██║</text>
-<text x="150" y="170" clip-path="url(#line4)">╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║</text>
-<text x="150" y="198" clip-path="url(#line5)"> ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝</text>
+<text x="80" y="58" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line0)">██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗</text>
+<text x="80" y="86" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line1)">██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║</text>
+<text x="80" y="114" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line2)">██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║</text>
+<text x="80" y="142" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line3)">██║   ██║   ██║   ██╔═██╗ ██╔══██╗██╔══██╗╚════██║██╔══██║</text>
+<text x="80" y="170" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line4)">╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║</text>
+<text x="80" y="198" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#line5)"> ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝</text>
 </g>
 <text x="24" y="220" font-family="monospace" font-size="12" fill="#8b949e">typing identity... <tspan fill="#22d3ee">UTKARSH</tspan><tspan fill="#00ff9c">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
 </svg>
