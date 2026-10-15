@@ -18,7 +18,6 @@ Nashik, India · IST (UTC+5:30)
 [![Email](https://img.shields.io/badge/Email-Contact%20me-8B89CC?style=for-the-badge&logo=gmail)](mailto:uskascent@gmail.com?subject=Opportunity%20from%20GitHub%20profile)
 
 </div>
----
 
 <h1 align="center">Contribution Activity</h1>
 
