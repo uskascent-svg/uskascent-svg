@@ -41,6 +41,7 @@ Problem solving is **built on trust. Driven by results.**
 |---|---|---|
 | **ASCENT SAFETY** | [Open repository ↗](https://github.com/uskascent-svg/Ascent-Safety-) | Cybersecurity analysis and threat-detection platform. |
 | **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
+| **Black Hole Simulation** | [Open repository ↗](https://github.com/uskascent-svg/black_hole) | C++/OpenGL exploration of gravitational lensing and GPU-assisted simulation; based on the upstream project by [kavan010](https://github.com/kavan010/black_hole). |
 
 ## `❯ ls ~/stack`
 
