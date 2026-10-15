@@ -29,7 +29,7 @@ Nashik, India · IST (UTC+5:30)
 
 Problem solving is **built on trust. Driven by results.**
 
-**[LeetCode · AscentU3](https://leetcode.com/u/AscentU3/)**
+**[LeetCode profile · AscentU3](https://leetcode.com/u/AscentU3/)**
 
 ## `❯ ./play --profile`
 
@@ -41,7 +41,6 @@ Problem solving is **built on trust. Driven by results.**
 |---|---|---|
 | **ASCENT SAFETY** | [Open repository ↗](https://github.com/uskascent-svg/Ascent-Safety-) | Cybersecurity analysis and threat-detection platform. |
 | **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
-| **LeetCode Solutions** | [Open repository ↗](https://github.com/uskascent-svg/Leetcode-solution-) | Repository for coding practice and problem solutions. |
 
 ## `❯ ls ~/stack`
 
