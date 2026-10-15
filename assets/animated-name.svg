@@ -1,20 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="170" viewBox="0 0 960 170" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
-<title id="title">Utkarsh S Khairnar typing animation</title>
-<desc id="desc">A responsive terminal-style animation that types the name Utkarsh S Khairnar from left to right.</desc>
-<rect width="960" height="170" rx="12" fill="#0d1117"/>
-<rect x="1" y="1" width="958" height="168" rx="11" fill="none" stroke="#30363d"/>
-<text x="28" y="32" font-family="monospace" font-size="15" fill="#8b949e">utkarsh@cloud:~$ whoami</text>
-<defs>
-  <clipPath id="typing-reveal">
-    <rect x="80" y="48" width="0" height="76">
-      <animate attributeName="width" from="0" to="800" dur="3.2s" begin="0.5s" fill="freeze"/>
-    </rect>
-  </clipPath>
-</defs>
-<text x="80" y="105" font-family="monospace" font-size="54" font-weight="700" fill="#00ff9c" text-anchor="start" textLength="800" lengthAdjust="spacingAndGlyphs" clip-path="url(#typing-reveal)">Utkarsh S Khairnar</text>
-<rect x="80" y="59" width="4" height="54" fill="#00ff9c">
-  <animate attributeName="x" values="80;880" dur="3.2s" begin="0.5s" fill="freeze"/>
-  <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.98;1" dur="3.2s" begin="0.5s" fill="freeze"/>
-</rect>
-<text x="28" y="145" font-family="monospace" font-size="13" fill="#8b949e">identity loaded <tspan fill="#22d3ee">[ ASCENT U3 ]</tspan><tspan fill="#00ff9c"> _<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+<title id="title">UTKARSH ASCII art typing animation</title>
+<desc id="desc">Original green terminal ASCII-art name revealed line by line with uneven character-like pauses.</desc>
+<rect width="960" height="230" rx="12" fill="#0d1117"/>
+<rect x="1" y="1" width="958" height="228" rx="11" fill="none" stroke="#30363d"/>
+<text x="24" y="28" font-family="monospace" font-size="13" fill="#8b949e">utkarsh@cloud:~$</text>
+<g font-family="monospace" font-size="18" xml:space="preserve" fill="#00ff9c" text-anchor="start">
+<text x="150" y="58">██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.04;0.05;1" dur="2.6s" begin="0.2s" fill="freeze"/></text>
+<text x="150" y="86">██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.04;0.05;1" dur="3.1s" begin="2.1s" fill="freeze"/></text>
+<text x="150" y="114">██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.04;0.05;1" dur="2.4s" begin="4.5s" fill="freeze"/></text>
+<text x="150" y="142">██║   ██║   ██║   ██╔═██╗ ██╔══██╗██╔══██╗╚════██║██╔══██║<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.04;0.05;1" dur="3.4s" begin="6.7s" fill="freeze"/></text>
+<text x="150" y="170">╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.04;0.05;1" dur="2.8s" begin="9.6s" fill="freeze"/></text>
+<text x="150" y="198"> ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.04;0.05;1" dur="3.2s" begin="12s" fill="freeze"/></text>
+</g>
+<text x="24" y="220" font-family="monospace" font-size="12" fill="#8b949e">typing identity... <tspan fill="#22d3ee">UTKARSH</tspan><tspan fill="#00ff9c">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/></tspan></text>
 </svg>
