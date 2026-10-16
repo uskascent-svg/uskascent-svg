@@ -1,57 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
-<title id="title">UTKARSH angular techno alphabet logo</title>
-<desc id="desc">UTKARSH rendered in custom heavy, angular, cut-corner techno lettering directly modeled on the supplied font reference, with animated glitch offsets.</desc>
+<title id="title">UTKARSH blackletter typing glitch logo</title>
+<desc id="desc">UTKARSH in bold Gothic blackletter shapes inspired by the supplied alphabet chart, typed one character at a time with cursor pauses and occasional RGB glitch bursts.</desc>
 <defs>
-  <!-- Each character is hand-drawn as a solid polygon in the sharp, cut-corner alphabet style of the reference. -->
-  <g id="glyphs" fill="currentColor" fill-rule="evenodd">
-    <!-- U: squared sides and chamfered bottom -->
-    <path d="M32 62H55V205H112V62H135V225L118 242H49L32 225Z M55 205H112L96 222H71Z"/>
-    <!-- T: long angular cap and centered stem -->
-    <path d="M158 62H286L267 84H233V242H209V84H158Z M158 62H286L267 84H174Z"/>
-    <!-- K: straight spine with diagonal arms -->
-    <path d="M310 62H334V242H310Z M334 151L407 62H438L370 146L440 242H409L352 163L334 184Z M334 151H366L351 167Z"/>
-    <!-- A: triangular peak with cut-out counter and crossbar -->
-    <path d="M458 242L495 62H526L566 242H537L530 203H489L481 242Z M494 179H526L510 103Z M489 179L510 159L530 179Z"/>
-    <!-- R: squared bowl, diagonal leg and clipped corners -->
-    <path d="M588 62H661L684 84V137L661 158H612V242H588Z M612 84V136H652L660 128V94L650 84Z M632 158H661L700 242H670Z M628 100H652L638 116H628Z"/>
-    <!-- S: angular zig-zag, broken-corner construction -->
-    <path d="M802 62H718L698 82V137L722 158H777V218H698V242H787L802 222V148L780 136H722V86H802Z M744 86H777L759 105H722Z M744 194H777L759 214H722Z"/>
-    <!-- H: two heavy uprights with a squared crossbar -->
-    <path d="M824 62H848V137H911V62H935V242H911V160H848V242H824Z M848 137H883L867 157H848Z"/>
-  </g>
-  <clipPath id="screen"><rect x="18" y="42" width="964" height="216"/></clipPath>
+ <g id="U" fill="currentColor" fill-rule="evenodd"><path d="M0 0H28V118L47 137L66 118V0H94V131L47 177L0 131Z"/><path d="M28 0H48V113L28 95Z"/></g>
+ <g id="T" fill="currentColor" fill-rule="evenodd"><path d="M0 0H112L94 25H68V177H40V25H0Z"/><path d="M40 25H68L48 48H40Z"/></g>
+ <g id="K" fill="currentColor" fill-rule="evenodd"><path d="M0 0H28V177H0Z"/><path d="M28 77L84 0H115L65 78L116 177H85L43 99L28 119Z"/><path d="M28 77H55L39 96H28Z"/></g>
+ <g id="A" fill="currentColor" fill-rule="evenodd"><path d="M0 177L31 0H62L95 177H66L60 137H32L26 177Z"/><path d="M36 111H57L47 49Z"/><path d="M32 111L47 94L60 111Z"/></g>
+ <g id="R" fill="currentColor" fill-rule="evenodd"><path d="M0 0H62Q88 0 88 26V54Q88 70 71 81Q90 90 90 109V177H62V111Q62 96 46 96H28V177H0Z"/><path d="M28 25V70H49Q61 70 61 55V37Q61 25 49 25Z"/><path d="M43 96H67L91 177H62Z"/></g>
+ <g id="S" fill="currentColor" fill-rule="evenodd"><path d="M87 0H20L0 20V65L19 82H59V151H0V177H68L87 157V93L69 70H28V25H87Z"/><path d="M40 25H65L48 43H28Z"/><path d="M26 134H59L42 152H26Z"/></g>
+ <g id="H" fill="currentColor" fill-rule="evenodd"><path d="M0 0H28V70H68V0H96V177H68V97H28V177H0Z"/><path d="M28 70H52L39 87H28Z"/></g>
+ <clipPath id="revealU"><rect x="55" y="54" width="0" height="190"><animate attributeName="width" values="0;105;105" keyTimes="0;.85;1" dur="7.6s" begin=".25s" fill="freeze"/></rect></clipPath>
+ <clipPath id="revealT"><rect x="178" y="54" width="0" height="190"><animate attributeName="width" values="0;120;120" keyTimes="0;.85;1" dur="7.6s" begin="1.05s" fill="freeze"/></rect></clipPath>
+ <clipPath id="revealK"><rect x="310" y="54" width="0" height="190"><animate attributeName="width" values="0;120;120" keyTimes="0;.85;1" dur="7.6s" begin="1.85s" fill="freeze"/></rect></clipPath>
+ <clipPath id="revealA"><rect x="442" y="54" width="0" height="190"><animate attributeName="width" values="0;100;100" keyTimes="0;.85;1" dur="7.6s" begin="2.65s" fill="freeze"/></rect></clipPath>
+ <clipPath id="revealR"><rect x="552" y="54" width="0" height="190"><animate attributeName="width" values="0;95;95" keyTimes="0;.85;1" dur="7.6s" begin="3.45s" fill="freeze"/></rect></clipPath>
+ <clipPath id="revealS"><rect x="670" y="54" width="0" height="190"><animate attributeName="width" values="0;90;90" keyTimes="0;.85;1" dur="7.6s" begin="4.25s" fill="freeze"/></rect></clipPath>
+ <clipPath id="revealH"><rect x="785" y="54" width="0" height="190"><animate attributeName="width" values="0;100;100" keyTimes="0;.85;1" dur="7.6s" begin="5.05s" fill="freeze"/></rect></clipPath>
 </defs>
-<rect width="1000" height="300" rx="12" fill="#07090d"/>
-<path d="M18 38H982M18 258H982" stroke="#26313c"/>
-<g font-family="monospace" font-size="13" fill="#788797">
-  <text x="28" y="25">UTKARSH // CUSTOM GLYPH</text><text x="847" y="25">SIGNAL: UNSTABLE</text>
+<rect width="1000" height="300" rx="12" fill="#08090d"/>
+<path d="M24 42H976M24 255H976" stroke="#27313b"/>
+<text x="30" y="28" fill="#8492a3" font-family="monospace" font-size="13">utkarsh@terminal:~$ type identity</text>
+<g transform="translate(55 56)">
+ <g clip-path="url(#revealU)"><use xlink:href="#U" color="#f3f5f7"/><use xlink:href="#U" color="#00e5ff" transform="translate(-3 0)" class="glitch-cyan"/><use xlink:href="#U" color="#ff245f" transform="translate(3 0)" class="glitch-pink"/></g>
 </g>
-<g clip-path="url(#screen)">
-  <use xlink:href="#glyphs" color="#00e5ff" transform="translate(-4 0)" opacity=".75" class="cyan"/>
-  <use xlink:href="#glyphs" color="#ff245f" transform="translate(4 0)" opacity=".75" class="magenta"/>
-  <use xlink:href="#glyphs" color="#f4f7fb" class="main"/>
-  <!-- crisp horizontal scanline cuts create the same sliced construction as the sample font -->
-  <g fill="#07090d">
-    <path d="M18 99H982V105H18Z M18 169H982V174H18Z M18 216H982V220H18Z"/>
-  </g>
-  <g fill="#00e5ff" opacity=".8">
-    <path d="M28 99H177V104H28Z M345 169H550V174H345Z M702 216H955V220H702Z"/>
-  </g>
-  <g fill="#ff245f" opacity=".8">
-    <path d="M696 99H972V104H696Z M175 169H318V174H175Z M425 216H685V220H425Z"/>
-  </g>
-</g>
-<g font-family="monospace" font-size="12" letter-spacing="3">
-  <text x="32" y="281" fill="#9aa8b8">DETECT • PREVENT • PROTECT</text>
-  <text x="850" y="281" fill="#ff245f">GLITCH//ON</text>
-</g>
+<g transform="translate(178 56)"><g clip-path="url(#revealT)"><use xlink:href="#T" color="#f3f5f7"/><use xlink:href="#T" color="#00e5ff" transform="translate(-3 0)" class="glitch-cyan"/><use xlink:href="#T" color="#ff245f" transform="translate(3 0)" class="glitch-pink"/></g></g>
+<g transform="translate(310 56)"><g clip-path="url(#revealK)"><use xlink:href="#K" color="#f3f5f7"/><use xlink:href="#K" color="#00e5ff" transform="translate(-3 0)" class="glitch-cyan"/><use xlink:href="#K" color="#ff245f" transform="translate(3 0)" class="glitch-pink"/></g></g>
+<g transform="translate(442 56)"><g clip-path="url(#revealA)"><use xlink:href="#A" color="#f3f5f7"/><use xlink:href="#A" color="#00e5ff" transform="translate(-3 0)" class="glitch-cyan"/><use xlink:href="#A" color="#ff245f" transform="translate(3 0)" class="glitch-pink"/></g></g>
+<g transform="translate(552 56)"><g clip-path="url(#revealR)"><use xlink:href="#R" color="#f3f5f7"/><use xlink:href="#R" color="#00e5ff" transform="translate(-3 0)" class="glitch-cyan"/><use xlink:href="#R" color="#ff245f" transform="translate(3 0)" class="glitch-pink"/></g></g>
+<g transform="translate(670 56)"><g clip-path="url(#revealS)"><use xlink:href="#S" color="#f3f5f7"/><use xlink:href="#S" color="#00e5ff" transform="translate(-3 0)" class="glitch-cyan"/><use xlink:href="#S" color="#ff245f" transform="translate(3 0)" class="glitch-pink"/></g></g>
+<g transform="translate(785 56)"><g clip-path="url(#revealH)"><use xlink:href="#H" color="#f3f5f7"/><use xlink:href="#H" color="#00e5ff" transform="translate(-3 0)" class="glitch-cyan"/><use xlink:href="#H" color="#ff245f" transform="translate(3 0)" class="glitch-pink"/></g></g>
+<g fill="#00e5ff" opacity=".7"><rect x="32" y="269" width="18" height="3"/><rect x="55" y="269" width="6" height="3"/><rect x="66" y="269" width="14" height="3"/></g>
+<text x="92" y="280" fill="#a5b1c0" font-family="monospace" font-size="12" letter-spacing="2">U T K A R S H</text>
+<text x="820" y="280" fill="#ff245f" font-family="monospace" font-size="12">GLITCH//LIVE</text>
+<rect id="cursor" x="52" y="244" width="10" height="3" fill="#00e5ff"><animate attributeName="x" values="52;175;307;439;549;667;782;900;52" keyTimes="0;.12;.24;.36;.48;.60;.72;.84;1" dur="7.6s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0;1" dur=".7s" repeatCount="indefinite"/></rect>
 <style>
-.cyan{animation:cyan-shift 3.4s steps(1,end) infinite}
-.magenta{animation:magenta-shift 3.4s steps(1,end) infinite}
-.main{animation:main-flicker 4.7s steps(1,end) infinite}
-@keyframes cyan-shift{0%,86%,92%,100%{transform:translate(-4px,0);opacity:.7}87%{transform:translate(11px,-3px);opacity:1}88%{transform:translate(-13px,2px);opacity:.9}89%{transform:translate(3px,0);opacity:1}}
-@keyframes magenta-shift{0%,86%,92%,100%{transform:translate(4px,0);opacity:.7}87%{transform:translate(-10px,2px);opacity:1}88%{transform:translate(12px,-2px);opacity:.9}89%{transform:translate(-3px,0);opacity:1}}
-@keyframes main-flicker{0%,86%,92%,100%{opacity:1}87%{opacity:.78}88%{opacity:.95}89%{opacity:.72}}
-@media(prefers-reduced-motion:reduce){.cyan,.magenta,.main{animation:none}}
+.glitch-cyan{opacity:.55;animation:gc 3.2s steps(1,end) infinite}
+.glitch-pink{opacity:.55;animation:gp 3.2s steps(1,end) infinite}
+@keyframes gc{0%,86%,93%,100%{transform:translate(-3px,0);opacity:.5}87%{transform:translate(10px,-3px);opacity:1}88%{transform:translate(-12px,2px);opacity:.85}89%{transform:translate(4px,0);opacity:.9}}
+@keyframes gp{0%,86%,93%,100%{transform:translate(3px,0);opacity:.5}87%{transform:translate(-9px,2px);opacity:1}88%{transform:translate(11px,-2px);opacity:.85}89%{transform:translate(-4px,0);opacity:.9}}
+@media(prefers-reduced-motion:reduce){.glitch-cyan,.glitch-pink{animation:none}}
 </style>
 </svg>
