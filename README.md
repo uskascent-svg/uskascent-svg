@@ -47,21 +47,23 @@ Problem solving is **built on trust. Driven by results.**
 ## `❯ ls ~/stack`
 
 ```bash
-drwxr-xr-x  security/       soc  threat-detection  siem  Wazuh  vulnerability-assessment
-                       Wireshark  Nmap  tcpdump  firewalls  VPNs
-drwxr-xr-x  networking/     DNS  TCP/IP  TLS  network-analysis
-drwxr-xr-x  systems/        linux  bash (Linux-Scripting)  python  docker  Ansible
-drwxr-xr-x  development/    python  R  cpp  java  javascript  Node.js  typescript  react  FastAPI  Flask  REST-APIs
-drwxr-xr-x  databases/      MySQL  PostgreSQL  MongoDB  Redis  SQLAlchemy
-drwxr-xr-x  cloud-native/   AWS  Google-Cloud  Azure  Kubernetes  cloud-CLI-tools
-drwxr-xr-x  infrastructure/ Terraform  Ansible  CI-CD  GitHub-Actions  pytest
-drwxr-xr-x  collaboration/  GitHub  GitHub-Actions  Postman  LeetCode
-drwxr-xr-x  ai-tools/       Antigravity  PyTorch  Google-ADK
+drwxr-xr-x  cybersecurity/   Wazuh  SOC-operations  threat-detection  vulnerability-assessment
+drwxr-xr-x  networking/     network-security  DNS  TCP/IP  TLS-HTTPS  VPNs
+drwxr-xr-x  development/    Python  C++  Java  JavaScript  TypeScript  React  Node.js  FastAPI  Flask
+drwxr-xr-x  backend/        SQLAlchemy  REST-APIs (learning)  Postman (learning)
+drwxr-xr-x  databases/      MySQL  PostgreSQL  MongoDB  Redis (learning)
+drwxr-xr-x  cloud/          AWS  Azure  Google-Cloud  cloud-CLI-tools
+drwxr-xr-x  infrastructure/ Docker  Kubernetes  Terraform  Ansible  Linux  Bash
+drwxr-xr-x  devops/         CI-CD  GitHub-Actions  Git  GitHub  pytest
+drwxr-xr-x  ai-computer-vision/ YOLO  PyTorch  Google-ADK  Antigravity
+drwxr-xr-x  developer-tools/ VS-Code  Visual-Studio
 drwxr-xr-x  payments/       Razorpay  Stripe
+drwxr-xr-x  learning/       R  automated-testing  Parrot-OS  Raspberry-Pi
+drwxr-xr-x  security-labs/  Kali-Linux
 ```
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,r,cpp,java,js,nodejs,ts,react,mysql,postgres,mongodb,redis,bash,linux,kali,docker,git,github,aws,gcp,azure,pytorch,terraform,githubactions,ansible,postman,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,nodejs,ts,react,mysql,postgres,mongodb,bash,linux,kali,docker,git,github,aws,gcp,azure,pytorch,terraform,githubactions,ansible,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
 </p>
 
 ## `❯ ./stats --live`
@@ -81,12 +83,15 @@ utkarsh@cloud:~$ _
 
 ## `❯ cat ~/skills.md`
 
-- **Cloud, CI/CD & automation:** CI/CD pipelines, GitHub Actions, AWS, Azure, Google Cloud, Terraform, Ansible and cloud CLI tools.
-- **Security & networking:** Wazuh, Wireshark, Nmap, tcpdump, Postman, DNS, TCP/IP, TLS, VPNs, firewalls, SIEM, vulnerability analysis and threat modelling.
-- **Backend & APIs:** FastAPI, Flask, SQLAlchemy and REST APIs.
-- **Testing:** pytest for Python test automation.
-- **Systems:** Linux, Bash (Linux scripting), Docker and Python.
-- **Problem solving:** [LeetCode · AscentU3](https://leetcode.com/u/AscentU3/).
+- **Cybersecurity:** Wazuh, SOC operations, threat detection and vulnerability assessment.
+- **Networking:** Network security fundamentals, DNS, TCP/IP, TLS/HTTPS and VPNs.
+- **Development:** Python, C++, Java, JavaScript, TypeScript, React, Node.js, FastAPI and Flask.
+- **Cloud & infrastructure:** AWS, Microsoft Azure, Google Cloud, cloud CLI tools, Docker, Kubernetes, Terraform, Ansible, Linux and Bash.
+- **DevOps & collaboration:** CI/CD, GitHub Actions, Git and GitHub.
+- **Databases & testing:** MySQL, PostgreSQL, MongoDB and pytest.
+- **AI & computer vision:** YOLO, PyTorch, Google ADK and Antigravity.
+- **Developer tools & payments:** VS Code, Visual Studio, Razorpay and Stripe.
+- **Currently learning:** R, Redis, automated testing, REST APIs, Postman, Parrot OS and Raspberry Pi.
 
 I aim to connect skills to reproducible labs, repositories, tests or write-ups instead of listing unverified credentials.
 
