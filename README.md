@@ -55,13 +55,13 @@ drwxr-xr-x  development/    python  cpp  java  javascript  typescript  react
 drwxr-xr-x  databases/      PostgreSQL  MongoDB
 drwxr-xr-x  cloud-native/   AWS  Google-Cloud  Azure  Kubernetes  cloud-CLI-tools
 drwxr-xr-x  infrastructure/ Terraform  Ansible  GitHub-Actions
-drwxr-xr-x  collaboration/  GitHub  GitHub-Actions
+drwxr-xr-x  collaboration/  GitHub  GitHub-Actions  Postman
 drwxr-xr-x  ai-tools/       Antigravity  PyTorch  Google-ADK
 drwxr-xr-x  payments/       Stripe
 ```
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,react,postgres,mongodb,bash,linux,kali,docker,git,github,aws,gcp,azure,pytorch,terraform,githubactions,ansible,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,react,postgres,mongodb,bash,linux,kali,docker,git,github,aws,gcp,azure,pytorch,terraform,githubactions,ansible,postman,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
 </p>
 
 ## `❯ ./stats --live`
