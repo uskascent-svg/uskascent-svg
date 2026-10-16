@@ -47,7 +47,7 @@ Problem solving is **built on trust. Driven by results.**
 ## `❯ ls ~/stack`
 
 ```bash
-drwxr-xr-x  security/       soc  threat-detection  siem  vulnerability-assessment
+drwxr-xr-x  security/       soc  threat-detection  siem  Wazuh  vulnerability-assessment
                        Wireshark  Nmap  tcpdump  firewalls  VPNs
 drwxr-xr-x  networking/     DNS  TCP/IP  TLS  network-analysis
 drwxr-xr-x  systems/        linux  bash (Linux-Scripting)  python  docker  Ansible
@@ -82,7 +82,7 @@ utkarsh@cloud:~$ _
 ## `❯ cat ~/skills.md`
 
 - **Cloud & automation:** AWS, Azure, Google Cloud, Terraform, Ansible, GitHub Actions and cloud CLI tools.
-- **Security & networking:** Wireshark, Nmap, tcpdump, Postman, DNS, TCP/IP, TLS, VPNs, firewalls, SIEM, vulnerability analysis and threat modelling.
+- **Security & networking:** Wazuh, Wireshark, Nmap, tcpdump, Postman, DNS, TCP/IP, TLS, VPNs, firewalls, SIEM, vulnerability analysis and threat modelling.
 - **Backend & APIs:** FastAPI, Flask, SQLAlchemy and REST APIs.
 - **Testing:** pytest for Python test automation.
 - **Systems:** Linux, Bash (Linux scripting), Docker and Python.
