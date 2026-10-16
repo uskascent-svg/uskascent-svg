@@ -47,19 +47,18 @@ Problem solving is **built on trust. Driven by results.**
 ## `❯ ls ~/stack`
 
 ```bash
-drwxr-xr-x  cybersecurity/   Wazuh  SOC-operations  threat-detection  vulnerability-assessment
-drwxr-xr-x  networking/     network-security  DNS  TCP/IP  TLS-HTTPS  VPNs
-drwxr-xr-x  development/    Python  C++  Java  JavaScript  TypeScript  React  Node.js  FastAPI  Flask
-drwxr-xr-x  backend/        SQLAlchemy  REST-APIs (learning)  Postman (learning)
-drwxr-xr-x  databases/      MySQL  PostgreSQL  MongoDB  Redis (learning)
-drwxr-xr-x  cloud/          AWS  Azure  Google-Cloud  cloud-CLI-tools
-drwxr-xr-x  infrastructure/ Docker  Kubernetes  Terraform  Ansible  Linux  Bash
-drwxr-xr-x  devops/         CI-CD  GitHub-Actions  Git  GitHub  pytest
-drwxr-xr-x  ai-computer-vision/ YOLO  PyTorch  Google-ADK  Antigravity
-drwxr-xr-x  developer-tools/ VS-Code  Visual-Studio
-drwxr-xr-x  payments/       Razorpay  Stripe
-drwxr-xr-x  learning/       R  automated-testing  Parrot-OS  Raspberry-Pi
-drwxr-xr-x  security-labs/  Kali-Linux
+cybersecurity/  Wazuh  SOC-operations  threat-detection  vulnerability-assessment
+networking/     network-security  DNS  TCP/IP  TLS-HTTPS  VPNs
+development/    Python  C++  Java  JavaScript  TypeScript  React  Node.js  FastAPI  Flask
+backend/        SQLAlchemy  REST-APIs (learning)  Postman (learning)
+databases/      MySQL  PostgreSQL  MongoDB  Redis (learning)
+cloud/          AWS  Azure  Google-Cloud  cloud-CLI-tools
+infrastructure/ Docker  Kubernetes  Terraform  Ansible  Linux  Bash
+devops/         CI-CD  GitHub-Actions  Git  GitHub  pytest
+ai-computer-vision/ YOLO  PyTorch  Google-ADK  Antigravity
+developer-tools/ VS-Code  Visual-Studio
+payments/       Razorpay  Stripe
+security-labs/  Kali-Linux
 ```
 
 <p align="center">
