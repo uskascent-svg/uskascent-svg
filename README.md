@@ -54,7 +54,7 @@ drwxr-xr-x  systems/        linux  bash (Linux-Scripting)  python  docker  Ansib
 drwxr-xr-x  development/    python  R  cpp  java  javascript  Node.js  typescript  react  FastAPI  Flask  REST-APIs
 drwxr-xr-x  databases/      MySQL  PostgreSQL  MongoDB  Redis  SQLAlchemy
 drwxr-xr-x  cloud-native/   AWS  Google-Cloud  Azure  Kubernetes  cloud-CLI-tools
-drwxr-xr-x  infrastructure/ Terraform  Ansible  GitHub-Actions  pytest
+drwxr-xr-x  infrastructure/ Terraform  Ansible  CI-CD  GitHub-Actions  pytest
 drwxr-xr-x  collaboration/  GitHub  GitHub-Actions  Postman  LeetCode
 drwxr-xr-x  ai-tools/       Antigravity  PyTorch  Google-ADK
 drwxr-xr-x  payments/       Razorpay  Stripe
@@ -81,7 +81,7 @@ utkarsh@cloud:~$ _
 
 ## `❯ cat ~/skills.md`
 
-- **Cloud & automation:** AWS, Azure, Google Cloud, Terraform, Ansible, GitHub Actions and cloud CLI tools.
+- **Cloud, CI/CD & automation:** CI/CD pipelines, GitHub Actions, AWS, Azure, Google Cloud, Terraform, Ansible and cloud CLI tools.
 - **Security & networking:** Wazuh, Wireshark, Nmap, tcpdump, Postman, DNS, TCP/IP, TLS, VPNs, firewalls, SIEM, vulnerability analysis and threat modelling.
 - **Backend & APIs:** FastAPI, Flask, SQLAlchemy and REST APIs.
 - **Testing:** pytest for Python test automation.
