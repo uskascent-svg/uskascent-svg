@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
-<title id="title">UTKARSH — angular blackletter typing glitch animation</title>
-<desc id="desc">UTKARSH drawn in a sharp, angular blackletter-inspired style based on the supplied alphabet reference, appearing letter by letter with human-like pauses, blinking cursor and brief cyan-magenta glitch bursts.</desc>
+<title id="title">UTKARSH — futuristic minimal techno-font typing glitch animation</title>
+<desc id="desc">UTKARSH drawn in a minimal futuristic techno alphabet inspired by the supplied reference, appearing letter by letter with human-like pauses, blinking cursor and brief cyan-magenta glitch bursts.</desc>
 <defs>
-<path id="glyph-A" fill="currentColor" fill-rule="evenodd" d="M0 180 L20 0 H78 L110 180 L82 158 L73 125 H38 L29 158 Z M43 98 H67 L57 45 H51 Z"/>
-<path id="glyph-H" fill="currentColor" fill-rule="evenodd" d="M0 0 L18 18 V72 H73 V18 L91 0 L105 18 V180 L83 158 V101 H31 V158 L12 180 V18 Z M31 72 H73 V101 H31 Z"/>
-<path id="glyph-K" fill="currentColor" fill-rule="evenodd" d="M0 18 L18 0 L37 18 V75 L76 18 L97 0 L112 18 L72 82 L112 162 L94 180 L75 162 L49 108 L37 126 V162 L18 180 L0 162 Z"/>
-<path id="glyph-R" fill="currentColor" fill-rule="evenodd" d="M0 18 L18 0 H64 Q101 0 101 35 V61 L80 83 L101 102 L112 162 L94 180 L76 162 L65 119 L48 103 H34 V162 L16 180 L0 162 Z M34 28 V76 H54 L71 60 V45 Q71 28 54 28 Z"/>
-<path id="glyph-S" fill="currentColor" fill-rule="evenodd" d="M101 0 L82 20 H39 L24 37 V67 L45 82 H72 L101 106 V151 L80 180 H13 L0 160 L20 143 H66 L78 128 V115 L60 102 H31 L3 79 V32 L23 0 Z"/>
-<path id="glyph-T" fill="currentColor" fill-rule="evenodd" d="M0 0 H112 L92 24 H67 V158 L48 180 L29 158 V24 H0 L18 12 Z"/>
-<path id="glyph-U" fill="currentColor" fill-rule="evenodd" d="M0 0 L18 18 V122 L34 143 L53 157 L72 143 L88 122 V18 L106 0 V132 L82 162 L53 180 L24 162 L0 132 Z"/>
+<path id="glyph-A" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" d="M8 166 L53 12 L98 166 M28 112 H78 M5 180 L8 180"/>
+<path id="glyph-H" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" d="M12 12 V168 M92 12 V168 M12 90 H92"/>
+<path id="glyph-K" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" d="M12 12 V168 M92 12 L35 82 L98 168 M42 82 L92 12"/>
+<path id="glyph-R" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" d="M12 168 V12 H57 Q91 12 91 48 Q91 82 57 82 H12 M56 82 L98 168"/>
+<path id="glyph-S" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" d="M91 22 H39 Q12 22 12 49 Q12 75 45 82 L67 88 Q98 96 91 130 Q88 160 61 160 H12"/>
+<path id="glyph-T" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" d="M8 18 H98 M53 18 V168"/>
+<path id="glyph-U" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" d="M12 12 V122 Q12 168 53 168 Q94 168 94 122 V12"/>
 </defs>
 <rect width="1000" height="300" rx="12" fill="#08090d"/>
 <path d="M24 42H976M24 255H976" stroke="#27313b"/>
