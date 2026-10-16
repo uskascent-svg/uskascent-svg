@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
-<title id="title">UTKARSH blackletter typing glitch logo</title>
-<desc id="desc">UTKARSH in bold Gothic blackletter shapes inspired by the supplied alphabet chart, typed one character at a time with cursor pauses and occasional RGB glitch bursts.</desc>
+<title id="title">UTKARSH — blackletter human typing glitch animation</title>
+<desc id="desc">The complete name UTKARSH types in from left to right in angular Gothic lettering, with natural pauses, a blinking cursor and brief cyan-magenta glitch bursts.</desc>
 <defs>
  <g id="U" fill="currentColor" fill-rule="evenodd"><path d="M0 0H28V118L47 137L66 118V0H94V131L47 177L0 131Z"/><path d="M28 0H48V113L28 95Z"/></g>
  <g id="T" fill="currentColor" fill-rule="evenodd"><path d="M0 0H112L94 25H68V177H40V25H0Z"/><path d="M40 25H68L48 48H40Z"/></g>
@@ -23,15 +23,15 @@
 <g fill="#00e5ff" opacity=".7"><rect x="32" y="269" width="18" height="3"/><rect x="55" y="269" width="6" height="3"/><rect x="66" y="269" width="14" height="3"/></g>
 <text x="92" y="280" fill="#a5b1c0" font-family="monospace" font-size="12" letter-spacing="2">U T K A R S H</text>
 <text x="820" y="280" fill="#ff245f" font-family="monospace" font-size="12">GLITCH//LIVE</text>
-<rect id="cursor" x="52" y="244" width="10" height="3" fill="#00e5ff"><animate attributeName="x" values="52;175;307;439;549;667;782;900;52" keyTimes="0;.12;.24;.36;.48;.60;.72;.84;1" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0;1" dur=".7s" repeatCount="indefinite"/></rect>
+<rect id="cursor" x="52" y="244" width="10" height="3" fill="#00e5ff"><animate attributeName="x" values="52;175;307;439;549;667;782;900;52" keyTimes="0;.12;.24;.36;.48;.60;.72;.84;1" dur="6.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0;1" dur=".72s" repeatCount="indefinite"/></rect>
 <style>
-.letter{animation:typed-in .22s steps(2,end) both}
-.letter-u{animation-delay:.2s}.letter-t{animation-delay:.85s}.letter-k{animation-delay:1.5s}.letter-a{animation-delay:2.15s}.letter-r{animation-delay:2.8s}.letter-s{animation-delay:3.45s}.letter-h{animation-delay:4.1s}
-@keyframes typed-in{0%{opacity:.15;filter:brightness(.5)}45%{opacity:.6;filter:brightness(1.5)}100%{opacity:1;filter:brightness(1)}}
-.glitch-cyan{opacity:.55;animation:gc 3.2s steps(1,end) infinite}
-.glitch-pink{opacity:.55;animation:gp 3.2s steps(1,end) infinite}
-@keyframes gc{0%,86%,93%,100%{transform:translate(-3px,0);opacity:.5}87%{transform:translate(10px,-3px);opacity:1}88%{transform:translate(-12px,2px);opacity:.85}89%{transform:translate(4px,0);opacity:.9}}
-@keyframes gp{0%,86%,93%,100%{transform:translate(3px,0);opacity:.5}87%{transform:translate(-9px,2px);opacity:1}88%{transform:translate(11px,-2px);opacity:.85}89%{transform:translate(-4px,0);opacity:.9}}
-@media(prefers-reduced-motion:reduce){.glitch-cyan,.glitch-pink{animation:none}}
+.letter{opacity:1;animation:typed-in .32s steps(1,end) backwards}
+.letter-u{animation-delay:.28s}.letter-t{animation-delay:1.05s}.letter-k{animation-delay:1.76s}.letter-a{animation-delay:2.48s}.letter-r{animation-delay:3.34s}.letter-s{animation-delay:4.08s}.letter-h{animation-delay:4.92s}
+@keyframes typed-in{0%{opacity:0;filter:brightness(.4);transform:translateY(3px)}20%{opacity:.25;filter:brightness(1.8);transform:translateY(-1px)}42%{opacity:.65;filter:brightness(.8);transform:translateY(1px)}65%,100%{opacity:1;filter:brightness(1);transform:translateY(0)}}
+.glitch-cyan{opacity:.5;animation:gc 4.1s steps(1,end) infinite}
+.glitch-pink{opacity:.5;animation:gp 4.1s steps(1,end) infinite}
+@keyframes gc{0%,78%,87%,100%{transform:translate(-3px,0);opacity:.5}79%{transform:translate(10px,-3px);opacity:1}80%{transform:translate(-12px,2px);opacity:.85}81%{transform:translate(4px,0);opacity:.9}}
+@keyframes gp{0%,78%,87%,100%{transform:translate(3px,0);opacity:.5}79%{transform:translate(-9px,2px);opacity:1}80%{transform:translate(11px,-2px);opacity:.85}81%{transform:translate(-4px,0);opacity:.9}}
+@media(prefers-reduced-motion:reduce){.letter,.glitch-cyan,.glitch-pink{animation:none!important;opacity:1}}
 </style>
 </svg>
