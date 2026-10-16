@@ -51,17 +51,17 @@ drwxr-xr-x  security/       soc  threat-detection  siem  vulnerability-assessmen
                        Wireshark  Nmap  tcpdump  firewalls  VPNs
 drwxr-xr-x  networking/     DNS  TCP/IP  TLS  network-analysis
 drwxr-xr-x  systems/        linux  bash (Linux-Scripting)  python  docker  Ansible
-drwxr-xr-x  development/    python  R  cpp  java  javascript  typescript  react
-drwxr-xr-x  databases/      MySQL  PostgreSQL  MongoDB
+drwxr-xr-x  development/    python  R  cpp  java  javascript  Node.js  typescript  react
+drwxr-xr-x  databases/      MySQL  PostgreSQL  MongoDB  Redis
 drwxr-xr-x  cloud-native/   AWS  Google-Cloud  Azure  Kubernetes  cloud-CLI-tools
 drwxr-xr-x  infrastructure/ Terraform  Ansible  GitHub-Actions
 drwxr-xr-x  collaboration/  GitHub  GitHub-Actions  Postman
 drwxr-xr-x  ai-tools/       Antigravity  PyTorch  Google-ADK
-drwxr-xr-x  payments/       Stripe
+drwxr-xr-x  payments/       Razorpay  Stripe
 ```
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,r,cpp,java,js,ts,react,mysql,postgres,mongodb,bash,linux,kali,docker,git,github,aws,gcp,azure,pytorch,terraform,githubactions,ansible,postman,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
+  <img src="https://skillicons.dev/icons?i=python,r,cpp,java,js,nodejs,ts,react,mysql,postgres,mongodb,redis,bash,linux,kali,docker,git,github,aws,gcp,azure,pytorch,terraform,githubactions,ansible,postman,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
 </p>
 
 ## `❯ ./stats --live`
