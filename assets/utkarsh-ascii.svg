@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
-<title id="title">UTKARSH — reference blackletter typing glitch animation</title>
-<desc id="desc">UTKARSH drawn from the supplied Gothic alphabet reference, appearing letter by letter with human-like pauses, blinking cursor and brief cyan-magenta glitch bursts.</desc>
+<title id="title">UTKARSH — clean modern bold typing glitch animation</title>
+<desc id="desc">UTKARSH drawn in a clean, bold, modern geometric style, appearing letter by letter with human-like pauses, blinking cursor and brief cyan-magenta glitch bursts.</desc>
 <defs>
-<path id="glyph-A" fill="currentColor" fill-rule="evenodd" d="M44,0 L88,26 L88,55 L104,67 L104,178 L124,196 L108,214 L79,192 L79,137 L42,137 L42,178 L0,207 L0,70 L25,47 L25,173 L42,160 L42,104 L79,104 L79,63 L44,43 L25,60 L25,104 L0,104 L0,70 Z"/>
-<path id="glyph-H" fill="currentColor" fill-rule="evenodd" d="M0,0 L27,25 L27,77 L49,77 L49,47 L27,25 L53,0 L78,25 L78,77 L100,77 L100,25 L126,0 L153,25 L153,165 L179,189 L153,211 L126,190 L126,111 L78,111 L78,176 L53,205 L27,181 L27,111 L0,91 Z M27,111 L49,111 L49,160 L27,177 Z"/>
-<path id="glyph-K" fill="currentColor" fill-rule="evenodd" d="M0,26 L28,0 L55,25 L55,78 L80,54 L80,31 L109,5 L137,28 L116,48 L116,64 L89,88 L118,106 L118,130 L145,153 L119,179 L91,157 L91,135 L55,111 L55,177 L28,205 L0,181 Z M55,78 L80,91 L55,108 Z"/>
-<path id="glyph-R" fill="currentColor" fill-rule="evenodd" d="M0,27 L27,0 L102,0 L126,22 L126,57 L110,74 L91,84 L112,96 L136,174 L108,195 L83,121 L55,121 L55,169 L28,195 L0,176 Z M55,29 L55,87 L78,87 L95,70 L98,51 L87,29 Z"/>
-<path id="glyph-S" fill="currentColor" fill-rule="evenodd" d="M102,0 L80,24 L49,24 L49,61 L80,61 L105,82 L116,100 L116,155 L94,179 L69,202 L43,183 L0,153 L23,129 L49,147 L69,164 L81,152 L81,119 L69,106 L37,106 L12,86 L12,45 L35,22 L58,0 Z M49,43 L49,74 L69,74 L69,43 Z"/>
-<path id="glyph-T" fill="currentColor" fill-rule="evenodd" d="M0,0 L147,0 L126,27 L94,27 L94,166 L67,193 L40,169 L40,27 L0,27 L20,0 Z M40,27 L67,27 L67,145 L54,158 L40,145 Z"/>
-<path id="glyph-U" fill="currentColor" fill-rule="evenodd" d="M0,25 L27,0 L54,25 L54,137 L77,155 L99,137 L99,25 L126,0 L153,25 L153,151 L134,174 L99,198 L77,194 L38,170 L0,143 Z M27,45 L27,128 L54,146 L54,45 Z M99,45 L126,45 L126,128 L99,146 Z"/>
+<path id="glyph-A" fill="currentColor" fill-rule="evenodd" d="M0 180 L38 0 H72 L110 180 H78 L70 139 H39 L31 180 Z M45 111 H65 L55 54 Z"/>
+<path id="glyph-H" fill="currentColor" fill-rule="evenodd" d="M0 0 H30 V72 H72 V0 H102 V180 H72 V101 H30 V180 H0 Z"/>
+<path id="glyph-K" fill="currentColor" fill-rule="evenodd" d="M0 0 H30 V73 L75 0 H110 L66 79 L112 180 H78 L45 106 L30 127 V180 H0 Z"/>
+<path id="glyph-R" fill="currentColor" fill-rule="evenodd" d="M0 0 H65 Q100 0 100 35 V57 Q100 78 79 88 Q94 96 98 116 L110 180 H78 L67 121 Q64 105 48 105 H30 V180 H0 Z M30 27 V78 H54 Q70 78 70 60 V44 Q70 27 54 27 Z"/>
+<path id="glyph-S" fill="currentColor" fill-rule="evenodd" d="M100 0 L82 27 H35 V72 H69 Q101 72 101 103 V149 Q101 180 70 180 H0 V153 H69 V101 H35 Q5 101 5 73 V31 Q5 0 35 0 Z"/>
+<path id="glyph-T" fill="currentColor" fill-rule="evenodd" d="M0 0 H112 L94 28 H70 V180 H40 V28 H0 Z"/>
+<path id="glyph-U" fill="currentColor" fill-rule="evenodd" d="M0 0 H30 V130 Q30 153 53 153 Q76 153 76 130 V0 H106 V132 Q106 180 53 180 Q0 180 0 132 Z"/>
 </defs>
 <rect width="1000" height="300" rx="12" fill="#08090d"/>
 <path d="M24 42H976M24 255H976" stroke="#27313b"/>
