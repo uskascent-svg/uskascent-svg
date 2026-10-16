@@ -47,19 +47,21 @@ Problem solving is **built on trust. Driven by results.**
 ## `❯ ls ~/stack`
 
 ```bash
-drwxr-xr-x  security/       soc  threat-detection  siem  vulnerability-assessment  network-security
-                       kali-linux  parrot-os
-drwxr-xr-x  systems/        linux  bash  python  docker
+drwxr-xr-x  security/       soc  threat-detection  siem  vulnerability-assessment
+                       Wireshark  Nmap  tcpdump  firewalls  VPNs
+drwxr-xr-x  networking/     DNS  TCP/IP  TLS  network-analysis
+drwxr-xr-x  systems/        linux  bash  python  docker  Ansible
 drwxr-xr-x  development/    python  cpp  java  javascript  typescript  react
 drwxr-xr-x  databases/      PostgreSQL  MongoDB
-drwxr-xr-x  cloud-native/   AWS  Google-Cloud  Azure  Kubernetes
-drwxr-xr-x  collaboration/  GitHub
+drwxr-xr-x  cloud-native/   AWS  Google-Cloud  Azure  Kubernetes  cloud-CLI-tools
+drwxr-xr-x  infrastructure/ Terraform  Ansible  GitHub-Actions
+drwxr-xr-x  collaboration/  GitHub  GitHub-Actions
 drwxr-xr-x  ai-tools/       Antigravity  PyTorch  Google-ADK
 drwxr-xr-x  payments/       Stripe
 ```
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,react,postgres,mongodb,bash,linux,kali,docker,git,github,aws,gcp,azure,pytorch,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,react,postgres,mongodb,bash,linux,kali,docker,git,github,aws,gcp,azure,pytorch,terraform,githubactions,ansible,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
 </p>
 
 ## `❯ ./stats --live`
@@ -79,8 +81,8 @@ utkarsh@cloud:~$ _
 
 ## `❯ cat ~/skills.md`
 
-- **Cloud:** AWS and Azure fundamentals, IAM, networking and Terraform labs.
-- **Security:** Cloud computing concepts, SIEM, vulnerability analysis and threat modelling.
+- **Cloud & automation:** AWS, Azure, Google Cloud, Terraform, Ansible, GitHub Actions and cloud CLI tools.
+- **Security & networking:** Wireshark, Nmap, tcpdump, DNS, TCP/IP, TLS, VPNs, firewalls, SIEM, vulnerability analysis and threat modelling.
 - **Systems:** Linux, Docker, Bash and Python.
 - **Problem solving:** [LeetCode · AscentU3](https://leetcode.com/u/AscentU3/).
 
