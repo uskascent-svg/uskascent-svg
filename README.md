@@ -48,15 +48,18 @@ Problem solving is **built on trust. Driven by results.**
 
 ```bash
 drwxr-xr-x  security/       soc  threat-detection  siem  vulnerability-assessment  network-security
+                       kali-linux  parrot-os
 drwxr-xr-x  systems/        linux  bash  python  docker
-drwxr-xr-x  development/    python  cpp  java  javascript  typescript  react  sql
-drwxr-xr-x  cloud-native/   AWS  kubernetes
+drwxr-xr-x  development/    python  cpp  java  javascript  typescript  react
+drwxr-xr-x  databases/      PostgreSQL  MongoDB
+drwxr-xr-x  cloud-native/   AWS  Google-Cloud  Azure  Kubernetes
 drwxr-xr-x  collaboration/  GitHub
-drwxr-xr-x  ai-tools/       antigravity
+drwxr-xr-x  ai-tools/       Antigravity  PyTorch  Google-ADK
+drwxr-xr-x  payments/       Stripe
 ```
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,react,mysql,bash,linux,docker,git,github,aws,kubernetes,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,react,postgres,mongodb,bash,linux,kali,docker,git,github,aws,gcp,azure,pytorch,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
 </p>
 
 ## `❯ ./stats --live`
