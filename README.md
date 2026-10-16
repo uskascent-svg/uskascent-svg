@@ -47,18 +47,18 @@ Problem solving is **built on trust. Driven by results.**
 ## `❯ ls ~/stack`
 
 ```bash
-cybersecurity/  Wazuh  SOC-operations  threat-detection  vulnerability-assessment
-networking/     network-security  DNS  TCP/IP  TLS-HTTPS  VPNs
-development/    Python  C++  Java  JavaScript  TypeScript  React  Node.js  FastAPI  Flask
-backend/        SQLAlchemy  REST-APIs (learning)  Postman (learning)
-databases/      MySQL  PostgreSQL  MongoDB  Redis (learning)
-cloud/          AWS  Azure  Google-Cloud  cloud-CLI-tools
-infrastructure/ Docker  Kubernetes  Terraform  Ansible  Linux  Bash
-devops/         CI-CD  GitHub-Actions  Git  GitHub  pytest
-ai-computer-vision/ YOLO  PyTorch  Google-ADK  Antigravity
-developer-tools/ VS-Code  Visual-Studio
-payments/       Razorpay  Stripe
-security-labs/  Kali-Linux
+CYBERSECURITY/   Wazuh , SOC-operations , threat-detection , vulnerability-assessment
+NETWORKING/      network-security , DNS , TCP/IP , OSI , TLS-HTTPS , VPNs
+DEVELOPMENT/     Python , C++ , Java , JavaScript , TypeScript , React , Node.js , FastAPI , Flask
+BACKEND/         SQLAlchemy , REST-APIs (learning) , Postman (learning)
+DATABASES/       MySQL , PostgreSQL , MongoDB , Redis (learning)
+CLOUD/           AWS , Azure , Google-Cloud , cloud-CLI-tools
+INFRASTRUCTURE/  Docker , Kubernetes , Terraform , Ansible  Linux  Bash
+DEVOPS/          CI-CD , GitHub-Actions , Git , GitHub , pytest
+Ai-VISION/       YOLO  PyTorch , Google-ADK , Antigravity
+DEVELOPER-TOOLS/ VS-Code , Visual-Studio
+PAYMENTS/        Razorpay , Stripe
+SECURITY-LABS/   Kali-Linux
 ```
 
 <p align="center">
