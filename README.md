@@ -55,7 +55,7 @@ drwxr-xr-x  development/    python  R  cpp  java  javascript  Node.js  typescrip
 drwxr-xr-x  databases/      MySQL  PostgreSQL  MongoDB  Redis
 drwxr-xr-x  cloud-native/   AWS  Google-Cloud  Azure  Kubernetes  cloud-CLI-tools
 drwxr-xr-x  infrastructure/ Terraform  Ansible  GitHub-Actions
-drwxr-xr-x  collaboration/  GitHub  GitHub-Actions  Postman
+drwxr-xr-x  collaboration/  GitHub  GitHub-Actions  Postman  LeetCode
 drwxr-xr-x  ai-tools/       Antigravity  PyTorch  Google-ADK
 drwxr-xr-x  payments/       Razorpay  Stripe
 ```
