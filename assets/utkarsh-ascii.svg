@@ -1,76 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
- width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
- <title id="title">UTKARSH — geometric glitch logo</title>
- <desc id="desc">A bold, angular, blackletter-inspired geometric UTKARSH wordmark with animated cyan and magenta glitch slices.</desc>
- <defs>
-  <g id="word" fill="currentColor" fill-rule="evenodd">
-   <!-- U -->
-   <path d="M40 55H65V205H125V55H150V230H40Z M65 80V180H100L65 145Z"/>
-   <!-- T -->
-   <path d="M180 55H300V80H252V230H227V80H180Z M252 80H275L252 103Z"/>
-   <!-- K -->
-   <path d="M330 55H355V230H330Z M355 128L420 55H452L389 132L455 230H424L375 157L355 181Z M355 128H390L365 153Z"/>
-   <!-- A -->
-   <path d="M475 230L510 55H545L580 230H552L545 190H510L502 230Z M515 165H540L527 98Z M510 165L527 145L545 165Z"/>
-   <!-- R -->
-   <path d="M605 55H680L710 83V125L680 150H630V230H605Z M630 80V125H670L685 110V93L672 80Z M650 150H680L715 230H685Z M645 97H671L657 112H645Z"/>
-   <!-- S -->
-   <path d="M810 55H735L710 80V125L740 150H785V205H710V230H795L810 205V145L785 125H735V80H810Z M760 80H785L760 105H735Z M760 180H785L760 205H735Z"/>
-   <!-- H -->
-   <path d="M840 55H865V128H920V55H945V230H920V153H865V230H840Z M865 128H895L880 143H865Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
+<title id="title">UTKARSH angular techno alphabet logo</title>
+<desc id="desc">UTKARSH rendered in custom heavy, angular, cut-corner techno lettering directly modeled on the supplied font reference, with animated glitch offsets.</desc>
+<defs>
+  <!-- Each character is hand-drawn as a solid polygon in the sharp, cut-corner alphabet style of the reference. -->
+  <g id="glyphs" fill="currentColor" fill-rule="evenodd">
+    <!-- U: squared sides and chamfered bottom -->
+    <path d="M32 62H55V205H112V62H135V225L118 242H49L32 225Z M55 205H112L96 222H71Z"/>
+    <!-- T: long angular cap and centered stem -->
+    <path d="M158 62H286L267 84H233V242H209V84H158Z M158 62H286L267 84H174Z"/>
+    <!-- K: straight spine with diagonal arms -->
+    <path d="M310 62H334V242H310Z M334 151L407 62H438L370 146L440 242H409L352 163L334 184Z M334 151H366L351 167Z"/>
+    <!-- A: triangular peak with cut-out counter and crossbar -->
+    <path d="M458 242L495 62H526L566 242H537L530 203H489L481 242Z M494 179H526L510 103Z M489 179L510 159L530 179Z"/>
+    <!-- R: squared bowl, diagonal leg and clipped corners -->
+    <path d="M588 62H661L684 84V137L661 158H612V242H588Z M612 84V136H652L660 128V94L650 84Z M632 158H661L700 242H670Z M628 100H652L638 116H628Z"/>
+    <!-- S: angular zig-zag, broken-corner construction -->
+    <path d="M802 62H718L698 82V137L722 158H777V218H698V242H787L802 222V148L780 136H722V86H802Z M744 86H777L759 105H722Z M744 194H777L759 214H722Z"/>
+    <!-- H: two heavy uprights with a squared crossbar -->
+    <path d="M824 62H848V137H911V62H935V242H911V160H848V242H824Z M848 137H883L867 157H848Z"/>
   </g>
-  <clipPath id="screen"><rect x="18" y="35" width="964" height="220"/></clipPath>
-  <filter id="rough">
-   <feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="2" seed="7" result="noise"/>
-   <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.2" xChannelSelector="R" yChannelSelector="G"/>
-  </filter>
- </defs>
- <rect width="1000" height="300" rx="12" fill="#07090d"/>
- <path d="M18 38H982M18 258H982" stroke="#26313c" stroke-width="1"/>
- <g font-family="monospace" font-size="13" fill="#788797">
-  <text x="30" y="25">UTKARSH.EXE</text><text x="860" y="25">SIGNAL: UNSTABLE</text>
- </g>
- <g clip-path="url(#screen)">
-  <use xlink:href="#word" color="#00e5ff" transform="translate(-5 0)" opacity=".9" class="cyan"/>
-  <use xlink:href="#word" color="#ff245f" transform="translate(5 0)" opacity=".85" class="magenta"/>
-  <use xlink:href="#word" color="#f4f7fb" filter="url(#rough)" class="main"/>
+  <clipPath id="screen"><rect x="18" y="42" width="964" height="216"/></clipPath>
+</defs>
+<rect width="1000" height="300" rx="12" fill="#07090d"/>
+<path d="M18 38H982M18 258H982" stroke="#26313c"/>
+<g font-family="monospace" font-size="13" fill="#788797">
+  <text x="28" y="25">UTKARSH // CUSTOM GLYPH</text><text x="847" y="25">SIGNAL: UNSTABLE</text>
+</g>
+<g clip-path="url(#screen)">
+  <use xlink:href="#glyphs" color="#00e5ff" transform="translate(-4 0)" opacity=".75" class="cyan"/>
+  <use xlink:href="#glyphs" color="#ff245f" transform="translate(4 0)" opacity=".75" class="magenta"/>
+  <use xlink:href="#glyphs" color="#f4f7fb" class="main"/>
+  <!-- crisp horizontal scanline cuts create the same sliced construction as the sample font -->
   <g fill="#07090d">
-   <path d="M0 91H1000V97H0Z M0 174H1000V178H0Z M0 212H1000V215H0Z"/>
+    <path d="M18 99H982V105H18Z M18 169H982V174H18Z M18 216H982V220H18Z"/>
   </g>
-  <g opacity=".8" fill="#00e5ff">
-   <path d="M26 92H205V98H26Z M350 174H610V178H350Z M700 211H963V215H700Z"/>
+  <g fill="#00e5ff" opacity=".8">
+    <path d="M28 99H177V104H28Z M345 169H550V174H345Z M702 216H955V220H702Z"/>
   </g>
-  <g opacity=".8" fill="#ff245f">
-   <path d="M700 89H975V94H700Z M40 173H290V178H40Z M440 211H660V216H440Z"/>
+  <g fill="#ff245f" opacity=".8">
+    <path d="M696 99H972V104H696Z M175 169H318V174H175Z M425 216H685V220H425Z"/>
   </g>
- </g>
- <g fill="#00e5ff" opacity=".65"><rect x="25" y="270" width="24" height="3"/><rect x="55" y="270" width="7" height="3"/><rect x="70" y="270" width="17" height="3"/></g>
- <text x="100" y="280" fill="#9aa8b8" font-family="monospace" font-size="12" letter-spacing="3">DETECT • PREVENT • PROTECT</text>
- <text x="855" y="280" fill="#ff245f" font-family="monospace" font-size="12">GLITCH//ON</text>
- <style>
-  .cyan{animation:cyan-shift 3.8s steps(1,end) infinite}
-  .magenta{animation:magenta-shift 3.8s steps(1,end) infinite}
-  .main{animation:main-flicker 5s steps(1,end) infinite}
-  @keyframes cyan-shift{
-   0%,88%,92%,100%{transform:translate(-5px,0);opacity:.65}
-   89%{transform:translate(10px,-3px);opacity:1}
-   90%{transform:translate(-12px,2px);opacity:.8}
-   91%{transform:translate(4px,0);opacity:1}
-  }
-  @keyframes magenta-shift{
-   0%,88%,92%,100%{transform:translate(5px,0);opacity:.55}
-   89%{transform:translate(-9px,2px);opacity:1}
-   90%{transform:translate(12px,-2px);opacity:.8}
-   91%{transform:translate(-4px,0);opacity:1}
-  }
-  @keyframes main-flicker{
-   0%,88%,92%,100%{opacity:1}
-   89%{opacity:.82}
-   90%{opacity:.96}
-   91%{opacity:.7}
-  }
-  @media(prefers-reduced-motion:reduce){
-   .cyan,.magenta,.main{animation:none}
-  }
- </style>
+</g>
+<g font-family="monospace" font-size="12" letter-spacing="3">
+  <text x="32" y="281" fill="#9aa8b8">DETECT • PREVENT • PROTECT</text>
+  <text x="850" y="281" fill="#ff245f">GLITCH//ON</text>
+</g>
+<style>
+.cyan{animation:cyan-shift 3.4s steps(1,end) infinite}
+.magenta{animation:magenta-shift 3.4s steps(1,end) infinite}
+.main{animation:main-flicker 4.7s steps(1,end) infinite}
+@keyframes cyan-shift{0%,86%,92%,100%{transform:translate(-4px,0);opacity:.7}87%{transform:translate(11px,-3px);opacity:1}88%{transform:translate(-13px,2px);opacity:.9}89%{transform:translate(3px,0);opacity:1}}
+@keyframes magenta-shift{0%,86%,92%,100%{transform:translate(4px,0);opacity:.7}87%{transform:translate(-10px,2px);opacity:1}88%{transform:translate(12px,-2px);opacity:.9}89%{transform:translate(-3px,0);opacity:1}}
+@keyframes main-flicker{0%,86%,92%,100%{opacity:1}87%{opacity:.78}88%{opacity:.95}89%{opacity:.72}}
+@media(prefers-reduced-motion:reduce){.cyan,.magenta,.main{animation:none}}
+</style>
 </svg>
