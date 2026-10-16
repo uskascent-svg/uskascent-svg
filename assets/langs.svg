@@ -13,25 +13,25 @@ text{font-family:'JetBrains Mono','Fira Code','SF Mono',Consolas,'Liberation Mon
 <text x="185" y="23" text-anchor="middle" font-size="12.5" fill="#8b949e">languages · uskascent-svg</text>
 <g class="f" style="animation-delay:.1s"><text x="22" y="61" font-size="12.5"><tspan fill="#00ff9c">uskascent-svg</tspan><tspan fill="#8b949e">@cloud:~$ </tspan><tspan fill="#c9d1d9">gh lang --top</tspan></text></g>
 <text class="f" style="animation-delay:0.20s" x="22" y="91" font-size="13" fill="#c9d1d9">Python</text>
-<text class="f" style="animation-delay:0.20s" x="348" y="91" text-anchor="end" font-size="12.5" fill="#8b949e">60.3%</text>
+<text class="f" style="animation-delay:0.20s" x="348" y="91" text-anchor="end" font-size="12.5" fill="#8b949e">60.2%</text>
 <rect x="22" y="98" width="326" height="7" rx="3.5" fill="#21262d"/>
-<rect class="bar" x="22" y="98" width="196.50" height="7" rx="3.5" fill="#3572A5" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.30s forwards"/>
+<rect class="bar" x="22" y="98" width="196.35" height="7" rx="3.5" fill="#3572A5" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.30s forwards"/>
 <text class="f" style="animation-delay:0.28s" x="22" y="122" font-size="13" fill="#c9d1d9">TypeScript</text>
-<text class="f" style="animation-delay:0.28s" x="348" y="122" text-anchor="end" font-size="12.5" fill="#8b949e">33.7%</text>
+<text class="f" style="animation-delay:0.28s" x="348" y="122" text-anchor="end" font-size="12.5" fill="#8b949e">33.5%</text>
 <rect x="22" y="129" width="326" height="7" rx="3.5" fill="#21262d"/>
-<rect class="bar" x="22" y="129" width="109.71" height="7" rx="3.5" fill="#3178c6" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.38s forwards"/>
+<rect class="bar" x="22" y="129" width="109.19" height="7" rx="3.5" fill="#3178c6" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.38s forwards"/>
 <text class="f" style="animation-delay:0.36s" x="22" y="153" font-size="13" fill="#c9d1d9">HTML</text>
-<text class="f" style="animation-delay:0.36s" x="348" y="153" text-anchor="end" font-size="12.5" fill="#8b949e"> 4.4%</text>
+<text class="f" style="animation-delay:0.36s" x="348" y="153" text-anchor="end" font-size="12.5" fill="#8b949e"> 4.6%</text>
 <rect x="22" y="160" width="326" height="7" rx="3.5" fill="#21262d"/>
-<rect class="bar" x="22" y="160" width="14.35" height="7" rx="3.5" fill="#e34c26" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.46s forwards"/>
+<rect class="bar" x="22" y="160" width="15.04" height="7" rx="3.5" fill="#e34c26" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.46s forwards"/>
 <text class="f" style="animation-delay:0.44s" x="22" y="184" font-size="13" fill="#c9d1d9">Shell</text>
 <text class="f" style="animation-delay:0.44s" x="348" y="184" text-anchor="end" font-size="12.5" fill="#8b949e"> 0.5%</text>
 <rect x="22" y="191" width="326" height="7" rx="3.5" fill="#21262d"/>
-<rect class="bar" x="22" y="191" width="1.65" height="7" rx="3.5" fill="#89e051" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.54s forwards"/>
+<rect class="bar" x="22" y="191" width="1.64" height="7" rx="3.5" fill="#89e051" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.54s forwards"/>
 <text class="f" style="animation-delay:0.52s" x="22" y="215" font-size="13" fill="#c9d1d9">PowerShell</text>
 <text class="f" style="animation-delay:0.52s" x="348" y="215" text-anchor="end" font-size="12.5" fill="#8b949e"> 0.5%</text>
 <rect x="22" y="222" width="326" height="7" rx="3.5" fill="#21262d"/>
-<rect class="bar" x="22" y="222" width="1.62" height="7" rx="3.5" fill="#012456" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.62s forwards"/>
+<rect class="bar" x="22" y="222" width="1.61" height="7" rx="3.5" fill="#012456" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.62s forwards"/>
 <text class="f" style="animation-delay:0.60s" x="22" y="246" font-size="13" fill="#c9d1d9">CSS</text>
 <text class="f" style="animation-delay:0.60s" x="348" y="246" text-anchor="end" font-size="12.5" fill="#8b949e"> 0.3%</text>
 <rect x="22" y="253" width="326" height="7" rx="3.5" fill="#21262d"/>
