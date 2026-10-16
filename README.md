@@ -47,13 +47,16 @@ Problem solving is **built on trust. Driven by results.**
 ## `❯ ls ~/stack`
 
 ```bash
-drwxr-xr-x  security/  soc  threat-detection  siem  vulnerability-assessment  network-security
-drwxr-xr-x  systems/   linux  bash  python  docker
-drwxr-xr-x  development/  python  cpp  java  javascript  typescript  sql
+drwxr-xr-x  security/       soc  threat-detection  siem  vulnerability-assessment  network-security
+drwxr-xr-x  systems/        linux  bash  python  docker
+drwxr-xr-x  development/    python  cpp  java  javascript  typescript  react  sql
+drwxr-xr-x  cloud-native/   AWS  kubernetes
+drwxr-xr-x  collaboration/  GitHub
+drwxr-xr-x  ai-tools/       antigravity
 ```
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,mysql,bash,linux,docker,git,vscode&perline=11&theme=dark" alt="Programming languages and developer tools" />
+  <img src="https://skillicons.dev/icons?i=python,cpp,java,js,ts,react,mysql,bash,linux,docker,git,github,aws,kubernetes,vscode&perline=7&theme=dark" alt="Programming languages and developer tools" />
 </p>
 
 ## `❯ ./stats --live`
