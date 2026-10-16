@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/utkarsh-ascii.svg?v=A-redraw-20261017" width="100%" alt="UTKARSH ASCII typing animation, responsive to mobile screen width" />
 
-<a href="https://uskascent-svg.github.io/uskascent-svg/terminal.html" title="Open the fully interactive ASCENT U3 terminal"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/readme-terminal.gif?v=6491668" width="100%" alt="ASCENT U3 terminal typing character by character with a blinking cursor"/></a>
+<a href="https://uskascent-svg.github.io/uskascent-svg/terminal.html" title="Open the fully interactive ASCENT U3 terminal"><img src="https://raw.githubusercontent.com/uskascent-svg/uskascent-svg/main/assets/readme-terminal.gif?v=6491668" width="100%" alt="ASCENT U3 terminal typing character by character with a blinking cursor" style="max-width:100%;height:auto"/></a>
 
 
 <p align="center">
