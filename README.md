@@ -51,10 +51,10 @@ drwxr-xr-x  security/       soc  threat-detection  siem  vulnerability-assessmen
                        Wireshark  Nmap  tcpdump  firewalls  VPNs
 drwxr-xr-x  networking/     DNS  TCP/IP  TLS  network-analysis
 drwxr-xr-x  systems/        linux  bash (Linux-Scripting)  python  docker  Ansible
-drwxr-xr-x  development/    python  R  cpp  java  javascript  Node.js  typescript  react
-drwxr-xr-x  databases/      MySQL  PostgreSQL  MongoDB  Redis
+drwxr-xr-x  development/    python  R  cpp  java  javascript  Node.js  typescript  react  FastAPI  Flask  REST-APIs
+drwxr-xr-x  databases/      MySQL  PostgreSQL  MongoDB  Redis  SQLAlchemy
 drwxr-xr-x  cloud-native/   AWS  Google-Cloud  Azure  Kubernetes  cloud-CLI-tools
-drwxr-xr-x  infrastructure/ Terraform  Ansible  GitHub-Actions
+drwxr-xr-x  infrastructure/ Terraform  Ansible  GitHub-Actions  pytest
 drwxr-xr-x  collaboration/  GitHub  GitHub-Actions  Postman  LeetCode
 drwxr-xr-x  ai-tools/       Antigravity  PyTorch  Google-ADK
 drwxr-xr-x  payments/       Razorpay  Stripe
@@ -83,6 +83,8 @@ utkarsh@cloud:~$ _
 
 - **Cloud & automation:** AWS, Azure, Google Cloud, Terraform, Ansible, GitHub Actions and cloud CLI tools.
 - **Security & networking:** Wireshark, Nmap, tcpdump, Postman, DNS, TCP/IP, TLS, VPNs, firewalls, SIEM, vulnerability analysis and threat modelling.
+- **Backend & APIs:** FastAPI, Flask, SQLAlchemy and REST APIs.
+- **Testing:** pytest for Python test automation.
 - **Systems:** Linux, Bash (Linux scripting), Docker and Python.
 - **Problem solving:** [LeetCode · AscentU3](https://leetcode.com/u/AscentU3/).
 
