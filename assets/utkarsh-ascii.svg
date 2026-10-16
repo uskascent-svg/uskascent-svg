@@ -2,73 +2,57 @@
      width="960" height="280" viewBox="0 0 960 280"
      preserveAspectRatio="xMidYMid meet"
      role="img" aria-labelledby="title desc">
-  <title id="title">UTKARSH ASCII typing animation</title>
-  <desc id="desc">Responsive terminal-style UTKARSH ASCII art revealed line by line in neon green, with a blinking cursor.</desc>
-
-  <style>
-    text {
-      font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
-    }
-    .frame { fill: #0d1117; }
-    .border { fill: none; stroke: #30363d; }
-    .muted { fill: #8b949e; font-size: 14px; }
-    .art { fill: #00ff9c; font-size: 18px; white-space: pre; }
-
-    #line1 rect, #line2 rect, #line3 rect,
-    #line4 rect, #line5 rect, #line6 rect {
-      width: 0;
-      animation: type-line 8s steps(48, end) infinite;
-    }
-    #line1 rect { animation-delay: 0s; }
-    #line2 rect { animation-delay: .8s; }
-    #line3 rect { animation-delay: 1.6s; }
-    #line4 rect { animation-delay: 2.4s; }
-    #line5 rect { animation-delay: 3.2s; }
-    #line6 rect { animation-delay: 4s; }
-
-    .cursor { fill: #00ff9c; animation: blink .9s steps(2, start) infinite; }
-    .name { fill: #22d3ee; font-weight: 700; }
-
-    @keyframes type-line {
-      0%, 3% { width: 0; }
-      14%, 100% { width: 878px; }
-    }
-    @keyframes blink {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      #line1 rect, #line2 rect, #line3 rect,
-      #line4 rect, #line5 rect, #line6 rect {
-        animation: none;
-        width: 878px;
-      }
-      .cursor { animation: none; opacity: 1; }
-    }
-  </style>
-
-  <rect class="frame" width="960" height="280" rx="12"/>
-  <rect class="border" x="1" y="1" width="958" height="278" rx="11"/>
-  <text class="muted" x="45" y="36">utkarsh@cloud:~$</text>
-
+  <title id="title">UTKARSH rune-style typing logo</title>
+  <desc id="desc">UTKARSH drawn in a sharp, distressed angular rune alphabet inspired by the supplied reference, revealed like a typewriter.</desc>
   <defs>
-    <clipPath id="line1"><rect x="41" y="55" width="878" height="30"/></clipPath>
-    <clipPath id="line2"><rect x="41" y="83" width="878" height="30"/></clipPath>
-    <clipPath id="line3"><rect x="41" y="111" width="878" height="30"/></clipPath>
-    <clipPath id="line4"><rect x="41" y="139" width="878" height="30"/></clipPath>
-    <clipPath id="line5"><rect x="41" y="167" width="878" height="30"/></clipPath>
-    <clipPath id="line6"><rect x="41" y="195" width="878" height="30"/></clipPath>
+    <clipPath id="reveal"><rect id="reveal-rect" x="34" y="36" width="0" height="208"/></clipPath>
+    <pattern id="grit" width="31" height="27" patternUnits="userSpaceOnUse">
+      <path d="M3 4l3 2M18 7l-2 4M24 20l4-2M9 23l-2-3" stroke="#fff" stroke-width="1.8" opacity=".78"/>
+      <path d="M13 2l1 2M29 11l-2 2M2 16l2 1" stroke="#0d1117" stroke-width="1.2" opacity=".75"/>
+    </pattern>
   </defs>
+  <rect width="960" height="280" rx="12" fill="#0d1117"/>
+  <rect x="1" y="1" width="958" height="278" rx="11" fill="none" stroke="#30363d"/>
+  <text x="42" y="31" fill="#8b949e" font-family="monospace" font-size="14">utkarsh@cloud:~$</text>
 
-  <g class="art" xml:space="preserve">
-    <text x="45" y="78" clip-path="url(#line1)">██╗   ██╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗</text>
-    <text x="45" y="106" clip-path="url(#line2)">██║   ██║╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║</text>
-    <text x="45" y="134" clip-path="url(#line3)">██║   ██║   ██║   █████╔╝ ███████║██████╔╝███████╗███████║</text>
-    <text x="45" y="162" clip-path="url(#line4)">██║   ██║   ██║   ██╔═██╗ ██╔══██╗██╔══██╗╚════██║██╔══██║</text>
-    <text x="45" y="190" clip-path="url(#line5)">╚██████╔╝   ██║   ██║  ██╗██║  ██║██║  ██║███████║██║  ██║</text>
-    <text x="45" y="218" clip-path="url(#line6)"> ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝</text>
+  <g clip-path="url(#reveal)" fill="none" stroke="#00ff9c" stroke-width="8"
+     stroke-linecap="square" stroke-linejoin="miter">
+    <!-- U: tall stave with angled base -->
+    <path d="M72 76 L72 190 L112 218 L152 190 L152 76"/>
+    <!-- T -->
+    <path d="M186 76 L270 76 M228 76 L228 218"/>
+    <!-- K -->
+    <path d="M304 76 L304 218 M304 151 L386 78 M319 151 L388 218"/>
+    <!-- A -->
+    <path d="M410 218 L454 76 L498 218 M425 169 L483 169"/>
+    <!-- R -->
+    <path d="M528 218 L528 76 L580 76 L610 104 L610 132 L580 151 L528 151 M580 151 L615 218"/>
+    <!-- S: broken angular zig-zag -->
+    <path d="M710 82 L650 82 L650 137 L710 157 L710 212 L642 212"/>
+    <!-- H -->
+    <path d="M748 76 L748 218 M830 76 L830 218 M748 148 L830 148"/>
   </g>
-
-  <text class="muted" x="45" y="254">typing identity... <tspan class="name">UTKARSH</tspan></text>
-  <rect class="cursor" x="272" y="242" width="8" height="15" rx="1"/>
+  <!-- scratched ink texture clipped to the letter strokes -->
+  <g clip-path="url(#reveal)" fill="none" stroke="#0d1117" stroke-width="2.2" opacity=".82" stroke-linecap="square">
+    <path d="M68 91l9 6 M75 126l-5 7 M112 212l7-7 M145 178l9 6
+             M191 91l8 5 M224 104l8-7 M222 184l9 6 M266 77l-7 8
+             M300 108l7 5 M308 173l-7 8 M348 113l8 6 M359 188l8-7
+             M449 103l6 8 M467 191l8-6 M525 96l7 7 M579 91l8 6
+             M606 123l-7 7 M579 180l8 7 M702 93l-8 7 M654 198l8 7
+             M744 105l8 6 M824 101l8 6 M789 168l8-6"/>
+  </g>
+  <g clip-path="url(#reveal)" fill="none" stroke="#00ff9c" stroke-width="2" opacity=".42" stroke-dasharray="2 9">
+    <path d="M72 76 L72 190 L112 218 L152 190 L152 76
+             M186 76 L270 76 M228 76 L228 218
+             M304 76 L304 218 M304 151 L386 78 M319 151 L388 218
+             M410 218 L454 76 L498 218 M425 169 L483 169
+             M528 218 L528 76 L580 76 L610 104 L610 132 L580 151 L528 151 M580 151 L615 218
+             M710 82 L650 82 L650 137 L710 157 L710 212 L642 212
+             M748 76 L748 218 M830 76 L830 218 M748 148 L830 148"/>
+  </g>
+  <text x="42" y="254" fill="#8b949e" font-family="monospace" font-size="14">identity loaded: <tspan fill="#22d3ee" font-weight="700">UTKARSH</tspan></text>
+  <rect x="292" y="242" width="8" height="15" rx="1" fill="#00ff9c">
+    <animate attributeName="opacity" values="1;0;1" dur=".9s" repeatCount="indefinite"/>
+  </rect>
+  <animate xlink:href="#reveal-rect" attributeName="width" from="0" to="890" dur="3.2s" begin=".25s" fill="freeze" xmlns:xlink="http://www.w3.org/1999/xlink"/>
 </svg>
