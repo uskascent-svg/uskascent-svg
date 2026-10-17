@@ -15,15 +15,15 @@ text{font-family:'JetBrains Mono','Fira Code','SF Mono',Consolas,'Liberation Mon
 <text class="f" style="animation-delay:0.20s" x="22" y="91" font-size="13" fill="#c9d1d9">Python</text>
 <text class="f" style="animation-delay:0.20s" x="348" y="91" text-anchor="end" font-size="12.5" fill="#8b949e">60.2%</text>
 <rect x="22" y="98" width="326" height="7" rx="3.5" fill="#21262d"/>
-<rect class="bar" x="22" y="98" width="196.35" height="7" rx="3.5" fill="#3572A5" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.30s forwards"/>
+<rect class="bar" x="22" y="98" width="196.15" height="7" rx="3.5" fill="#3572A5" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.30s forwards"/>
 <text class="f" style="animation-delay:0.28s" x="22" y="122" font-size="13" fill="#c9d1d9">TypeScript</text>
 <text class="f" style="animation-delay:0.28s" x="348" y="122" text-anchor="end" font-size="12.5" fill="#8b949e">33.5%</text>
 <rect x="22" y="129" width="326" height="7" rx="3.5" fill="#21262d"/>
-<rect class="bar" x="22" y="129" width="109.19" height="7" rx="3.5" fill="#3178c6" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.38s forwards"/>
+<rect class="bar" x="22" y="129" width="109.08" height="7" rx="3.5" fill="#3178c6" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.38s forwards"/>
 <text class="f" style="animation-delay:0.36s" x="22" y="153" font-size="13" fill="#c9d1d9">HTML</text>
-<text class="f" style="animation-delay:0.36s" x="348" y="153" text-anchor="end" font-size="12.5" fill="#8b949e"> 4.6%</text>
+<text class="f" style="animation-delay:0.36s" x="348" y="153" text-anchor="end" font-size="12.5" fill="#8b949e"> 4.7%</text>
 <rect x="22" y="160" width="326" height="7" rx="3.5" fill="#21262d"/>
-<rect class="bar" x="22" y="160" width="15.04" height="7" rx="3.5" fill="#e34c26" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.46s forwards"/>
+<rect class="bar" x="22" y="160" width="15.36" height="7" rx="3.5" fill="#e34c26" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.46s forwards"/>
 <text class="f" style="animation-delay:0.44s" x="22" y="184" font-size="13" fill="#c9d1d9">Shell</text>
 <text class="f" style="animation-delay:0.44s" x="348" y="184" text-anchor="end" font-size="12.5" fill="#8b949e"> 0.5%</text>
 <rect x="22" y="191" width="326" height="7" rx="3.5" fill="#21262d"/>
@@ -43,6 +43,6 @@ text{font-family:'JetBrains Mono','Fira Code','SF Mono',Consolas,'Liberation Mon
 <text class="f" style="animation-delay:0.76s" x="22" y="308" font-size="13" fill="#c9d1d9">Dockerfile</text>
 <text class="f" style="animation-delay:0.76s" x="348" y="308" text-anchor="end" font-size="12.5" fill="#8b949e"> 0.1%</text>
 <rect x="22" y="315" width="326" height="7" rx="3.5" fill="#21262d"/>
-<rect class="bar" x="22" y="315" width="0.42" height="7" rx="3.5" fill="#384d54" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.86s forwards"/>
+<rect class="bar" x="22" y="315" width="0.41" height="7" rx="3.5" fill="#384d54" style="transform-origin:22px 0;transform:scaleX(0);animation:grow .9s ease-out 0.86s forwards"/>
 <text x="22" y="330" font-size="9.5" fill="#8b949e">Generated from public repos · percentages by code bytes</text>
 </svg>
