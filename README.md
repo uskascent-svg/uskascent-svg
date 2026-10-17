@@ -9,7 +9,8 @@
 </p>
 <h1 align="center">Utkarsh S Khairnar</h1>
 
-Cybersecurity · Cloud Computing · Development · AI · IT Infrastructure 
+Cybersecurity · Cloud Computing · Development 
+· AI · IT Infrastructure 
 
 Nashik, India · IST (UTC+5:30)
 
