@@ -24,12 +24,43 @@ Problem solving is **built on trust. Driven by results.**
 
 ## 🔹 `❯ ls ~/projects --featured`
 
-| Project | Repository | What it does |
-|---|---|---|
-| **ASCENT SAFETY** | [Open repository ↗](https://github.com/uskascent-svg/Ascent-Safety-) | Cybersecurity analysis and threat-detection platform. |
-| **E-Cycle** | [Live Demo ↗](https://e-cycle-xyv5.onrender.com) | Community-focused e-waste management platform for responsible disposal, reuse, repair, donation and recycling. Users can submit collection requests and track their status, while administrators manage users, submissions, distributors, facilities and collection operations. Includes a security panel for login analysis, account lockouts, threat categories, incident investigations, administrator audit activity and downloadable PDF, CSV and XLSX reports, with 180-day security-log retention. |
-| **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
-| **Black Hole Simulation** | [Open repository ↗](https://github.com/uskascent-svg/black_hole) | C++/OpenGL exploration of gravitational lensing and GPU-assisted simulation; based on the upstream project by [kavan010](https://github.com/kavan010/black_hole). |
+A selection of my existing and newer projects. Each description is **100 words**; live demos are linked only where a deployed URL is documented.
+
+### ASCENT SAFETY
+
+ASCENT SAFETY is a modular cybersecurity monitoring and threat-analysis platform built to support practical security operations. It brings suspicious-content analysis, phishing detection, security-event review, threat-intelligence enrichment, endpoint telemetry, alerts, reports, and case workflows into one interface. The platform combines a Next.js frontend, FastAPI services, and PostgreSQL persistence, with explainable detection logic and controlled machine-learning evaluation. Authorized users can investigate findings, review event timelines, and manage security reports, while administrators oversee integrations and operational activity. Its design emphasizes evidence-based results, privacy-aware handling, auditable actions, and honest reporting: unavailable telemetry or unverified detection metrics are never presented as confirmed security outcomes. responsibly
+
+[Live Demo ↗](https://ascent-safety-web.onrender.com) · [GitHub Repository ↗](https://github.com/uskascent-svg/Ascent-Safety-)
+
+### E-Cycle
+
+E-Cycle is a community-focused e-waste collection and circular-economy platform that encourages responsible disposal, reuse, repair, donation, refurbishment, and recycling. Users can register unwanted electronic devices, submit collection requests, receive tracking updates, and follow the journey of their items. The platform supports pickup scheduling, service-area and capacity checks, distributor assignment, facility intake, processing records, community drives, rewards, certificates, and an AI assistant when configured. Administrators manage users, submissions, distributors, facilities, operations, reports, and security activity through dedicated workflows. Built with HTML, CSS, JavaScript, Flask, and SQLite, it aims to make electronic-waste handling more transparent, organized, and accessible for local communities today.
+
+[Live Demo ↗](https://e-cycle-xyv5.onrender.com) · [GitHub Repository ↗](https://github.com/uskascent-svg/E-cycle)
+
+### Raju's Royal Artifacts (Shop Agent)
+
+Raju's Royal Artifacts is an interactive AI-powered bargaining shopkeeper experience inspired by an Indian digital bazaar. A conversational agent named Raju welcomes customers, discusses products, negotiates prices, and checks stock through a Python inventory function. The application uses Google's Gemini model and Agent Development Kit, with a FastAPI runtime and a responsive glassmorphism storefront. Its features include a distinctive shopkeeper personality, real-time tool calling, stock-aware responses, sold-out handling, stateful chat sessions, and a visual product shelf. The repository includes setup scripts, API documentation, and automated tests. It is designed as a locally runnable demonstration; no public production demo is claimed.
+
+[GitHub Repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent)
+
+### Black Hole Simulation
+
+Black Hole Simulation explores the visual physics of black holes through C++ and OpenGL. The repository includes a two-dimensional gravitational-lensing visualization and a three-dimensional GPU-assisted simulation that uses a compute shader for geodesic calculations. It provides a hands-on way to explore how light paths can bend around an extreme gravitational object, combining mathematical ideas with real-time graphics programming. The project uses a C++17-compatible toolchain, CMake, and graphics dependencies such as GLEW, GLFW, and GLM, with Vcpkg documented for dependency management. This repository is based on the upstream work by kavan010, whose authorship and attribution are retained in documentation and credits.
+
+[GitHub Repository ↗](https://github.com/uskascent-svg/black_hole)
+
+### SOC-IO
+
+SOC-IO is an experimental, offline-first security-event triage toolkit created for cybersecurity learning and authorized lab validation. It ingests normalized JSONL events, applies transparent deterministic detection rules, and can optionally collect recent Windows Sysmon events through a read-only workflow. Analysis runs can be stored locally in SQLite, while a lightweight dashboard displays generated JSON reports without making network requests. The repository also includes unit tests, a synthetic rule-regression evaluation harness, and documentation for collection, persistence, and security boundaries. SOC-IO is intentionally presented as a prototype, not a production SIEM; rule matches are investigation leads, not proof of compromise, for analyst training.
+
+[GitHub Repository ↗](https://github.com/uskascent-svg/soc-io)
+
+### AscentIntegrity
+
+AscentIntegrity is a cybersecurity-focused evidence-integrity platform designed to record and verify digital evidence using cryptographic hashes. Its workflow calculates SHA-256 digests during evidence intake, stores version records, records audit events, and can optionally anchor digests to an EVM-compatible blockchain. A React and TypeScript dashboard connects to a FastAPI backend, with PostgreSQL models and Alembic migrations supporting structured records. Verification re-hashes stored files and checks configured blockchain anchors before an integrity certificate can be issued. The project distinguishes byte integrity from factual truth and documents important development-stage limitations, including authorization, storage immutability, and production key management for secure evidence workflows today.
+
+[GitHub Repository ↗](https://github.com/uskascent-svg/AscentIntegrity)
 
 ## 🔹 `❯ ls ~/stack`
 
