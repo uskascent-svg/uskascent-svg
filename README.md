@@ -24,43 +24,16 @@ Problem solving is **built on trust. Driven by results.**
 
 ## 🔹 `❯ ls ~/projects --featured`
 
-A selection of my existing and newer projects. Each description is **100 words**; live demos are linked only where a deployed URL is documented.
+A selection of my existing and newer projects, presented with concise 50-word descriptions, technology stacks, and available demo and repository links.
 
-### ASCENT SAFETY
-
-ASCENT SAFETY is a modular cybersecurity monitoring and threat-analysis platform built to support practical security operations. It brings suspicious-content analysis, phishing detection, security-event review, threat-intelligence enrichment, endpoint telemetry, alerts, reports, and case workflows into one interface. The platform combines a Next.js frontend, FastAPI services, and PostgreSQL persistence, with explainable detection logic and controlled machine-learning evaluation. Authorized users can investigate findings, review event timelines, and manage security reports, while administrators oversee integrations and operational activity. Its design emphasizes evidence-based results, privacy-aware handling, auditable actions, and honest reporting: unavailable telemetry or unverified detection metrics are never presented as confirmed security outcomes. responsibly
-
-[Live Demo ↗](https://ascent-safety-web.onrender.com) · [GitHub Repository ↗](https://github.com/uskascent-svg/Ascent-Safety-)
-
-### E-Cycle
-
-E-Cycle is a community-focused e-waste collection and circular-economy platform that encourages responsible disposal, reuse, repair, donation, refurbishment, and recycling. Users can register unwanted electronic devices, submit collection requests, receive tracking updates, and follow the journey of their items. The platform supports pickup scheduling, service-area and capacity checks, distributor assignment, facility intake, processing records, community drives, rewards, certificates, and an AI assistant when configured. Administrators manage users, submissions, distributors, facilities, operations, reports, and security activity through dedicated workflows. Built with HTML, CSS, JavaScript, Flask, and SQLite, it aims to make electronic-waste handling more transparent, organized, and accessible for local communities today.
-
-[Live Demo ↗](https://e-cycle-xyv5.onrender.com) · [GitHub Repository ↗](https://github.com/uskascent-svg/E-cycle)
-
-### Raju's Royal Artifacts (Shop Agent)
-
-Raju's Royal Artifacts is an interactive AI-powered bargaining shopkeeper experience inspired by an Indian digital bazaar. A conversational agent named Raju welcomes customers, discusses products, negotiates prices, and checks stock through a Python inventory function. The application uses Google's Gemini model and Agent Development Kit, with a FastAPI runtime and a responsive glassmorphism storefront. Its features include a distinctive shopkeeper personality, real-time tool calling, stock-aware responses, sold-out handling, stateful chat sessions, and a visual product shelf. The repository includes setup scripts, API documentation, and automated tests. It is designed as a locally runnable demonstration; no public production demo is claimed.
-
-[GitHub Repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent)
-
-### Black Hole Simulation
-
-Black Hole Simulation explores the visual physics of black holes through C++ and OpenGL. The repository includes a two-dimensional gravitational-lensing visualization and a three-dimensional GPU-assisted simulation that uses a compute shader for geodesic calculations. It provides a hands-on way to explore how light paths can bend around an extreme gravitational object, combining mathematical ideas with real-time graphics programming. The project uses a C++17-compatible toolchain, CMake, and graphics dependencies such as GLEW, GLFW, and GLM, with Vcpkg documented for dependency management. This repository is based on the upstream work by kavan010, whose authorship and attribution are retained in documentation and credits.
-
-[GitHub Repository ↗](https://github.com/uskascent-svg/black_hole)
-
-### SOC-IO
-
-SOC-IO is an experimental, offline-first security-event triage toolkit created for cybersecurity learning and authorized lab validation. It ingests normalized JSONL events, applies transparent deterministic detection rules, and can optionally collect recent Windows Sysmon events through a read-only workflow. Analysis runs can be stored locally in SQLite, while a lightweight dashboard displays generated JSON reports without making network requests. The repository also includes unit tests, a synthetic rule-regression evaluation harness, and documentation for collection, persistence, and security boundaries. SOC-IO is intentionally presented as a prototype, not a production SIEM; rule matches are investigation leads, not proof of compromise, for analyst training.
-
-[GitHub Repository ↗](https://github.com/uskascent-svg/soc-io)
-
-### AscentIntegrity
-
-AscentIntegrity is a cybersecurity-focused evidence-integrity platform designed to record and verify digital evidence using cryptographic hashes. Its workflow calculates SHA-256 digests during evidence intake, stores version records, records audit events, and can optionally anchor digests to an EVM-compatible blockchain. A React and TypeScript dashboard connects to a FastAPI backend, with PostgreSQL models and Alembic migrations supporting structured records. Verification re-hashes stored files and checks configured blockchain anchors before an integrity certificate can be issued. The project distinguishes byte integrity from factual truth and documents important development-stage limitations, including authorization, storage immutability, and production key management for secure evidence workflows today.
-
-[GitHub Repository ↗](https://github.com/uskascent-svg/AscentIntegrity)
+| No. | Project | Description (50 words) | Technology Stack | Live Demo | GitHub Repository |
+|---:|---|---|---|---|---|
+| 1 | **ASCENT SAFETY** | ASCENT SAFETY is a cybersecurity analysis platform designed to identify and investigate digital threats. It includes phishing analysis, security event monitoring, threat intelligence, endpoint information, alerts, reports, and investigation workflows. Its architecture combines frontend technologies with backend security services, supporting structured analysis, auditability, and controlled machine-learning evaluation for security teams. | Next.js, React, TypeScript, Tailwind CSS, Python, FastAPI, PostgreSQL, SQLAlchemy | [Live Demo](https://ascent-safety-web.onrender.com) | [GitHub](https://github.com/uskascent-svg/Ascent-Safety-) |
+| 2 | **E-Cycle** | E-Cycle is a community-focused electronic waste management platform encouraging responsible disposal through reuse, repair, donation, refurbishment, and recycling. Users can submit e-waste, request collections, and track progress. It also supports distributor workflows, recycling facilities, administrative management, community participation, and impact reporting to simplify sustainable e-waste management for local communities today. | HTML, CSS, JavaScript, Python, Flask, SQLite | [Live Demo](https://e-cycle-xyv5.onrender.com) | [GitHub](https://github.com/uskascent-svg/E-cycle) |
+| 3 | **Raju's Royal Artifacts** | Raju's Royal Artifacts is an AI-powered shopping assistant that simulates conversations with a virtual shopkeeper. Users can discuss products, negotiate prices, and receive inventory-aware responses. It integrates Google Gemini with Python inventory functions, exploring conversational AI, function calling, session-based interactions, and practical agent development through a modern shopping interface today. | Python, Google Gemini, Google ADK, FastAPI, HTML, CSS, JavaScript | Local demo | [GitHub](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) |
+| 4 | **Black Hole Simulation** | Black Hole Simulation is a computer graphics project visualising black holes and gravitational effects through interactive rendering. It explores gravitational lensing, light distortion, and three-dimensional simulation using graphics programming. The project demonstrates rendering pipelines, mathematical transformations, shader techniques, and GPU-assisted computation to connect scientific concepts with real-time visual experiences interactively. | C++, OpenGL, GLEW, GLFW, GLM, CMake, GPU shaders | Local demo | [GitHub](https://github.com/uskascent-svg/black_hole) |
+| 5 | **SOC-IO** | SOC-IO is an experimental security operations platform exploring security event ingestion, investigation, and rule-based triage. It supports JSONL event processing, deterministic detection rules, SQLite persistence, JSON reporting, and optional Windows Sysmon collection. Testing and evaluation components help examine detection behaviour, evidence handling, and security operations workflows in controlled environments securely. | Python, SQLite, JSONL, Windows Sysmon, CLI, unittest | Local prototype | [GitHub](https://github.com/uskascent-svg/soc-io) |
+| 6 | **AscentIntegrity** | AscentIntegrity is an evidence-integrity platform using SHA-256 hashing to generate verification fingerprints and track evidence changes. It includes version records, audit events, and optional EVM-compatible blockchain anchoring. Its architecture combines frontend interfaces, backend services, and persistent storage to demonstrate cryptographic verification and traceable evidence-management workflows for digital investigations and audits. | React, TypeScript, Python, FastAPI, PostgreSQL, SQLAlchemy, Alembic, SHA-256, EVM | Local demo | [GitHub](https://github.com/uskascent-svg/AscentIntegrity) |
 
 ## 🔹 `❯ ls ~/stack`
 
