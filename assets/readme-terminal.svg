@@ -3,24 +3,24 @@
 <title id="title">ASCENT U3 character-by-character cybersecurity terminal</title>
 <desc id="desc">An animated green terminal that types each character of the profile, status log, and career goal one by one. Reduced-motion preferences show all text immediately.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07130b"/><stop offset="1" stop-color="#020604"/></linearGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#071b4a"/><stop offset="1" stop-color="#03060f"/></linearGradient>
   <clipPath id="screen"><rect x="1" y="1" width="958" height="388" rx="15"/></clipPath>
   <style>
     text{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
-    .prompt{fill:#4dff91;font-weight:700}.out{fill:#d7e8db}.good{fill:#4dff91}.dim{fill:#83a18c}.title{fill:#a5ffc3;font-size:13px;letter-spacing:2px}
+    .prompt{fill:#00D8FF;font-weight:700}.out{fill:#DFFFFF}.good{fill:#00D8FF}.dim{fill:#7FB6D6}.title{fill:#A6F1FF;font-size:13px;letter-spacing:2px}
     @keyframes charIn{0%{opacity:0}0.1%,99%{opacity:1}100%{opacity:0}}
-    .cursor{fill:#4dff91;animation:blink 1s steps(2,start) infinite}
+    .cursor{fill:#00D8FF;animation:blink 1s steps(2,start) infinite}
     @keyframes blink{to{visibility:hidden}}
     @media(prefers-reduced-motion:reduce){text tspan{opacity:1!important;animation:none!important}.cursor{animation:none;visibility:visible}}
   </style>
 </defs>
 <g clip-path="url(#screen)">
 <rect width="960" height="390" rx="15" fill="url(#bg)"/>
-<rect width="960" height="42" fill="#101a13"/>
-<circle cx="23" cy="21" r="5" fill="#ff625d"/><circle cx="41" cy="21" r="5" fill="#ffc04d"/><circle cx="59" cy="21" r="5" fill="#42d66b"/>
+<rect width="960" height="42" fill="#071b4a"/>
+<circle cx="23" cy="21" r="5" fill="#ff625d"/><circle cx="41" cy="21" r="5" fill="#ffc04d"/><circle cx="59" cy="21" r="5" fill="#00FFFF"/>
 <text x="82" y="26" class="title">ASCENT U3 / CYBER DEFENCE CONSOLE</text>
 <text x="934" y="26" text-anchor="end" class="dim" font-size="11">SAFE PROFILE SIMULATION</text>
-<line x1="0" y1="42" x2="960" y2="42" stroke="#20382a"/>
+<line x1="0" y1="42" x2="960" y2="42" stroke="#0A84FF"/>
 <g font-size="16">
 <text x="28" y="78" class="prompt">$ whoami</text>
 <text y="105" class="out" font-size="16"><tspan x="28" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:0.800s">I</tspan><tspan x="37.62" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:0.855s">T</tspan><tspan x="47.239999999999995" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:0.910s"> </tspan><tspan x="56.86" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:0.965s">E</tspan><tspan x="66.47999999999999" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.020s">n</tspan><tspan x="76.1" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.075s">g</tspan><tspan x="85.72" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.130s">i</tspan><tspan x="95.33999999999999" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.185s">n</tspan><tspan x="104.96" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.240s">e</tspan><tspan x="114.58" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.295s">e</tspan><tspan x="124.19999999999999" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.350s">r</tspan><tspan x="133.82" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.405s">i</tspan><tspan x="143.44" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.460s">n</tspan><tspan x="153.06" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.515s">g</tspan><tspan x="162.67999999999998" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.570s"> </tspan><tspan x="172.29999999999998" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.625s">s</tspan><tspan x="181.92" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.680s">t</tspan><tspan x="191.54" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.735s">u</tspan><tspan x="201.16" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.790s">d</tspan><tspan x="210.77999999999997" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.845s">e</tspan><tspan x="220.39999999999998" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.900s">n</tspan><tspan x="230.01999999999998" opacity="0" style="animation:charIn 24s steps(1,end) infinite;animation-delay:1.955s">t</tspan></text>
@@ -36,5 +36,5 @@
 <text x="48" y="369" class="dim" font-size="12">DETECT. PREVENT. PROTECT.</text>
 </g>
 </g>
-<rect x=".5" y=".5" width="959" height="389" rx="15" fill="none" stroke="#294a34"/>
+<rect x=".5" y=".5" width="959" height="389" rx="15" fill="none" stroke="#0A8CFF"/>
 </svg>
