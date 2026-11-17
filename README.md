@@ -27,6 +27,7 @@ Problem solving is **built on trust. Driven by results.**
 | Project | Repository | What it does |
 |---|---|---|
 | **ASCENT SAFETY** | [Open repository ↗](https://github.com/uskascent-svg/Ascent-Safety-) | Cybersecurity analysis and threat-detection platform. |
+| **E-Cycle** | [Live Demo ↗](https://e-cycle-xyv5.onrender.com) · [Project Repository](https://github.com/uskascent-svg/e-cycle) | Community-focused e-waste management platform for responsible disposal, reuse, repair, donation and recycling. Users can submit collection requests and track their status, while administrators manage users, submissions, distributors, facilities and collection operations. Includes a security panel for login analysis, account lockouts, threat categories, incident investigations, administrator audit activity and downloadable PDF, CSV and XLSX reports, with 180-day security-log retention. |
 | **Shop Agent** | [Open repository ↗](https://github.com/uskascent-svg/Utkarsh-Raju-shop-agent) | AI-powered shopping agent project. |
 | **Black Hole Simulation** | [Open repository ↗](https://github.com/uskascent-svg/black_hole) | C++/OpenGL exploration of gravitational lensing and GPU-assisted simulation; based on the upstream project by [kavan010](https://github.com/kavan010/black_hole). |
 
