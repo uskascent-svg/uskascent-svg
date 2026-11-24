@@ -110,14 +110,16 @@ I am interested in cybersecurity internships and project opportunities where I c
 
 <div align="center">
 
-**Let's connect**
+### Let's connect
 
-<a href="https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/" title="LinkedIn"><img src="https://cdn.simpleicons.org/linkedin/0A66C2" width="32" height="32" alt="LinkedIn"/></a>&nbsp;&nbsp;&nbsp;
-<a href="https://leetcode.com/u/AscentU3/" title="LeetCode"><img src="https://cdn.simpleicons.org/leetcode/FFA116" width="32" height="32" alt="LeetCode"/></a>&nbsp;&nbsp;&nbsp;
-<a href="mailto:uskascent@gmail.com" title="Email"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/mail.svg" width="32" height="32" alt="Email"/></a>&nbsp;&nbsp;&nbsp;
-<a href="https://ascent-u3-portfolio.lovable.app" title="Portfolio"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/globe.svg" width="32" height="32" alt="Portfolio"/></a>
+<a href="https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/" title="Connect on LinkedIn"><img src="https://img.shields.io/badge/LINKEDIN-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="40" alt="LinkedIn — Connect"/></a>&nbsp;
+<a href="https://leetcode.com/u/AscentU3/" title="View LeetCode profile"><img src="https://img.shields.io/badge/LEETCODE-Solve-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" height="40" alt="LeetCode — Solve"/></a>&nbsp;
+<a href="mailto:uskascent@gmail.com" title="Send an email"><img src="https://img.shields.io/badge/EMAIL-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" height="40" alt="Email — Contact"/></a>&nbsp;
+<a href="https://ascent-u3-portfolio.lovable.app" title="Explore portfolio"><img src="https://img.shields.io/badge/PORTFOLIO-Explore-16A6C9?style=for-the-badge&logo=googlechrome&logoColor=white" height="40" alt="Portfolio — Explore"/></a>
 
-**Detect. Prevent. Protect.**
+<br/><br/>
+
+**DETECT. PREVENT. PROTECT.**
 
 *Curious by default. Security-minded by design.*
 
