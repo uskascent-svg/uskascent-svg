@@ -6,10 +6,10 @@
 
 ---
 
-## 🔹 Contribution Activity
+## 🔹 Contribution City
 
 <p align="center">
-  <img src="./assets/contribution-activity.svg" width="100%" alt="GitHub contribution calendar showing yearly total and date range"/>
+  <img src="https://www.gitskins.com/api/section/city?username=uskascent-svg&theme=aurora" width="100%" alt="GitHub contribution history visualized as an animated 3D city skyline"/>
 </p>
 
 ## 🔹 `❯ ./leetcode --profile`
