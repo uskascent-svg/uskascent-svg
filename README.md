@@ -40,6 +40,7 @@
 ## 🔹 `❯ ./leetcode --profile`
 
 Problem solving is **built on trust. Driven by results.**
+Curiosity fuels the challenges Logic drives the solution.
 
 <p align="center">
   <a href="https://leetcode.com/u/AscentU3/" title="Open LeetCode profile — AscentU3" target="_blank" rel="noopener noreferrer">
@@ -49,7 +50,7 @@ Problem solving is **built on trust. Driven by results.**
 
 ## 🔹 `❯ ./play --profile`
 
-**[Launch the ASCENT U3 Interactive Terminal ↗](https://uskascent-svg.github.io/uskascent-svg/terminal.html)** — explore my background, cybersecurity interests, projects, current learning goals, career direction, and contact links. This is a safe, simulated terminal; it does not run real shell commands or security scans.
+**[Launch the ASCENT U3 Interactive Terminal ↗](https://uskascent-svg.github.io/uskascent-svg/terminal.html)** — explore my background
 
 ## 🔹 `❯ ls ~/projects --featured`
 
