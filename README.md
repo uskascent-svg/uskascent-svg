@@ -9,7 +9,7 @@
 ## 🔹 Contribution City
 
 <p align="center">
-  <img src="https://www.gitskins.com/api/section/city?username=uskascent-svg&theme=aurora" width="100%" alt="GitHub contribution history visualized as an animated 3D city skyline"/>
+  <img src="./profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated 3D GitHub contribution skyline generated automatically from public contribution data"/>
 </p>
 
 ## 🔹 `❯ ./leetcode --profile`
