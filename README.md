@@ -33,9 +33,10 @@
   <img height="170" src="https://streak-stats.demolab.com?user=uskascent-svg&theme=transparent&hide_border=true&background=07111F&ring=63C8FF&fire=22D3EE&currStreakLabel=63C8FF" alt="GitHub contribution streak for uskascent-svg"/>
 </p>
 
-<p align="center">
+<div align="center">
   <h3>Utkarsh Sanjay Khairnar</h3>
-</p>
+</div>
+
 
 ## 🔹 `❯ ./leetcode --profile`
 
