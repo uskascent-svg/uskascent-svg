@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <sub>365-day contribution landscape · refreshed daily by GitHub Actions</sub>
+  <sub>365-day contribution landscape</sub>
 </p>
 
 ## 🔹 `❯ ./contributions --snake`
