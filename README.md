@@ -40,7 +40,6 @@
 ## 🔹 `❯ ./leetcode --profile`
 
 Problem solving is **built on trust. Driven by results.**
-
 **[LeetCode profile · AscentU3](https://leetcode.com/u/AscentU3/)**
 
 ## 🔹 `❯ ./play --profile`
