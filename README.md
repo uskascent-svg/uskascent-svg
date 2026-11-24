@@ -34,7 +34,7 @@
 </p>
 
 <p align="center">
-  <h>Utkarsh Sanjay Khairnar</h>
+  <h1>Utkarsh Sanjay Khairnar</h1>
 </p>
 
 ## 🔹 `❯ ./leetcode --profile`
