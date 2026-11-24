@@ -40,7 +40,12 @@
 ## 🔹 `❯ ./leetcode --profile`
 
 Problem solving is **built on trust. Driven by results.**
-**[LeetCode profile · AscentU3](https://leetcode.com/u/AscentU3/)**
+
+<p align="center">
+  <a href="https://leetcode.com/u/AscentU3/" title="Open LeetCode profile — AscentU3" target="_blank" rel="noopener noreferrer">
+    <img src="https://cdn.simpleicons.org/leetcode/63C8FF" width="44" height="44" alt="LeetCode icon — visit AscentU3 profile"/>
+  </a>
+</p>
 
 ## 🔹 `❯ ./play --profile`
 
