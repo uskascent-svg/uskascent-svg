@@ -9,7 +9,7 @@
 ## 🔹 Contribution City
 
 <p align="center">
-  <img src="./profile-3d-contrib/profile-green-animate.svg" width="100%" alt="Animated 3D GitHub contribution skyline generated automatically from public contribution data"/>
+  <img src="./profile-3d-contrib/profile-customize.svg" width="100%" alt="Animated 3D GitHub contribution skyline in ASCENT U3 electric-blue and deep-navy colors"/>
 </p>
 
 ## 🔹 `❯ ./leetcode --profile`
