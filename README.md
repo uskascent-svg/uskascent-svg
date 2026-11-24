@@ -117,8 +117,7 @@ I am interested in cybersecurity internships and project opportunities where I c
 <a href="mailto:uskascent@gmail.com" title="Send an email"><img src="https://img.shields.io/badge/EMAIL-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" height="40" alt="Email — Contact"/></a>&nbsp;
 <a href="https://ascent-u3-portfolio.lovable.app" title="Explore portfolio"><img src="https://img.shields.io/badge/PORTFOLIO-Explore-16A6C9?style=for-the-badge&logo=googlechrome&logoColor=white" height="40" alt="Portfolio — Explore"/></a>
 
-<br/><br/>
-
+<br/>
 **DETECT. PREVENT. PROTECT.**
 
 *Curious by default. Security-minded by design.*
