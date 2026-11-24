@@ -44,18 +44,16 @@ Let's connect
 <a href="https://ascent-u3-portfolio.lovable.app" title="Explore portfolio"><img src="https://img.shields.io/badge/PORTFOLIO-Explore-16A6C9?style=for-the-badge&logo=googlechrome&logoColor=white" height="40" alt="Portfolio — Explore"/></a>
 
 
-<div>
-
-Problem solving is **built on trust. Driven by results.**
-Curiosity fuels the challenges Logic drives the solution.
+<p align="center">
+  Problem solving is <strong>built on trust. Driven by results.</strong><br>
+  Curiosity fuels the challenges. Logic drives the solution.
+</p>
 
 <p align="center">
   <a href="https://leetcode.com/u/AscentU3/" title="Open LeetCode profile — AscentU3" target="_blank" rel="noopener noreferrer">
     <img src="https://cdn.simpleicons.org/leetcode/63C8FF" width="44" height="44" alt="LeetCode icon — visit AscentU3 profile"/>
   </a>
 </p>
-
-</div>
 
 ## 🔹 `❯ ./play --profile`
 
