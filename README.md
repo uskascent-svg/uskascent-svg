@@ -112,7 +112,10 @@ I am interested in cybersecurity internships and project opportunities where I c
 
 **Let's connect**
 
-[LinkedIn](https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/) · [LeetCode](https://leetcode.com/u/AscentU3/) · [Email](mailto:uskascent@gmail.com) · [Portfolio](https://ascent-u3-portfolio.lovable.app)
+<a href="https://www.linkedin.com/in/utkarsh-khairnar-7a467237b/" title="LinkedIn"><img src="https://cdn.simpleicons.org/linkedin/0A66C2" width="32" height="32" alt="LinkedIn"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://leetcode.com/u/AscentU3/" title="LeetCode"><img src="https://cdn.simpleicons.org/leetcode/FFA116" width="32" height="32" alt="LeetCode"/></a>&nbsp;&nbsp;&nbsp;
+<a href="mailto:uskascent@gmail.com" title="Email"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/mail.svg" width="32" height="32" alt="Email"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://ascent-u3-portfolio.lovable.app" title="Portfolio"><img src="https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/globe.svg" width="32" height="32" alt="Portfolio"/></a>
 
 **Detect. Prevent. Protect.**
 
